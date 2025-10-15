@@ -1,0 +1,16 @@
+---
+title: "Listado Participantes"
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(gt)
+source('_admin_materiales/participantes.R')
+
+gt(participantes%>%
+     select(-ci2))
+
+```

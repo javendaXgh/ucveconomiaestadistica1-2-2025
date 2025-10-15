@@ -1,0 +1,7 @@
+---
+title: "Videos Apoyo"
+execute:
+  freeze: false
+---
+
+-   [Playlist YouTube Introducción a los Datos](https://www.youtube.com/playlist?list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8)

@@ -1,0 +1,53 @@
+---
+title: "Recursos Disponibles"
+---
+
+A continuación se listan una serie de recursos altamente valiosos que sirven de apoyo para el desarrollo del curso.
+
+### Libros Recomendados
+
+-   OpenIntro Statistics versión español: [OpenIntro](/oi/oi.html) dentro del site o en <https://rpubs.com/javenda/openintroes> Esta versión está sujeta a correcciones.
+
+-   OpenIntro Statistics: Acceso de descarga al libro en inglés: <https://leanpub.com/os> Nota: seleccionar `you-pay $0.00` .
+
+-   <https://www.openintro.org/book/stat/>: <https://www.openintro.org/book/os/> OpenIntro Statistics es una versión dinámica del plan de estudios tradicional, que se utiliza con éxito en colegios comunitarios y en la Ivy League.
+
+-   [OpenIntro Labs for R and tidyverse](http://openintrostat.github.io/oilabs-tidy/) OpenIntro Labs, fomenta la comprensión y la aplicación de la estadística mediante el análisis de datos aplicados. Los laboratorios se titulan según el área temática, que corresponde a capítulos específicos de las tres versiones de OpenIntro Statistics.
+
+-   R para profesionales de los datos: una introducción <https://www.datanalytics.com/libro_r/> por Carlos J. Gil Bellosta
+
+-   Introductory Business Statistic: libro del proyecto OpenStax, el cual se concentra en la edición de de recursos educativos abiertos (REA) y es un proveedor de tecnologías de aprendizaje interactivo e investigación educativa para la escuela secundaria y la universidad realizado por la Universidad Rice. Enlace <https://assets.openstax.org/oscms-prodcms/media/documents/Introductory_Business_Statistics_2e_-_WEB.pdf> (sólo inglés).
+
+-   An Introduction to Statistical Learning ISL with R Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani. <https://www.statlearning.com> (sólo inglés).
+
+-   Introducción a R : <https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf> por R Development Core Team Modelado (machine learning y estadístico) <https://github.com/tidymodels/learntidymodels> (sólo inglés).
+
+### **Repositorios de librerías-paquetes**
+
+-   <https://cran.r-project.org/>
+
+-   <https://ropensci.org/packages/>
+
+-   <https://www.bioconductor.org/packages/release/BiocViews.html#___Software>
+
+### **Tutoriales, info general sobre R y sus aplicaciones:**
+
+-   <https://www.r-bloggers.com/>
+
+-   <https://github.com/josersosa/Programando_en_R>
+
+-   <https://swcarpentry.github.io/r-novice-gapminder-es/>
+
+-   <https://gonzalezgouveia.com/curso-de-r-studio-gratis/>
+
+-   <https://www.infoworld.com/profile/sharon-machlis/>
+
+-   <https://rafael-zambrano-blog-ds.netlify.app/blog>
+
+-   <https://intro-r-eph.netlify.app/bio> , <https://intro-r-eph.netlify.app/0a_diapositivas/01b_r_intro_presentacion#1>
+
+### **Software y descargas:**
+
+-   Lenguaje R: <https://cran.r-project.org/> versión actual R-4.4.3. Video instalación: pendiente por agregar
+
+-   RStudio Desktop <https://posit.co/download/rstudio-desktop/> : entorno de desarrollo de fácil integración con el lenguaje R Video instalación: pendiente por agregar

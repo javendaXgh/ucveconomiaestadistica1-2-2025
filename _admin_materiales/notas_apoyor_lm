@@ -1,0 +1,37 @@
+Clase 14 01 correlaciones. transición a dejar la incógnita de una línea, ecuaciones lineales
+clase 14 02 coeficiente de correlacion de pearson
+clase 14 03 regresion lineal
+clase 14 04 residuales
+clase 14 05 otros componentes de la RL: 
+clase 14 06 bias variance trade off
+
+Clase 14 01
+Adaptar una línea a los datos
+usar esto de referencia https://docs.google.com/presentation/d/1DqA5n0m53j2gZeqqn4Jog2B6JEzwXNOXtLPPPKY6ZH0/edit?slide=id.g5fa332d673_0_18#slide=id.g5fa332d673_0_18
+
+
+
+Recordar ecuaciones linéales
+
+clase 14 03 
+añadir esto https://docs.google.com/presentation/d/1ABWqpgPhn3kphZ0iMPAIskb4JOrZnFJPhyPHctT-ptI/edit?slide=id.g5fa1d17a6d_0_26#slide=id.g5fa1d17a6d_0_26
+Perfecta Relación lineal: a partir del valor de x, podemos predecir con exactitud el valor que asumirá y.
+Por ejemplo, si compramos tal cantidad de productos, podemos definir con exactitud el precio que pagaremos
+
+
+Definición de Regresión Lineal
+Linear regression is the statistical method for fitting a line to data where the relationship
+between two variables, x and y, can be modeled by a straight line with some error:
+
+y= β0 + β1x+ ε
+The values β0 and β1 represent the model’s parameters (β is the Greek letter beta), and the error is
+represented by ε(the Greek letter epsilon). The parameters are estimated using data, and we write
+their point estimates as b0 and b1. When we use xto predict y, we usually call xthe explanatory or
+predictor variable, and we call y the response; we also often drop the ϵ term when writing down
+the model since our main focus is often on the prediction of the average outcome.
+Incluir fórmula residual
+
+subestima: residual positivo, sobreestima: negativo
+
+
+Ejercicio: dadas unas curvas calcular residuales, preguntas desde el pag 309,310

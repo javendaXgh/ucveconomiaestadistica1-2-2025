@@ -1,0 +1,22 @@
+institute: "Universidad Central de Venezuela- Escuela de Economía. 2025-1"
+footer: "[🔗 Estadística 1](https://ucveconomia-estadistica1.netlify.app/)"
+author: M.Sc. José Miguel Avendaño I.
+logo: "images/logo2.png"
+format:
+  revealjs:
+    # embed-resources: true
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    # highlight-style: a11y-dark
+editor: visual
+lang: es
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 90

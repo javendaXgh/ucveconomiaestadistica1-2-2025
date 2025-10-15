@@ -1,0 +1,39 @@
+---
+title: "Zona de Programación en R"
+#format: revealjs
+#incremental: true
+#auto-stretch: false
+engine: knitr
+filters:
+  - webr
+---
+
+## [Codificar]{style="color:red"}
+
+```{webr}
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+```

@@ -1,0 +1,16 @@
+## Extensiones
+1)webr
+https://github.com/coatless/quarto-webr
+quarto add coatless/quarto-webr
+
+2) fontawesome
+https://github.com/quarto-ext/fontawesome
+quarto add quarto-ext/fontawesome
+
+3) lightbox
+https://github.com/quarto-ext/lightbox
+quarto add quarto-ext/lightbox
+
+4) quarto-live
+https://github.com/r-wasm/quarto-live
+quarto add r-wasm/quarto-live

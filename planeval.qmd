@@ -1,0 +1,11 @@
+---
+title: "Plan de Evaluación"
+---
+
+|           Detalle           | Porcentaje |
+|:---------------------------:|:----------:|
+|       6 cuestionarios       |    20 %    |
+| Intervenciones y asistencia |    20 %    |
+|          Parcial I          |    20 %    |
+|         Parcial II          |    20 %    |
+|         Parcial III         |    20 %    |

@@ -1,0 +1,110 @@
+// fonts
+/* atkinson-hyperlegible-regular - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  src: url('atkinson-hyperlegible-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+#qwebr-output-code-area-11 {
+  color: #00a896;
+  background-color: 'red';
+}
+
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+
+$presentation-heading-color: #00a896;
+$presentation-title-slide-text-align: "left";
+$link-color: #00a896;
+$code-color: #00a896;
+$code-block-font-size: 0.6em;
+$presentation-font-size-root: 40px;
+$presentation-h2-font-size: 1.2em;
+
+/*-- scss:rules --*/
+
+details>summary {
+  font-size: 0.75em;
+}
+
+.reveal #title-slide .subtitle {
+  color: #00a896;
+  font-weight: bold;
+  text-align: left;
+}
+
+.reveal #title-slide .author {
+  text-align: left;
+}
+
+.reveal #title-slide .institute {
+  text-align: left;
+}
+
+.small {
+  font-size: 0.4em;
+}
+
+.xsmall {
+  font-size: 0.3em;
+}
+
+.xxsmall {
+  font-size: 0.2em;
+}
+
+.reveal .slide .question {
+  border-left: 3px solid #00a896;
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background: #a4b9da;
+}
+
+.reveal .slide .poll {
+  border-left: 3px solid #FFBE98;
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background: #ffdecb;
+}
+
+.reveal .slide .appex {
+  border-left: 3px solid #00a896;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #a4b9da;
+}
+
+.reveal .slide .demo {
+  border-left: 3px solid #3a7d83;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #a8d5d9;
+}
+
+.reveal pre code {
+  width: 1000px;
+}
+
+.reveal .hand {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.2em
+}
+
+.reveal dl.code-annotation-container-grid {
+    margin-left: 0.1em;
+    background-color: #ecf1f7;
+}
+
+.reveal pre {
+  font-size: 30px !important;
+}
+
+.reveal code {
+  font-size:  30px !important;
+}
+

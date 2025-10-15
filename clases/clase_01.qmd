@@ -1,0 +1,334 @@
+---
+title: "Estadística I"
+subtitle: "Clase 1: Introducción a los Datos"
+date: "2025/10/15"
+format: revealjs
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+```{r}
+
+library(openintro)
+library(tidyverse)
+library(gtsummary)
+library(gt)
+library(plotly)
+stents <- stent30%>%
+  mutate(paciente= row_number())%>%
+  rename('0-30 días'= outcome)%>%
+  bind_cols(stent365%>%
+              select(outcome)%>%
+              rename ('0-365 días'= outcome))%>%
+  select(paciente, group,'0-30 días','0-365 días' )
+
+stents_if <- stents%>% {
+  rbind( head(., 3), tail(., 2) )
+} 
+
+t1 <- tbl_summary(stent30, 
+            include=c(group),
+            by= outcome,
+            percent = 'row')
+
+t2 <- tbl_summary(stent365, 
+                  include=c(group),
+                  by= outcome,
+            percent = 'row')
+
+
+```
+
+## Aproximación Concepto "Estadística"
+
+Los científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. 
+
+[La estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible.]{style="color:#dc2f02; font-size:1.3em"}
+
+# Propiedades de los Datos
+
+## Estudio de caso: 
+
+Uso de *stents* para prevenir accidentes cerebro vasculares
+
+<br>
+
+```{r}
+gt(stents_if)%>%
+  tab_options(table.font.size = 36)
+```
+
+## Datos Tabulares
+
+Hay observaciones que generalmente en los datos tabulares estarán representados por [(filas)]{style="color:red"} , las cuales a su vez contienen distintos atributos o variables, que generalmente corresponden a las [(columnas)]{style="color:#0077b6"}.
+
+```{r}
+gt(stent30%>%
+     mutate(paciente=row_number())%>%
+     sample_n(5)%>%
+     select(paciente, group, outcome)%>%
+     arrange(paciente))%>%
+  tab_options(table.font.size = 36)%>%
+  gt::tab_style(          
+    style = list(gt::cell_fill(color = "red")),
+    locations = gt::cells_body(row = 4
+    ))%>%
+  gt::tab_style(          
+    style = list(gt::cell_fill(color = "#0077b6")),
+    locations = gt::cells_body(columns = c('group')
+    ))%>%
+  gt::tab_style(          
+    style = list(gt::cell_fill(color = "#7209b7")),
+    locations = gt::cells_body(columns = c('group'), row=4
+    ))
+```
+
+## Asignados por Grupo
+
+```{r}
+tbl_summary(stents,
+            include=group)%>%
+  as_gt()%>%
+  tab_options(table.font.size = 36)
+```
+
+-   Cantidad de pacientes en grupo de:
+
+    -   tratamiento (50%)
+
+    -   control (50%)
+
+::: notes
+grupos están balanceados
+:::
+
+## Resultados 0 a 30 días:
+
+```{r}
+#| classes: styled-output
+table(stent30)
+```
+
+## Resultado 0 a 365 días:
+
+```{r}
+#| classes: styled-output
+table(stent365)
+```
+
+## Tabla con Estadística Descriptiva: 
+
+```{r}
+tbl_merge(
+  tbls = list(t1, t2),
+  tab_spanner = c("**0-30 días**", "**0-365 días**")
+)%>%
+  as_gt()%>%
+  tab_options(table.font.size = 30)
+```
+
+## Cálculos de Valores Estadísticos Representativos
+
+```{r}
+tbl_merge(
+  tbls = list(t1, t2),
+  tab_spanner = c("**0-30 días**", "**0-365 días**"))%>%
+  as_gt()%>%
+  gt::tab_style(          
+    style = list(gt::cell_fill(color = "#48cae4")),
+    locations = gt::cells_body(columns = c(stat_2_1), rows = c(2,3)
+  ))%>%
+  gt::tab_style(          
+    style = list(gt::cell_fill(color = "#0077b6")),
+    locations = gt::cells_body(columns = c(stat_2_2), rows = c(2,3)
+    ))%>%
+  tab_options(table.font.size = 30)
+```
+
+## Análisis Resultados Obtenidos
+
+-   De los 224 pacientes del grupo de tratamiento:
+
+    -   33 sufrieron un ACV antes de los 30 primeros días
+
+    -   45 sufrieron un ACV al antes del final de primer año
+
+-   De los 227 pacientes del grupo de control:
+
+    -   13 sufrieron un ACV antes de los 30 primeros días
+
+    -   28 sufrieron un ACV al antes del final de primer año
+
+::: notes
+```         
+En primer lugar, es contrario a lo que los médicos esperaban, que era que los stents reducirían la tasa de accidentes cerebrovasculares. En segundo lugar, nos lleva a una pregunta estadística: ¿muestran los datos una diferencia real entre los grupos?
+Esta segunda pregunta es sutil. Supongamos que lanzamos una moneda 100 veces. Si bien la probabilidad de que una moneda salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos. Es posible que la diferencia del 8 % en el estudio de los stents se deba a esta variación natural. Sin embargo, cuanto mayor sea la diferencia que observamos (para un tamaño de muestra determinado), menos creíble es que se deba al azar. Por lo tanto, lo que realmente nos preguntamos es lo siguiente: ¿es la diferencia tan grande que deberíamos rechazar la idea de que se debió al azar?
+
+PRECAUCION: NO GENERALIZAR
+```
+:::
+
+## Pregunta Clave a Responder {.small}
+
+### ¿Los datos representados muestran que existe una diferencia entre los dos grupos? {style="color:#ff6d00"}
+
+Supongamos que lanzas una moneda **100** veces. Si bien la probabilidad de que salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos.
+
+La diferencia observada anteriormente entre los dos grupos puede ser real o deberse a la variación natural.
+
+Dado que la diferencia es bastante grande, es más creíble que sea real.
+
+[Utilizamos herramientas estadísticas para determinar si la diferencia es tan grande que deberíamos rechazar la idea de que se debió al azar]{style="color:#dc2f02"}[.]{style="color:"}
+
+## Ejercicio {.small}
+
+La migraña es un tipo de dolor de cabeza particularmente doloroso, que los pacientes a veces desean tratar con acupuntura. 
+
+Para determinar si la acupuntura alivia el dolor migrañoso, los investigadores realizaron un estudio controlado aleatorizado en el que 89 mujeres diagnosticadas con migraña fueron asignadas aleatoriamente a uno de dos grupos:
+
+-   grupo tratamiento: 43 pacientes del grupo de tratamiento recibieron acupuntura específicamente diseñada para tratar las migrañas.
+
+-   grupo control: 46 pacientes del grupo control recibieron acupuntura placebo (inserción de agujas en puntos distintos a los de acupuntura). 
+
+24 después de recibir la acupuntura, se les preguntó si no sentían dolor.
+
+## Tabla Resultados
+
+```{r}
+table(migraine)
+```
+
+## Preguntas a Responder
+
+```{r}
+tbl_summary(migraine,
+            include=group,
+            by= pain_free,
+            percent = 'row')%>%
+   as_gt()%>%
+  tab_options(table.font.size = 28)
+```
+
+a\) ¿Qué porcentaje de pacientes del grupo de tratamiento no tenían dolor 24 horas después de recibir acupuntura?
+
+\(b\) ¿Qué porcentaje del grupo de control no tuvo dolor? Se realizaron pruebas repetidas con el dolorímetro.
+
+## Preguntas a Responder
+
+```{r}
+
+tbl_summary(migraine,
+            include=group,
+            by= pain_free,
+            percent = 'row')%>%
+  as_gt()%>%
+  tab_options(table.font.size = 28)
+```
+
+\(c\) ¿En qué grupo hubo un mayor porcentaje de pacientes que no sintieron dolor 24 horas después de recibir acupuntura?
+
+## Preguntas a Responder- continuación:
+
+\(d\) Sus hallazgos hasta el momento podrían sugerir que la acupuntura es un tratamiento eficaz para las migrañas en todas las personas que las padecen. 
+
+Sin embargo, esta no es la única conclusión posible que se puede extraer con base en sus hallazgos. 
+
+¿Cuál es otra posible explicación para la diferencia observada entre los porcentajes de pacientes sin dolor 24 horas después de recibir acupuntura en los dos grupos?
+
+## Tipos de Variables
+
+![](images/clase01/variables.png){fig-align="center" width="800"}
+
+## Variables Conjunto de Datos
+
+```{r}
+gt(loan50%>%
+     sample_n(8)%>%
+     select(loan_amount,
+            interest_rate,
+            term,
+            grade,
+            state,
+            total_income,
+            homeownership))
+
+```
+
+## Descripción Variables {.small}
+
+|  |  |
+|------------------------------------|------------------------------------|
+| **Variable** | **Descripción** |
+| loan_amount | Monto del préstamo recibido, en dólares estadounidenses. |
+| interest_rate | Tasa de interés del préstamo, en porcentaje anual. |
+| term | El plazo del préstamo, que siempre se establece como un número entero de meses. |
+| grade | Calificación del préstamo, que toma valores de A a G y representa la calidad del préstamo y su probabilidad de ser reembolsado. |
+| state | Estado de EE.UU. donde reside el prestatario. |
+| total_income | Ingreso total del prestatario, incluyendo cualquier segundo ingreso, en dólares estadounidenses. |
+| homeownership | Indica si la persona es propietaria, es propietaria pero tiene una hipoteca, o alquila. |
+
+## Clasificar Cada Variable Según Tipo
+
+|               |                   |
+|---------------|-------------------|
+| **Variable**  | **Tipo Variable** |
+| loan_amount   |                   |
+| interest_rate |                   |
+| term          |                   |
+| grade         |                   |
+| state         |                   |
+| total_income  |                   |
+| homeownership |                   |
+
+## Ejercicio:
+
+Crear una estructura de datos tabulares con el plan de evaluación del curso
+
+## Relaciones Entre Variables
+
+```{r}
+plot_ly(data = county,
+        y = ~homeownership,
+        x = ~multi_unit,
+        text= ~name)%>%
+  layout(title = '',
+         xaxis = list(title = 'Percent of Units in Multi−Unit Structures'),
+         yaxis = list(title = 'tasa de homeownership'))
+```
+
+## Variables Asociadas
+
+Cuando dos variables muestran algún tipo de conexión se dice que están asociadas.
+
+```{r}
+plot_ly(data = county,
+        y = ~pop_change,
+        x = ~median_hh_income,
+        text= ~name)%>%
+  layout(title = '"Population Change" contra "Median Household Income"',
+         xaxis = list(title = 'Median Household Income'),
+         yaxis = list(title = 'Population Change'))
+
+```
+
+::: notes
+Debido a que hay una tendencia a la baja en la Figura 1.8 (los condados con más unidades en estructuras de unidades múltiples están asociados con una menor propiedad de vivienda), se dice que estas variables están asociadas negativamente. Se muestra una asociación positiva en la relación entre el ingreso medio *hh* y el cambio *pop* en la Figura 1.9, donde los condados con un ingreso familiar medio más alto tienden a tener tasas más altas de crecimiento poblacional.
+
+Si dos variables no están asociadas se dice que son independientes. Es decir, dos variables son independientes si no existe una relación evidente entre ellas.
+:::
+
+## **Variables explicativas y de respuesta.**
+
+-   **Variables Explicativas:** Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, "explicativa" captura esta esencia.
+
+-   **Variable de Respuesta:** Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, "de respuesta" es la traducción precisa.
+
+::: notes
+Cuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética.
+:::

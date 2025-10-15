@@ -1,0 +1,118 @@
+
+Pendiente:
+- crear quiz
+
+
+ejercicios taller 1
+GUIDED PRACTICE 1.3/ clasificar las variables
+EXAMPLE 1.5
+GUIDED PRACTICE 1.7 income/loan_amount: scatter y relación
+
+En loan_50
+R factores, state is called a categorical variable, and
+the possible values are called the variable’s levels.
+Exercises
+1.7 , 1.5, 1.9, 1.11, 1.12
+https://openintro.shinyapps.io/ims-01-data-02/#section-observational-studies-and-experiments
+
+
+Tarea 1:
+
+- Clase Experimentos:
+Iniciar con cita Sampling Bias
+Experimentos
+Investigar Impact Evaluation, y clase de Joshua
+Resumen
+Taller
+Montar colab
+
+2025 04 22
+- Tarea 2
+- cifras promedio,weighted mean, pag 44, 
+- Media armónica, media geométrica
+- boxplot
+- medidas de ubicación 
+- guía complemento desviación media, usar datos gemini
+
+- Transforming data (special topic)
+- Desviación media
+- Medidas de ubicación percentiles, (cuartiles, deciles)
+- Variables categóricas, 
+- Robust statistics
+
+Martes 6
+- Revisar si incluí conceptos Medida Tendencia Central y Dispersión
+- Insistir mediana= percentil2
+- Medidas de ubicación percentiles, (cuartiles, deciles, percentiles)- Transformaciones en Datos
+- Insistir en desviación típica, ejemplos
+Repaso
+Mediana n par o n impar
+Aplicacion medidas de dispersión
+
+
+por definir si incluyo:
+
+
+# falta
+deflactar
+indice de fischer
+
+tomar de referencia 
+## segunda parte 
+al 12 mayo quedan 13 clases + 2 sesiones examen
+
+- momentos de una variable -clase 12
+- asimetría - clase 13 y 15
+- curtosis- clase 15
+
+- practica desviacion típica, , asimetria, curtosis. sesiones 1
+- números índices (clase 16 a 19). sesiones  2
+- series de tiempo. sesiones  2
+- practica numeros indice, series de tiempo 1
+- correlaciones. sesiones  1
+- estudio de las variables aleatorias. sesiones  1
+- regresiones. sesiones  2
+- practica correlaciones, estudio de las variables aleatorias, regresiones. sesiones  1
+- técnicas de conteo¿¿¿. sesiones  1
+- probabilidad. sesiones  2
+- practica tecnicas de conteo, probabilidad. sesiones  1
+
+
+
+Categorical Data
+-Contingency tables and bar plots
+-Using a bar plot with two variables 
+
+Clase Momentos Variable
+Introducción adaptación trabajo de Pearson
+
+Análisis de correlación y regresión lineal
+1.41 Correlación o asociación entre variables. Interpretación de la correlación. Tipos de correlación
+
+Conceptual: Diferenciar entre correlación positiva, negativa y nula
+Procedimental: Identificar tipos de correlación en diagramas de dispersión
+Actitudinal: Evitar confundir correlación con causalidad
+
+1.42 Correlación lineal simple. Diagrama de dispersión Coeficiente de correlación lineal r de
+
+Conceptual: Definir el coeficiente r de Pearson como medida de correlación lineal
+Procedimental: Calcular e interpretar r (-1 ≤ r ≤ 1) a partir de datos
+Actitudinal: Considerar el contexto al interpretar la fuerza de la correlación
+
+
+Introducción a la teoría de la probabilidad/Introducción al estudio de las variables aleatorias.
+1.1 Experimento aleatorio, variable aleatoria
+Conceptual: Comprender la diferencia entre experimento aleatorio (resultados inciertos) y
+variable aleatoria (función que asigna valores numéricos a dichos resultados)
+Procedimental: Identificar experimentos aleatorios en situaciones reales y definir las variables aleatorias asociadas
+Actitudinal: Valorar la importancia de modelar la incertidumbre mediante variables aleatorias en contextos científicos y sociales
+
+1.2 Espacio muestral, y sucesos u eventos
+Conceptual: Definir espacio muestral (conjunto de todos los resultados posibles) y suceso (subconjunto del espacio muestral)
+Procedimental: Construir espacios muestrales para experimentos simples y enumerar sucesos posibles
+Actitudinal: Desarrollar precisión al describir todos los resultados posibles de un fenómeno aleatorio
+
+1.3 Definición clásica y empírica de probabilidad
+Conceptual: Contrastar la definición clásica (casos favorables/casos posibles) con la empírica (frecuencia relativa en repeticiones)
+Procedimental: Calcular probabilidades usando ambos enfoques en ejemplos concretos 
+Actitudinal: Reconocer las limitaciones de cada definición según el contexto (equiprobabilidad vs. datos observados)

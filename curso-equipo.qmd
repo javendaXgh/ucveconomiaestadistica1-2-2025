@@ -1,0 +1,11 @@
+---
+title: "Equipo de Enseñanza"
+---
+
+### Prof. José Miguel Avendaño I.:
+
+Profesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Grandes Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del ***machine learning***.
+
+|     |
+|-----|
+|     |

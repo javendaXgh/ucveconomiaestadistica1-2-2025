@@ -1,0 +1,134 @@
+---
+title: "Glosario Funciones R"
+execute:
+  echo: true
+  eval: true
+  warning: false
+  fig-align: center
+---
+
+Se indicarán las funciones de R que son usadas a lo largo del curso. El orden en que se muestran está asociado al orden en que fueron mostradas en las distintas clases.
+
+Las siguientes funciones fueron abordadas en el [1 er. notebook](https://colab.research.google.com/github/javendaXgh/ucveconomiaestadistica1/blob/main/notebooks/clase_01_estadistica.ipynb)
+
+-   `library`: permite cargar un paquete expandiendo las capacidades que tiene el lenguaje R. Ejemplo de uso:
+
+    ```{r}
+    library (dplyr)
+    library(openintro)
+    ```
+
+-   `head` : visualizar las 6 primeras filas de un conjunto de datos. Si la acompaño del argumento `n` , se pueden visualizar una cantidad de `n` filas.
+
+    ```{r}
+    head (mtcars)
+    # con el argumento n
+    head (mtcars, 3)
+    ```
+
+-   `tail` : visualizar las 6 últimas filas de un conjunto de datos. Igualmente, como ocurrió en la función `head` se puede usar el argumento `n` .
+
+    ```{r}
+    tail (mtcars)
+    ```
+
+-   `table` : Crear una tabla de contingencia sobre una o más variables categóricas
+
+    ```{r}
+    table(mtcars$cyl)
+    ```
+
+-   `+,*,/,-` : operadores aritméticos
+
+    ```{r}
+    12 + 15
+    ```
+
+-   `?` : obtener documentación y ejemplos sobre el uso de una función o un conjunto de datos.
+
+    ```{r}
+    ?head
+    ```
+
+-   `sample_n` : pertenece al paquete `dplyr` y permite seleccionar de forma aleatoria una cantidad `n` de observaciones de un conjunto de datos
+
+    ```{r}
+    sample_n(mtcars, 10)
+
+    # usando el operador %>% se puede rescribir el código como
+    mtcars %>%
+      sample_n(5)
+    ```
+
+-   `select` : pertenece al paquete `dplyr` y permite seleccionar columnas del conjunto de datos.
+
+    ```{r}
+    select (mtcars,c("mpg" ,"hp" ,"gear" ))
+
+    ```
+
+-   `mean` : obtener el promedio sobre los valores que conforman un vector
+
+    ```{r}
+    mean( c( 8, 5, 11))
+    # el vector son los datos 8, 5, 11 que se encuentran entre paréntesis, y están precedidos por la letra c
+    mean (mtcars$mpg)
+    ```
+
+-   `sum` : sumar los elementos que conforman un vector
+
+    ```{r}
+    sum( c( 8, 5, 11))
+    # el vector son los datos 8, 5, 11 que se encuentran entre paréntesis, y están precedidos por la letra c
+    ```
+
+-   `table` : crear tabla de contigencia para una variable de tipo categórica
+
+    ```{r}
+    table(mtcars$cyl)
+    ```
+
+-   `plot` : crear un gráfico de dispersión o en inglés, scatterplot. Sirve para analizar posibles relaciones de asociación entre dos variables numéricas.
+
+    ```{r}
+    plot(x = county$median_hh_income,
+         y = county$pop_change)
+    ```
+
+-   `hist` : crea un histograma sobre una variable y permite analizar la distribución que presenta tal variable. Puede usarse el argumento `breaks` para cambiar la cantidad de barras generadas de forma automática.
+
+    ```{r}
+    hist (mtcars$mpg, breaks= 6)
+    ```
+
+-   `max` :
+
+-   `min` :
+
+-   `abs` :
+
+-   `sort` :
+
+-   `median` :
+
+-   `cunsum` :
+
+-   `round` :
+
+-   `sd`
+
+## Funciones dplyr
+
+-   `mutate` :
+
+-   `rename` :
+
+-   
+
+## Operadores
+
+-   `$` :
+
+-   `%>%` :
+
+-   

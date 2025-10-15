@@ -1,0 +1,95 @@
+project:
+  type: website
+  resources:
+    - scripts/
+  # render:
+  #   - "*.qmd"      # Incluye todos los archivos .qmd en el directorio raíz
+  #   - "!clases/" 
+
+website:
+  page-navigation: false
+  title: "UCV Economía Estadística I"
+  description: "Sitio de Apoyo, Edición 2025-2"
+  site-url: https://ucveconomia-estadistica1-2-2025.netlify.app/
+  repo-url: https://github.com/javendaXgh/ucveconomiaestadistica1-2-2025
+  favicon: images/favicon.png
+  google-analytics: "G-5BVQ49LXJG"
+  
+  open-graph: true
+
+  sidebar:
+    background: "#a01f35" #"#E46C4E"
+    logo: "images/logo2.png"
+    pinned: true
+    align: center 
+    tools:
+      - icon: envelope
+        text: "Correo"
+        href: "mailto:javenda@gmail.com"
+      - icon: github
+        href: https://github.com/javendaXgh/ucveconomiaestadistica1-2-2025
+        text: "GitHub"
+      - icon: cloud
+        href: https://posit.cloud/
+        text: "Posit Cloud"
+
+
+    style: docked
+    # search: true
+    collapse-level: 1
+
+    contents:
+      - section: "Sobre el Curso"
+        contents:
+          - href: index.qmd
+            text: Actividades
+          - href: curso-programa.qmd
+            text: Contenido del Curso
+          - href: planeval.qmd
+            text: Plan de Evaluación
+          - href: curso-equipo.qmd
+            text: Equipo de Enseñanza
+          # - href: faq.qmd
+          #   text: Preguntas Frecuentes
+          - href: codigoconducta.qmd
+            text: Código de Conducta
+          - href: recursos.qmd
+            text: Recursos Disponibles
+          - href: participantes.qmd
+            text: Alumnos Curso
+      - section: Tareas
+      - section: "Talleres-Otros"
+        contents:
+          - href: glos.qmd
+            text: Glosario Funciones R
+          - href: clases/playground.qmd
+            text: Zona para Programar en R
+      - section: "Videos de Apoyo"
+        contents:
+          - href: vidlist.qmd
+            text: vínculos
+
+
+  page-footer:
+    right: "Este sitio fue elaborado con [Quarto](https://quarto.org/) inspirado en el site [sta199 de Mine Çetinkaya-Rundel](https://mine-cr.com/teaching/sta199/)"
+    background: "#5d6d74"
+    left: |
+      [![](images/ee.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
+lang: es    
+format:
+  html:
+    embed-resources: true
+    include-before-body: 'google_tags/gtag.js'
+    theme:
+      light: [cosmo, style/stat101_of.scss]
+      dark: [cosmo,  style/dark.scss]
+    linkcolor: "#E63B2E"
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+# execute:
+#   freeze: auto
+
+editor: visual

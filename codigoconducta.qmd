@@ -1,0 +1,63 @@
+---
+title: "Código de Conducta del Estudiante" 
+---
+
+**1. Asistencia a Clases:**
+
+-   La asistencia es obligatoria y se tendrá en cuenta para la calificación final.
+
+-   Cada inasistencia injustificada restará puntos de la nota final.
+
+-   Las inasistencias deberán ser justificadas con un comprobante válido (certificado médico, etc.) y notificadas al profesor con anticipación, siempre que sea posible.
+
+-   Más de 5 inasistencias anulan la obtención del correspondiente puntaje.
+
+**2. Plagio:**
+
+-   El plagio, en cualquiera de sus formas, no está permitido.
+
+-   Cualquier trabajo que se detecte como plagiado será calificado con cero.
+
+-   Se espera que los estudiantes realicen sus trabajos de forma individual, a menos que se indique lo contrario.
+
+**3. Uso de IA Generativas:**
+
+-   Se permite el uso de herramientas de IA generativas como ChatGPT, Gemini, Llama.
+
+-   Es obligatorio citar la fuente y la herramienta utilizada en el trabajo entregado.
+
+-   El objetivo es usar la IA para complementar el aprendizaje, no para sustituirlo.
+
+**4. Participación:**
+
+-   La participación activa en clase es fundamental para el aprendizaje.
+
+-   Se valorará la participación, la formulación de preguntas y la colaboración con otros estudiantes.
+
+**5. Entrega de Trabajos:**
+
+-   Los trabajos, en caso de ser asignados, deberán ser entregados en la fecha y hora indicadas.
+
+-   Las entregas tardías serán penalizadas, a menos que se justifique un motivo válido. Igualmente, las entregas tardías tendrán una fecha límite no superior a los 7 días a la fecha indicada. La penalización será de un 3% menos a la nota obtenida por día de retardo, con un límite de 20% de penalidad.
+
+-   Los trabajos deben cumplir con los requisitos de formato y contenido especificados por el profesor.
+
+**6. Respeto:**
+
+-   Se espera un ambiente de respeto y colaboración entre todos los participantes del curso.
+
+-   Se prohíbe cualquier forma de discriminación, acoso o comportamiento inapropiado.
+
+**7. Comunicación:**
+
+-   La comunicación con el profesor se realizará a través de los canales establecidos (correo electrónico u otro que sea acordado).
+
+-   Se espera que los estudiantes revisen regularmente los anuncios y mensajes del profesor en el medio electrónico que sea acordado.
+
+8.  **Uso de dispositivos electrónicos:** 
+
+-   Los teléfonos celulares deben permanecer en modo silencioso o apagado durante toda la duración de la clase.
+
+-   Se prohíbe el uso de teléfonos celulares para llamadas, mensajes de texto, navegación en redes sociales, juegos o cualquier otra actividad no relacionada con la clase.
+
+-   El uso de la cámara del teléfono para grabar audio o video de la clase solo se permite con el consentimiento explícito del profesor.

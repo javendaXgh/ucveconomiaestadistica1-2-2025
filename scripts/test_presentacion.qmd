@@ -1,0 +1,72 @@
+---
+title: "test pib"
+author: "Don Diego de la Vega"
+format: revealjs
+---
+
+## nueva lámina
+
+-   primer punto
+
+-   segundo punto
+
+**esto va en negrilla**
+
+------------------------------------------------------------------------
+
+## Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?
+
+-   El PIB es el valor monetario total de todos los **bienes y servicios finales** producidos dentro de las fronteras de un país en un **período de tiempo específico** (generalmente un año).
+
+-   Piensa en él como una medida del **tamaño de la economía** de un país.
+
+-   Un PIB más alto generalmente indica una economía más grande y, a menudo, más próspera.
+
+------------------------------------------------------------------------
+
+## Lámina 2: ¿Qué se incluye en el PIB?
+
+-   **Bienes Finales:** Productos listos para ser consumidos (ej. un carro nuevo, una manzana, un corte de cabello). No se incluyen bienes intermedios (ej. el acero para hacer el carro).
+-   **Servicios:** Actividades realizadas por personas (ej. la educación de un profesor, la atención médica de un doctor, el trabajo de un electricista).
+-   **Producción Doméstica:** Solo se cuenta lo producido dentro de las fronteras del país, sin importar la nacionalidad de quien lo produce.
+-   **Período Específico:** Generalmente se mide anualmente o trimestralmente.
+
+------------------------------------------------------------------------
+
+## Lámina 3: ¿Qué NO se incluye en el PIB?
+
+-   **Bienes Intermedios:** Materiales o productos que se utilizan para producir otros bienes (ej. harina para hacer pan).
+-   **Bienes de Segunda Mano:** La venta de un carro usado no se cuenta en el PIB actual, ya que ya se contó cuando fue nuevo.
+-   **Actividades No de Mercado:** Trabajo doméstico no remunerado (ej. cocinar en casa), voluntariado.
+-   **Actividades Ilegales:** Venta de drogas, contrabando, etc.
+-   **Transferencias Financieras:** Pagos de seguridad social, becas, etc. (no representan producción actual).
+
+------------------------------------------------------------------------
+
+## Lámina 4: La Fórmula del PIB (Enfoque del Gasto)
+
+La forma más común de calcular el PIB es a través del enfoque del gasto, que suma todo el gasto final en la economía:
+
+$$PIB = C + I + G + (X - M)$$
+
+Donde:
+
+-   \(C\) = **Consumo:** Gasto de los hogares en bienes y servicios.
+-   \(I\) = **Inversión:** Gasto de las empresas en bienes de capital (maquinaria, fábricas), inventarios y construcción residencial.
+-   \(G\) = **Gasto Público:** Gasto del gobierno en bienes y servicios (salarios de funcionarios, infraestructura, etc.).
+-   \(X\) = **Exportaciones:** Bienes y servicios producidos en el país y vendidos al extranjero.
+-   \(M\) = **Importaciones:** Bienes y servicios producidos en el extranjero y comprados por el país.
+-   ((X - M)) = **Exportaciones Netas**.
+
+------------------------------------------------------------------------
+
+## Lámina 5: ¿Por qué es importante el PIB?
+
+-   **Medida del Crecimiento Económico:** Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.
+-   **Comparaciones Internacionales:** Permite comparar el tamaño de las economías de diferentes países.
+-   **Indicador del Nivel de Vida (aproximado):** Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.
+-   **Base para Políticas Económicas:** Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias.
+
+------------------------------------------------------------------------
+
+Espero que estas láminas sean útiles para tus estudiantes. ¿Necesitas alguna modificación o lámina adicional?
