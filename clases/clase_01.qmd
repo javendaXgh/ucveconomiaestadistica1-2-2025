@@ -263,7 +263,7 @@ gt(loan50%>%
 ## Descripción Variables {.small}
 
 |  |  |
-|------------------------------------|------------------------------------|
+|----|----|
 | **Variable** | **Descripción** |
 | loan_amount | Monto del préstamo recibido, en dólares estadounidenses. |
 | interest_rate | Tasa de interés del préstamo, en porcentaje anual. |

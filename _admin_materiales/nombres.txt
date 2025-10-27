@@ -1,5 +1,5 @@
 Nombre,Cedula
-Fysler Jiménez,25210266
+Eysler Jiménez,25210266
 Paola Cadena,31777523
 Aaron Romero,28312670
 Chantal Carrillo,30437350
@@ -8,7 +8,7 @@ Susana González,30346674
 Daniel Maldonado,29664107
 Angela Salcedo,31508240
 Leysamar Rivas,30950980
-Samuel Isaccurra,31867328
+Samuel Isaccura,31867328
 Miguel Riera,31418043
 Dilam Depablos,31761713
 José Ruiz,30152542

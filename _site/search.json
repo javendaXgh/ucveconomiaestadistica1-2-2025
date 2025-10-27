@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n5\nmié, 12 nov.\nI er. Exámen Parcial\n\n\n\n\n11\nmié, 14 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadas 🛠️ Ejecutar Notebook en Google Colab🎦 videos 3 y 4 de la playlist\n\n\n5\nmié, 12 nov.\nI er. Exámen Parcial\n\n\n\n\n11\nmié, 14 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -140,7 +140,7 @@
     "href": "participantes.html",
     "title": "Listado Participantes",
     "section": "",
-    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAaron Romero\n28.312.670\n\n\n2\nAbraham Elbitar\n29.864.827\n\n\n3\nAdrian Acevedo\n21.984.508\n\n\n4\nAngela Salcedo\n31.508.240\n\n\n5\nChantal Carrillo\n30.437.350\n\n\n6\nDaniel Maldonado\n29.664.107\n\n\n7\nDilam Depablos\n31.761.713\n\n\n8\nFranyerber Alcalá\n29.731.662\n\n\n9\nFysler Jiménez\n25.210.266\n\n\n10\nGerardo Escalante\n31.193.330\n\n\n11\nJosé Ruiz\n30.152.542\n\n\n12\nLeysamar Rivas\n30.950.980\n\n\n13\nMarangelia Bolivar\n28.014.942\n\n\n14\nMaria Umbarre\n32.346.229\n\n\n15\nMaría Fernanda Cuervo\n27.988.880\n\n\n16\nMiguel Riera\n31.418.043\n\n\n17\nMiller De Freitas\n32.281.822\n\n\n18\nNathalia Diaz\n31.945.857\n\n\n19\nPaola Cadena\n31.777.523\n\n\n20\nRachel Mahfoud\n31.170.925\n\n\n21\nRicardo Obregon\n28.302.190\n\n\n22\nRubén Torres\n28.311.075\n\n\n23\nSamuel Isaccurra\n31.867.328\n\n\n24\nSusana González\n30.346.674\n\n\n25\nValeria García\n30.751.510\n\n\n26\nVictor Cortez\n31.249.794",
+    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAaron Romero\n28312670\n\n\n2\nAbraham Carmona\n29992575\n\n\n3\nAbraham Elbitar\n29864837\n\n\n4\nAdrian Acevedo\n31984508\n\n\n5\nAngela Salcedo\n31508240\n\n\n6\nAshley Reyes\n28326912\n\n\n7\nChantal Carrillo\n30437350\n\n\n8\nDaniel Maldonado\n29664107\n\n\n9\nDilam Depablos\n31761713\n\n\n10\nEysler Jiménez\n25210266\n\n\n11\nFranyerber Alcalá\n29731662\n\n\n12\nGerardo Escalante\n31193520\n\n\n13\nJosé Ruiz\n30152542\n\n\n14\nJuan Piñero\n30678650\n\n\n15\nLeysamar Rivas\n30950950\n\n\n16\nMariargelia Bolivar\n28014942\n\n\n17\nMaría Fernanda\nCuervo 27988880\n\n\n18\nMaría Urribarri\n32346774\n\n\n19\nMiguel Riera\n31418043\n\n\n20\nMiller De Freitas\n32281822\n\n\n21\nNathalia Diaz\n31945857\n\n\n22\nPaola Lapenna\n31777525\n\n\n23\nRachel Mahfoud\n31170925\n\n\n24\nRicardo Obregón\n28302190\n\n\n25\nRubén Torres\n28311075\n\n\n26\nSamuel Isaaccura\n31867328\n\n\n27\nSara Henríquez\n29596779\n\n\n28\nSofia Goitte\n32417008\n\n\n29\nSusana González\n30346674\n\n\n30\nValeria García\n30751510\n\n\n31\nVictor Cortez\n31249794\n\n\n32\nWinder Pico\n29584271",
     "crumbs": [
       "Sobre el Curso",
       "Alumnos Curso"
@@ -335,5 +335,40 @@
     "title": "Estadística I",
     "section": "Variables explicativas y de respuesta.",
     "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética.\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
+    "href": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
+    "title": "Estadística I",
+    "section": "Bloqueador Solar => Cáncer Piel ❌",
+    "text": "Bloqueador Solar =&gt; Cáncer Piel ❌\nSupongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
+  },
+  {
+    "objectID": "clases/clase_02.html#variable-confusión",
+    "href": "clases/clase_02.html#variable-confusión",
+    "title": "Estadística I",
+    "section": "Variable Confusión",
+    "text": "Variable Confusión\nTambién se denomina variable oculta, factor de confusión o factor de confusión.\n\n\n\n\n\nEs una variable correlacionada tanto con la variable explicativa como con la variable de respuesta"
+  },
+  {
+    "objectID": "clases/clase_02.html#correlación-no-implica-causación",
+    "href": "clases/clase_02.html#correlación-no-implica-causación",
+    "title": "Estadística I",
+    "section": "Correlación No Implica Causación",
+    "text": "Correlación No Implica Causación\n\n\n\n\n\n\nImportante\n\n\nLa causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una “correlación espuria”\n\n\n\n\nCE 1CE 2CE 3La Regla es …"
+  },
+  {
+    "objectID": "clases/clase_02.html#estudios-observacionales-y-experimentos",
+    "href": "clases/clase_02.html#estudios-observacionales-y-experimentos",
+    "title": "Estadística I",
+    "section": "Estudios Observacionales y Experimentos",
+    "text": "Estudios Observacionales y Experimentos\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_02.html",
+    "href": "clases/clase_02.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
   }
 ]

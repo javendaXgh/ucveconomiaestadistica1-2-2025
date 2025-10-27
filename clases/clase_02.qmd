@@ -1,0 +1,67 @@
+---
+title: "Estadística I"
+subtitle: "Clase 2/Parte I: Variables Asociadas"
+date: "2025/10/27"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## Bloqueador Solar =\> Cáncer Piel ❌ {.small}
+
+Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.
+
+Cuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.
+
+[¿Significa esto que que la protección solar provoca cáncer de piel?]{style="color:orange"}
+
+## Variable Confusión
+
+También se denomina variable oculta, factor de confusión o factor de confusión.
+
+![](images/clase02/variable_confusion.png){fig-align="center" width="600"}
+
+Es una variable correlacionada tanto con la variable explicativa como con la variable de respuesta
+
+## Correlación No Implica Causación {.small}
+
+::: callout-important
+La causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una "correlación espuria"
+:::
+
+::: panel-tabset
+## CE 1
+
+![](images/clase02/correlaciones.png){fig-align="center" width="600"}
+
+## CE 2
+
+[![](images/clase02/espurea3.png){fig-align="center" width="600"}](https://www.tylervigen.com/spurious/correlation/31115_liquefied-petroleum-gas-used-in-venezuela_correlates-with_number-of-las-vegas-hotel-room-check-ins)
+
+## CE 3
+
+![](images/clase02/espurea2.png){fig-align="center" width="600"}
+
+## La Regla es ...
+
+![](images/clase02/bart.png){fig-align="center" width="700"}
+:::
+
+## **Estudios Observacionales y Experimentos**
+
+### Observacionales
+
+Cuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos
+
+No pueden por sí solos mostrar una conexión causal.
+
+### Experimentos
+
+Se realizan cuando se quiere evaluar una posible relación causal
