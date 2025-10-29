@@ -1,0 +1,65 @@
+---
+title: ""
+format: 
+  pdf:
+      documentclass: article 
+      geometry:
+        - margin=.3in 
+      spacing: single 
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+library(openintro)
+library(dplyr)
+library(knitr)
+ames_subset <- ames%>%
+  select(area, price, Kitchen.Qual, MS.SubClass,Overall.Qual, Year.Built,TotRms.AbvGrd)%>%
+  filter(Kitchen.Qual!='TA')%>%
+  sample_n(500)
+
+
+```
+
+## Quiz I / Prof. José M. Avendaño I. / Fecha: 29-10-2025
+
+## Nombre y Apellido: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ / C.I.: \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### Tipo de Variables:
+
+`ames` contiene información de la "Ames Assessor's Office" y se utiliza para calcular los valores de precios de propiedades residenciales individuales vendidas en Iowa, Estados Unidos, con datos comprendidos entre los años 2006 y 2010. El conjunto de datos inicialmente incluye 2.930 observaciones y del total de variables que lo componen solo se tomarán 7 a modo de ejemplo.
+
+| **Nombre Variable** | **Descripción** |
+|------------------------------------|------------------------------------|
+| area | área en mts2 |
+| price | precio de venta |
+| Kitchen.Qual | calificación otorgada al área de la cocina (Ex:Excellent, Gd: Good, TA: Typical/Average, Fa: Fair, Po: Poor) |
+| MS.SubClass | Identifica el tipo de vivienda objeto de la venta (020: 1-story 1946 & todos los estilos ; 030 1- 1945 & vieja,....) |
+| Overall.Qual | calificación emitida sobre el material y el acabado general de la casa, va del 1 al 10 (1 muy pobre al 10 súper excelente) |
+| year.build | año de construcción |
+| TotRms.AbvGrd | total habitaciones |
+
+```{r}
+#| echo: false
+kable(head(ames_subset, 5))
+```
+
+1.  Identifique para cada variabe contenida en `ames` su tipo. (8 ptos.)
+
+    ### De los dos siguientes gráficos que tienen de insumo `ames`:
+
+    ```{r}
+    #| layout-ncol: 2
+    #| fig-height: 3
+    #| echo: false
+    options(scipen=999)
+    plot(ames_subset$price~ames_subset$area,xlab='precio',ylab ='área' )
+
+    plot(ames_subset$area~ames_subset$price,ylab='precio',xlab ='área' )
+    ```
+
+    2.  Cuál de las relaciones de dependencia, según la que muestra cada gráfico, le parece que tiene más sentido. Sólo para el gráfico que seleccionado, justifique su elección, indique el tipo de relación y cualquier otro elemento de importancia. (10 ptos.)
+    3.  Indique cómo se llama este tipo de gráficos y para qué sirven. (2 ptos).

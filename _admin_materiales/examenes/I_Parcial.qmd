@@ -1,0 +1,191 @@
+---
+title: ""
+format: 
+  pdf:
+      documentclass: article 
+      geometry:
+        - margin=.3in 
+      spacing: single 
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+library(openintro)
+library(dplyr)
+library(knitr)
+ames_subset <- ames%>%
+  select(area, price, Kitchen.Qual, MS.SubClass,Overall.Qual, Year.Built,TotRms.AbvGrd)%>%
+  filter(Kitchen.Qual!='TA')%>%
+  sample_n(500)
+
+
+```
+
+## 1 er. Examen Parcial / Prof. José M. Avendaño I. / Fecha: 20-05-2025
+
+## Nombre y Apellido: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ / C.I.: \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+### I- Análisis del Conjunto de Datos:
+
+`ames` contiene información de la "Ames Assessor's Office" y se utiliza para calcular los valores de precios de propiedades residenciales individuales vendidas en Iowa, Estados Unidos, con datos comprendidos entre los años 2006 y 2010. El conjunto de datos inicialmente incluye 2.930 observaciones y del total de variables que lo componen solo se tomarán 7.
+
+| **Nombre Variable** | **Descripción** |
+|----|----|
+| area | área en mts2 |
+| price | precio de venta |
+| Kitchen.Qual | calificación otorgada al área de la cocina (Ex:Excellent, Gd: Good, TA: Typical/Average, Fa: Fair, Po: Poor) |
+| MS.SubClass | Identifica el tipo de vivienda objeto de la venta (020: 1-story 1946 & todos los estilos ; 030 1- 1945 & vieja,....) |
+| Overall.Qual | calificación emitida sobre el material y el acabado general de la casa, va del 1 al 10 (1 muy pobre al 10 súper excelente) |
+| year.build | año de construcción |
+| TotRms.AbvGrd | total habitaciones |
+
+```{r}
+#| echo: false
+kable(head(ames_subset, 5))
+```
+
+1.  Identifique para cada variabe contenida en `ames` su tipo. (1 pto.)
+
+2.  De los dos siguientes gráficos que tienen de insumo `ames`:
+
+    ```{r}
+    #| layout-ncol: 2
+    #| fig-height: 3
+    #| echo: false
+    options(scipen=999)
+    plot(ames_subset$price~ames_subset$area,xlab='precio',ylab ='área' )
+
+    plot(ames_subset$area~ames_subset$price,ylab='precio',xlab ='área' )
+    ```
+
+    a.  Cuál de las relaciones de dependencia, según la que muestra cada gráfico, le parece que tiene más sentido. Sólo para el gráfico que seleccionado, justifique su elección, indique el tipo de relación y cualquier otro elemento de importancia. (1 pto.)
+    b.  Indique cómo se llama este tipo de gráficos y para qué sirven. (0,5 pto.)
+
+### II- Tipos de Estudios
+
+1.  Para cada uno de los siguientes estudios, mencione de qué tipo es cada uno (lo puede hacer directamente en la tabla) (1 pto.):
+
+    | ítem | **Descripción** | **Tipo** |
+    |----|----|----|
+    | 1 | Otorgar microcréditos aleatoriamente a un grupo de familias de bajos ingresos en una comunidad y comparar el desarrollo de sus pequeños negocios y su bienestar económico con un grupo similar que no recibió los microcréditos. |  |
+    | 2 | Realizar una encuesta en Guarenas para determinar la relación entre el nivel educativo de los adultos y sus ingresos anuales en un momento dado. |  |
+    | 3 | En la ciudad Mérida, seguir a un grupo de jóvenes que acceden a programas de formación profesional y a otro grupo que no lo hace, durante cinco años, para comparar sus tasas de empleo y salarios. |  |
+    | 4 | Asignar aleatoriamente a personas desempleadas a un programa de búsqueda de empleo intensivo o a un programa estándar, y luego comparar el tiempo que tardan en encontrar trabajo y la calidad de los empleos obtenidos. |  |
+
+2.  Los resultados parciales del tercer estudio (ítem 3) mencionado anteriormente fueron los siguientes:
+
+    |                           | con empleo | sin empleo |
+    |---------------------------|:----------:|:----------:|
+    | formación profesional     |    150     |     50     |
+    | sin formación profesional |     30     |     60     |
+
+    1.  Para la tabla sumario antes expuesta, calcule los cifras relativas que permitan comprender mejor los datos recolectados (escriba los valores en la misma tabla). (1 pto.)
+    2.  Indique su apreciación y posibles conclusiones sobre los datos que se muestran. (1 pto.)
+    3.  ¿Los datos que fueron obtenidos corresponden a una muestra o a una población (justifique) ? (0,5 pto.)
+
+3.  Si usted hubiese participado en la planificación del estudio mencionado en el ítem 2 de la tabla, indique dos consideraciones o aspectos que hubiese tomado en cuenta. (1 pto.)
+
+### III- Medidas de Tendencia Central
+
+Teniendo presente las fórmulas para calcular distintos tipos de medias:
+
+| Ponderada | Armónica | Geométrica | Aritmética |
+|:--:|:--:|:--:|:--:|
+| $$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$ | $$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$ | $$G = \sqrt[n]{x_1 \times x_2 \times \cdots \times x_n}$$ | $xˉ=\frac{\sum_{i=1}^{n}​}{n}​=\frac{x1​+x2​+⋯+xn}{n}$ |
+
+1.  Indique un caso en la cuál es recomendado el uso de cada una de ellas (2 pto.)
+
+2.  Los 5 valores que se muestran a continuación son una serie simulada que representa la variación porcentual de los precios de vivienda en Caracas entre los años 2015 y 2019.
+
+    Valores: 3,5; 2,6 ; 3,1 ; 4,2 ; 5,3 (cada valor de la serie está separado por ";" )
+
+    1.  Indique cuál es la medida de tendencia central que mejor representaría una media para esta serie. (1 pto.)
+
+    2.  Indique la implementación de la fórmula con la cuál calcularía tal media (no hace falta realizar el cálculo). (1 pto.)
+
+## IV- Representación de Distribución de Variables
+
+1.  A continuación se presenta un histograma con la variable que recoge la edad en que tuvieron su matrimonio 5.534 mujeres de los Estados Unidos. Igualmente se muestra una tabla resúmen de valores estadísticos así como la desviación típica.
+
+    ```{r}
+    #| echo: false
+    #| fig-height: 2
+    ggplot(data=age_at_mar, 
+           aes(x=age))+
+      geom_histogram(bins = 8)
+
+    #'la media es:', round(mean(age_at_mar$age),2),'; la mediana es:', median(age_at_mar$age),
+
+    #
+    summary(age_at_mar$age)
+    cat('La desviación típica (dt) es', round(sd(age_at_mar$age),2))
+    ```
+
+    1.  Indique: cuál medida de tendencia central prefiere según el centro de los datos; forma y dispersión de la distribución; modalidad; sesgo; potenciales valores atípicos; posibles causas de valores atípicos. Obviar la cantidad de barras seleccionadas y asumir que ofrece una selección adecuada. (3 pto.)
+
+    2.  Indique en el gráfico mediante líneas con flechas apuntadaras: - 1 dt ; -2 dt ;- la media; - la mediana. (1 pto.)
+
+    3.  Según el gráfico, aproximadamente indique en qué rango de edades se da la mayor cantidad de matrimonios. (0.5 pto.)
+
+    4.  ¿Cuál es el rango representado y cuáles valores, con su correspondiente nombre, componen este rango? (0.5 pto.)
+
+    5.  Indique los valores del percentil 25, 50 y 75. (0.5 pto.)
+
+2.  Representación gráfico de caja de datos de expectativa de vida para los continentes Europa y Africa para el año 1952 obtenidos de Gapminder :
+
+    ```{r}
+    #| echo: false
+    #| fig-height: 2
+
+    datos_boxplot <- gapminder::gapminder%>%
+      filter(year== min(year) & continent %in% c('Africa','Europe') )
+
+    datos_africa <- gapminder::gapminder%>%
+      filter(year== min(year) & continent %in% c('Africa') )
+
+    datos_europa <- gapminder::gapminder%>%
+      filter(year== min(year) & continent %in% c('Europe') )
+    # datos_boxplot
+    ggplot(data = datos_boxplot,
+           mapping = aes(x=continent, 
+                         y= lifeExp)) +
+      geom_boxplot(fill= "#fb8b24",
+                   color='#00a6fb',
+                   outlier.colour = 'red')
+
+    cat('datos resumen estadístico expectativa de vida Africa:')
+     summary(datos_africa$lifeExp)
+    cat('datos resumen estadístico expectativa de vida Europa' )
+    summary(datos_europa$lifeExp)
+    ```
+
+    1.  Cómo calcularía e interpretaría valores atípicos en este gráfico (una de las fórmulas es $bigote superior = Q3 + 1.5 x RIC$). De los anterior, ¿qué se desprende? (0.5 pto.)
+
+    2.  Compare e interprete, los valores estadísticos representados para cada período. (3 ptos.)
+
+## Extra Puntos (2 ptos. cu).
+
+Condición para aplicar a los extra puntos: sumar entre todos las respuestas anteriores 12 puntos.
+
+1.  Gráfico en Pantalla
+
+2.  Para el siguiente histograma de la variable `ames$price` indique: cuál medida de tendencia central prefiere según el centro de los datos; forma y dispersión de la distribución; modalidad; sesgo; potenciales valores atípicos; posibles causas de valores atípicos. Obviar la cantidad de barras seleccionadas y asumir que ofrece una selección adecuada.
+
+    ```{r}
+    #| echo: false
+    #| fig-height: 2
+    ggplot(data=ames, 
+           aes(x=price))+
+      geom_histogram(bins = 8)
+
+    #'la media es:', round(mean(age_at_mar$age),2),'; la mediana es:', median(age_at_mar$age),
+
+    #
+    summary(ames$price)
+    cat('la desviación típica (dt) es', round(sd(ames$price),2))
+
+
+    ```
