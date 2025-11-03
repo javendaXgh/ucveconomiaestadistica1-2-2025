@@ -43,7 +43,7 @@
     "href": "clases/clase_01.html#datos-tabulares",
     "title": "Estadística I",
     "section": "Datos Tabulares",
-    "text": "Datos Tabulares\nHay observaciones que generalmente en los datos tabulares estarán representados por (filas) , las cuales a su vez contienen distintos atributos o variables, que generalmente corresponden a las (columnas).\n\n\n\n\n\n\n\n\npaciente\ngroup\noutcome\n\n\n\n\n33\ntreatment\nstroke\n\n\n130\ntreatment\nno event\n\n\n173\ntreatment\nno event\n\n\n195\ntreatment\nno event\n\n\n414\ncontrol\nno event"
+    "text": "Datos Tabulares\nHay observaciones que generalmente en los datos tabulares estarán representados por (filas) , las cuales a su vez contienen distintos atributos o variables, que generalmente corresponden a las (columnas).\n\n\n\n\n\n\n\n\npaciente\ngroup\noutcome\n\n\n\n\n62\ntreatment\nno event\n\n\n126\ntreatment\nno event\n\n\n311\ncontrol\nno event\n\n\n368\ncontrol\nno event\n\n\n371\ncontrol\nno event"
   },
   {
     "objectID": "clases/clase_01.html#asignados-por-grupo",
@@ -141,7 +141,7 @@
     "href": "clases/clase_01.html#variables-conjunto-de-datos",
     "title": "Estadística I",
     "section": "Variables Conjunto de Datos",
-    "text": "Variables Conjunto de Datos\n\n\n\n\n\n\n\n\nloan_amount\ninterest_rate\nterm\ngrade\nstate\ntotal_income\nhomeownership\n\n\n\n\n3000\n7.96\n36\nA\nCA\n34000\nrent\n\n\n40000\n20.00\n60\nD\nWI\n168000\nmortgage\n\n\n6000\n10.42\n36\nB\nTX\n60000\nmortgage\n\n\n40000\n12.62\n36\nC\nTX\n192000\nmortgage\n\n\n6000\n7.96\n36\nA\nCA\n100000\nrent\n\n\n3000\n17.09\n36\nD\nNY\n28800\nrent\n\n\n22000\n10.90\n60\nB\nNJ\n59000\nrent\n\n\n30000\n7.35\n36\nA\nCA\n103000\nrent"
+    "text": "Variables Conjunto de Datos\n\n\n\n\n\n\n\n\nloan_amount\ninterest_rate\nterm\ngrade\nstate\ntotal_income\nhomeownership\n\n\n\n\n18500\n12.62\n60\nC\nFL\n192000\nmortgage\n\n\n6400\n9.92\n36\nB\nIN\n67000\nmortgage\n\n\n14500\n6.08\n36\nA\nMO\n80000\nmortgage\n\n\n18000\n19.42\n60\nD\nFL\n76000\nmortgage\n\n\n4400\n18.45\n36\nD\nIL\n58000\nrent\n\n\n30000\n21.45\n36\nD\nNV\n58500\nmortgage\n\n\n15000\n16.02\n36\nC\nNJ\n50000\nrent\n\n\n32000\n9.44\n36\nB\nNV\n112000\nmortgage"
   },
   {
     "objectID": "clases/clase_01.html#descripción-variables",
