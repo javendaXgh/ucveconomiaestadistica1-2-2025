@@ -1,179 +1,28 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Actividades",
-    "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadas 🛠️ Ejecutar Notebook en Google Colab🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
-    "crumbs": [
-      "Sobre el Curso",
-      "Actividades"
-    ]
-  },
-  {
-    "objectID": "curso-programa.html",
-    "href": "curso-programa.html",
-    "title": "Contenido",
-    "section": "",
-    "text": "El orden en que serán impartidos los temas puedes ser sujeto a modificaciones.\n\n\n\n\n\n\n\nConceptos básicos de la estadística. Definición, estadística descriptiva e inferencial. Introducción a los Datos. Conceptos de Población, Muestra, Variable, clasificación de las variables.\n\n\n\n\nPresentación de datos. Tablas de frecuencia para variables cualitativas y cuantitativas. Gráficos estadísticos.\n\n\n\n\nMedidas de tendencia central. Definición. Media aritmética, propiedades y aplicaciones. Media geométrica. Media armónica. Moda. Mediana\n\n\n\n\nMedidas de ubicación. Definición. Cuartiles, Deciles, Percentiles. Aplicaciones de las medidas de ubicación\n\n\n\n\nMedidas de dispersión. Concepto. El Rango. Desviación media. Desviación cuartil. La Varianza, propiedades. Desviación típica. El coeficiente de variación, aplicaciones. Momentos. Medidas de asimetría y curtosis\n\n\n\n\nNúmeros índice. Definiciones, propiedades, tipos y aplicaciones\n\n\n\n\nAnálisis de correlación y regresión lineal |\n\n\n\n\nIntroducción a la teoría de la probabilidad\n\n\n\n\nIntroducción al estudio de las variables aleatorias.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Contenido del Curso"
-    ]
-  },
-  {
-    "objectID": "planeval.html",
-    "href": "planeval.html",
-    "title": "Plan de Evaluación",
-    "section": "",
-    "text": "Detalle\nPorcentaje\n\n\n\n\n6 cuestionarios\n20 %\n\n\nIntervenciones y asistencia\n20 %\n\n\nParcial I\n20 %\n\n\nParcial II\n20 %\n\n\nParcial III\n20 %",
-    "crumbs": [
-      "Sobre el Curso",
-      "Plan de Evaluación"
-    ]
-  },
-  {
-    "objectID": "codigoconducta.html",
-    "href": "codigoconducta.html",
-    "title": "Código de Conducta del Estudiante",
-    "section": "",
-    "text": "1. Asistencia a Clases:\n\nLa asistencia es obligatoria y se tendrá en cuenta para la calificación final.\nCada inasistencia injustificada restará puntos de la nota final.\nLas inasistencias deberán ser justificadas con un comprobante válido (certificado médico, etc.) y notificadas al profesor con anticipación, siempre que sea posible.\nMás de 5 inasistencias anulan la obtención del correspondiente puntaje.\n\n2. Plagio:\n\nEl plagio, en cualquiera de sus formas, no está permitido.\nCualquier trabajo que se detecte como plagiado será calificado con cero.\nSe espera que los estudiantes realicen sus trabajos de forma individual, a menos que se indique lo contrario.\n\n3. Uso de IA Generativas:\n\nSe permite el uso de herramientas de IA generativas como ChatGPT, Gemini, Llama.\nEs obligatorio citar la fuente y la herramienta utilizada en el trabajo entregado.\nEl objetivo es usar la IA para complementar el aprendizaje, no para sustituirlo.\n\n4. Participación:\n\nLa participación activa en clase es fundamental para el aprendizaje.\nSe valorará la participación, la formulación de preguntas y la colaboración con otros estudiantes.\n\n5. Entrega de Trabajos:\n\nLos trabajos, en caso de ser asignados, deberán ser entregados en la fecha y hora indicadas.\nLas entregas tardías serán penalizadas, a menos que se justifique un motivo válido. Igualmente, las entregas tardías tendrán una fecha límite no superior a los 7 días a la fecha indicada. La penalización será de un 3% menos a la nota obtenida por día de retardo, con un límite de 20% de penalidad.\nLos trabajos deben cumplir con los requisitos de formato y contenido especificados por el profesor.\n\n6. Respeto:\n\nSe espera un ambiente de respeto y colaboración entre todos los participantes del curso.\nSe prohíbe cualquier forma de discriminación, acoso o comportamiento inapropiado.\n\n7. Comunicación:\n\nLa comunicación con el profesor se realizará a través de los canales establecidos (correo electrónico u otro que sea acordado).\nSe espera que los estudiantes revisen regularmente los anuncios y mensajes del profesor en el medio electrónico que sea acordado.\n\n\nUso de dispositivos electrónicos: \n\n\nLos teléfonos celulares deben permanecer en modo silencioso o apagado durante toda la duración de la clase.\nSe prohíbe el uso de teléfonos celulares para llamadas, mensajes de texto, navegación en redes sociales, juegos o cualquier otra actividad no relacionada con la clase.\nEl uso de la cámara del teléfono para grabar audio o video de la clase solo se permite con el consentimiento explícito del profesor.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Código de Conducta"
-    ]
-  },
-  {
-    "objectID": "playground.html",
-    "href": "playground.html",
-    "title": "Zona de Programación en R ir a siguiente lámina",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
     "objectID": "playground.html#codificar",
     "href": "playground.html#codificar",
     "title": "Zona de Programación en R ir a siguiente lámina",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+    "section": "Codificar",
+    "text": "Codificar"
   },
   {
     "objectID": "playground.html#codificar-1",
     "href": "playground.html#codificar-1",
     "title": "Zona de Programación en R ir a siguiente lámina",
     "section": "Codificar",
-    "text": "Codificar\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "clases/playground.html",
-    "href": "clases/playground.html",
-    "title": "Zona de Programación en R",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Talleres-Otros",
-      "Zona para Programar en R"
-    ]
+    "text": "Codificar"
   },
   {
     "objectID": "clases/playground.html#codificar",
     "href": "clases/playground.html#codificar",
     "title": "Zona de Programación en R",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "section": "Codificar",
+    "text": "Codificar\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n🔗 Estadística 1",
     "crumbs": [
       "Talleres-Otros",
       "Zona para Programar en R"
     ]
-  },
-  {
-    "objectID": "scripts/test_presentacion.html",
-    "href": "scripts/test_presentacion.html",
-    "title": "test pib",
-    "section": "",
-    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#nueva-lámina",
-    "href": "scripts/test_presentacion.html#nueva-lámina",
-    "title": "test pib",
-    "section": "",
-    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
-    "href": "scripts/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
-    "title": "test pib",
-    "section": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?",
-    "text": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?\n\nEl PIB es el valor monetario total de todos los bienes y servicios finales producidos dentro de las fronteras de un país en un período de tiempo específico (generalmente un año).\nPiensa en él como una medida del tamaño de la economía de un país.\nUn PIB más alto generalmente indica una economía más grande y, a menudo, más próspera."
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
-    "href": "scripts/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
-    "title": "test pib",
-    "section": "Lámina 2: ¿Qué se incluye en el PIB?",
-    "text": "Lámina 2: ¿Qué se incluye en el PIB?\n\nBienes Finales: Productos listos para ser consumidos (ej. un carro nuevo, una manzana, un corte de cabello). No se incluyen bienes intermedios (ej. el acero para hacer el carro).\nServicios: Actividades realizadas por personas (ej. la educación de un profesor, la atención médica de un doctor, el trabajo de un electricista).\nProducción Doméstica: Solo se cuenta lo producido dentro de las fronteras del país, sin importar la nacionalidad de quien lo produce.\nPeríodo Específico: Generalmente se mide anualmente o trimestralmente."
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
-    "href": "scripts/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
-    "title": "test pib",
-    "section": "Lámina 3: ¿Qué NO se incluye en el PIB?",
-    "text": "Lámina 3: ¿Qué NO se incluye en el PIB?\n\nBienes Intermedios: Materiales o productos que se utilizan para producir otros bienes (ej. harina para hacer pan).\nBienes de Segunda Mano: La venta de un carro usado no se cuenta en el PIB actual, ya que ya se contó cuando fue nuevo.\nActividades No de Mercado: Trabajo doméstico no remunerado (ej. cocinar en casa), voluntariado.\nActividades Ilegales: Venta de drogas, contrabando, etc.\nTransferencias Financieras: Pagos de seguridad social, becas, etc. (no representan producción actual)."
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
-    "href": "scripts/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
-    "title": "test pib",
-    "section": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)",
-    "text": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)\nLa forma más común de calcular el PIB es a través del enfoque del gasto, que suma todo el gasto final en la economía:\n\\[PIB = C + I + G + (X - M)\\]\nDonde:\n\n(C) = Consumo: Gasto de los hogares en bienes y servicios.\n(I) = Inversión: Gasto de las empresas en bienes de capital (maquinaria, fábricas), inventarios y construcción residencial.\n(G) = Gasto Público: Gasto del gobierno en bienes y servicios (salarios de funcionarios, infraestructura, etc.).\n(X) = Exportaciones: Bienes y servicios producidos en el país y vendidos al extranjero.\n(M) = Importaciones: Bienes y servicios producidos en el extranjero y comprados por el país.\n((X - M)) = Exportaciones Netas."
-  },
-  {
-    "objectID": "scripts/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
-    "href": "scripts/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
-    "title": "test pib",
-    "section": "Lámina 5: ¿Por qué es importante el PIB?",
-    "text": "Lámina 5: ¿Por qué es importante el PIB?\n\nMedida del Crecimiento Económico: Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.\nComparaciones Internacionales: Permite comparar el tamaño de las economías de diferentes países.\nIndicador del Nivel de Vida (aproximado): Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.\nBase para Políticas Económicas: Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias.\n\n\nEspero que estas láminas sean útiles para tus estudiantes. ¿Necesitas alguna modificación o lámina adicional?"
-  },
-  {
-    "objectID": "participantes.html",
-    "href": "participantes.html",
-    "title": "Listado Participantes",
-    "section": "",
-    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAaron Romero\n28.312.670\n\n\n2\nAbraham Carmona\n29.992.575\n\n\n3\nAbraham Elbitar\n29.864.837\n\n\n4\nAdrian Acevedo\n31.984.508\n\n\n5\nAngela Salcedo\n31.508.240\n\n\n6\nAshley Reyes\n28.326.912\n\n\n7\nChantal Carrillo\n30.437.350\n\n\n8\nDaniel Maldonado\n29.664.107\n\n\n9\nDilam Depablos\n31.761.713\n\n\n10\nEysler Jiménez\n25.210.266\n\n\n11\nFranyerber Alcalá\n29.731.662\n\n\n12\nGerardo Escalante\n31.193.520\n\n\n13\nJosé Ruiz\n30.152.542\n\n\n14\nJuan Piñero\n30.678.650\n\n\n15\nLeysamar Rivas\n30.950.950\n\n\n16\nMariargelia Bolivar\n28.014.942\n\n\n17\nMaría Fernanda Cuervo\n27.988.880\n\n\n18\nMaría Urribarri\n32.346.774\n\n\n19\nMiguel Riera\n31.418.043\n\n\n20\nMiller De Freitas\n32.281.822\n\n\n21\nNathalia Diaz\n31.945.857\n\n\n22\nPaola Lapenna\n31.777.525\n\n\n23\nRachel Mahfoud\n31.170.925\n\n\n24\nRicardo Obregón\n28.302.190\n\n\n25\nRubén Torres\n28.311.075\n\n\n26\nSamuel Isaaccura\n31.867.328\n\n\n27\nSara Henríquez\n29.596.779\n\n\n28\nSofia Goitte\n32.417.008\n\n\n29\nSusana González\n30.346.674\n\n\n30\nValeria García\n30.751.510\n\n\n31\nVictor Cortez\n31.249.794\n\n\n32\nWinder Pico\n29.584.271",
-    "crumbs": [
-      "Sobre el Curso",
-      "Alumnos Curso"
-    ]
-  },
-  {
-    "objectID": "recursos.html",
-    "href": "recursos.html",
-    "title": "Recursos Disponibles",
-    "section": "",
-    "text": "A continuación se listan una serie de recursos altamente valiosos que sirven de apoyo para el desarrollo del curso.\n\nLibros Recomendados\n\nOpenIntro Statistics versión español: OpenIntro dentro del site o en https://rpubs.com/javenda/openintroes Esta versión está sujeta a correcciones.\nOpenIntro Statistics: Acceso de descarga al libro en inglés: https://leanpub.com/os Nota: seleccionar you-pay $0.00 .\nhttps://www.openintro.org/book/stat/: https://www.openintro.org/book/os/ OpenIntro Statistics es una versión dinámica del plan de estudios tradicional, que se utiliza con éxito en colegios comunitarios y en la Ivy League.\nOpenIntro Labs for R and tidyverse OpenIntro Labs, fomenta la comprensión y la aplicación de la estadística mediante el análisis de datos aplicados. Los laboratorios se titulan según el área temática, que corresponde a capítulos específicos de las tres versiones de OpenIntro Statistics.\nR para profesionales de los datos: una introducción https://www.datanalytics.com/libro_r/ por Carlos J. Gil Bellosta\nIntroductory Business Statistic: libro del proyecto OpenStax, el cual se concentra en la edición de de recursos educativos abiertos (REA) y es un proveedor de tecnologías de aprendizaje interactivo e investigación educativa para la escuela secundaria y la universidad realizado por la Universidad Rice. Enlace https://assets.openstax.org/oscms-prodcms/media/documents/Introductory_Business_Statistics_2e_-_WEB.pdf (sólo inglés).\nAn Introduction to Statistical Learning ISL with R Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani. https://www.statlearning.com (sólo inglés).\nIntroducción a R : https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf por R Development Core Team Modelado (machine learning y estadístico) https://github.com/tidymodels/learntidymodels (sólo inglés).\n\n\n\nRepositorios de librerías-paquetes\n\nhttps://cran.r-project.org/\nhttps://ropensci.org/packages/\nhttps://www.bioconductor.org/packages/release/BiocViews.html#___Software\n\n\n\nTutoriales, info general sobre R y sus aplicaciones:\n\nhttps://www.r-bloggers.com/\nhttps://github.com/josersosa/Programando_en_R\nhttps://swcarpentry.github.io/r-novice-gapminder-es/\nhttps://gonzalezgouveia.com/curso-de-r-studio-gratis/\nhttps://www.infoworld.com/profile/sharon-machlis/\nhttps://rafael-zambrano-blog-ds.netlify.app/blog\nhttps://intro-r-eph.netlify.app/bio , https://intro-r-eph.netlify.app/0a_diapositivas/01b_r_intro_presentacion#1\n\n\n\nSoftware y descargas:\n\nLenguaje R: https://cran.r-project.org/ versión actual R-4.4.3. Video instalación: pendiente por agregar\nRStudio Desktop https://posit.co/download/rstudio-desktop/ : entorno de desarrollo de fácil integración con el lenguaje R Video instalación: pendiente por agregar",
-    "crumbs": [
-      "Sobre el Curso",
-      "Recursos Disponibles"
-    ]
-  },
-  {
-    "objectID": "curso-equipo.html",
-    "href": "curso-equipo.html",
-    "title": "Equipo de Enseñanza",
-    "section": "",
-    "text": "Prof. José Miguel Avendaño I.:\nProfesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Grandes Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Equipo de Enseñanza"
-    ]
-  },
-  {
-    "objectID": "clases/clase_01.html",
-    "href": "clases/clase_01.html",
-    "title": "Estadística I",
-    "section": "",
-    "text": "Los científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
   },
   {
     "objectID": "clases/clase_01.html#aproximación-concepto-estadística",
@@ -337,6 +186,169 @@
     "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética.\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
+    "objectID": "curso-equipo.html",
+    "href": "curso-equipo.html",
+    "title": "Equipo de Enseñanza",
+    "section": "",
+    "text": "Prof. José Miguel Avendaño I.:\nProfesor Escuela de Economía (U.C.V.), Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciones se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Grandes Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Equipo de Enseñanza"
+    ]
+  },
+  {
+    "objectID": "curso-programa.html",
+    "href": "curso-programa.html",
+    "title": "Contenido",
+    "section": "",
+    "text": "El orden en que serán impartidos los temas puedes ser sujeto a modificaciones.\n\n\n\n\n\n\n\nConceptos básicos de la estadística. Definición, estadística descriptiva e inferencial. Introducción a los Datos. Conceptos de Población, Muestra, Variable, clasificación de las variables.\n\n\n\n\nPresentación de datos. Tablas de frecuencia para variables cualitativas y cuantitativas. Gráficos estadísticos.\n\n\n\n\nMedidas de tendencia central. Definición. Media aritmética, propiedades y aplicaciones. Media geométrica. Media armónica. Moda. Mediana\n\n\n\n\nMedidas de ubicación. Definición. Cuartiles, Deciles, Percentiles. Aplicaciones de las medidas de ubicación\n\n\n\n\nMedidas de dispersión. Concepto. El Rango. Desviación media. Desviación cuartil. La Varianza, propiedades. Desviación típica. El coeficiente de variación, aplicaciones. Momentos. Medidas de asimetría y curtosis\n\n\n\n\nNúmeros índice. Definiciones, propiedades, tipos y aplicaciones\n\n\n\n\nAnálisis de correlación y regresión lineal |\n\n\n\n\nIntroducción a la teoría de la probabilidad\n\n\n\n\nIntroducción al estudio de las variables aleatorias.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Contenido del Curso"
+    ]
+  },
+  {
+    "objectID": "participantes.html",
+    "href": "participantes.html",
+    "title": "Listado Participantes",
+    "section": "",
+    "text": "N.\nNombre\ncédula de identidad\n\n\n\n\n1\nAaron Romero\n28.312.670\n\n\n2\nAbraham Carmona\n29.992.575\n\n\n3\nAbraham Elbitar\n29.864.837\n\n\n4\nAdrian Acevedo\n31.984.508\n\n\n5\nAngela Salcedo\n31.508.240\n\n\n6\nAshley Reyes\n28.326.912\n\n\n7\nChantal Carrillo\n30.437.350\n\n\n8\nDaniel Maldonado\n29.664.107\n\n\n9\nDilam Depablos\n31.761.713\n\n\n10\nEysler Jiménez\n25.210.266\n\n\n11\nFranyerber Alcalá\n29.731.662\n\n\n12\nGerardo Escalante\n31.193.520\n\n\n13\nJosé Ruiz\n30.152.542\n\n\n14\nJuan Piñero\n30.678.650\n\n\n15\nLeysamar Rivas\n30.950.950\n\n\n16\nMariargelia Bolivar\n28.014.942\n\n\n17\nMaría Fernanda Cuervo\n27.988.880\n\n\n18\nMaría Urribarri\n32.346.774\n\n\n19\nMiguel Riera\n31.418.043\n\n\n20\nMiller De Freitas\n32.281.822\n\n\n21\nNathalia Diaz\n31.945.857\n\n\n22\nPaola Lapenna\n31.777.525\n\n\n23\nRachel Mahfoud\n31.170.925\n\n\n24\nRicardo Obregón\n28.302.190\n\n\n25\nRubén Torres\n28.311.075\n\n\n26\nSamuel Isaaccura\n31.867.328\n\n\n27\nSara Henríquez\n29.596.779\n\n\n28\nSofia Goitte\n32.417.008\n\n\n29\nSusana González\n30.346.674\n\n\n30\nValeria García\n30.751.510\n\n\n31\nVictor Cortez\n31.249.794\n\n\n32\nWinder Pico\n29.584.271",
+    "crumbs": [
+      "Sobre el Curso",
+      "Alumnos Curso"
+    ]
+  },
+  {
+    "objectID": "vidlist.html",
+    "href": "vidlist.html",
+    "title": "Videos Apoyo",
+    "section": "",
+    "text": "Playlist YouTube Introducción a los Datos",
+    "crumbs": [
+      "Videos de Apoyo",
+      "vínculos"
+    ]
+  },
+  {
+    "objectID": "glos.html",
+    "href": "glos.html",
+    "title": "Glosario Funciones R",
+    "section": "",
+    "text": "Se indicarán las funciones de R que son usadas a lo largo del curso. El orden en que se muestran está asociado al orden en que fueron mostradas en las distintas clases.\nLas siguientes funciones fueron abordadas en el 1 er. notebook",
+    "crumbs": [
+      "Talleres-Otros",
+      "Glosario Funciones R"
+    ]
+  },
+  {
+    "objectID": "glos.html#funciones-dplyr",
+    "href": "glos.html#funciones-dplyr",
+    "title": "Glosario Funciones R",
+    "section": "Funciones dplyr",
+    "text": "Funciones dplyr\n\nmutate :\nrename :",
+    "crumbs": [
+      "Talleres-Otros",
+      "Glosario Funciones R"
+    ]
+  },
+  {
+    "objectID": "glos.html#operadores",
+    "href": "glos.html#operadores",
+    "title": "Glosario Funciones R",
+    "section": "Operadores",
+    "text": "Operadores\n\n$ :\n%&gt;% :",
+    "crumbs": [
+      "Talleres-Otros",
+      "Glosario Funciones R"
+    ]
+  },
+  {
+    "objectID": "planeval.html",
+    "href": "planeval.html",
+    "title": "Plan de Evaluación",
+    "section": "",
+    "text": "Detalle\nPorcentaje\n\n\n\n\n6 cuestionarios\n20 %\n\n\nIntervenciones y asistencia\n20 %\n\n\nParcial I\n20 %\n\n\nParcial II\n20 %\n\n\nParcial III\n20 %",
+    "crumbs": [
+      "Sobre el Curso",
+      "Plan de Evaluación"
+    ]
+  },
+  {
+    "objectID": "recursos.html",
+    "href": "recursos.html",
+    "title": "Recursos Disponibles",
+    "section": "",
+    "text": "A continuación se listan una serie de recursos altamente valiosos que sirven de apoyo para el desarrollo del curso.\n\nLibros Recomendados\n\nOpenIntro Statistics versión español: OpenIntro dentro del site o en https://rpubs.com/javenda/openintroes Esta versión está sujeta a correcciones.\nOpenIntro Statistics: Acceso de descarga al libro en inglés: https://leanpub.com/os Nota: seleccionar you-pay $0.00 .\nhttps://www.openintro.org/book/stat/: https://www.openintro.org/book/os/ OpenIntro Statistics es una versión dinámica del plan de estudios tradicional, que se utiliza con éxito en colegios comunitarios y en la Ivy League.\nOpenIntro Labs for R and tidyverse OpenIntro Labs, fomenta la comprensión y la aplicación de la estadística mediante el análisis de datos aplicados. Los laboratorios se titulan según el área temática, que corresponde a capítulos específicos de las tres versiones de OpenIntro Statistics.\nR para profesionales de los datos: una introducción https://www.datanalytics.com/libro_r/ por Carlos J. Gil Bellosta\nIntroductory Business Statistic: libro del proyecto OpenStax, el cual se concentra en la edición de de recursos educativos abiertos (REA) y es un proveedor de tecnologías de aprendizaje interactivo e investigación educativa para la escuela secundaria y la universidad realizado por la Universidad Rice. Enlace https://assets.openstax.org/oscms-prodcms/media/documents/Introductory_Business_Statistics_2e_-_WEB.pdf (sólo inglés).\nAn Introduction to Statistical Learning ISL with R Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani. https://www.statlearning.com (sólo inglés).\nIntroducción a R : https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf por R Development Core Team Modelado (machine learning y estadístico) https://github.com/tidymodels/learntidymodels (sólo inglés).\n\n\n\nRepositorios de librerías-paquetes\n\nhttps://cran.r-project.org/\nhttps://ropensci.org/packages/\nhttps://www.bioconductor.org/packages/release/BiocViews.html#___Software\n\n\n\nTutoriales, info general sobre R y sus aplicaciones:\n\nhttps://www.r-bloggers.com/\nhttps://github.com/josersosa/Programando_en_R\nhttps://swcarpentry.github.io/r-novice-gapminder-es/\nhttps://gonzalezgouveia.com/curso-de-r-studio-gratis/\nhttps://www.infoworld.com/profile/sharon-machlis/\nhttps://rafael-zambrano-blog-ds.netlify.app/blog\nhttps://intro-r-eph.netlify.app/bio , https://intro-r-eph.netlify.app/0a_diapositivas/01b_r_intro_presentacion#1\n\n\n\nSoftware y descargas:\n\nLenguaje R: https://cran.r-project.org/ versión actual R-4.4.3. Video instalación: pendiente por agregar\nRStudio Desktop https://posit.co/download/rstudio-desktop/ : entorno de desarrollo de fácil integración con el lenguaje R Video instalación: pendiente por agregar",
+    "crumbs": [
+      "Sobre el Curso",
+      "Recursos Disponibles"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Actividades",
+    "section": "",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadas 🛠️ Ejecutar Notebook en Google Colab🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "crumbs": [
+      "Sobre el Curso",
+      "Actividades"
+    ]
+  },
+  {
+    "objectID": "index.html#agradecimientos",
+    "href": "index.html#agradecimientos",
+    "title": "Actividades",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\n\nTodo el profesorado",
+    "crumbs": [
+      "Sobre el Curso",
+      "Actividades"
+    ]
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#nueva-lámina",
+    "href": "scripts/test_presentacion.html#nueva-lámina",
+    "title": "test pib",
+    "section": "nueva lámina",
+    "text": "nueva lámina\n\nprimer punto\nsegundo punto\n\nesto va en negrilla"
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
+    "href": "scripts/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
+    "title": "test pib",
+    "section": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?",
+    "text": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?\n\nEl PIB es el valor monetario total de todos los bienes y servicios finales producidos dentro de las fronteras de un país en un período de tiempo específico (generalmente un año).\nPiensa en él como una medida del tamaño de la economía de un país.\nUn PIB más alto generalmente indica una economía más grande y, a menudo, más próspera."
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
+    "href": "scripts/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
+    "title": "test pib",
+    "section": "Lámina 2: ¿Qué se incluye en el PIB?",
+    "text": "Lámina 2: ¿Qué se incluye en el PIB?\n\nBienes Finales: Productos listos para ser consumidos (ej. un carro nuevo, una manzana, un corte de cabello). No se incluyen bienes intermedios (ej. el acero para hacer el carro).\nServicios: Actividades realizadas por personas (ej. la educación de un profesor, la atención médica de un doctor, el trabajo de un electricista).\nProducción Doméstica: Solo se cuenta lo producido dentro de las fronteras del país, sin importar la nacionalidad de quien lo produce.\nPeríodo Específico: Generalmente se mide anualmente o trimestralmente."
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
+    "href": "scripts/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
+    "title": "test pib",
+    "section": "Lámina 3: ¿Qué NO se incluye en el PIB?",
+    "text": "Lámina 3: ¿Qué NO se incluye en el PIB?\n\nBienes Intermedios: Materiales o productos que se utilizan para producir otros bienes (ej. harina para hacer pan).\nBienes de Segunda Mano: La venta de un carro usado no se cuenta en el PIB actual, ya que ya se contó cuando fue nuevo.\nActividades No de Mercado: Trabajo doméstico no remunerado (ej. cocinar en casa), voluntariado.\nActividades Ilegales: Venta de drogas, contrabando, etc.\nTransferencias Financieras: Pagos de seguridad social, becas, etc. (no representan producción actual)."
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
+    "href": "scripts/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
+    "title": "test pib",
+    "section": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)",
+    "text": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)\nLa forma más común de calcular el PIB es a través del enfoque del gasto, que suma todo el gasto final en la economía:\n\\[PIB = C + I + G + (X - M)\\]\nDonde:\n\n(C) = Consumo: Gasto de los hogares en bienes y servicios.\n(I) = Inversión: Gasto de las empresas en bienes de capital (maquinaria, fábricas), inventarios y construcción residencial.\n(G) = Gasto Público: Gasto del gobierno en bienes y servicios (salarios de funcionarios, infraestructura, etc.).\n(X) = Exportaciones: Bienes y servicios producidos en el país y vendidos al extranjero.\n(M) = Importaciones: Bienes y servicios producidos en el extranjero y comprados por el país.\n((X - M)) = Exportaciones Netas."
+  },
+  {
+    "objectID": "scripts/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
+    "href": "scripts/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
+    "title": "test pib",
+    "section": "Lámina 5: ¿Por qué es importante el PIB?",
+    "text": "Lámina 5: ¿Por qué es importante el PIB?\n\nMedida del Crecimiento Económico: Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.\nComparaciones Internacionales: Permite comparar el tamaño de las economías de diferentes países.\nIndicador del Nivel de Vida (aproximado): Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.\nBase para Políticas Económicas: Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias."
+  },
+  {
     "objectID": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "href": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "title": "Estadística I",
@@ -365,10 +377,14 @@
     "text": "Estudios Observacionales y Experimentos\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal\n\n\n\n\n🔗 Estadística 1"
   },
   {
-    "objectID": "clases/clase_02.html",
-    "href": "clases/clase_02.html",
-    "title": "Estadística I",
+    "objectID": "codigoconducta.html",
+    "href": "codigoconducta.html",
+    "title": "Código de Conducta del Estudiante",
     "section": "",
-    "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
+    "text": "1. Asistencia a Clases:\n\nLa asistencia es obligatoria y se tendrá en cuenta para la calificación final.\nCada inasistencia injustificada restará puntos de la nota final.\nLas inasistencias deberán ser justificadas con un comprobante válido (certificado médico, etc.) y notificadas al profesor con anticipación, siempre que sea posible.\nMás de 5 inasistencias anulan la obtención del correspondiente puntaje.\n\n2. Plagio:\n\nEl plagio, en cualquiera de sus formas, no está permitido.\nCualquier trabajo que se detecte como plagiado será calificado con cero.\nSe espera que los estudiantes realicen sus trabajos de forma individual, a menos que se indique lo contrario.\n\n3. Uso de IA Generativas:\n\nSe permite el uso de herramientas de IA generativas como ChatGPT, Gemini, Llama.\nEs obligatorio citar la fuente y la herramienta utilizada en el trabajo entregado.\nEl objetivo es usar la IA para complementar el aprendizaje, no para sustituirlo.\n\n4. Participación:\n\nLa participación activa en clase es fundamental para el aprendizaje.\nSe valorará la participación, la formulación de preguntas y la colaboración con otros estudiantes.\n\n5. Entrega de Trabajos:\n\nLos trabajos, en caso de ser asignados, deberán ser entregados en la fecha y hora indicadas.\nLas entregas tardías serán penalizadas, a menos que se justifique un motivo válido. Igualmente, las entregas tardías tendrán una fecha límite no superior a los 7 días a la fecha indicada. La penalización será de un 3% menos a la nota obtenida por día de retardo, con un límite de 20% de penalidad.\nLos trabajos deben cumplir con los requisitos de formato y contenido especificados por el profesor.\n\n6. Respeto:\n\nSe espera un ambiente de respeto y colaboración entre todos los participantes del curso.\nSe prohíbe cualquier forma de discriminación, acoso o comportamiento inapropiado.\n\n7. Comunicación:\n\nLa comunicación con el profesor se realizará a través de los canales establecidos (correo electrónico u otro que sea acordado).\nSe espera que los estudiantes revisen regularmente los anuncios y mensajes del profesor en el medio electrónico que sea acordado.\n\n\nUso de dispositivos electrónicos: \n\n\nLos teléfonos celulares deben permanecer en modo silencioso o apagado durante toda la duración de la clase.\nSe prohíbe el uso de teléfonos celulares para llamadas, mensajes de texto, navegación en redes sociales, juegos o cualquier otra actividad no relacionada con la clase.\nEl uso de la cámara del teléfono para grabar audio o video de la clase solo se permite con el consentimiento explícito del profesor.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Código de Conducta"
+    ]
   }
 ]

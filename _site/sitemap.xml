@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/index.html</loc>
-    <lastmod>2025-11-03T02:10:20.602Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/curso-programa.html</loc>
-    <lastmod>2025-10-15T00:44:20.647Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/planeval.html</loc>
-    <lastmod>2025-10-15T00:44:27.859Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/codigoconducta.html</loc>
-    <lastmod>2025-10-15T00:44:17.713Z</lastmod>
-  </url>
-  <url>
     <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/playground.html</loc>
     <lastmod>2025-03-27T15:40:03.152Z</lastmod>
   </url>
@@ -25,27 +9,51 @@
     <lastmod>2025-04-08T23:35:47.628Z</lastmod>
   </url>
   <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/scripts/test_presentacion.html</loc>
-    <lastmod>2025-06-01T16:11:41.950Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/participantes.html</loc>
-    <lastmod>2025-10-29T11:24:57.621Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/recursos.html</loc>
-    <lastmod>2025-10-15T00:44:30.480Z</lastmod>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/clases/clase_01.html</loc>
+    <lastmod>2025-11-03T14:46:48.520Z</lastmod>
   </url>
   <url>
     <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/curso-equipo.html</loc>
     <lastmod>2025-10-15T00:44:24.560Z</lastmod>
   </url>
   <url>
-    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/clases/clase_01.html</loc>
-    <lastmod>2025-11-03T02:06:36.968Z</lastmod>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/curso-programa.html</loc>
+    <lastmod>2025-10-15T00:44:20.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/participantes.html</loc>
+    <lastmod>2025-10-29T11:24:57.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/vidlist.html</loc>
+    <lastmod>2025-11-03T14:46:37.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/glos.html</loc>
+    <lastmod>2025-04-24T17:11:07.658Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/planeval.html</loc>
+    <lastmod>2025-10-15T00:44:27.859Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/recursos.html</loc>
+    <lastmod>2025-10-15T00:44:30.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/index.html</loc>
+    <lastmod>2025-11-03T14:50:08.801Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/scripts/test_presentacion.html</loc>
+    <lastmod>2025-06-01T16:11:41.950Z</lastmod>
   </url>
   <url>
     <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/clases/clase_02.html</loc>
-    <lastmod>2025-11-03T02:06:34.193Z</lastmod>
+    <lastmod>2025-11-03T14:46:47.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomia-estadistica1-2-2025.netlify.app/codigoconducta.html</loc>
+    <lastmod>2025-10-15T00:44:17.713Z</lastmod>
   </url>
 </urlset>
