@@ -1,0 +1,13 @@
+name: gapminder2007
+title: gapminder2007
+username: javenda
+account: javenda
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14469690
+bundleId: 10153922
+url: https://javenda.shinyapps.io/gapminder2007/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app_dado.R|app_edadmadres.R|datos/gap_2007.csv|dependencias.R
