@@ -4,5 +4,6 @@
 .Ruserdata
 _admin_materiales/
 /.quarto/
-_apps/
+_apps/app_recolecion/
 _apps/app_recolecion/creden.json
+_apps/rsconnect/
