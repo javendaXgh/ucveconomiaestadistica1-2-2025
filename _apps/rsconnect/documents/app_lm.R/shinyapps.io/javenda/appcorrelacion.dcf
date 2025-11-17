@@ -1,0 +1,12 @@
+name: appcorrelacion
+title: appcorrelacion
+username: javenda
+account: javenda
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14873646
+bundleId: 10390363
+url: https://javenda.shinyapps.io/appcorrelacion/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
