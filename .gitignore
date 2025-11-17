@@ -4,3 +4,5 @@
 .Ruserdata
 _admin_materiales/
 /.quarto/
+_apps/app_recoleccion/creden.json
+_apps/*

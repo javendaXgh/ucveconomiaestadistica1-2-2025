@@ -1,3 +1,6 @@
+library(plotly)
+library(shiny)
+library(tidyverse)
 # aplicacion shiny para visualizar media, mediana, 1 desviación típica, 2 desviaciones
 # típica, 3 desviaciones típicas sobre una simulación de datos de una normal.
 # incluye selector de valores para mostrar o no y input de cantidad de datos a simular

@@ -1,0 +1,13 @@
+name: app_recolecion
+title: app_recolecion
+username: javenda
+account: javenda
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16082636
+bundleId: 11187388
+url: https://javenda.shinyapps.io/app_recolecion/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: credenciales.json|datos_20251116_210623.csv|datos_recolectados/datos_20251116_205321.csv
