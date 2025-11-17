@@ -28,8 +28,8 @@
     "objectID": "clases/clase_01.html#aproximación-concepto-estadística",
     "href": "clases/clase_01.html#aproximación-concepto-estadística",
     "title": "Estadística I",
-    "section": "Aproximación Concepto “Estadística”",
-    "text": "Aproximación Concepto “Estadística”\nLos científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
+    "section": "",
+    "text": "Los científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
   },
   {
     "objectID": "clases/clase_01.html#estudio-de-caso",
@@ -92,7 +92,7 @@
     "href": "clases/clase_01.html#pregunta-clave-a-responder",
     "title": "Estadística I",
     "section": "Pregunta Clave a Responder",
-    "text": "Pregunta Clave a Responder\n¿Los datos representados muestran que existe una diferencia entre los dos grupos?\nSupongamos que lanzas una moneda 100 veces. Si bien la probabilidad de que salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos.\nLa diferencia observada anteriormente entre los dos grupos puede ser real o deberse a la variación natural.\nDado que la diferencia es bastante grande, es más creíble que sea real.\nUtilizamos herramientas estadísticas para determinar si la diferencia es tan grande que deberíamos rechazar la idea de que se debió al azar."
+    "text": "Pregunta Clave a Responder\n\n¿Los datos representados muestran que existe una diferencia entre los dos grupos?\nSupongamos que lanzas una moneda 100 veces. Si bien la probabilidad de que salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos.\nLa diferencia observada anteriormente entre los dos grupos puede ser real o deberse a la variación natural.\nDado que la diferencia es bastante grande, es más creíble que sea real.\nUtilizamos herramientas estadísticas para determinar si la diferencia es tan grande que deberíamos rechazar la idea de que se debió al azar."
   },
   {
     "objectID": "clases/clase_01.html#ejercicio",
@@ -183,7 +183,7 @@
     "href": "clases/clase_01.html#variables-explicativas-y-de-respuesta.",
     "title": "Estadística I",
     "section": "Variables explicativas y de respuesta.",
-    "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética.\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética."
   },
   {
     "objectID": "curso-equipo.html",
@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadas 🛠️ Ejecutar Notebook en Google Colab🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -352,8 +352,8 @@
     "objectID": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "href": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "title": "Estadística I",
-    "section": "Bloqueador Solar => Cáncer Piel ❌",
-    "text": "Bloqueador Solar =&gt; Cáncer Piel ❌\nSupongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
+    "section": "",
+    "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
   },
   {
     "objectID": "clases/clase_02.html#variable-confusión",
@@ -367,14 +367,14 @@
     "href": "clases/clase_02.html#correlación-no-implica-causación",
     "title": "Estadística I",
     "section": "Correlación No Implica Causación",
-    "text": "Correlación No Implica Causación\n\n\n\n\n\n\nImportante\n\n\nLa causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una “correlación espuria”\n\n\n\n\nCE 1CE 2CE 3La Regla es …"
+    "text": "Correlación No Implica Causación\n\n\n\n\n\n\nImportante\n\n\n\nLa causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una “correlación espuria”\n\n\n\nCE 1CE 2CE 3La Regla es …"
   },
   {
     "objectID": "clases/clase_02.html#estudios-observacionales-y-experimentos",
     "href": "clases/clase_02.html#estudios-observacionales-y-experimentos",
     "title": "Estadística I",
     "section": "Estudios Observacionales y Experimentos",
-    "text": "Estudios Observacionales y Experimentos\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal\n\n\n\n\n🔗 Estadística 1"
+    "text": "Estudios Observacionales y Experimentos\n\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\n\n\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal"
   },
   {
     "objectID": "codigoconducta.html",
@@ -386,5 +386,110 @@
       "Sobre el Curso",
       "Código de Conducta"
     ]
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#conjunto-de-datos-seleccionado",
+    "href": "notebooks/taller_01_estadistica.html#conjunto-de-datos-seleccionado",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Conjunto de Datos Seleccionado",
+    "text": "Conjunto de Datos Seleccionado\nEstaremos trabajando con el conjunto stent30 y stent365.\nPrimero usaremos la función head para ver las primeras 6 filas. Es importante ver que luego de enununciar la función usamos el paréntesis para indicar el nombre del conjunto de datos.\n\nhead(stent30)\n\n\nhead(stent365,20)\n\nSi queremos ver las últimas filas se usa la función tail.\n\ntail(stent30)\n\nSi queremos generar para este conjunto de datos una tabla de contingencia se usa la función table. Una tabla de contigencia muestra el resumen de los datos de dos variables categóricas en forma cruzada. Ver https://es.wikipedia.org/wiki/Tabla_de_contingencia\n\ntable(stent30)\n\n\ntable(stent365)"
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#usando-r-como-una-calculadora",
+    "href": "notebooks/taller_01_estadistica.html#usando-r-como-una-calculadora",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Usando R como una calculadora",
+    "text": "Usando R como una calculadora\n\nSumar\n\n214 + 191\n\n\n\nDividir\n\n191/(214 + 191)"
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#inspeccionar-conjunto-de-datos-loans",
+    "href": "notebooks/taller_01_estadistica.html#inspeccionar-conjunto-de-datos-loans",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Inspeccionar Conjunto de Datos Loans",
+    "text": "Inspeccionar Conjunto de Datos Loans\nSi queremos obtener ayuda sobre una función o queremos saber cuáles datos contiene un conjunto de datos, podemos usar la función ?\n\n?loan50\n\n\n?head\n\n\n# el numeral se usa para colocar comentarios en los códigos.\n# vamos a inspeccionar las primeras filas del conjunto de datos (c.d.) loan50\nhead(loan50)\n\nVamos a usar la función select para seleccionar solo unas columnas de nuestro c.d. loan50.\n\nloan50%&gt;%\n   sample_n(10)%&gt;%\n   select(loan_amount,\n          interest_rate,\n          term,\n          grade,\n          state,\n          total_income,\n          homeownership)\n\nLa función sample_n acompañada del argumento 10 se usó para seleccionar aleatoriamente 10 observaciones del c.d.\nAhora debemos indicar para cada una de las columnas el tipo de variable que tenemos representada."
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#otras-funciones-de-interés",
+    "href": "notebooks/taller_01_estadistica.html#otras-funciones-de-interés",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Otras funciones de interés",
+    "text": "Otras funciones de interés\n\nmean: permite obtener el promedio para una serie de datos.\nsum: permite sumar todos los valores de una serie de datos\n\n\nmean(loan50$interest_rate)\n\nel operador $ se usa para acceder a todos los valores que tiene una columna de un c.d.\n\nloan50$interest_rate\n\n\nsum(loan50$loan_amount)\n\nPodemos ver con sum(loan50$loan_amount) la suma de todos los montos otorgados en prestamos."
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#tabla-de-contingencia-para-c.d.-con-múltiples-tipos-de-datos",
+    "href": "notebooks/taller_01_estadistica.html#tabla-de-contingencia-para-c.d.-con-múltiples-tipos-de-datos",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Tabla de Contingencia para C.D. con Múltiples Tipos de Datos",
+    "text": "Tabla de Contingencia para C.D. con Múltiples Tipos de Datos\nSi queremos crear una tabla resumen del atributo homeownership (tipo propietario), llamamos a loan50 y usamos el operador $ para seleccionar la variable homeownership.\n\ntable(loan50$homeownership)\n\nSi queremos crear una tabla de contigencia para las variables homeownership y grade (grado de la hipoteca), usamos nuevamente la función table y llamamos a las dos variables\n\ntable(loan50$homeownership,\n      loan50$grade)"
+  },
+  {
+    "objectID": "notebooks/taller_01_estadistica.html#gráficos-de-dispersión",
+    "href": "notebooks/taller_01_estadistica.html#gráficos-de-dispersión",
+    "title": "Estadística I, Clase 1: Describir los Datos",
+    "section": "Gráficos de Dispersión",
+    "text": "Gráficos de Dispersión\nSirven para observar las posibles relaciones que se presenten entre dos variables de tipo numéricas que pertenezcan a un conjunto de datos.\nEn R se pueden generar con la función plot teniendo de argumento las dos variables que se quieren representar.\nPara observar el comportamiento de las variables se usará el conjunto de datos county.\n\nplot(x = county$median_hh_income,\n     y = county$pop_change)\n\nSe genera un gráfico donde cada punto corresponde a los valores presentes para una observación en cada variable.\nOtro ejemplo lo podemos representar con:\n\nplot(y = county$homeownership,\n     x = county$multi_unit,\n     col='blue')\n\nEn la representación anterior se incluyó el argumento col='blue' para que los puntos se representen en color azul."
+  },
+  {
+    "objectID": "clases/clase_01.html",
+    "href": "clases/clase_01.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Los científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html",
+    "href": "scripts_apoyo/test_presentacion.html",
+    "title": "test pib",
+    "section": "",
+    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#nueva-lámina",
+    "href": "scripts_apoyo/test_presentacion.html#nueva-lámina",
+    "title": "test pib",
+    "section": "",
+    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
+    "href": "scripts_apoyo/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
+    "title": "test pib",
+    "section": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?",
+    "text": "Lámina 1: ¿Qué es el Producto Interno Bruto (PIB)?\n\nEl PIB es el valor monetario total de todos los bienes y servicios finales producidos dentro de las fronteras de un país en un período de tiempo específico (generalmente un año).\nPiensa en él como una medida del tamaño de la economía de un país.\nUn PIB más alto generalmente indica una economía más grande y, a menudo, más próspera."
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
+    "href": "scripts_apoyo/test_presentacion.html#lámina-2-qué-se-incluye-en-el-pib",
+    "title": "test pib",
+    "section": "Lámina 2: ¿Qué se incluye en el PIB?",
+    "text": "Lámina 2: ¿Qué se incluye en el PIB?\n\nBienes Finales: Productos listos para ser consumidos (ej. un carro nuevo, una manzana, un corte de cabello). No se incluyen bienes intermedios (ej. el acero para hacer el carro).\nServicios: Actividades realizadas por personas (ej. la educación de un profesor, la atención médica de un doctor, el trabajo de un electricista).\nProducción Doméstica: Solo se cuenta lo producido dentro de las fronteras del país, sin importar la nacionalidad de quien lo produce.\nPeríodo Específico: Generalmente se mide anualmente o trimestralmente."
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
+    "href": "scripts_apoyo/test_presentacion.html#lámina-3-qué-no-se-incluye-en-el-pib",
+    "title": "test pib",
+    "section": "Lámina 3: ¿Qué NO se incluye en el PIB?",
+    "text": "Lámina 3: ¿Qué NO se incluye en el PIB?\n\nBienes Intermedios: Materiales o productos que se utilizan para producir otros bienes (ej. harina para hacer pan).\nBienes de Segunda Mano: La venta de un carro usado no se cuenta en el PIB actual, ya que ya se contó cuando fue nuevo.\nActividades No de Mercado: Trabajo doméstico no remunerado (ej. cocinar en casa), voluntariado.\nActividades Ilegales: Venta de drogas, contrabando, etc.\nTransferencias Financieras: Pagos de seguridad social, becas, etc. (no representan producción actual)."
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
+    "href": "scripts_apoyo/test_presentacion.html#lámina-4-la-fórmula-del-pib-enfoque-del-gasto",
+    "title": "test pib",
+    "section": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)",
+    "text": "Lámina 4: La Fórmula del PIB (Enfoque del Gasto)\nLa forma más común de calcular el PIB es a través del enfoque del gasto, que suma todo el gasto final en la economía:\n\\[PIB = C + I + G + (X - M)\\]\nDonde:\n\n(C) = Consumo: Gasto de los hogares en bienes y servicios.\n(I) = Inversión: Gasto de las empresas en bienes de capital (maquinaria, fábricas), inventarios y construcción residencial.\n(G) = Gasto Público: Gasto del gobierno en bienes y servicios (salarios de funcionarios, infraestructura, etc.).\n(X) = Exportaciones: Bienes y servicios producidos en el país y vendidos al extranjero.\n(M) = Importaciones: Bienes y servicios producidos en el extranjero y comprados por el país.\n((X - M)) = Exportaciones Netas."
+  },
+  {
+    "objectID": "scripts_apoyo/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
+    "href": "scripts_apoyo/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
+    "title": "test pib",
+    "section": "Lámina 5: ¿Por qué es importante el PIB?",
+    "text": "Lámina 5: ¿Por qué es importante el PIB?\n\nMedida del Crecimiento Económico: Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.\nComparaciones Internacionales: Permite comparar el tamaño de las economías de diferentes países.\nIndicador del Nivel de Vida (aproximado): Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.\nBase para Políticas Económicas: Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias.\n\n\nEspero que estas láminas sean útiles para tus estudiantes. ¿Necesitas alguna modificación o lámina adicional?"
+  },
+  {
+    "objectID": "clases/clase_02.html",
+    "href": "clases/clase_02.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
   }
 ]
