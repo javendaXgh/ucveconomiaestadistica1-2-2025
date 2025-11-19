@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -491,5 +491,152 @@
     "title": "Estadística I",
     "section": "",
     "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
+  },
+  {
+    "objectID": "clases/clase_05.html#introducción-a-las-medias",
+    "href": "clases/clase_05.html#introducción-a-las-medias",
+    "title": "Estadística I",
+    "section": "Introducción a las Medias",
+    "text": "Introducción a las Medias\nEn estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
+  },
+  {
+    "objectID": "clases/clase_05.html#media-ponderada-weighted-mean",
+    "href": "clases/clase_05.html#media-ponderada-weighted-mean",
+    "title": "Estadística I",
+    "section": "1- Media Ponderada (Weighted Mean)",
+    "text": "1- Media Ponderada (Weighted Mean)\nAsigna diferentes pesos o importancias a cada valor del conjunto de datos. - Cada valor tiene una importancia diferente (peso). - Útil cuando las observaciones no son igualmente relevantes. Penaliza los valores extremos altos.\nFórmula:\n\\[\\bar{x}_w = \\frac{\\sum_{i=1}^{n} w_i x_i}{\\sum_{i=1}^{n} w_i}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(w_i\\) representa el peso asignado a cada valor \\(x_i\\). \\(n\\) es el número total de valores."
+  },
+  {
+    "objectID": "clases/clase_05.html#ejemplo-de-media-ponderada",
+    "href": "clases/clase_05.html#ejemplo-de-media-ponderada",
+    "title": "Estadística I",
+    "section": "Ejemplo de Media Ponderada",
+    "text": "Ejemplo de Media Ponderada\nEstudiante tiene las siguientes calificaciones en un curso:\n\nExamen 1: 14 (peso 30%)\nExamen 2: 17 (peso 40%)\nTrabajo final: 15 (peso 30%)\n\nLa media ponderada se calcula como:\n\\[\\bar{x}_w = \\frac{(0.30 \\times 14) + (0.40 \\times 17) + (0.30 \\times 15)}{0.30 + 0.40 + 0.30} = \\frac{4.2 + 6.18 + 4.5}{1.0} = 14.88\\]"
+  },
+  {
+    "objectID": "clases/clase_05.html#comparación-media-aritmética-vs.-media-ponderada",
+    "href": "clases/clase_05.html#comparación-media-aritmética-vs.-media-ponderada",
+    "title": "Estadística I",
+    "section": "Comparación: Media Aritmética vs. Media Ponderada",
+    "text": "Comparación: Media Aritmética vs. Media Ponderada\n\n\n\n\n\n\n\n\nCaracterística\nMedia Aritmética\nMedia Ponderada\n\n\n\n\nPeso de los datos\nTodos los datos tienen la misma importancia (peso 1).\nCada dato puede tener un peso diferente.\n\n\nUso principal\nCuando todos los datos son igualmente relevantes.\nCuando algunos datos son más importantes que otros.\n\n\nFórmula\n\\[\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n}\\]\n\\[\\bar{x}_w = \\frac{\\sum_{i=1}^{n} w_i x_i}{\\sum_{i=1}^{n} w_i}\\]"
+  },
+  {
+    "objectID": "clases/clase_05.html#casos-de-uso-de-la-media-ponderada",
+    "href": "clases/clase_05.html#casos-de-uso-de-la-media-ponderada",
+    "title": "Estadística I",
+    "section": "Casos de Uso de la Media Ponderada",
+    "text": "Casos de Uso de la Media Ponderada\n\nÍndices económicos.\nCálculo de la inflación por componentes.\nAnálisis de portafolios de inversión con diferentes cantidades invertidas en cada activo.\nCálculo de promedios académicos con diferentes créditos por materia.\nEncuestas con ponderación de respuestas según el tamaño del estrato poblacional."
+  },
+  {
+    "objectID": "clases/clase_05.html#media-armónica-harmonic-mean",
+    "href": "clases/clase_05.html#media-armónica-harmonic-mean",
+    "title": "Estadística I",
+    "section": "2- Media Armónica (Harmonic Mean)",
+    "text": "2- Media Armónica (Harmonic Mean)\nEs útil para calcular promedios de tasas o ratios. Se define como el recíproco1 de la media aritmética de los recíprocos de los valores.\nFórmula:\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores.\nSi tienes un conjunto de datos como \\(x1​,x2​,...,xn​\\), el recíproco de cada valor es \\(\\frac{1}{x1}​, \\frac{1}{x2}​,..., \\frac{1}{xn}\\)"
+  },
+  {
+    "objectID": "clases/clase_05.html#ejemplo-de-media-armónica",
+    "href": "clases/clase_05.html#ejemplo-de-media-armónica",
+    "title": "Estadística I",
+    "section": "Ejemplo de Media Armónica",
+    "text": "Ejemplo de Media Armónica\nUn automóvil viaja 100 km a 40 km/h y luego otros 100 km a 60 km/h.\n¿Cuál es la velocidad promedio del viaje?\n\\[H = \\frac{2}{\\frac{1}{40} + \\frac{1}{60}} = \\frac{2}{\\frac{3 + 2}{120}} = \\frac{2}{\\frac{5}{120}} = \\frac{2 \\times 120}{5} = \\frac{240}{5} = 48 \\text{ km/h}\\]\nNota: La media aritmética simple daría \\((40 + 60) / 2 = 50\\) km/h, lo cual es incorrecto porque se pasa más tiempo viajando a la velocidad más lenta."
+  },
+  {
+    "objectID": "clases/clase_05.html#comparación-media-aritmética-vs.-media-armónica",
+    "href": "clases/clase_05.html#comparación-media-aritmética-vs.-media-armónica",
+    "title": "Estadística I",
+    "section": "Comparación: Media Aritmética vs. Media Armónica",
+    "text": "Comparación: Media Aritmética vs. Media Armónica\n\n\n\n\n\n\n\n\nCaracterística\nMedia Aritmética\nMedia Armónica\n\n\n\n\nUso principal\nPara promediar valores directos.\nPara promediar tasas, ratios o velocidades.\n\n\nSensibilidad\nSensible a valores extremos altos.\nSensible a valores extremos bajos.\n\n\nFórmula\n\\[\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n}\\]\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]"
+  },
+  {
+    "objectID": "clases/clase_05.html#casos-de-uso-de-la-media-armónica",
+    "href": "clases/clase_05.html#casos-de-uso-de-la-media-armónica",
+    "title": "Estadística I",
+    "section": "Casos de Uso de la Media Armónica",
+    "text": "Casos de Uso de la Media Armónica\n\nCálculo de la velocidad promedio en trayectos con distancias iguales pero velocidades diferentes.\nPromedio de tipos de cambio o ratios financieros.\nCálculo de la productividad promedio de máquinas con diferentes tasas de producción.\nCostos promedio en “por unidad” cuando se paga por tiempo.\nTasas de eficiencia (ej: km/litro)."
+  },
+  {
+    "objectID": "clases/clase_05.html#media-geométrica-geometric-mean",
+    "href": "clases/clase_05.html#media-geométrica-geometric-mean",
+    "title": "Estadística I",
+    "section": "3- Media Geométrica (Geometric Mean)",
+    "text": "3- Media Geométrica (Geometric Mean)\nLa media geométrica es útil para calcular promedios de tasas de crecimiento, porcentajes o valores que se multiplican entre sí. Menos sensible a valores extremos.\nFórmula:\n\\[G = \\left( \\prod_{i=1}^{n} x_i \\right)^{1/n} = \\sqrt[n]{x_1 \\times x_2 \\times \\cdots \\times x_n}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores.\nEs importante que todos los valores sean positivos."
+  },
+  {
+    "objectID": "clases/clase_05.html#ejemplo-de-media-geométrica",
+    "href": "clases/clase_05.html#ejemplo-de-media-geométrica",
+    "title": "Estadística I",
+    "section": "Ejemplo de Media Geométrica",
+    "text": "Ejemplo de Media Geométrica\nLa economía de un país creció un 10% en el primer año, un 20% en el segundo año y decreció un 10% en el tercer año.\n¿Cuál es la tasa de crecimiento promedio anual?\n\nTasas de crecimiento de un país:\n\n\n\n\nAño\nTasa de crecimiento (%)\n\n\n\n\n1\n10%\n\n\n2\n20%\n\n\n3\n-10%\n\n\n\nConvertimos a factores: (1.10), (1.20), (0.90)."
+  },
+  {
+    "objectID": "clases/clase_05.html#cálculo-media-geométrica-ejemplo",
+    "href": "clases/clase_05.html#cálculo-media-geométrica-ejemplo",
+    "title": "Estadística I",
+    "section": "Cálculo Media Geométrica Ejemplo",
+    "text": "Cálculo Media Geométrica Ejemplo\nMedia geométrica:\n\\[G = \\sqrt[3]{(1 + 0.10) \\times (1 + 0.20) \\times (1 - 0.10)} = \\sqrt[3]{1.10 \\times 1.20 \\times 0.90} = \\sqrt[3]{1.188} \\approx 1.059\\]\nLa tasa de crecimiento promedio anual es aproximadamente del 5,9 %."
+  },
+  {
+    "objectID": "clases/clase_05.html#comparación-media-aritmética-vs.-media-geométrica",
+    "href": "clases/clase_05.html#comparación-media-aritmética-vs.-media-geométrica",
+    "title": "Estadística I",
+    "section": "Comparación: Media Aritmética vs. Media Geométrica",
+    "text": "Comparación: Media Aritmética vs. Media Geométrica\n\n\n\n\n\n\n\n\nCaracterística\nMedia Aritmética\nMedia Geométrica\n\n\n\n\nUso principal\nPara promediar valores directos.\nPara promediar tasas de crecimiento o valores multiplicativos.\n\n\nSensibilidad\nSensible a valores extremos altos.\nMenos sensible a valores extremos que la media aritmética.\n\n\nRequisito de datos\nNo hay restricciones de signo.\nLos datos deben ser positivos.\n\n\nFórmula\n\\[\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n}\\]\n\\[G = \\left( \\prod_{i=1}^{n} x_i \\right)^{1/n}\\]"
+  },
+  {
+    "objectID": "clases/clase_05.html#casos-de-uso-de-la-media-geométrica",
+    "href": "clases/clase_05.html#casos-de-uso-de-la-media-geométrica",
+    "title": "Estadística I",
+    "section": "Casos de Uso de la Media Geométrica",
+    "text": "Casos de Uso de la Media Geométrica\n\nCálculo de la tasa de crecimiento promedio de ventas, población o inversiones.\nPromedio de índices o ratios.\nAnálisis de la diversidad genética en poblaciones.\nTasa de crecimiento económico.\nÍndices bursátiles (ej: rendimiento de acciones)."
+  },
+  {
+    "objectID": "clases/clase_05.html#relación-entre-las-medias",
+    "href": "clases/clase_05.html#relación-entre-las-medias",
+    "title": "Estadística I",
+    "section": "Relación entre las Medias",
+    "text": "Relación entre las Medias\nPara un conjunto de datos positivos, generalmente se cumple la siguiente desigualdad:\n\\[H \\leq G \\leq \\bar{x}\\]"
+  },
+  {
+    "objectID": "clases/clase_05.html#comparación-de-medias",
+    "href": "clases/clase_05.html#comparación-de-medias",
+    "title": "Estadística I",
+    "section": "Comparación de Medias",
+    "text": "Comparación de Medias\n\n\n\nTipo de media\n¿Cuándo usar?\nSensible a valores extremos\n\n\n\n\nAritmética\nValores homogéneos\nAlta\n\n\nPonderada\nValores con importancia diferente\nAlta\n\n\nArmónica\nPromedio de razones\nMuy alta\n\n\nGeométrica\nCrecimientos y proporciones\nBaja"
+  },
+  {
+    "objectID": "clases/clase_05.html#resumen-de-fórmulas",
+    "href": "clases/clase_05.html#resumen-de-fórmulas",
+    "title": "Estadística I",
+    "section": "Resumen de Fórmulas",
+    "text": "Resumen de Fórmulas\n\n\n\nTipo de media\nFórmula\n\n\n\n\nAritmética\n\\(( \\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i )\\)\n\n\nPonderada\n\\(( \\bar{x}_w = \\frac{\\sum w_i x_i}{\\sum w_i} )\\)\n\n\nArmónica\n\\(( \\bar{x}_h = \\frac{n}{\\sum \\frac{1}{x_i}} )\\)\n\n\nGeométrica\n\\(( \\bar{x}_g = (\\prod x_i)^{1/n} )\\)"
+  },
+  {
+    "objectID": "clases/clase_05.html#cómo-decidir-qué-media-usar",
+    "href": "clases/clase_05.html#cómo-decidir-qué-media-usar",
+    "title": "Estadística I",
+    "section": "¿Cómo decidir qué media usar?",
+    "text": "¿Cómo decidir qué media usar?\nRecetario con uso discrecional\n\n¿Importancia desigual? → Media ponderada.\n¿Promedios de tasas? → Media armónica.\n¿Crecimiento o factores multiplicativos? → Media geométrica.\n¿Valores homogéneos? → Media aritmética.\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "notebooks/TallerPrimerTema.html#ejercicio-práctico",
+    "href": "notebooks/TallerPrimerTema.html#ejercicio-práctico",
+    "title": "UCV-Escuela Economía- Estadística 1",
+    "section": "Ejercicio Práctico",
+    "text": "Ejercicio Práctico\n\nEstadística Descriptiva\n\n# cargar librerías a trabajar\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nLeer los datos\nDesde el repositorio del curso ubicado en repositorio datos\n\n# gapminder 2007\ngap_2007 &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/ucveconomiaestadistica1-2-2025/refs/heads/main/data/gap_2007.csv')\n# notas quiz1\nquiz1&lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/ucveconomiaestadistica1-2-2025/refs/heads/main/data/quiz1.csv')\n# encuesta Estadística 1-2025 UCV\ndf_encuesta &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/ucveconomiaestadistica1-2-2025/refs/heads/main/data/df_curso.csv')"
+  },
+  {
+    "objectID": "notebooks/TallerPrimerTema.html#inspeccionar-conjunto-de-datos",
+    "href": "notebooks/TallerPrimerTema.html#inspeccionar-conjunto-de-datos",
+    "title": "UCV-Escuela Economía- Estadística 1",
+    "section": "Inspeccionar conjunto de datos",
+    "text": "Inspeccionar conjunto de datos\n\nMedia\nMediana\nHistograma\nGráfico de caja boxplot(boxplot)\nMedidas de dispersión\nRango\nCuartiles\n\n\n# revisar conjunto de datos\ngap_2007\n\n\n# cantidad observaciones\nnrow(gap_2007)\n\n\ngap_2007$lifeExp\n\n\n# ordenar valores ascendentemente\nsort(gap_2007$lifeExp)\n\n\n# asignar a una variables\nexpect_vida &lt;- sort(gap_2007$lifeExp)\n\n\n# revisar valores\nexpect_vida\n\n\n# media o promedio\nmean(expect_vida)\n\n\n# mediana\nmedian(expect_vida)\n\n\n# mitad de los datos en el valor\nnrow(gap_2007)/2\n\n\n# valores en la mitad\nexpect_vida[71]\n\n\nexpect_vida[72]\n\n\n# calcular la mediana para cantidades pares en el número de observaciones\n(expect_vida[71]  + expect_vida[72] )/2\n\n\n# tabla resumen de una columna\nsummary(gap_2007$lifeExp)\n\n\n# tabla resumen de los valores expect_vida\nsummary(expect_vida)\n\n\n# tabla resumen de pib per cápita\nsummary(gap_2007$gdpPercap)\n\n\n# histograma con RBase para la PIB per cápita\nhist(gap_2007$gdpPercap)\n\n\n# histograma para expectativa de vida\nhist(expect_vida, col='orange')\n\n\n# en otro color\nhist(expect_vida, col ='blue')\n\n\n# añadir línea media\nhist(expect_vida, col ='blue')\nabline(v = mean(expect_vida), col = \"red\", lwd = 2, lty = 2)\n\n\n# añadir línea mediana\nhist(expect_vida, col ='blue')\nabline(v = mean(expect_vida), col = \"red\", lwd = 2, lty = 2)\nabline(v = median(expect_vida), col = \"green\", lwd = 2, lty = 2)\n\n\n# obtener desviación típica\ndesviacion_tipica &lt;- sd(expect_vida)\n# llamar (ver el valor asignado a la variable)\ndesviacion_tipica\n\n\n# calcular 1 desviación de la media por encima\ndesviacion_1pos &lt;- mean(expect_vida)+ 1*desviacion_tipica\ndesviacion_1pos\n\n\n# calcular 1 desviación de la media por debajo\ndesviacion_1neg &lt;- mean(expect_vida)- 1*desviacion_tipica\ndesviacion_1neg\n\n\n# calcular dos desviaciones\ndesviacion_2pos &lt;- mean(expect_vida)+ 2*desviacion_tipica\ndesviacion_2neg &lt;- mean(expect_vida)- 2*desviacion_tipica\ndesviacion_2pos\ndesviacion_2neg\n\n\n# graficar una desviación de la media\nhist(gap_2007$lifeExp, col ='blue')\nabline(v = mean(expect_vida), col = \"red\", lwd = 4, lty = 2)\nabline(v = desviacion_1pos, col = \"orange\", lwd = 3, lty = 2)\nabline(v = desviacion_1neg, col = \"orange\", lwd = 3, lty = 2)\n\n#abline(v = -sd(gap_2007$lifeExp), col = \"orange\", lwd = 2, lty = 2)\n\n\n# graficar dos desviaciones de la media\nhist(gap_2007$lifeExp, col ='blue')\nabline(v = mean(expect_vida), col = \"red\", lwd = 4, lty = 2)\nabline(v = desviacion_1pos, col = \"orange\", lwd = 3, lty = 2)\nabline(v = desviacion_1neg, col = \"orange\", lwd = 3, lty = 2)\nabline(v = desviacion_2pos, col = \"purple\", lwd = 3, lty = 2)\nabline(v = desviacion_2neg, col = \"purple\", lwd = 3, lty = 2)\n\n\nGráficos con sistema ggplot para ir del gráfico de puntos al gráfico de caja pasando por el histograma\n\n# variable en estudio: notas del quiz1\nvariable_estudio &lt;- quiz1\nnombre_variable &lt;- 'Notas Quiz1'\n\n\nvariable_estudio\n\n\nnombre_variable\n\n\nggplot(data=variable_estudio,\n       aes(x=quiz1,y=0)) +\n  geom_point()\n\n\nggplot(data=variable_estudio,\n       aes(x=quiz1)) +\n  geom_dotplot()\n\n\n# cambio en el ancho del punto\nggplot(data= variable_estudio,\n       aes(x=quiz1)) +\n  geom_dotplot(binwidth=2,\n               fill=\"blue\") +\n  xlab(nombre_variable) +\n  ylab(\"Frecuencia\")\n\n\n# pasar al histograma\nggplot(data=variable_estudio,\n       aes(x=quiz1)) +\n  geom_histogram(binwidth=1,\n               fill=\"blue\") +\n  xlab(nombre_variable)\n\n\n# asignar colores por una variable categórica\nggplot(data=gap_2007,\n       aes(x=lifeExp,\n           fill=continent)) +\n  geom_dotplot(binwidth=1) +\n  xlab('Expectativa de Vida') +\n  ylab(\"Frecuencia\") +\n  ggtitle(\"Dotplot de la Expectativa de Vida por Continente \")\n\n\nggplot(data=gap_2007,\n       aes(x=lifeExp,\n           fill=continent)) +\n  geom_histogram() +\n  xlab('Expectativa de Vida') +\n  ylab(\"Frecuencia\") +\n  ggtitle(\"Dotplot de la Expectativa de Vida por Continente \")\n\n\n\nggplot(data=gap_2007,\n       aes(x=lifeExp,\n           fill=continent)) +\n  geom_histogram(bins=6) +\n  xlab('Expectativa de Vida') +\n  ylab(\"Frecuencia\") +\n  ggtitle(\"Dotplot de la Expectativa de Vida por Continente \")\n\n\n# cambio en el ancho del punto\n\n\nnota_mediana &lt;- median(variable_estudio$quiz1, na.rm = TRUE)\nnota_mediana\n\n\nggplot(data=variable_estudio,\n       aes(x=quiz1,y=0)) +\n  geom_point() +\n  geom_vline(xintercept =nota_mediana,\n           color = \"red\",\n             linetype = \"dashed\",   # Tipo de línea (e.g., \"solid\", \"dotted\")\n             linewidth = 1)\n\n\nboxplot(variable_estudio$quiz1, horizontal = TRUE)\n\n\nboxplot(variable_estudio$quiz1)\n\n\nggplot(data=gap_2007,\n       aes(x=lifeExp,y=0)) +\n  geom_point() +\n  geom_vline(xintercept =median(gap_2007$lifeExp),\n           color = \"red\",\n             linetype = \"dashed\",   # Tipo de línea (e.g., \"solid\", \"dotted\")\n             linewidth = 1)+\n  geom_vline(xintercept =mean(gap_2007$lifeExp),\n           color = \"blue\",\n             linetype = \"dashed\",   # Tipo de línea (e.g., \"solid\", \"dotted\")\n             linewidth = 1)\n\n\nboxplot(gap_2007$lifeExp, horizontal = TRUE)\n\n\nboxplot(gap_2007$lifeExp)\n\n\nhist(expect_vida)\nabline(v = mean(expect_vida), col = \"blue\", lwd = 2, lty = 2)\nabline(v = median(expect_vida), col = \"red\", lwd = 2, lty = 2)"
+  },
+  {
+    "objectID": "notebooks/TallerPrimerTema.html#trabajar-con-nuestros-datos",
+    "href": "notebooks/TallerPrimerTema.html#trabajar-con-nuestros-datos",
+    "title": "UCV-Escuela Economía- Estadística 1",
+    "section": "Trabajar con nuestros Datos",
+    "text": "Trabajar con nuestros Datos\n\ndf_encuesta\n\n\nA data.frame: 0 × 17\n\n\npeso\naltura\nEdad\nhermanos\ncod.postal\nsexo\ndia.nacionmiento\nhijos\ndistancia\ntranporte\ntrabaja\nmaterias.cursadas\nhoras.estudio\npromedio.acad\nred.social\nconsumo.drogas\nhora.registro\n\n\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;"
   }
 ]

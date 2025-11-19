@@ -1,0 +1,186 @@
+---
+title: "Estadística I"
+subtitle: "Clase 05: Medias Especializadas"
+date: "2025/11/19"
+format: revealjs
+lang: es
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## Introducción a las Medias
+
+En estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.
+
+Adicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras **medias** que son más apropiadas en ciertos contextos.
+
+-   1- Media ponderada
+-   2- Media armónica
+-   3- Media geométrica
+
+## 1- Media Ponderada (Weighted Mean)
+
+Asigna diferentes pesos o importancias a cada valor del conjunto de datos. - Cada valor tiene una importancia diferente (peso). - Útil cuando las observaciones no son igualmente relevantes. Penaliza los valores extremos altos.
+
+**Fórmula:**
+
+$$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$
+
+Donde: $x_i$ representa cada valor del conjunto de datos. $w_i$ representa el peso asignado a cada valor $x_i$. $n$ es el número total de valores.
+
+## Ejemplo de Media Ponderada
+
+Estudiante tiene las siguientes calificaciones en un curso:
+
+-   Examen 1: 14 (peso 30%)
+-   Examen 2: 17 (peso 40%)
+-   Trabajo final: 15 (peso 30%)
+
+La media ponderada se calcula como:
+
+$$\bar{x}_w = \frac{(0.30 \times 14) + (0.40 \times 17) + (0.30 \times 15)}{0.30 + 0.40 + 0.30} = \frac{4.2 + 6.18 + 4.5}{1.0} = 14.88$$
+
+## Comparación: Media Aritmética vs. Media Ponderada
+
+| Característica | Media Aritmética | Media Ponderada |
+|:-----------------------|:-----------------------|:-----------------------|
+| **Peso de los datos** | Todos los datos tienen la misma importancia (peso 1). | Cada dato puede tener un peso diferente. |
+| **Uso principal** | Cuando todos los datos son igualmente relevantes. | Cuando algunos datos son más importantes que otros. |
+| **Fórmula** | $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ | $$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$ |
+
+## Casos de Uso de la Media Ponderada
+
+-   Índices económicos.
+-   Cálculo de la inflación por componentes.
+-   Análisis de portafolios de inversión con diferentes cantidades invertidas en cada activo.
+-   Cálculo de promedios académicos con diferentes créditos por materia.
+-   Encuestas con ponderación de respuestas según el tamaño del estrato poblacional.
+
+## 2- Media Armónica (Harmonic Mean)
+
+Es útil para calcular promedios de tasas o *ratios*. Se define como el recíproco[^1] de la media aritmética de los recíprocos de los valores.
+
+[^1]: Si tienes un conjunto de datos como $x1​,x2​,...,xn​$, el recíproco de cada valor es $\frac{1}{x1}​, \frac{1}{x2}​,..., \frac{1}{xn}$
+
+**Fórmula:**
+
+$$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$
+
+Donde: $x_i$ representa cada valor del conjunto de datos. $n$ es el número total de valores.
+
+## Ejemplo de Media Armónica
+
+Un automóvil viaja 100 km a 40 km/h y luego otros 100 km a 60 km/h.
+
+¿Cuál es la velocidad promedio del viaje?
+
+$$H = \frac{2}{\frac{1}{40} + \frac{1}{60}} = \frac{2}{\frac{3 + 2}{120}} = \frac{2}{\frac{5}{120}} = \frac{2 \times 120}{5} = \frac{240}{5} = 48 \text{ km/h}$$
+
+**Nota:** La media aritmética simple daría $(40 + 60) / 2 = 50$ km/h, lo cual es incorrecto porque se pasa más tiempo viajando a la velocidad más lenta.
+
+## Comparación: Media Aritmética vs. Media Armónica
+
+| Característica | Media Aritmética | Media Armónica |
+|:-----------------------|:-----------------------|:-----------------------|
+| **Uso principal** | Para promediar valores directos. | Para promediar tasas, ratios o velocidades. |
+| **Sensibilidad** | Sensible a valores extremos altos. | Sensible a valores extremos bajos. |
+| **Fórmula** | $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ | $$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$ |
+
+## Casos de Uso de la Media Armónica
+
+-   Cálculo de la velocidad promedio en trayectos con distancias iguales pero velocidades diferentes.
+-   Promedio de tipos de cambio o ratios financieros.
+-   Cálculo de la productividad promedio de máquinas con diferentes tasas de producción.
+-   Costos promedio en "por unidad" cuando se paga por tiempo.
+-   Tasas de eficiencia (ej: km/litro).
+
+## 3- Media Geométrica (Geometric Mean)
+
+La media geométrica es útil para calcular promedios de tasas de crecimiento, porcentajes o valores que se multiplican entre sí. Menos sensible a valores extremos.
+
+**Fórmula:**
+
+$$G = \left( \prod_{i=1}^{n} x_i \right)^{1/n} = \sqrt[n]{x_1 \times x_2 \times \cdots \times x_n}$$
+
+Donde: $x_i$ representa cada valor del conjunto de datos. $n$ es el número total de valores.
+
+Es importante que todos los valores sean positivos.
+
+## Ejemplo de Media Geométrica
+
+La economía de un país creció un 10% en el primer año, un 20% en el segundo año y decreció un 10% en el tercer año.
+
+¿Cuál es la tasa de crecimiento promedio anual?
+
+-   Tasas de crecimiento de un país:
+
+| Año | Tasa de crecimiento (%) |
+|:---:|:-----------------------:|
+|  1  |           10%           |
+|  2  |           20%           |
+|  3  |          -10%           |
+
+Convertimos a factores: (1.10), (1.20), (0.90).
+
+## Cálculo Media Geométrica Ejemplo
+
+**Media geométrica:**
+
+$$G = \sqrt[3]{(1 + 0.10) \times (1 + 0.20) \times (1 - 0.10)} = \sqrt[3]{1.10 \times 1.20 \times 0.90} = \sqrt[3]{1.188} \approx 1.059$$
+
+La tasa de crecimiento promedio anual es aproximadamente del 5,9 %.
+
+## Comparación: Media Aritmética vs. Media Geométrica
+
+| Característica | Media Aritmética | Media Geométrica |
+|:-----------------------|:-----------------------|:-----------------------|
+| **Uso principal** | Para promediar valores directos. | Para promediar tasas de crecimiento o valores multiplicativos. |
+| **Sensibilidad** | Sensible a valores extremos altos. | Menos sensible a valores extremos que la media aritmética. |
+| **Requisito de datos** | No hay restricciones de signo. | Los datos deben ser positivos. |
+| **Fórmula** | $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ | $$G = \left( \prod_{i=1}^{n} x_i \right)^{1/n}$$ |
+
+## Casos de Uso de la Media Geométrica
+
+-   Cálculo de la tasa de crecimiento promedio de ventas, población o inversiones.
+-   Promedio de índices o ratios.
+-   Análisis de la diversidad genética en poblaciones.
+-   Tasa de crecimiento económico.
+-   Índices bursátiles (ej: rendimiento de acciones).
+
+## Relación entre las Medias
+
+Para un conjunto de datos positivos, generalmente se cumple la siguiente desigualdad:
+
+$$H \leq G \leq \bar{x}$$
+
+## Comparación de Medias
+
+| Tipo de media | ¿Cuándo usar? | Sensible a valores extremos |
+|:--:|:--:|:--:|
+| Aritmética | Valores homogéneos | Alta |
+| Ponderada | Valores con importancia diferente | Alta |
+| Armónica | Promedio de razones | Muy alta |
+| Geométrica | Crecimientos y proporciones | Baja |
+
+## Resumen de Fórmulas
+
+| Tipo de media |                     Fórmula                     |
+|:-------------:|:-----------------------------------------------:|
+|  Aritmética   |   $( \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i )$   |
+|   Ponderada   | $( \bar{x}_w = \frac{\sum w_i x_i}{\sum w_i} )$ |
+|   Armónica    | $( \bar{x}_h = \frac{n}{\sum \frac{1}{x_i}} )$  |
+|  Geométrica   |       $( \bar{x}_g = (\prod x_i)^{1/n} )$       |
+
+## ¿Cómo decidir qué media usar?
+
+### Recetario con uso discrecional
+
+-   **¿Importancia desigual?** → Media ponderada.
+-   **¿Promedios de tasas?** → Media armónica.
+-   **¿Crecimiento o factores multiplicativos?** → Media geométrica.
+-   **¿Valores homogéneos?** → Media aritmética.
