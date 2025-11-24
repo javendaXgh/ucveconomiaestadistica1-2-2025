@@ -48,7 +48,7 @@ $$\bar{x}_w = \frac{(0.30 \times 14) + (0.40 \times 17) + (0.30 \times 15)}{0.30
 ## Comparación: Media Aritmética vs. Media Ponderada
 
 | Característica | Media Aritmética | Media Ponderada |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | **Peso de los datos** | Todos los datos tienen la misma importancia (peso 1). | Cada dato puede tener un peso diferente. |
 | **Uso principal** | Cuando todos los datos son igualmente relevantes. | Cuando algunos datos son más importantes que otros. |
 | **Fórmula** | $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ | $$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$ |
@@ -86,7 +86,7 @@ $$H = \frac{2}{\frac{1}{40} + \frac{1}{60}} = \frac{2}{\frac{3 + 2}{120}} = \fra
 ## Comparación: Media Aritmética vs. Media Armónica
 
 | Característica | Media Aritmética | Media Armónica |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | **Uso principal** | Para promediar valores directos. | Para promediar tasas, ratios o velocidades. |
 | **Sensibilidad** | Sensible a valores extremos altos. | Sensible a valores extremos bajos. |
 | **Fórmula** | $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$ | $$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$ |
@@ -138,7 +138,7 @@ La tasa de crecimiento promedio anual es aproximadamente del 5,9 %.
 ## Comparación: Media Aritmética vs. Media Geométrica
 
 | Característica | Media Aritmética | Media Geométrica |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | **Uso principal** | Para promediar valores directos. | Para promediar tasas de crecimiento o valores multiplicativos. |
 | **Sensibilidad** | Sensible a valores extremos altos. | Menos sensible a valores extremos que la media aritmética. |
 | **Requisito de datos** | No hay restricciones de signo. | Los datos deben ser positivos. |

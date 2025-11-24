@@ -1,0 +1,651 @@
+---
+title: "Estadística I"
+subtitle: "Clase 06: Tablas de Frecuencia"
+date: "2025/11/23"
+lang: es
+incremental: false
+auto-stretch: false
+fig-align: center
+format: 
+  revealjs:
+    transition: slide
+    scrollable: true
+    code-fold: true
+    echo: true
+    slide-number: true
+editor: visual
+---
+
+## Cargar Librerías Necesarias
+
+```{r}
+#| warning: false
+library(dplyr) # manipular datos
+library(ggplot2)# crear gráficos
+library(gt) # crear tablas
+library(gtExtras)# añadir funcionalidades a las tablas
+library(DT) #mostrar tablas en formato interactivo
+```
+
+## Generación de los datos
+
+```{r}
+
+set.seed(123) # para reproducibilidad
+# 1. Generar Altura: 32 valores normales + 1 outlier (195 cm)
+altura <- round(c(rnorm(32, mean = 168, sd = 8),195))
+
+# 2. Generar Ruido: Un componente aleatorio (varianza) para el peso
+#    Esto simula factores no relacionados con la altura (metabolismo, etc.)
+ruido_peso <- rnorm(33, mean = 0, sd = 6) # Ruido con media 0 y Desv. Típica 6
+
+# 3. Generar Peso Asociado a Altura:
+#    Peso_base = (Altura * Coeficiente) + Intercepto + Ruido
+#    Usamos una fórmula simple (ej: IMC aproximado) para ligar el peso a la altura.
+peso <- round(0.7 * altura - 50 + ruido_peso)
+
+# 4. Generar Sexo e ID
+sexo <- sample(c("M", "F"), 33, replace = TRUE)
+
+# generar consecutivos para identificación de observaciones (filas)
+id=1:33
+
+datos_curso <- data.frame(id,
+                          altura, 
+                          peso, 
+                          sexo)
+```
+
+## Conjunto de Datos
+
+```{r}
+#| echo: false
+# mostrar 10 filas de conjunto de datos. Ocultar numero de filas
+
+datatable(datos_curso, 
+          options = list(pageLength = 4),
+          rownames = FALSE)
+```
+
+## Objetivo de la clase
+
+-   Construir tablas de frecuencia.
+-   Interpretar medidas de frecuencia (absoluta, relativa, acumulada).
+-   Visualizar la distribución de los datos.
+-   Detectar valores atípicos (outliers) y su impacto.
+-   Relacionar con distintos estadísticos y gráficos descriptivos.
+
+## Frecuencia Absoluta
+
+Denotada como $n_i$, es el número de veces que aparece un valor o categoría específica en un conjunto de datos.
+
+Si tenemos una muestra de tamaño N: $$ \sum_{i=1}^{k} n_i = N $$
+
+## Datos de Alturas
+- En orden de recolección
+```{r}
+datos_curso$altura
+
+```
+- Ordenados ascendentemente
+```{r}
+sort(datos_curso$altura)
+```
+
+## Tabla de Frecuencia Absoluta de Alturas
+
+```{r}
+freq_abs <- datos_curso %>%
+  group_by(altura) %>%
+  summarise(ni = n())
+
+gt(freq_abs)%>%
+   gt_theme_excel()
+
+```
+
+## Tabla de Frecuencia Absoluta de Sexo (categórica)
+
+```{r}
+freq_sexo <- datos_curso %>%
+  group_by(sexo) %>%
+  summarise(ni = n())
+
+gt(freq_sexo)%>%
+   gt_theme_excel()
+```
+
+## Frecuencia Relativa
+
+Denotada como $f_i$
+
+Representa la proporción de elementos que pertenecen a una categoría respecto al total.
+
+$$ f_i = \frac{n_i}{N} $$
+
+*Nota:* La suma de todas las frecuencias relativas es siempre 1.
+
+## Tabla de Frecuencia Relativa de Alturas
+
+```{r}
+freq_rel <- datos_curso %>%
+  group_by(altura) %>%
+  summarise(
+    ni = n(),
+    fi = ni/nrow(datos_curso)
+  )
+
+
+gt(freq_rel)%>%
+  fmt_percent(columns = fi,
+              decimals = 1) %>%
+   gt_theme_excel()
+```
+
+## Tabla de Frecuencia Relativa de Sexo
+
+```{r}
+freq_sexo_rel <- datos_curso %>%
+  group_by(sexo) %>%
+  summarise(
+    ni = n(),
+    fi = ni/nrow(datos_curso)
+  )
+
+
+gt(freq_sexo_rel)%>%
+  fmt_percent(columns = fi, 
+              decimals = 1) %>%
+  gt_theme_excel()
+```
+
+## Frecuencias Acumuladas
+
+Útiles para responder preguntas tipo:
+
+"¿Cuántos individuos tienen una altura menor o igual a X?"
+
+1.  Absoluta Acumulada $(N_i)$:
+
+$$ N_i = n_1 + n_2 + ... + n_i $$
+
+2.  Relativa Acumulada $(F_i)$:
+
+$$ F_i = f_1 + f_2 + ... + f_i $$
+
+## Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas
+```{r}
+freq_altura_acumulada <- datos_curso%>%
+  group_by(altura)%>%
+  summarise(ni = n(),
+            fi = ni/nrow(datos_curso))%>%
+  mutate(Ni = cumsum(ni),
+         Fi = cumsum(ni / sum(ni)))
+  
+gt(freq_altura_acumulada)%>%
+  fmt_percent(columns = c(fi, Fi),
+              decimals = 1) %>%
+  gt_theme_excel()
+```
+
+
+
+# Datos Agrupados
+
+## ¿Por qué agrupar datos?
+
+Cuando trabajamos con variables continuas (como la altura, el ingreso o el PIB), los valores exactos rara vez se repiten.
+
+**Problema:** Una tabla de frecuencia simple tendría cientos de filas con $n_i = 1$
+
+**Solución:** Creamos **Intervalos de Clase**.
+
+Al agrupar, asumimos que los valores se distribuyen uniformemente dentro del intervalo. Esto implica una leve pérdida de información a cambio de ganar claridad sobre la distribución.
+
+
+
+## Componentes de la Tabla Agrupada
+
+Para operar matemáticamente con intervalos, necesitamos definir nuevos conceptos:
+
+1.  **Límites de Clase (**$L_{inf}, L_{sup}$): Los valores extremos del intervalo (ej. $[160, 170)$).
+2.  **Amplitud (**$a_i$): El tamaño del intervalo ($L_{sup} - L_{inf}$).
+3.  **Marca de Clase (**$x_i$): Es el punto medio del intervalo. Es el valor **representativo** que usaremos para calcular medias y varianzas en datos agrupados.
+
+## Fórmula de la Marca de Clase
+
+La Marca de Clase ($x_i$) es el promedio de los límites:
+
+$$x_i = \frac{L_{inf} + L_{sup}}{2}$$
+
+Por ejemplo, para el intervalo $[160, 170)$:
+
+$$x_i = \frac{160 + 170}{2} = 165$$
+
+## Generando la Tabla Agrupada con Marca de Clase
+
+Vamos a mejorar nuestra tabla anterior calculando explícitamente la *Marca de Clase*. Esto es necesario para calcular la media aproximada desde la tabla sin tener los datos originales.
+
+## Creación de Intervalos (Binning)
+Usaremos la regla de Sturges o un ancho fijo para definir los intervalos. Vamos a crear cortes cada 8 cm (aproximadamente) para facilitar la lectura.
+
+
+
+- Datos de alturas
+```{r}
+datos_curso$altura
+```
+
+- Valor mínimo
+```{r}
+min(datos_curso$altura) # altura mínima
+```
+
+Se pueden crear cerca de 6 intervalos
+- Valor máximo
+```{r}
+
+max(datos_curso$altura) # altura máxima
+
+```
+
+## Pasos Previos/ Cont.
+Crear 6 intervalos
+
+
+- Rango
+```{r}
+range(datos_curso$altura) # rango de alturas
+```
+
+
+- Partes del Rango a 6 partes
+```{r}
+(max( datos_curso$altura)- min(datos_curso$altura)) /6
+```
+
+
+- Aproximación a la secuencia de los intervalos
+```{r}
+seq(min(datos_curso$altura), 
+    max(datos_curso$altura),
+    8) # crear secuencias con brincos de 8 aproximadamente
+```
+
+
+## Procesamiento de Datos para Marca de Clase
+
+```{r}
+# Procesamiento de datos para obtener Marca de Clase
+tabla_detallada <- datos_curso %>%
+  mutate(
+    # Creamos los cortes de nuevo
+    intervalo_cat = cut(altura, 
+                        breaks = seq(from= 140, 
+                                     to= 220,
+                                     by = 8), 
+                        right = FALSE)
+  ) %>%
+  group_by(intervalo_cat) %>%
+  summarise(
+    ni = n(), # frecuencia absoluta
+  ) %>%
+  mutate(
+    # fi = ni / sum(ni), #frecuencia relativa
+    fi = ni / sum(ni),
+    Ni = cumsum(ni), # frecuencia acumulada
+    Fi = cumsum(ni / sum(ni)),# frecuencia acumulada relativa
+    # Extraemos numéricamente los límites para calcular el punto medio
+    limite_inf = as.numeric(sub("\\[([0-9]+),.*", "\\1", intervalo_cat)),
+    limite_sup = as.numeric(sub(".*,([0-9]+)\\)", "\\1", intervalo_cat)),
+    marca_clase = (limite_inf + limite_sup) / 2,
+  )
+
+```
+*Nota:* cut divide los datos en rangos como [148,156).
+
+## Tabla de frecuencia para Datos Agregados (altura)
+
+```{r}
+tabla_detallada %>%
+  gt() %>%
+  fmt_percent(columns = c(fi, Fi), 
+              decimals = 1) %>%
+   gt_theme_excel()%>%
+  tab_header(
+    title = "Distribución de Alturas",
+    subtitle = "Estudiantes de Economía (n=33)"
+  ) %>%
+  fmt_number(columns = c(fi, Fi), decimals = 3) %>% 
+  # fmt_percent(columns = c(fi, Fi), decimals = 1) %>% 
+  cols_label(
+    intervalo_cat = "Rango de Altura",
+    limite_inf= "Límite Inferior",
+    limite_sup = "Límite Superior",
+    ni = "Frec. Abs (ni)",
+    fi = "Frec. Rel (fi)",
+    Ni = "Acumulada (Ni)",
+    Fi = "Rel. Acum. (Fi)"
+  ) %>%
+  tab_style(
+    style = list(cell_fill(color = "#f0f0f0")),
+    locations = cells_body(rows = ni == max(ni))
+  )
+```
+
+## Histograma de altura
+El histograma es la representación gráfica de la tabla de frecuencias para datos agrupados.
+
+- La base de la barra es el intervalo.
+
+- La altura de la barra es proporcional a la frecuencia $(n_i)$
+
+
+```{r}
+ggplot(datos_curso, 
+       aes(x = altura)) +
+  geom_histogram(breaks = seq(140, 220, by = 8),
+                 fill = "#15616D") +
+  labs(title = "Histograma de Altura",
+       subtitle = "Bins de 10cm (coinciden con la tabla)",
+       x = "Altura (cm)", y = "Frecuencia") +
+  theme_minimal()
+```
+
+## Datos Agrupados vs. No Agrupados
+#### No Agrupados
+Útil cuando hay pocos valores únicos (ej. número de hijos).
+
+#### Agrupados
+Necesario para variables continuas (como la altura) donde los valores exactos rara vez se repiten.
+
+# Estadísticas Descriptivas Altura
+
+## Media Aritmética Alturas
+
+La media aritmética ($\bar{x}$) es la suma de todos los valores dividada por el número total de valores. $$ \bar{x} = \frac{1}{N} \sum_{i=1}^{N} x_i $$
+
+```{r}
+media_altura <- mean(datos_curso$altura)
+
+media_altura
+```
+
+## Mediana Alturas
+La mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.
+\usepackage{amsmath}
+$$
+\text{Mediana} =
+\begin{cases}
+    x_{(N+1)/2} & \text{si } N \text{ es impar} \\
+    \frac{x_{N/2} \hspace{1pt} + \hspace{1pt} x_{N/2 + 1}}{2} & \text{si } N \text{ es par}
+\end{cases}
+$$
+
+
+
+```{r}
+mediana_altura <- median(datos_curso$altura)
+
+mediana_altura
+```
+## Estadísticos
+El RIC es:
+
+$$\text{RIC} = Q_3 - Q_1$$
+
+```{r}
+estadisticos <- datos_curso %>%
+  summarise(
+    Media = mean(altura),
+    Mediana = median(altura),
+    Q1 = quantile(altura, 0.25),
+    Q3 = quantile(altura, 0.75),
+    RIC = IQR(altura),
+    Min = min(altura),
+    Max = max(altura)
+  )
+
+gt(estadisticos)%>%
+   gt_theme_excel()%>%
+  tab_header(title = "Estadísticos Descriptivos de Altura") %>%
+  fmt_number(everything(), decimals = 2)
+```
+
+## Valores dentro del RIC
+
+```{r}
+q1 <- estadisticos$Q1
+q3 <- estadisticos$Q3
+
+ric_vals <- datos_curso %>% 
+  filter(altura >= q1, 
+         altura <= q3)
+
+ric_vals %>% 
+  gt()
+```
+
+## Detalle de valores entre Q1 y Q3
+
+```{r}
+datatable(ric_vals, 
+          options = list(pageLength = 10))
+```
+
+## Outlier
+
+```{r}
+lim_inf <- q1 - 1.5 * estadisticos$RIC
+lim_sup <- q3 + 1.5 * estadisticos$RIC
+
+outliers <- datos_curso %>% 
+  filter(altura < lim_inf | altura > lim_sup)
+
+
+gt(outliers)%>%
+  gt_theme_excel()
+```
+
+
+
+## Histograma de altura con media y mediana
+Mediana en verde y media en rojo
+
+```{r}
+ggplot(datos_curso, 
+       aes(x = altura)) +
+  geom_histogram(binwidth = 5, 
+                 fill = "#15616D", 
+                 color = "black") +
+  geom_vline(aes(xintercept = media_altura), 
+             color = "red", 
+             linetype = "dashed", 
+             size = 2) +
+  geom_vline(aes(xintercept = mediana_altura), 
+             color = "green", 
+             linetype = "dashed", 
+             size = 1) +
+  labs(title = "Histograma de Altura con Media y Mediana",
+       x = "Altura",
+       y = "Frecuencia") +
+  theme_minimal()
+```
+
+## Desviación Típica o Estándar
+##### Desviación Estándar Poblacional (σ):
+Se denota con la letra griega sigma (σ).
+La desviación estándar ($\sigma$) mide la dispersión de los datos respecto a la media poblacional.
+
+$$\sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}$$
+
+## Desviación Típica o Estándar-cont
+
+#### Muestral: Se denota con la letra latina (s).
+
+La desviación estándar $(s)$ mide la dispersión de los datos respecto a la media muestral y se usa la Corrección de Bessel $(n−1)$ para calcularla.
+
+$$s = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}}$$
+
+
+```{r}
+
+sd_altura <- sd(datos_curso$altura)
+sd_altura 
+```
+
+## Histograma de Altura 
+#### con línea media (rojo), 1 desviación estándar (azul) y 2 desviaciones estándar (verde)
+
+```{r}
+
+ggplot(datos_curso, 
+       aes(x = altura)) +
+  geom_histogram(binwidth = 5, 
+                 fill = "#15616D", 
+                 color = "black") +
+  geom_vline(aes(xintercept = media_altura), 
+             color = "red", 
+             linetype = "dashed", 
+             size = 1) +
+  geom_vline(aes(xintercept = media_altura + sd_altura), 
+             color = "blue", 
+             linetype = "dashed", 
+             size = 1) +
+  geom_vline(aes(xintercept = media_altura - sd_altura), 
+             color = "blue", 
+             linetype = "dashed", 
+             size = 1) +
+  geom_vline(aes(xintercept = media_altura + 2 * sd_altura), 
+             color = "green", 
+             linetype = "dashed", 
+             size = 1) +
+  geom_vline(aes(xintercept = media_altura - 2 * sd_altura), 
+             color = "green", 
+             linetype = "dashed", 
+             size = 1) +
+  labs(title = "Histograma de Altura con Media y Desviaciones Estándar",
+       x = "Altura",
+       y = "Frecuencia") +
+  theme_minimal()
+```
+
+## Regresamos: Histograma de altura con mediana
+Mediana en verde 
+
+```{r}
+ggplot(datos_curso, 
+       aes(x = altura)) +
+  geom_histogram(binwidth = 5, 
+                 fill = "#15616D", 
+                 color = "black") +
+  geom_vline(aes(xintercept = mediana_altura), 
+             color = "green", 
+             linetype = "dashed", 
+             size = 1) +
+  labs(title = "Histograma de Altura con Media y Mediana",
+       x = "Altura",
+       y = "Frecuencia") +
+  theme_minimal()
+```
+
+## Boxplot 
+
+El Boxplot visualiza los cuartiles.
+
+- Caja: Del $Q_1$ al $Q_3$ (contiene el 50% central).
+
+- Línea central: Mediana.
+
+- Bigotes: Se extienden hasta 1.5×IQR.
+
+- Puntos: Valores fuera de los bigotes (Outliers).
+
+## Boxplot en representación horizontal y tabla sumario de altura 
+```{r}
+summary(datos_curso$altura)
+```
+
+
+```{r}
+ggplot(datos_curso, aes(y = altura)) +
+  geom_boxplot(outlier.colour = "red",
+               outlier.size = 2,
+               whisker.colour = 'blue',
+               staplewidth = 0.2) +
+  coord_flip() +
+  theme_minimal()+
+  labs(title = "Boxplot de Altura",
+       subtitle =  'Orientación Horizontal',
+       x = "Altura (cm)") +
+  theme_minimal() 
+
+```
+
+## Representación Conjunta Histograma- Boxplot
+```{r}
+ggplot(datos_curso, 
+       aes(x = altura)) +
+  geom_histogram(binwidth = 5, 
+                 fill = "#15616D", 
+                 color = "black") +
+  geom_vline(aes(xintercept = mediana_altura), 
+             color = "green", 
+             linetype = "dashed", 
+             size = 1) +
+  labs(title = "Histograma de Altura con Media y Mediana",
+       x = "Altura",
+       y = "Frecuencia") +
+  theme_minimal()
+
+ggplot(datos_curso, aes(y = altura)) +
+  geom_boxplot(outlier.colour = "red",
+               outlier.size = 2,
+               whisker.colour = 'blue',
+               staplewidth = 0.2) +
+  coord_flip() +
+  theme_minimal()
+```
+
+
+
+## Boxplot de altura
+
+```{r}
+ggplot(datos_curso, aes(y = altura)) +
+  geom_boxplot(outlier.colour = "red",
+               outlier.size = 2,
+               whisker.colour = 'blue',
+               staplewidth = 0.2) +
+  theme_minimal()
+```
+
+## Boxplot de altura por sexo
+¿Cómo se comporta la distribución según el sexo?
+```{r}
+ggplot(datos_curso, aes(x = sexo,
+                        y = altura,
+                        fill=sexo)) +
+  geom_boxplot() +
+  facet_grid(~sexo) +
+  theme_minimal()+
+  labs(title = "Distribución de Altura por Sexo") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+
+
+
+
+## Scatterplot: peso vs estatura
+
+Variables posiblemente asociadas
+
+```{r}
+ggplot(datos_curso, aes(x = altura, 
+                  y = peso,
+                  color=sexo)) +
+  geom_point(size=2) +
+  theme_minimal()
+```

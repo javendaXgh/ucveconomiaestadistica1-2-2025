@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -496,8 +496,8 @@
     "objectID": "clases/clase_05.html#introducción-a-las-medias",
     "href": "clases/clase_05.html#introducción-a-las-medias",
     "title": "Estadística I",
-    "section": "Introducción a las Medias",
-    "text": "Introducción a las Medias\nEn estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
+    "section": "",
+    "text": "En estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
   },
   {
     "objectID": "clases/clase_05.html#media-ponderada-weighted-mean",
@@ -532,7 +532,7 @@
     "href": "clases/clase_05.html#media-armónica-harmonic-mean",
     "title": "Estadística I",
     "section": "2- Media Armónica (Harmonic Mean)",
-    "text": "2- Media Armónica (Harmonic Mean)\nEs útil para calcular promedios de tasas o ratios. Se define como el recíproco1 de la media aritmética de los recíprocos de los valores.\nFórmula:\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores.\nSi tienes un conjunto de datos como \\(x1​,x2​,...,xn​\\), el recíproco de cada valor es \\(\\frac{1}{x1}​, \\frac{1}{x2}​,..., \\frac{1}{xn}\\)"
+    "text": "2- Media Armónica (Harmonic Mean)\nEs útil para calcular promedios de tasas o ratios. Se define como el recíproco1 de la media aritmética de los recíprocos de los valores.\nFórmula:\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores."
   },
   {
     "objectID": "clases/clase_05.html#ejemplo-de-media-armónica",
@@ -616,7 +616,7 @@
     "href": "clases/clase_05.html#cómo-decidir-qué-media-usar",
     "title": "Estadística I",
     "section": "¿Cómo decidir qué media usar?",
-    "text": "¿Cómo decidir qué media usar?\nRecetario con uso discrecional\n\n¿Importancia desigual? → Media ponderada.\n¿Promedios de tasas? → Media armónica.\n¿Crecimiento o factores multiplicativos? → Media geométrica.\n¿Valores homogéneos? → Media aritmética.\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "¿Cómo decidir qué media usar?\n\nRecetario con uso discrecional\n\n¿Importancia desigual? → Media ponderada.\n¿Promedios de tasas? → Media armónica.\n¿Crecimiento o factores multiplicativos? → Media geométrica.\n¿Valores homogéneos? → Media aritmética."
   },
   {
     "objectID": "notebooks/TallerPrimerTema.html#ejercicio-práctico",
@@ -638,5 +638,418 @@
     "title": "UCV-Escuela Economía- Estadística 1",
     "section": "Trabajar con nuestros Datos",
     "text": "Trabajar con nuestros Datos\n\ndf_encuesta\n\n\nA data.frame: 0 × 17\n\n\npeso\naltura\nEdad\nhermanos\ncod.postal\nsexo\ndia.nacionmiento\nhijos\ndistancia\ntranporte\ntrabaja\nmaterias.cursadas\nhoras.estudio\npromedio.acad\nred.social\nconsumo.drogas\nhora.registro\n\n\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;\n&lt;lgl&gt;"
+  },
+  {
+    "objectID": "clases/clase_06.html#generación-de-los-datos",
+    "href": "clases/clase_06.html#generación-de-los-datos",
+    "title": "Estadística I",
+    "section": "Generación de los datos",
+    "text": "Generación de los datos\n\n\nCódigo\nset.seed(123) # para reproducibilidad\n# 1. Generar Altura: 32 valores normales + 1 outlier (195 cm)\naltura &lt;- round(c(rnorm(32, mean = 168, sd = 8),195))\n\n# 2. Generar Ruido: Un componente aleatorio (varianza) para el peso\n#    Esto simula factores no relacionados con la altura (metabolismo, etc.)\nruido_peso &lt;- rnorm(33, mean = 0, sd = 6) # Ruido con media 0 y Desv. Típica 6\n\n# 3. Generar Peso Asociado a Altura:\n#    Peso_base = (Altura * Coeficiente) + Intercepto + Ruido\n#    Usamos una fórmula simple (ej: IMC aproximado) para ligar el peso a la altura.\npeso &lt;- round(0.7 * altura - 50 + ruido_peso)\n\n# 4. Generar Sexo e ID\nsexo &lt;- sample(c(\"M\", \"F\"), 33, replace = TRUE)\n\n# generar consecutivos para identificación de observaciones (filas)\nid=1:33\n\ndatos_curso &lt;- data.frame(id,\n                          altura, \n                          peso, \n                          sexo)"
+  },
+  {
+    "objectID": "clases/clase_06.html#conjunto-de-datos",
+    "href": "clases/clase_06.html#conjunto-de-datos",
+    "title": "Estadística I",
+    "section": "Conjunto de Datos",
+    "text": "Conjunto de Datos"
+  },
+  {
+    "objectID": "clases/clase_06.html#objetivo-de-la-clase",
+    "href": "clases/clase_06.html#objetivo-de-la-clase",
+    "title": "Estadística I",
+    "section": "Objetivo de la clase",
+    "text": "Objetivo de la clase\n\nConstruir tablas de frecuencia.\nInterpretar medidas de frecuencia (absoluta, relativa, acumulada).\nVisualizar la distribución de los datos.\nDetectar valores atípicos (outliers) y su impacto.\nRelacionar con distintos estadísticos y gráficos descriptivos."
+  },
+  {
+    "objectID": "clases/clase_06.html#frecuencia-absoluta",
+    "href": "clases/clase_06.html#frecuencia-absoluta",
+    "title": "Estadística I",
+    "section": "Frecuencia Absoluta",
+    "text": "Frecuencia Absoluta\nDenotada como \\(n_i\\), es el número de veces que aparece un valor o categoría específica en un conjunto de datos.\nSi tenemos una muestra de tamaño N: \\[ \\sum_{i=1}^{k} n_i = N \\]"
+  },
+  {
+    "objectID": "clases/clase_06.html#frecuencia-relativa",
+    "href": "clases/clase_06.html#frecuencia-relativa",
+    "title": "Estadística I",
+    "section": "Frecuencia Relativa",
+    "text": "Frecuencia Relativa\nDenotada como \\(f_i\\)\nRepresenta la proporción de elementos que pertenecen a una categoría respecto al total.\n\\[ f_i = \\frac{n_i}{N} \\]\nNota: La suma de todas las frecuencias relativas es siempre 1."
+  },
+  {
+    "objectID": "clases/clase_06.html#conceptos-frecuencias-acumuladas",
+    "href": "clases/clase_06.html#conceptos-frecuencias-acumuladas",
+    "title": "Estadística I",
+    "section": "Conceptos: Frecuencias Acumuladas",
+    "text": "Conceptos: Frecuencias Acumuladas\nÚtiles para responder preguntas tipo: “¿Cuántos individuos tienen una altura menor o igual a X?” 1. Absoluta Acumulada \\((N_i=)\\):\n\\[ N_i = n_1 + n_2 + ... + n_i \\]\n\nRelativa Acumulada \\((F_i)\\):\n\n\\[ F_i = f_1 + f_2 + ... + f_i \\]"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-altura",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-altura",
+    "title": "Estadística I",
+    "section": "Tabla de frecuencia (altura)",
+    "text": "Tabla de frecuencia (altura)\nCreamos intervalos para la estatura.\n\n\nCódigo\ndatos_curso &lt;- datos_curso %&gt;% \n  mutate(intervalo = cut(altura, breaks = seq(140, 220, 5)))\n\nfreq &lt;- datos_curso %&gt;%\n  group_by(intervalo) %&gt;%\n  summarise(\n    n = n(),\n    fr = n()/nrow(datos_curso),\n    fa = cumsum(n),\n    fra = cumsum(fr)\n  )"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-en-gt",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-en-gt",
+    "title": "Estadística I",
+    "section": "Tabla de frecuencia en gt",
+    "text": "Tabla de frecuencia en gt\n\n\nCódigo\nfreq %&gt;%\n  gt() %&gt;%\n  fmt_percent(columns = c(fr, fra), \n              decimals = 1) %&gt;%\n  gt_theme_dot_matrix()\n\n\n\n\n\n\n\n\nintervalo\nn\nfr\nfa\nfra\n\n\n\n\n(150,155]\n2\n6.1%\n2\n6.1%\n\n\n(155,160]\n4\n12.1%\n4\n12.1%\n\n\n(160,165]\n7\n21.2%\n7\n21.2%\n\n\n(165,170]\n7\n21.2%\n7\n21.2%\n\n\n(170,175]\n8\n24.2%\n8\n24.2%\n\n\n(175,180]\n3\n9.1%\n3\n9.1%\n\n\n(180,185]\n2\n6.1%\n2\n6.1%"
+  },
+  {
+    "objectID": "clases/clase_06.html#histograma-de-altura",
+    "href": "clases/clase_06.html#histograma-de-altura",
+    "title": "Estadística I",
+    "section": "Histograma de altura",
+    "text": "Histograma de altura\nEl histograma es la representación gráfica de la tabla de frecuencias para datos agrupados.\n\nLa base de la barra es el intervalo.\nLa altura de la barra es proporcional a la frecuencia \\((n_i)\\)\n\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(breaks = seq(140, 220, by = 8),\n                 fill = \"#15616D\") +\n  labs(title = \"Histograma de Altura\",\n       subtitle = \"Bins de 10cm (coinciden con la tabla)\",\n       x = \"Altura (cm)\", y = \"Frecuencia\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-de-altura",
+    "href": "clases/clase_06.html#boxplot-de-altura",
+    "title": "Estadística I",
+    "section": "Boxplot de altura",
+    "text": "Boxplot de altura\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-de-altura-por-sexo",
+    "href": "clases/clase_06.html#boxplot-de-altura-por-sexo",
+    "title": "Estadística I",
+    "section": "Boxplot de altura por sexo",
+    "text": "Boxplot de altura por sexo\n¿Cómo se comporta la distribución según el sexo?\n\n\nCódigo\nggplot(datos_curso, aes(x = sexo,\n                        y = altura,\n                        fill=sexo)) +\n  geom_boxplot() +\n  facet_grid(~sexo) +\n  theme_minimal()+\n  labs(title = \"Distribución de Altura por Sexo\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "clases/clase_06.html#estadísticas-descriptivas",
+    "href": "clases/clase_06.html#estadísticas-descriptivas",
+    "title": "Estadística I",
+    "section": "Estadísticas descriptivas",
+    "text": "Estadísticas descriptivas\nSea una variable aleatoria continua \\(X\\). La media es:\n\\[\\bar{x} = \\frac{1}{n} \\sum_{i=1}^n x_i\\]\nLa mediana es el valor central del conjunto ordenado y el RIC es:\n\\[\\text{RIC} = Q_3 - Q_1\\]\n\n\nCódigo\nsummary_stats &lt;- datos_curso %&gt;% \n  summarise(\n  media = mean(altura),\n  mediana = median(altura),\n  Q1 = quantile(altura, 0.25),\n  Q3 = quantile(altura, 0.75),\n  RIC = Q3 - Q1\n)\nsummary_stats\n\n\n     media mediana  Q1  Q3 RIC\n1 168.5455     169 163 172   9"
+  },
+  {
+    "objectID": "clases/clase_06.html#valores-dentro-del-ric",
+    "href": "clases/clase_06.html#valores-dentro-del-ric",
+    "title": "Estadística I",
+    "section": "Valores dentro del RIC",
+    "text": "Valores dentro del RIC\n\n\nCódigo\nq1 &lt;- estadisticos$Q1\nq3 &lt;- estadisticos$Q3\n\nric_vals &lt;- datos_curso %&gt;% \n  filter(altura &gt;= q1, \n         altura &lt;= q3)\n\nric_vals %&gt;% \n  gt()\n\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n1\n164\n70\nF\n\n\n2\n166\n71\nM\n\n\n4\n169\n72\nF\n\n\n5\n169\n72\nF\n\n\n7\n172\n69\nF\n\n\n9\n163\n60\nF\n\n\n10\n164\n64\nM\n\n\n12\n171\n83\nF\n\n\n13\n171\n77\nF\n\n\n14\n169\n62\nM\n\n\n15\n164\n62\nF\n\n\n17\n172\n75\nF\n\n\n20\n164\n65\nF\n\n\n22\n166\n74\nF\n\n\n25\n163\n55\nM\n\n\n28\n169\n70\nM\n\n\n31\n171\n68\nM\n\n\n32\n166\n60\nF"
+  },
+  {
+    "objectID": "clases/clase_06.html#detalle-de-valores-entre-q1-y-q3",
+    "href": "clases/clase_06.html#detalle-de-valores-entre-q1-y-q3",
+    "title": "Estadística I",
+    "section": "Detalle de valores entre Q1 y Q3",
+    "text": "Detalle de valores entre Q1 y Q3\n\n\nCódigo\ndatatable(ric_vals, \n          options = list(pageLength = 10))"
+  },
+  {
+    "objectID": "clases/clase_06.html#outlier",
+    "href": "clases/clase_06.html#outlier",
+    "title": "Estadística I",
+    "section": "Outlier",
+    "text": "Outlier\n\n\nCódigo\nlim_inf &lt;- q1 - 1.5 * estadisticos$RIC\nlim_sup &lt;- q3 + 1.5 * estadisticos$RIC\n\noutliers &lt;- datos_curso %&gt;% \n  filter(altura &lt; lim_inf | altura &gt; lim_sup)\n\n\ngt(outliers)%&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n33\n195\n80\nF"
+  },
+  {
+    "objectID": "clases/clase_06.html#scatterplot-peso-vs-estatura",
+    "href": "clases/clase_06.html#scatterplot-peso-vs-estatura",
+    "title": "Estadística I",
+    "section": "Scatterplot: peso vs estatura",
+    "text": "Scatterplot: peso vs estatura\nVariables posiblemente asociadas\n\n\nCódigo\nggplot(datos_curso, aes(x = altura, \n                  y = peso,\n                  color=sexo)) +\n  geom_point(size=2) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_06.html#cargar-librerías-necesarias",
+    "href": "clases/clase_06.html#cargar-librerías-necesarias",
+    "title": "Estadística I",
+    "section": "Cargar Librerías Necesarias",
+    "text": "Cargar Librerías Necesarias\n\n\nCódigo\nlibrary(dplyr) # manipular datos\nlibrary(ggplot2)# crear gráficos\nlibrary(gt) # crear tablas\nlibrary(gtExtras)# añadir funcionalidades a las tablas\nlibrary(DT) #mostrar tablas en formato interactivo"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-altura",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-altura",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencia Absoluta de Altura",
+    "text": "Tabla de Frecuencia Absoluta de Altura\n\n\nCódigo\nfreq_abs &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(n = n())%&gt;%\n  arrange(n)\n\ndatatable(freq_abs, \n          options = list(pageLength = 4),\n          rownames = FALSE)"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-alturas",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-alturas",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencia Absoluta de Alturas",
+    "text": "Tabla de Frecuencia Absoluta de Alturas\n\n\nCódigo\nfreq_abs &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(ni = n())\n\ngt(freq_abs)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\n\n\n\n\n152\n1\n\n\n155\n1\n\n\n158\n1\n\n\n159\n2\n\n\n160\n1\n\n\n162\n1\n\n\n163\n2\n\n\n164\n4\n\n\n166\n3\n\n\n169\n4\n\n\n171\n3\n\n\n172\n2\n\n\n174\n1\n\n\n175\n1\n\n\n178\n2\n\n\n180\n1\n\n\n182\n2\n\n\n195\n1"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-sexo-categórica",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-sexo-categórica",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencia Absoluta de Sexo (categórica)",
+    "text": "Tabla de Frecuencia Absoluta de Sexo (categórica)\n\n\nCódigo\nfreq_sexo &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(ni = n())\n\ngt(freq_sexo)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\nsexo\nni\n\n\n\n\nF\n20\n\n\nM\n13"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-sexo",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-sexo",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencia Relativa de Sexo",
+    "text": "Tabla de Frecuencia Relativa de Sexo\n\n\nCódigo\nfreq_sexo_rel &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_sexo_rel)%&gt;%\n  fmt_percent(columns = fi, \n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\nsexo\nni\nfi\n\n\n\n\nF\n20\n60.6%\n\n\nM\n13\n39.4%"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-alturas",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-alturas",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencia Relativa de Alturas",
+    "text": "Tabla de Frecuencia Relativa de Alturas\n\n\nCódigo\nfreq_rel &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_rel)%&gt;%\n  fmt_percent(columns = fi,\n              decimals = 1) %&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\nfi\n\n\n\n\n152\n1\n3.0%\n\n\n155\n1\n3.0%\n\n\n158\n1\n3.0%\n\n\n159\n2\n6.1%\n\n\n160\n1\n3.0%\n\n\n162\n1\n3.0%\n\n\n163\n2\n6.1%\n\n\n164\n4\n12.1%\n\n\n166\n3\n9.1%\n\n\n169\n4\n12.1%\n\n\n171\n3\n9.1%\n\n\n172\n2\n6.1%\n\n\n174\n1\n3.0%\n\n\n175\n1\n3.0%\n\n\n178\n2\n6.1%\n\n\n180\n1\n3.0%\n\n\n182\n2\n6.1%\n\n\n195\n1\n3.0%"
+  },
+  {
+    "objectID": "clases/clase_06.html#frecuencias-acumuladas",
+    "href": "clases/clase_06.html#frecuencias-acumuladas",
+    "title": "Estadística I",
+    "section": "Frecuencias Acumuladas",
+    "text": "Frecuencias Acumuladas\nÚtiles para responder preguntas tipo:\n“¿Cuántos individuos tienen una altura menor o igual a X?”\n\nAbsoluta Acumulada \\((N_i)\\):\n\n\\[ N_i = n_1 + n_2 + ... + n_i \\]\n\nRelativa Acumulada \\((F_i)\\):\n\n\\[ F_i = f_1 + f_2 + ... + f_i \\]"
+  },
+  {
+    "objectID": "clases/clase_06.html#por-qué-agrupar-datos",
+    "href": "clases/clase_06.html#por-qué-agrupar-datos",
+    "title": "Estadística I",
+    "section": "¿Por qué agrupar datos?",
+    "text": "¿Por qué agrupar datos?\nCuando trabajamos con variables continuas (como la altura, el ingreso o el PIB), los valores exactos rara vez se repiten.\nProblema: Una tabla de frecuencia simple tendría cientos de filas con \\(n_i = 1\\)\nSolución: Creamos Intervalos de Clase.\nAl agrupar, asumimos que los valores se distribuyen uniformemente dentro del intervalo. Esto implica una leve pérdida de información a cambio de ganar claridad sobre la distribución."
+  },
+  {
+    "objectID": "clases/clase_06.html#componentes-de-la-tabla-agrupada",
+    "href": "clases/clase_06.html#componentes-de-la-tabla-agrupada",
+    "title": "Estadística I",
+    "section": "Componentes de la Tabla Agrupada",
+    "text": "Componentes de la Tabla Agrupada\nPara operar matemáticamente con intervalos, necesitamos definir nuevos conceptos:\n\nLímites de Clase (\\(L_{inf}, L_{sup}\\)): Los valores extremos del intervalo (ej. \\([160, 170)\\)).\nAmplitud (\\(a_i\\)): El tamaño del intervalo (\\(L_{sup} - L_{inf}\\)).\nMarca de Clase (\\(x_i\\)): Es el punto medio del intervalo. Es el valor representativo que usaremos para calcular medias y varianzas en datos agrupados."
+  },
+  {
+    "objectID": "clases/clase_06.html#fórmula-de-la-marca-de-clase",
+    "href": "clases/clase_06.html#fórmula-de-la-marca-de-clase",
+    "title": "Estadística I",
+    "section": "Fórmula de la Marca de Clase",
+    "text": "Fórmula de la Marca de Clase\nLa Marca de Clase (\\(x_i\\)) es el promedio de los límites:\n\\[x_i = \\frac{L_{inf} + L_{sup}}{2}\\]\nPor ejemplo, para el intervalo \\([160, 170)\\):\n\\[x_i = \\frac{160 + 170}{2} = 165\\]"
+  },
+  {
+    "objectID": "clases/clase_06.html#generando-la-tabla-con-marca-de-clase",
+    "href": "clases/clase_06.html#generando-la-tabla-con-marca-de-clase",
+    "title": "Estadística I",
+    "section": "Generando la Tabla con Marca de Clase",
+    "text": "Generando la Tabla con Marca de Clase\nVamos a mejorar nuestra tabla anterior calculando explícitamente la Marca de Clase. Esto es necesario para calcular la media aproximada desde la tabla sin tener los datos originales."
+  },
+  {
+    "objectID": "clases/clase_06.html#procesamiento-de-datos-para-marca-de-clase",
+    "href": "clases/clase_06.html#procesamiento-de-datos-para-marca-de-clase",
+    "title": "Estadística I",
+    "section": "Procesamiento de Datos para Marca de Clase",
+    "text": "Procesamiento de Datos para Marca de Clase\n\n\nCódigo\n# Procesamiento de datos para obtener Marca de Clase\ntabla_detallada &lt;- datos_curso %&gt;%\n  mutate(\n    # Creamos los cortes de nuevo\n    intervalo_cat = cut(altura, \n                        breaks = seq(from= 140, \n                                     to= 220,\n                                     by = 8), \n                        right = FALSE)\n  ) %&gt;%\n  group_by(intervalo_cat) %&gt;%\n  summarise(\n    ni = n(), # frecuencia absoluta\n  ) %&gt;%\n  mutate(\n    # fi = ni / sum(ni), #frecuencia relativa\n    fi = ni / sum(ni),\n    Ni = cumsum(ni), # frecuencia acumulada\n    Fi = cumsum(ni / sum(ni)),# frecuencia acumulada relativa\n    # Extraemos numéricamente los límites para calcular el punto medio\n    limite_inf = as.numeric(sub(\"\\\\[([0-9]+),.*\", \"\\\\1\", intervalo_cat)),\n    limite_sup = as.numeric(sub(\".*,([0-9]+)\\\\)\", \"\\\\1\", intervalo_cat)),\n    marca_clase = (limite_inf + limite_sup) / 2,\n  )\n\n\nNota: cut divide los datos en rangos como [148,156)."
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencia-para-datos-agregados-altura",
+    "href": "clases/clase_06.html#tabla-de-frecuencia-para-datos-agregados-altura",
+    "title": "Estadística I",
+    "section": "Tabla de frecuencia para Datos Agregados (altura)",
+    "text": "Tabla de frecuencia para Datos Agregados (altura)\n\n\nCódigo\ntabla_detallada %&gt;%\n  gt() %&gt;%\n  fmt_percent(columns = c(fi, Fi), \n              decimals = 1) %&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(\n    title = \"Distribución de Alturas\",\n    subtitle = \"Estudiantes de Economía (n=33)\"\n  ) %&gt;%\n  fmt_number(columns = c(fi, Fi), decimals = 3) %&gt;% \n  # fmt_percent(columns = c(fi, Fi), decimals = 1) %&gt;% \n  cols_label(\n    intervalo_cat = \"Rango de Altura\",\n    limite_inf= \"Límite Inferior\",\n    limite_sup = \"Límite Superior\",\n    ni = \"Frec. Abs (ni)\",\n    fi = \"Frec. Rel (fi)\",\n    Ni = \"Acumulada (Ni)\",\n    Fi = \"Rel. Acum. (Fi)\"\n  ) %&gt;%\n  tab_style(\n    style = list(cell_fill(color = \"#f0f0f0\")),\n    locations = cells_body(rows = ni == max(ni))\n  )\n\n\n\n\n\n\n\n\nDistribución de Alturas\n\n\nEstudiantes de Economía (n=33)\n\n\nRango de Altura\nFrec. Abs (ni)\nFrec. Rel (fi)\nAcumulada (Ni)\nRel. Acum. (Fi)\nLímite Inferior\nLímite Superior\nmarca_clase\n\n\n\n\n[148,156)\n2\n0.061\n2\n0.061\n148\n156\n152\n\n\n[156,164)\n7\n0.212\n9\n0.273\n156\n164\n160\n\n\n[164,172)\n14\n0.424\n23\n0.697\n164\n172\n168\n\n\n[172,180)\n6\n0.182\n29\n0.879\n172\n180\n176\n\n\n[180,188)\n3\n0.091\n32\n0.970\n180\n188\n184\n\n\n[188,196)\n1\n0.030\n33\n1.000\n188\n196\n192"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-con-bigotes",
+    "href": "clases/clase_06.html#boxplot-con-bigotes",
+    "title": "Estadística I",
+    "section": "Boxplot con Bigotes",
+    "text": "Boxplot con Bigotes\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#pasos-previos-cont.",
+    "href": "clases/clase_06.html#pasos-previos-cont.",
+    "title": "Estadística I",
+    "section": "Pasos Previos/ Cont.",
+    "text": "Pasos Previos/ Cont.\nCrear 6 intervalos\n\nRango\n\n\n\nCódigo\nrange(datos_curso$altura) # rango de alturas\n\n\n[1] 152 195\n\n\n\nPartes del Rango a 6 partes\n\n\n\nCódigo\n(max( datos_curso$altura)- min(datos_curso$altura)) /6\n\n\n[1] 7.166667\n\n\n\nAproximación a la secuencia de los intervalos\n\n\n\nCódigo\nseq(min(datos_curso$altura), \n    max(datos_curso$altura),\n    8) # crear secuencias con brincos de 8 aproximadamente\n\n\n[1] 152 160 168 176 184 192"
+  },
+  {
+    "objectID": "clases/clase_06.html#media-aritmética-y-mediana",
+    "href": "clases/clase_06.html#media-aritmética-y-mediana",
+    "title": "Estadística I",
+    "section": "Media Aritmética y Mediana",
+    "text": "Media Aritmética y Mediana\nLa media aritmética (\\(\\bar{x}\\)) es la suma de todos los valores dividada por el número total de valores. \\[ \\bar{x} = \\frac{1}{N} \\sum_{i=1}^{N} x_i \\]\n\n\nCódigo\nmedia_altura &lt;- mean(datos_curso$altura)\n\nmedia_altura\n\n\n[1] 168.5455\n\n\nLa mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.\n\\[ \\text{Mediana} = \\begin{cases}\nx_{\\frac{N+1}{2}} & \\text{si N es impar} \\\\\n\\frac{x_{\\frac{N}{2}} + x_{\\frac{N}{2} + 1}}{2} & \\text{si N es par}\n\\end{cases} \\]\n\n\nCódigo\nmediana_altura &lt;- median(datos_curso$altura)\n\nmediana_altura\n\n\n[1] 169"
+  },
+  {
+    "objectID": "clases/clase_06.html#histograma-de-altura-con-media-y-mediana",
+    "href": "clases/clase_06.html#histograma-de-altura-con-media-y-mediana",
+    "title": "Estadística I",
+    "section": "Histograma de altura con media y mediana",
+    "text": "Histograma de altura con media y mediana\nMediana en verde y media en rojo\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 2) +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#desviación-típica-o-estándar",
+    "href": "clases/clase_06.html#desviación-típica-o-estándar",
+    "title": "Estadística I",
+    "section": "Desviación Típica o Estándar",
+    "text": "Desviación Típica o Estándar\nDesviación Estándar Poblacional (σ):\nSe denota con la letra griega sigma (σ). La desviación estándar (\\(\\sigma\\)) mide la dispersión de los datos respecto a la media poblacional.\n\\[\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\\]"
+  },
+  {
+    "objectID": "clases/clase_06.html#histograma-de-altura-con-línea-media-1-desviación-estándar-y-2-desviaciones-estándar",
+    "href": "clases/clase_06.html#histograma-de-altura-con-línea-media-1-desviación-estándar-y-2-desviaciones-estándar",
+    "title": "Estadística I",
+    "section": "Histograma de Altura con línea media, 1 desviación estándar y 2 desviaciones estándar",
+    "text": "Histograma de Altura con línea media, 1 desviación estándar y 2 desviaciones estándar\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"lightblue\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Desviaciones Estándar\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-de-altura-en-representación-horizontal",
+    "href": "clases/clase_06.html#boxplot-de-altura-en-representación-horizontal",
+    "title": "Estadística I",
+    "section": "Boxplot de altura en representación horizontal",
+    "text": "Boxplot de altura en representación horizontal\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot() +\n  coord_flip() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#pasos-previos",
+    "href": "clases/clase_06.html#pasos-previos",
+    "title": "Estadística I",
+    "section": "Pasos Previos",
+    "text": "Pasos Previos\nIntervalos para la estatura. Se van a crear 6 intervalos\n\n\nCódigo\n#|code-fold: false\n\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\nCódigo\nmin(datos_curso$altura) # altura mínima\n\n\n[1] 152\n\n\nCódigo\nmax(datos_curso$altura) # altura máxima\n\n\n[1] 195"
+  },
+  {
+    "objectID": "clases/clase_06.html#pasos-previos-tabla-agrupada",
+    "href": "clases/clase_06.html#pasos-previos-tabla-agrupada",
+    "title": "Estadística I",
+    "section": "Pasos Previos Tabla Agrupada",
+    "text": "Pasos Previos Tabla Agrupada\nIntervalos para la estatura. Se van a crear 6 intervalos\n\nDatos de alturas\n\n\n\nCódigo\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nValor mínimo\n\n\n\nCódigo\nmin(datos_curso$altura) # altura mínima\n\n\n[1] 152\n\n\n\nValor máximo\n\n\n\nCódigo\nmax(datos_curso$altura) # altura máxima\n\n\n[1] 195"
+  },
+  {
+    "objectID": "clases/clase_06.html#generando-la-tabla-agrupada-con-marca-de-clase",
+    "href": "clases/clase_06.html#generando-la-tabla-agrupada-con-marca-de-clase",
+    "title": "Estadística I",
+    "section": "Generando la Tabla Agrupada con Marca de Clase",
+    "text": "Generando la Tabla Agrupada con Marca de Clase\nVamos a mejorar nuestra tabla anterior calculando explícitamente la Marca de Clase. Esto es necesario para calcular la media aproximada desde la tabla sin tener los datos originales."
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-de-frecuencias-absolutas-relativas-y-acumuladas-para-alturas",
+    "href": "clases/clase_06.html#tabla-de-frecuencias-absolutas-relativas-y-acumuladas-para-alturas",
+    "title": "Estadística I",
+    "section": "Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas",
+    "text": "Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas\n\n\nCódigo\nfreq_altura_acumulada &lt;- datos_curso%&gt;%\n  group_by(altura)%&gt;%\n  summarise(ni = n(),\n            fi = ni/nrow(datos_curso))%&gt;%\n  mutate(Ni = cumsum(ni),\n         Fi = cumsum(ni / sum(ni)))\n  \ngt(freq_altura_acumulada)%&gt;%\n  fmt_percent(columns = c(fi, Fi),\n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\nfi\nNi\nFi\n\n\n\n\n152\n1\n3.0%\n1\n3.0%\n\n\n155\n1\n3.0%\n2\n6.1%\n\n\n158\n1\n3.0%\n3\n9.1%\n\n\n159\n2\n6.1%\n5\n15.2%\n\n\n160\n1\n3.0%\n6\n18.2%\n\n\n162\n1\n3.0%\n7\n21.2%\n\n\n163\n2\n6.1%\n9\n27.3%\n\n\n164\n4\n12.1%\n13\n39.4%\n\n\n166\n3\n9.1%\n16\n48.5%\n\n\n169\n4\n12.1%\n20\n60.6%\n\n\n171\n3\n9.1%\n23\n69.7%\n\n\n172\n2\n6.1%\n25\n75.8%\n\n\n174\n1\n3.0%\n26\n78.8%\n\n\n175\n1\n3.0%\n27\n81.8%\n\n\n178\n2\n6.1%\n29\n87.9%\n\n\n180\n1\n3.0%\n30\n90.9%\n\n\n182\n2\n6.1%\n32\n97.0%\n\n\n195\n1\n3.0%\n33\n100.0%"
+  },
+  {
+    "objectID": "clases/clase_06.html#datos-de-alturas",
+    "href": "clases/clase_06.html#datos-de-alturas",
+    "title": "Estadística I",
+    "section": "Datos de Alturas",
+    "text": "Datos de Alturas\n\nEn orden de recolección\n\n\n\nCódigo\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nOrdenados ascendentemente\n\n\n\nCódigo\nsort(datos_curso$altura)\n\n\n [1] 152 155 158 159 159 160 162 163 163 164 164 164 164 166 166 166 169 169 169 169 171\n[22] 171 171 172 172 174 175 178 178 180 182 182 195"
+  },
+  {
+    "objectID": "clases/clase_06.html#media-aritmética-alturas",
+    "href": "clases/clase_06.html#media-aritmética-alturas",
+    "title": "Estadística I",
+    "section": "Media Aritmética Alturas",
+    "text": "Media Aritmética Alturas\nLa media aritmética (\\(\\bar{x}\\)) es la suma de todos los valores dividada por el número total de valores. \\[ \\bar{x} = \\frac{1}{N} \\sum_{i=1}^{N} x_i \\]\n\n\nCódigo\nmedia_altura &lt;- mean(datos_curso$altura)\n\nmedia_altura\n\n\n[1] 168.5455"
+  },
+  {
+    "objectID": "clases/clase_06.html#mediana-alturas",
+    "href": "clases/clase_06.html#mediana-alturas",
+    "title": "Estadística I",
+    "section": "Mediana Alturas",
+    "text": "Mediana Alturas\nLa mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.\n\\[\n\\text{Mediana} =\n\\begin{cases}\n    x_{(N+1)/2} & \\text{si } N \\text{ es impar} \\\\\n    \\frac{x_{N/2} \\hspace{1pt} + \\hspace{1pt} x_{N/2 + 1}}{2} & \\text{si } N \\text{ es par}\n\\end{cases}\n\\]\n\n\nCódigo\nmediana_altura &lt;- median(datos_curso$altura)\n\nmediana_altura\n\n\n[1] 169"
+  },
+  {
+    "objectID": "clases/clase_06.html#desviación-típica-o-estándar-cont",
+    "href": "clases/clase_06.html#desviación-típica-o-estándar-cont",
+    "title": "Estadística I",
+    "section": "Desviación Típica o Estándar-cont",
+    "text": "Desviación Típica o Estándar-cont\nMuestral: Se denota con la letra latina (s).\nLa desviación estándar \\((s)\\) mide la dispersión de los datos respecto a la media muestral y se usa la Corrección de Bessel \\((n−1)\\) para calcularla.\n\\[s = \\sqrt{\\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n-1}}\\]\n\n\nCódigo\nsd_altura &lt;- sd(datos_curso$altura)\nsd_altura \n\n\n[1] 8.867394"
+  },
+  {
+    "objectID": "clases/clase_06.html#histograma-de-altura-1",
+    "href": "clases/clase_06.html#histograma-de-altura-1",
+    "title": "Estadística I",
+    "section": "Histograma de Altura",
+    "text": "Histograma de Altura\ncon línea media (rojo), 1 desviación estándar (azul) y 2 desviaciones estándar (verde)\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Desviaciones Estándar\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#regresamos-histograma-de-altura-con-mediana",
+    "href": "clases/clase_06.html#regresamos-histograma-de-altura-con-mediana",
+    "title": "Estadística I",
+    "section": "Regresamos: Histograma de altura con mediana",
+    "text": "Regresamos: Histograma de altura con mediana\nMediana en verde\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#representación-conjunta",
+    "href": "clases/clase_06.html#representación-conjunta",
+    "title": "Estadística I",
+    "section": "Representación Conjunta",
+    "text": "Representación Conjunta\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot() +\n  coord_flip() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#tabla-sumario",
+    "href": "clases/clase_06.html#tabla-sumario",
+    "title": "Estadística I",
+    "section": "Tabla Sumario",
+    "text": "Tabla Sumario\n\n\nCódigo\nsummary(datos_curso$altura)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  152.0   163.0   169.0   168.5   172.0   195.0"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-y-tabla-sumario-de-altura-en-representación-horizontal",
+    "href": "clases/clase_06.html#boxplot-y-tabla-sumario-de-altura-en-representación-horizontal",
+    "title": "Estadística I",
+    "section": "Boxplot y tabla sumario de altura en representación horizontal",
+    "text": "Boxplot y tabla sumario de altura en representación horizontal\n\n\nCódigo\nsummary(datos_curso$altura)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  152.0   163.0   169.0   168.5   172.0   195.0 \n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#representación-conjunta-histograma--boxplot",
+    "href": "clases/clase_06.html#representación-conjunta-histograma--boxplot",
+    "title": "Estadística I",
+    "section": "Representación Conjunta Histograma- Boxplot",
+    "text": "Representación Conjunta Histograma- Boxplot\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#ric",
+    "href": "clases/clase_06.html#ric",
+    "title": "Estadística I",
+    "section": "RIC",
+    "text": "RIC\nEl RIC es:\n\\[\\text{RIC} = Q_3 - Q_1\\]\n\n\nCódigo\nsummary_stats &lt;- datos_curso %&gt;% \n  summarise(\n  media = mean(altura),\n  mediana = median(altura),\n  Q1 = quantile(altura, 0.25),\n  Q3 = quantile(altura, 0.75),\n  RIC = Q3 - Q1\n)\n\ngt(summary_stats)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\nmedia\nmediana\nQ1\nQ3\nRIC\n\n\n\n\n168.5455\n169\n163\n172\n9"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot-en-representación-horizontal-y-tabla-sumario-de-altura",
+    "href": "clases/clase_06.html#boxplot-en-representación-horizontal-y-tabla-sumario-de-altura",
+    "title": "Estadística I",
+    "section": "Boxplot en representación horizontal y tabla sumario de altura",
+    "text": "Boxplot en representación horizontal y tabla sumario de altura\n\n\nCódigo\nsummary(datos_curso$altura)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  152.0   163.0   169.0   168.5   172.0   195.0 \n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()+\n  labs(title = \"Boxplot de Altura\",\n       subtitle =  'Orientación Horizontal',\n       x = \"Altura (cm)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "clases/clase_06.html#datos-agrupados-vs.-no-agrupados",
+    "href": "clases/clase_06.html#datos-agrupados-vs.-no-agrupados",
+    "title": "Estadística I",
+    "section": "Datos Agrupados vs. No Agrupados",
+    "text": "Datos Agrupados vs. No Agrupados\nNo Agrupados\nÚtil cuando hay pocos valores únicos (ej. número de hijos).\nAgrupados\nNecesario para variables continuas (como la altura) donde los valores exactos rara vez se repiten."
+  },
+  {
+    "objectID": "clases/clase_06.html#creación-de-intervalos-binning",
+    "href": "clases/clase_06.html#creación-de-intervalos-binning",
+    "title": "Estadística I",
+    "section": "Creación de Intervalos (Binning)",
+    "text": "Creación de Intervalos (Binning)\nUsaremos la regla de Sturges o un ancho fijo para definir los intervalos. Vamos a crear cortes cada 8 cm (aproximadamente) para facilitar la lectura.\n\nDatos de alturas\n\n\n\nCódigo\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nValor mínimo\n\n\n\nCódigo\nmin(datos_curso$altura) # altura mínima\n\n\n[1] 152\n\n\nSe pueden crear cerca de 6 intervalos - Valor máximo\n\n\nCódigo\nmax(datos_curso$altura) # altura máxima\n\n\n[1] 195"
+  },
+  {
+    "objectID": "clases/clase_06.html#estadísticos",
+    "href": "clases/clase_06.html#estadísticos",
+    "title": "Estadística I",
+    "section": "Estadísticos",
+    "text": "Estadísticos\nEl RIC es:\n\\[\\text{RIC} = Q_3 - Q_1\\]\n\n\nCódigo\nestadisticos &lt;- datos_curso %&gt;%\n  summarise(\n    Media = mean(altura),\n    Mediana = median(altura),\n    Q1 = quantile(altura, 0.25),\n    Q3 = quantile(altura, 0.75),\n    RIC = IQR(altura),\n    Min = min(altura),\n    Max = max(altura)\n  )\n\ngt(estadisticos)%&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(title = \"Estadísticos Descriptivos de Altura\") %&gt;%\n  fmt_number(everything(), decimals = 2)\n\n\n\n\n\n\n\n\nEstadísticos Descriptivos de Altura\n\n\nMedia\nMediana\nQ1\nQ3\nRIC\nMin\nMax\n\n\n\n\n168.55\n169.00\n163.00\n172.00\n9.00\n152.00\n195.00"
+  },
+  {
+    "objectID": "clases/clase_06.html#boxplot",
+    "href": "clases/clase_06.html#boxplot",
+    "title": "Estadística I",
+    "section": "Boxplot",
+    "text": "Boxplot\nEl Boxplot visualiza los cuartiles.\n\nCaja: Del \\(Q_1\\) al \\(Q_3\\) (contiene el 50% central).\nLínea central: Mediana.\nBigotes: Se extienden hasta 1.5×IQR.\nPuntos: Valores fuera de los bigotes (Outliers)."
+  },
+  {
+    "objectID": "clases/clase_06.html",
+    "href": "clases/clase_06.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "library(dplyr) # manipular datos\nlibrary(ggplot2)# crear gráficos\nlibrary(gt) # crear tablas\nlibrary(gtExtras)# añadir funcionalidades a las tablas\nlibrary(DT) #mostrar tablas en formato interactivo"
+  },
+  {
+    "objectID": "clases/clase_05.html",
+    "href": "clases/clase_05.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "En estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
+  },
+  {
+    "objectID": "clases/clase_05.html#footnotes",
+    "href": "clases/clase_05.html#footnotes",
+    "title": "Estadística I",
+    "section": "Notas",
+    "text": "Notas\n\n\nSi tienes un conjunto de datos como \\(x1​,x2​,...,xn​\\), el recíproco de cada valor es \\(\\frac{1}{x1}​, \\frac{1}{x2}​,..., \\frac{1}{xn}\\)↩︎"
   }
 ]
