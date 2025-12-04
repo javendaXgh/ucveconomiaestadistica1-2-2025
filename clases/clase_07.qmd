@@ -1,0 +1,206 @@
+---
+title: "Estadística I"
+subtitle: "Clase 7: Momentos de Una Variable"
+date: "2025/12/03"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## ¿Qué son los Momentos?
+
+-   Son medidas que nos dan información sobre las características de un conjunto de datos.
+
+-   Nos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.
+
+-   Algunos son: la media, la varianza, la asimetría y la curtosis.
+
+::: notes
+los momentos nos dan diferentes "perspectivas" de los datos, más allá del simple promedio.
+:::
+
+## El Primer Momento: La Media ( $\bar{X}$ )
+
+La **media** es el promedio de los datos. Nos dice dónde está el "centro" de nuestros valores.
+
+$xˉ=\frac{\sum_{i=1}^{n}​}{n}​=\frac{x1​+x2​+⋯+xn}{n}$
+
+**Ejemplo :** El salario promedio de los empleados de una empresa.
+
+## El Segundo Momento Central: La Varianza ( $S^2$ )
+
+La **varianza** mide cuánto se dispersan los datos alrededor de la media. Una varianza alta significa que los datos están muy dispersos; una varianza baja, que están más agrupados.
+
+$s^2=\frac{\sum_{i=1}^{n}​(xi​−\bar{x})^2}{n-1}$
+
+La **desviación estándar** (s) es la raíz cuadrada de la varianza y se interpreta más fácilmente.
+
+$s=\sqrt{s^2}$![](data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22400em%22%20height=%221.08em%22%20viewBox=%220%200%20400000%201080%22%20preserveAspectRatio=%22xMinYMin%20slice%22%3E%3Cpath%20d=%22M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,-221l0%20-0c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47zM834%2080h400000v40h-400000z%22%3E%3C/path%3E%3C/svg%3E)​
+
+## **Ejemplo Varianza:** 
+
+La varianza del rendimiento diario de las acciones indica qué tan volátil es el precio.
+
+## El Tercer Momento Central: Asimetría
+
+La **asimetría** nos dice si la distribución de los datos es simétrica o si está "cargada" hacia un lado.
+
+-   **Asimetría positiva (sesgado a la derecha):** La cola derecha es más larga.
+
+-   **Asimetría negativa (sesgado a la izquierda):** La cola izquierda es más larga.
+
+-   **Asimetría cercana a cero:** Distribución aproximadamente simétrica.
+
+## **Coeficiente de Asimetría Muestral**
+
+El **coeficiente de asimetría muestral**  ( $A_s$​ ) oscila entre -1 y 1
+
+Su comportamiento, cuando la distribución está sesgada, está dado porque la media tienda a situarse con respecto a la mediana al mismo lado que la cola más larga ubicarse
+
+![](images/clase11/sesgo_muesta.png){fig-align="center" width="500"}
+
+## Cálculo de Coeficiente de Asimetría
+
+Se puede calcular de distintas formas.
+
+1.  Primer coeficiente de Pearson
+
+    $Sesgo=​\frac{Media-Moda}{desviación\,típica}=​\frac{\bar{X}-moda}{s}$
+
+2.  Segundo coeficiente de Pearson
+
+    $Sesgo = ​\frac{3(Media-Mediana)}{desviación\,típica}=​\frac{3(\bar{X}-mediana)}{s}$
+
+    En el segundo caso se omite el uso de la "moda"
+
+## Cálculo de Coeficiente de Asimetría /2
+
+3.  Coeficiente de Sesgo Cuartílico
+
+    $Sesgo=​\frac{(Q_3 - Q_2)-(Q_2-Q_1)}{Q_3-Q_1}= \frac{Q_3-2Q_2+Q_1}{Q_3-Q_1}$
+
+4.  Coeficiente de Sesgo percentílico
+
+    $Sesgo=​\frac{(P_{90}-P_{50})- (P_{50}-P_{10})}{P_{90}-P_{10}}=​\frac{P_{90}-2P_{50}+P_{10}}{P_{90}-P_{10}}$
+
+## **Ejemplo Asimetría:** 
+
+La distribución de los ingresos en un país puede tener asimetría positiva si hay pocos individuos con ingresos muy altos.
+
+## El Cuarto Momento: Curtosis
+
+La **curtosis** nos indica qué tan "puntiaguda" es la distribución y qué tan pesadas son sus "colas" (los extremos).
+
+-   **Leptocúrtica:** Más puntiaguda y con colas más pesadas que una distribución normal.
+
+-   **Platicúrtica:** Más achatada y con colas más ligeras que una distribución normal.
+
+-   **Mesocúrtica:** Similar a una distribución normal.
+
+El **coeficiente de curtosis muestral** ($K_u$​) también se puede calcular.
+
+## **Ejemplo Curtosis:** 
+
+La rentabilidad de algunos activos financieros puede tener alta curtosis, lo que significa que ocurren eventos extremos (grandes ganancias o pérdidas) con más frecuencia de lo que se esperaría en una distribución normal.
+
+## Distribución Mesocúrtica
+
+```{r}
+# Simulación de una distribución mesocúrtica (normal)
+n <- 1000  # Tamaño de la muestra
+media <- 0
+desviacion_estandar <- 1
+datos_mesocurtica <- rnorm(n, mean = media, sd = desviacion_estandar)
+
+# Visualización
+hist(datos_mesocurtica, 
+     main = "Distribución Mesocúrtica (Normal)",
+     xlab = "Valores", 
+     ylab = "Densidad",
+     col = "orange",
+     freq = FALSE)
+curve(dnorm(x,
+            mean = media,
+            sd = desviacion_estandar),
+      from = min(datos_mesocurtica), 
+      to = max(datos_mesocurtica), 
+      col = "red", 
+      lw=4,
+      add = TRUE)
+
+```
+
+## Distribución Leptocúrtica
+
+Colas más pesadas y pico más alto
+
+```{r}
+# Simulación de una distribución leptocúrtica (t de Student con df bajos)
+df <- 3      # Grados de libertad (bajos para leptocurtosis)
+n <- 1000
+datos_leptocurtica <- rt(n, df = df)
+
+# Visualización (opcional)
+hist(datos_leptocurtica,
+     main = "Distribución Leptocúrtica (t de Student, df=3)",
+     xlab = "Valores", 
+     ylab = "Densidad", 
+     col = "orange",
+     freq = FALSE)
+curve(dt(x, df = df),
+      from = min(datos_leptocurtica),
+      to = max(datos_leptocurtica), 
+      col = "red", 
+      lw=3,
+      add = TRUE)
+```
+
+## Distribución Platicúrtica
+
+```{r}
+# Simulación de una distribución platicúrtica (Beta centrada y escalada - más plana)
+n <- 1000
+alpha <- 5
+beta <- 5
+
+# Generar datos beta
+datos_beta <- rbeta(n, shape1 = alpha, shape2 = beta)
+
+# Centrar y escalar aproximadamente al rango de -3 a 3
+datos_platicurtica_beta_plana <- (datos_beta - 0.5) * 6
+
+# Función de densidad beta centrada y escalada
+densidad_beta_escalada_plana <- function(x) {
+  y <- (x + 3) / 6 # Desescalar para el argumento de dbeta
+  ifelse(y >= 0 & y <= 1, dbeta(y, shape1 = alpha, shape2 = beta) / 6, 0) # Dividir por el factor de escala para la densidad
+}
+
+# Visualización
+hist(datos_platicurtica_beta_plana,
+     main = "Distribución Platicúrtica ", xlab = "Valores", ylab = "Densidad", 
+     col = "orange", 
+     freq = FALSE)
+curve(densidad_beta_escalada_plana(x), 
+      from = min(datos_platicurtica_beta_plana), 
+      to = max(datos_platicurtica_beta_plana),
+      col = "red", 
+      lw=3,
+      add = TRUE)
+```
+
+## Resumen de los Momentos
+
+|                             |                                               |
+|-----------------------------|-----------------------------------------------|
+| **Momento**                 | **¿Qué mide?**                                |
+| **Media (** $\bar{X}$ )     | El centro de los datos                        |
+| **Varianza (** $s^2$ )      | La dispersión de los datos                    |
+| **Asimetría (** $A_s$ **)** | Si la distribución está sesgada hacia un lado |
+| **Curtosis (** $K_u$ )      | El "apuntamiento" y el grosor de las colas    |

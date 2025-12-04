@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n5\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n12\nmié, 21 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -644,7 +644,7 @@
     "href": "clases/clase_06.html#generación-de-los-datos",
     "title": "Estadística I",
     "section": "Generación de los datos",
-    "text": "Generación de los datos\n\n\nCódigo\nset.seed(123) # para reproducibilidad\n# 1. Generar Altura: 32 valores normales + 1 outlier (195 cm)\naltura &lt;- round(c(rnorm(32, mean = 168, sd = 8),195))\n\n# 2. Generar Ruido: Un componente aleatorio (varianza) para el peso\n#    Esto simula factores no relacionados con la altura (metabolismo, etc.)\nruido_peso &lt;- rnorm(33, mean = 0, sd = 6) # Ruido con media 0 y Desv. Típica 6\n\n# 3. Generar Peso Asociado a Altura:\n#    Peso_base = (Altura * Coeficiente) + Intercepto + Ruido\n#    Usamos una fórmula simple (ej: IMC aproximado) para ligar el peso a la altura.\npeso &lt;- round(0.7 * altura - 50 + ruido_peso)\n\n# 4. Generar Sexo e ID\nsexo &lt;- sample(c(\"M\", \"F\"), 33, replace = TRUE)\n\n# generar consecutivos para identificación de observaciones (filas)\nid=1:33\n\ndatos_curso &lt;- data.frame(id,\n                          altura, \n                          peso, \n                          sexo)"
+    "text": "Generación de los datos\n\nset.seed(123) # para reproducibilidad\n# 1. Generar Altura: 32 valores normales + 1 outlier (195 cm)\naltura &lt;- round(c(rnorm(32, mean = 168, sd = 8),195))\n\n# 2. Generar Ruido: Un componente aleatorio (varianza) para el peso\n#    Esto simula factores no relacionados con la altura (metabolismo, etc.)\nruido_peso &lt;- rnorm(33, mean = 0, sd = 6) # Ruido con media 0 y Desv. Típica 6\n\n# 3. Generar Peso Asociado a Altura:\n#    Peso_base = (Altura * Coeficiente) + Intercepto + Ruido\n#    Usamos una fórmula simple (ej: IMC aproximado) para ligar el peso a la altura.\npeso &lt;- round(0.7 * altura - 50 + ruido_peso)\n\n# 4. Generar Sexo e ID\nsexo &lt;- sample(c(\"M\", \"F\"), 33, replace = TRUE)\n\n# generar consecutivos para identificación de observaciones (filas)\nid=1:33\n\ndatos_curso &lt;- data.frame(id,\n                          altura, \n                          peso, \n                          sexo)"
   },
   {
     "objectID": "clases/clase_06.html#conjunto-de-datos",
@@ -700,21 +700,21 @@
     "href": "clases/clase_06.html#histograma-de-altura",
     "title": "Estadística I",
     "section": "Histograma de altura",
-    "text": "Histograma de altura\nEl histograma es la representación gráfica de la tabla de frecuencias para datos agrupados.\n\nLa base de la barra es el intervalo.\nLa altura de la barra es proporcional a la frecuencia \\((n_i)\\)\n\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(breaks = seq(140, 220, by = 8),\n                 fill = \"#15616D\") +\n  labs(title = \"Histograma de Altura\",\n       subtitle = \"Bins de 10cm (coinciden con la tabla)\",\n       x = \"Altura (cm)\", y = \"Frecuencia\") +\n  theme_minimal()"
+    "text": "Histograma de altura\nEl histograma es la representación gráfica de la tabla de frecuencias para datos agrupados.\n\nLa base de la barra es el intervalo.\nLa altura de la barra es proporcional a la frecuencia \\((n_i)\\)\n\n\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(breaks = seq(140, 220, by = 8),\n                 fill = \"#15616D\") +\n  labs(title = \"Histograma de Altura\",\n       subtitle = \"Bins de 10cm (coinciden con la tabla)\",\n       x = \"Altura (cm)\", y = \"Frecuencia\") +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#boxplot-de-altura",
     "href": "clases/clase_06.html#boxplot-de-altura",
     "title": "Estadística I",
     "section": "Boxplot de altura",
-    "text": "Boxplot de altura\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  theme_minimal()"
+    "text": "Boxplot de altura\n\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#boxplot-de-altura-por-sexo",
     "href": "clases/clase_06.html#boxplot-de-altura-por-sexo",
     "title": "Estadística I",
     "section": "Boxplot de altura por sexo",
-    "text": "Boxplot de altura por sexo\n¿Cómo se comporta la distribución según el sexo?\n\n\nCódigo\nggplot(datos_curso, aes(x = sexo,\n                        y = altura,\n                        fill=sexo)) +\n  geom_boxplot() +\n  facet_grid(~sexo) +\n  theme_minimal()+\n  labs(title = \"Distribución de Altura por Sexo\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
+    "text": "Boxplot de altura por sexo\n¿Cómo se comporta la distribución según el sexo?\n\nggplot(datos_curso, aes(x = sexo,\n                        y = altura,\n                        fill=sexo)) +\n  geom_boxplot() +\n  facet_grid(~sexo) +\n  theme_minimal()+\n  labs(title = \"Distribución de Altura por Sexo\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
   },
   {
     "objectID": "clases/clase_06.html#estadísticas-descriptivas",
@@ -728,35 +728,35 @@
     "href": "clases/clase_06.html#valores-dentro-del-ric",
     "title": "Estadística I",
     "section": "Valores dentro del RIC",
-    "text": "Valores dentro del RIC\n\n\nCódigo\nq1 &lt;- estadisticos$Q1\nq3 &lt;- estadisticos$Q3\n\nric_vals &lt;- datos_curso %&gt;% \n  filter(altura &gt;= q1, \n         altura &lt;= q3)\n\nric_vals %&gt;% \n  gt()\n\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n1\n164\n70\nF\n\n\n2\n166\n71\nM\n\n\n4\n169\n72\nF\n\n\n5\n169\n72\nF\n\n\n7\n172\n69\nF\n\n\n9\n163\n60\nF\n\n\n10\n164\n64\nM\n\n\n12\n171\n83\nF\n\n\n13\n171\n77\nF\n\n\n14\n169\n62\nM\n\n\n15\n164\n62\nF\n\n\n17\n172\n75\nF\n\n\n20\n164\n65\nF\n\n\n22\n166\n74\nF\n\n\n25\n163\n55\nM\n\n\n28\n169\n70\nM\n\n\n31\n171\n68\nM\n\n\n32\n166\n60\nF"
+    "text": "Valores dentro del RIC\n\nq1 &lt;- estadisticos$Q1\nq3 &lt;- estadisticos$Q3\n\nric_vals &lt;- datos_curso %&gt;% \n  filter(altura &gt;= q1, \n         altura &lt;= q3)\n\nric_vals %&gt;% \n  gt()\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n1\n164\n70\nF\n\n\n2\n166\n71\nM\n\n\n4\n169\n72\nF\n\n\n5\n169\n72\nF\n\n\n7\n172\n69\nF\n\n\n9\n163\n60\nF\n\n\n10\n164\n64\nM\n\n\n12\n171\n83\nF\n\n\n13\n171\n77\nF\n\n\n14\n169\n62\nM\n\n\n15\n164\n62\nF\n\n\n17\n172\n75\nF\n\n\n20\n164\n65\nF\n\n\n22\n166\n74\nF\n\n\n25\n163\n55\nM\n\n\n28\n169\n70\nM\n\n\n31\n171\n68\nM\n\n\n32\n166\n60\nF"
   },
   {
     "objectID": "clases/clase_06.html#detalle-de-valores-entre-q1-y-q3",
     "href": "clases/clase_06.html#detalle-de-valores-entre-q1-y-q3",
     "title": "Estadística I",
     "section": "Detalle de valores entre Q1 y Q3",
-    "text": "Detalle de valores entre Q1 y Q3\n\n\nCódigo\ndatatable(ric_vals, \n          options = list(pageLength = 10))"
+    "text": "Detalle de valores entre Q1 y Q3\n\ndatatable(ric_vals, \n          options = list(pageLength = 10))"
   },
   {
     "objectID": "clases/clase_06.html#outlier",
     "href": "clases/clase_06.html#outlier",
     "title": "Estadística I",
     "section": "Outlier",
-    "text": "Outlier\n\n\nCódigo\nlim_inf &lt;- q1 - 1.5 * estadisticos$RIC\nlim_sup &lt;- q3 + 1.5 * estadisticos$RIC\n\noutliers &lt;- datos_curso %&gt;% \n  filter(altura &lt; lim_inf | altura &gt; lim_sup)\n\n\ngt(outliers)%&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n33\n195\n80\nF"
+    "text": "Outlier\n\nlim_inf &lt;- q1 - 1.5 * estadisticos$RIC\nlim_sup &lt;- q3 + 1.5 * estadisticos$RIC\n\noutliers &lt;- datos_curso %&gt;% \n  filter(altura &lt; lim_inf | altura &gt; lim_sup)\n\n\ngt(outliers)%&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\nid\naltura\npeso\nsexo\n\n\n\n\n33\n195\n80\nF"
   },
   {
     "objectID": "clases/clase_06.html#scatterplot-peso-vs-estatura",
     "href": "clases/clase_06.html#scatterplot-peso-vs-estatura",
     "title": "Estadística I",
     "section": "Scatterplot: peso vs estatura",
-    "text": "Scatterplot: peso vs estatura\nVariables posiblemente asociadas\n\n\nCódigo\nggplot(datos_curso, aes(x = altura, \n                  y = peso,\n                  color=sexo)) +\n  geom_point(size=2) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Scatterplot: peso vs estatura\nVariables posiblemente asociadas\n\nggplot(datos_curso, aes(x = altura, \n                  y = peso,\n                  color=sexo)) +\n  geom_point(size=2) +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#cargar-librerías-necesarias",
     "href": "clases/clase_06.html#cargar-librerías-necesarias",
     "title": "Estadística I",
-    "section": "Cargar Librerías Necesarias",
-    "text": "Cargar Librerías Necesarias\n\n\nCódigo\nlibrary(dplyr) # manipular datos\nlibrary(ggplot2)# crear gráficos\nlibrary(gt) # crear tablas\nlibrary(gtExtras)# añadir funcionalidades a las tablas\nlibrary(DT) #mostrar tablas en formato interactivo"
+    "section": "",
+    "text": "library(dplyr) # manipular datos\nlibrary(ggplot2)# crear gráficos\nlibrary(gt) # crear tablas\nlibrary(gtExtras)# añadir funcionalidades a las tablas\nlibrary(DT) #mostrar tablas en formato interactivo"
   },
   {
     "objectID": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-altura",
@@ -770,28 +770,28 @@
     "href": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-alturas",
     "title": "Estadística I",
     "section": "Tabla de Frecuencia Absoluta de Alturas",
-    "text": "Tabla de Frecuencia Absoluta de Alturas\n\n\nCódigo\nfreq_abs &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(ni = n())\n\ngt(freq_abs)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\n\n\n\n\n152\n1\n\n\n155\n1\n\n\n158\n1\n\n\n159\n2\n\n\n160\n1\n\n\n162\n1\n\n\n163\n2\n\n\n164\n4\n\n\n166\n3\n\n\n169\n4\n\n\n171\n3\n\n\n172\n2\n\n\n174\n1\n\n\n175\n1\n\n\n178\n2\n\n\n180\n1\n\n\n182\n2\n\n\n195\n1"
+    "text": "Tabla de Frecuencia Absoluta de Alturas\n\nfreq_abs &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(ni = n())\n\ngt(freq_abs)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\naltura\nni\n\n\n\n\n152\n1\n\n\n155\n1\n\n\n158\n1\n\n\n159\n2\n\n\n160\n1\n\n\n162\n1\n\n\n163\n2\n\n\n164\n4\n\n\n166\n3\n\n\n169\n4\n\n\n171\n3\n\n\n172\n2\n\n\n174\n1\n\n\n175\n1\n\n\n178\n2\n\n\n180\n1\n\n\n182\n2\n\n\n195\n1"
   },
   {
     "objectID": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-sexo-categórica",
     "href": "clases/clase_06.html#tabla-de-frecuencia-absoluta-de-sexo-categórica",
     "title": "Estadística I",
     "section": "Tabla de Frecuencia Absoluta de Sexo (categórica)",
-    "text": "Tabla de Frecuencia Absoluta de Sexo (categórica)\n\n\nCódigo\nfreq_sexo &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(ni = n())\n\ngt(freq_sexo)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\nsexo\nni\n\n\n\n\nF\n20\n\n\nM\n13"
+    "text": "Tabla de Frecuencia Absoluta de Sexo (categórica)\n\nfreq_sexo &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(ni = n())\n\ngt(freq_sexo)%&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\nsexo\nni\n\n\n\n\nF\n20\n\n\nM\n13"
   },
   {
     "objectID": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-sexo",
     "href": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-sexo",
     "title": "Estadística I",
     "section": "Tabla de Frecuencia Relativa de Sexo",
-    "text": "Tabla de Frecuencia Relativa de Sexo\n\n\nCódigo\nfreq_sexo_rel &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_sexo_rel)%&gt;%\n  fmt_percent(columns = fi, \n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\nsexo\nni\nfi\n\n\n\n\nF\n20\n60.6%\n\n\nM\n13\n39.4%"
+    "text": "Tabla de Frecuencia Relativa de Sexo\n\nfreq_sexo_rel &lt;- datos_curso %&gt;%\n  group_by(sexo) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_sexo_rel)%&gt;%\n  fmt_percent(columns = fi, \n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\nsexo\nni\nfi\n\n\n\n\nF\n20\n60.6%\n\n\nM\n13\n39.4%"
   },
   {
     "objectID": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-alturas",
     "href": "clases/clase_06.html#tabla-de-frecuencia-relativa-de-alturas",
     "title": "Estadística I",
     "section": "Tabla de Frecuencia Relativa de Alturas",
-    "text": "Tabla de Frecuencia Relativa de Alturas\n\n\nCódigo\nfreq_rel &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_rel)%&gt;%\n  fmt_percent(columns = fi,\n              decimals = 1) %&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\nfi\n\n\n\n\n152\n1\n3.0%\n\n\n155\n1\n3.0%\n\n\n158\n1\n3.0%\n\n\n159\n2\n6.1%\n\n\n160\n1\n3.0%\n\n\n162\n1\n3.0%\n\n\n163\n2\n6.1%\n\n\n164\n4\n12.1%\n\n\n166\n3\n9.1%\n\n\n169\n4\n12.1%\n\n\n171\n3\n9.1%\n\n\n172\n2\n6.1%\n\n\n174\n1\n3.0%\n\n\n175\n1\n3.0%\n\n\n178\n2\n6.1%\n\n\n180\n1\n3.0%\n\n\n182\n2\n6.1%\n\n\n195\n1\n3.0%"
+    "text": "Tabla de Frecuencia Relativa de Alturas\n\nfreq_rel &lt;- datos_curso %&gt;%\n  group_by(altura) %&gt;%\n  summarise(\n    ni = n(),\n    fi = ni/nrow(datos_curso)\n  )\n\n\ngt(freq_rel)%&gt;%\n  fmt_percent(columns = fi,\n              decimals = 1) %&gt;%\n   gt_theme_excel()\n\n\n\n\n\n\n\naltura\nni\nfi\n\n\n\n\n152\n1\n3.0%\n\n\n155\n1\n3.0%\n\n\n158\n1\n3.0%\n\n\n159\n2\n6.1%\n\n\n160\n1\n3.0%\n\n\n162\n1\n3.0%\n\n\n163\n2\n6.1%\n\n\n164\n4\n12.1%\n\n\n166\n3\n9.1%\n\n\n169\n4\n12.1%\n\n\n171\n3\n9.1%\n\n\n172\n2\n6.1%\n\n\n174\n1\n3.0%\n\n\n175\n1\n3.0%\n\n\n178\n2\n6.1%\n\n\n180\n1\n3.0%\n\n\n182\n2\n6.1%\n\n\n195\n1\n3.0%"
   },
   {
     "objectID": "clases/clase_06.html#frecuencias-acumuladas",
@@ -833,14 +833,14 @@
     "href": "clases/clase_06.html#procesamiento-de-datos-para-marca-de-clase",
     "title": "Estadística I",
     "section": "Procesamiento de Datos para Marca de Clase",
-    "text": "Procesamiento de Datos para Marca de Clase\n\n\nCódigo\n# Procesamiento de datos para obtener Marca de Clase\ntabla_detallada &lt;- datos_curso %&gt;%\n  mutate(\n    # Creamos los cortes de nuevo\n    intervalo_cat = cut(altura, \n                        breaks = seq(from= 140, \n                                     to= 220,\n                                     by = 8), \n                        right = FALSE)\n  ) %&gt;%\n  group_by(intervalo_cat) %&gt;%\n  summarise(\n    ni = n(), # frecuencia absoluta\n  ) %&gt;%\n  mutate(\n    # fi = ni / sum(ni), #frecuencia relativa\n    fi = ni / sum(ni),\n    Ni = cumsum(ni), # frecuencia acumulada\n    Fi = cumsum(ni / sum(ni)),# frecuencia acumulada relativa\n    # Extraemos numéricamente los límites para calcular el punto medio\n    limite_inf = as.numeric(sub(\"\\\\[([0-9]+),.*\", \"\\\\1\", intervalo_cat)),\n    limite_sup = as.numeric(sub(\".*,([0-9]+)\\\\)\", \"\\\\1\", intervalo_cat)),\n    marca_clase = (limite_inf + limite_sup) / 2,\n  )\n\n\nNota: cut divide los datos en rangos como [148,156)."
+    "text": "Procesamiento de Datos para Marca de Clase\n\n# Procesamiento de datos para obtener Marca de Clase\ntabla_detallada &lt;- datos_curso %&gt;%\n  mutate(\n    # Creamos los cortes de nuevo\n    intervalo_cat = cut(altura, \n                        breaks = seq(from= 140, \n                                     to= 220,\n                                     by = 8), \n                        right = FALSE)\n  ) %&gt;%\n  group_by(intervalo_cat) %&gt;%\n  summarise(\n    ni = n(), # frecuencia absoluta\n  ) %&gt;%\n  mutate(\n    # fi = ni / sum(ni), #frecuencia relativa\n    fi = ni / sum(ni),\n    Ni = cumsum(ni), # frecuencia acumulada\n    Fi = cumsum(ni / sum(ni)),# frecuencia acumulada relativa\n    # Extraemos numéricamente los límites para calcular el punto medio\n    limite_inf = as.numeric(sub(\"\\\\[([0-9]+),.*\", \"\\\\1\", intervalo_cat)),\n    limite_sup = as.numeric(sub(\".*,([0-9]+)\\\\)\", \"\\\\1\", intervalo_cat)),\n    marca_clase = (limite_inf + limite_sup) / 2,\n  )\n\nNota: cut divide los datos en rangos como [148,156)."
   },
   {
     "objectID": "clases/clase_06.html#tabla-de-frecuencia-para-datos-agregados-altura",
     "href": "clases/clase_06.html#tabla-de-frecuencia-para-datos-agregados-altura",
     "title": "Estadística I",
     "section": "Tabla de frecuencia para Datos Agregados (altura)",
-    "text": "Tabla de frecuencia para Datos Agregados (altura)\n\n\nCódigo\ntabla_detallada %&gt;%\n  gt() %&gt;%\n  fmt_percent(columns = c(fi, Fi), \n              decimals = 1) %&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(\n    title = \"Distribución de Alturas\",\n    subtitle = \"Estudiantes de Economía (n=33)\"\n  ) %&gt;%\n  fmt_number(columns = c(fi, Fi), decimals = 3) %&gt;% \n  # fmt_percent(columns = c(fi, Fi), decimals = 1) %&gt;% \n  cols_label(\n    intervalo_cat = \"Rango de Altura\",\n    limite_inf= \"Límite Inferior\",\n    limite_sup = \"Límite Superior\",\n    ni = \"Frec. Abs (ni)\",\n    fi = \"Frec. Rel (fi)\",\n    Ni = \"Acumulada (Ni)\",\n    Fi = \"Rel. Acum. (Fi)\"\n  ) %&gt;%\n  tab_style(\n    style = list(cell_fill(color = \"#f0f0f0\")),\n    locations = cells_body(rows = ni == max(ni))\n  )\n\n\n\n\n\n\n\n\nDistribución de Alturas\n\n\nEstudiantes de Economía (n=33)\n\n\nRango de Altura\nFrec. Abs (ni)\nFrec. Rel (fi)\nAcumulada (Ni)\nRel. Acum. (Fi)\nLímite Inferior\nLímite Superior\nmarca_clase\n\n\n\n\n[148,156)\n2\n0.061\n2\n0.061\n148\n156\n152\n\n\n[156,164)\n7\n0.212\n9\n0.273\n156\n164\n160\n\n\n[164,172)\n14\n0.424\n23\n0.697\n164\n172\n168\n\n\n[172,180)\n6\n0.182\n29\n0.879\n172\n180\n176\n\n\n[180,188)\n3\n0.091\n32\n0.970\n180\n188\n184\n\n\n[188,196)\n1\n0.030\n33\n1.000\n188\n196\n192"
+    "text": "Tabla de frecuencia para Datos Agregados (altura)\n\ntabla_detallada %&gt;%\n  gt() %&gt;%\n  fmt_percent(columns = c(fi, Fi), \n              decimals = 1) %&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(\n    title = \"Distribución de Alturas\",\n    subtitle = \"Estudiantes de Economía (n=33)\"\n  ) %&gt;%\n  fmt_number(columns = c(fi, Fi), decimals = 3) %&gt;% \n  # fmt_percent(columns = c(fi, Fi), decimals = 1) %&gt;% \n  cols_label(\n    intervalo_cat = \"Rango de Altura\",\n    limite_inf= \"Límite Inferior\",\n    limite_sup = \"Límite Superior\",\n    ni = \"Frec. Abs (ni)\",\n    fi = \"Frec. Rel (fi)\",\n    Ni = \"Acumulada (Ni)\",\n    Fi = \"Rel. Acum. (Fi)\"\n  ) %&gt;%\n  tab_style(\n    style = list(cell_fill(color = \"#f0f0f0\")),\n    locations = cells_body(rows = ni == max(ni))\n  )\n\n\n\n\n\n\n\nDistribución de Alturas\n\n\nEstudiantes de Economía (n=33)\n\n\nRango de Altura\nFrec. Abs (ni)\nFrec. Rel (fi)\nAcumulada (Ni)\nRel. Acum. (Fi)\nLímite Inferior\nLímite Superior\nmarca_clase\n\n\n\n\n[148,156)\n2\n0.061\n2\n0.061\n148\n156\n152\n\n\n[156,164)\n7\n0.212\n9\n0.273\n156\n164\n160\n\n\n[164,172)\n14\n0.424\n23\n0.697\n164\n172\n168\n\n\n[172,180)\n6\n0.182\n29\n0.879\n172\n180\n176\n\n\n[180,188)\n3\n0.091\n32\n0.970\n180\n188\n184\n\n\n[188,196)\n1\n0.030\n33\n1.000\n188\n196\n192"
   },
   {
     "objectID": "clases/clase_06.html#boxplot-con-bigotes",
@@ -854,7 +854,7 @@
     "href": "clases/clase_06.html#pasos-previos-cont.",
     "title": "Estadística I",
     "section": "Pasos Previos/ Cont.",
-    "text": "Pasos Previos/ Cont.\nCrear 6 intervalos\n\nRango\n\n\n\nCódigo\nrange(datos_curso$altura) # rango de alturas\n\n\n[1] 152 195\n\n\n\nPartes del Rango a 6 partes\n\n\n\nCódigo\n(max( datos_curso$altura)- min(datos_curso$altura)) /6\n\n\n[1] 7.166667\n\n\n\nAproximación a la secuencia de los intervalos\n\n\n\nCódigo\nseq(min(datos_curso$altura), \n    max(datos_curso$altura),\n    8) # crear secuencias con brincos de 8 aproximadamente\n\n\n[1] 152 160 168 176 184 192"
+    "text": "Pasos Previos/ Cont.\nCrear 6 intervalos\n\nRango\n\n\nrange(datos_curso$altura) # rango de alturas\n\n[1] 152 195\n\n\n\nPartes del Rango a 6 partes\n\n\n(max( datos_curso$altura)- min(datos_curso$altura)) /6\n\n[1] 7.166667\n\n\n\nAproximación a la secuencia de los intervalos\n\n\nseq(min(datos_curso$altura), \n    max(datos_curso$altura),\n    8) # crear secuencias con brincos de 8 aproximadamente\n\n[1] 152 160 168 176 184 192"
   },
   {
     "objectID": "clases/clase_06.html#media-aritmética-y-mediana",
@@ -868,14 +868,14 @@
     "href": "clases/clase_06.html#histograma-de-altura-con-media-y-mediana",
     "title": "Estadística I",
     "section": "Histograma de altura con media y mediana",
-    "text": "Histograma de altura con media y mediana\nMediana en verde y media en rojo\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 2) +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+    "text": "Histograma de altura con media y mediana\nMediana en verde y media en rojo\n\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 2) +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#desviación-típica-o-estándar",
     "href": "clases/clase_06.html#desviación-típica-o-estándar",
     "title": "Estadística I",
     "section": "Desviación Típica o Estándar",
-    "text": "Desviación Típica o Estándar\nDesviación Estándar Poblacional (σ):\nSe denota con la letra griega sigma (σ). La desviación estándar (\\(\\sigma\\)) mide la dispersión de los datos respecto a la media poblacional.\n\\[\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\\]"
+    "text": "Desviación Típica o Estándar\n\nDesviación Estándar Poblacional (σ):\nSe denota con la letra griega sigma (σ). La desviación estándar (\\(\\sigma\\)) mide la dispersión de los datos respecto a la media poblacional.\n\\[\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N} (x_i - \\mu)^2}{N}}\\]"
   },
   {
     "objectID": "clases/clase_06.html#histograma-de-altura-con-línea-media-1-desviación-estándar-y-2-desviaciones-estándar",
@@ -917,49 +917,49 @@
     "href": "clases/clase_06.html#tabla-de-frecuencias-absolutas-relativas-y-acumuladas-para-alturas",
     "title": "Estadística I",
     "section": "Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas",
-    "text": "Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas\n\n\nCódigo\nfreq_altura_acumulada &lt;- datos_curso%&gt;%\n  group_by(altura)%&gt;%\n  summarise(ni = n(),\n            fi = ni/nrow(datos_curso))%&gt;%\n  mutate(Ni = cumsum(ni),\n         Fi = cumsum(ni / sum(ni)))\n  \ngt(freq_altura_acumulada)%&gt;%\n  fmt_percent(columns = c(fi, Fi),\n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\n\naltura\nni\nfi\nNi\nFi\n\n\n\n\n152\n1\n3.0%\n1\n3.0%\n\n\n155\n1\n3.0%\n2\n6.1%\n\n\n158\n1\n3.0%\n3\n9.1%\n\n\n159\n2\n6.1%\n5\n15.2%\n\n\n160\n1\n3.0%\n6\n18.2%\n\n\n162\n1\n3.0%\n7\n21.2%\n\n\n163\n2\n6.1%\n9\n27.3%\n\n\n164\n4\n12.1%\n13\n39.4%\n\n\n166\n3\n9.1%\n16\n48.5%\n\n\n169\n4\n12.1%\n20\n60.6%\n\n\n171\n3\n9.1%\n23\n69.7%\n\n\n172\n2\n6.1%\n25\n75.8%\n\n\n174\n1\n3.0%\n26\n78.8%\n\n\n175\n1\n3.0%\n27\n81.8%\n\n\n178\n2\n6.1%\n29\n87.9%\n\n\n180\n1\n3.0%\n30\n90.9%\n\n\n182\n2\n6.1%\n32\n97.0%\n\n\n195\n1\n3.0%\n33\n100.0%"
+    "text": "Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas\n\nfreq_altura_acumulada &lt;- datos_curso%&gt;%\n  group_by(altura)%&gt;%\n  summarise(ni = n(),\n            fi = ni/nrow(datos_curso))%&gt;%\n  mutate(Ni = cumsum(ni),\n         Fi = cumsum(ni / sum(ni)))\n  \ngt(freq_altura_acumulada)%&gt;%\n  fmt_percent(columns = c(fi, Fi),\n              decimals = 1) %&gt;%\n  gt_theme_excel()\n\n\n\n\n\n\n\naltura\nni\nfi\nNi\nFi\n\n\n\n\n152\n1\n3.0%\n1\n3.0%\n\n\n155\n1\n3.0%\n2\n6.1%\n\n\n158\n1\n3.0%\n3\n9.1%\n\n\n159\n2\n6.1%\n5\n15.2%\n\n\n160\n1\n3.0%\n6\n18.2%\n\n\n162\n1\n3.0%\n7\n21.2%\n\n\n163\n2\n6.1%\n9\n27.3%\n\n\n164\n4\n12.1%\n13\n39.4%\n\n\n166\n3\n9.1%\n16\n48.5%\n\n\n169\n4\n12.1%\n20\n60.6%\n\n\n171\n3\n9.1%\n23\n69.7%\n\n\n172\n2\n6.1%\n25\n75.8%\n\n\n174\n1\n3.0%\n26\n78.8%\n\n\n175\n1\n3.0%\n27\n81.8%\n\n\n178\n2\n6.1%\n29\n87.9%\n\n\n180\n1\n3.0%\n30\n90.9%\n\n\n182\n2\n6.1%\n32\n97.0%\n\n\n195\n1\n3.0%\n33\n100.0%"
   },
   {
     "objectID": "clases/clase_06.html#datos-de-alturas",
     "href": "clases/clase_06.html#datos-de-alturas",
     "title": "Estadística I",
     "section": "Datos de Alturas",
-    "text": "Datos de Alturas\n\nEn orden de recolección\n\n\n\nCódigo\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nOrdenados ascendentemente\n\n\n\nCódigo\nsort(datos_curso$altura)\n\n\n [1] 152 155 158 159 159 160 162 163 163 164 164 164 164 166 166 166 169 169 169 169 171\n[22] 171 171 172 172 174 175 178 178 180 182 182 195"
+    "text": "Datos de Alturas\n\nEn orden de recolección\n\n\ndatos_curso$altura\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nOrdenados ascendentemente\n\n\nsort(datos_curso$altura)\n\n [1] 152 155 158 159 159 160 162 163 163 164 164 164 164 166 166 166 169 169 169 169 171\n[22] 171 171 172 172 174 175 178 178 180 182 182 195"
   },
   {
     "objectID": "clases/clase_06.html#media-aritmética-alturas",
     "href": "clases/clase_06.html#media-aritmética-alturas",
     "title": "Estadística I",
     "section": "Media Aritmética Alturas",
-    "text": "Media Aritmética Alturas\nLa media aritmética (\\(\\bar{x}\\)) es la suma de todos los valores dividada por el número total de valores. \\[ \\bar{x} = \\frac{1}{N} \\sum_{i=1}^{N} x_i \\]\n\n\nCódigo\nmedia_altura &lt;- mean(datos_curso$altura)\n\nmedia_altura\n\n\n[1] 168.5455"
+    "text": "Media Aritmética Alturas\nLa media aritmética (\\(\\bar{x}\\)) es la suma de todos los valores dividada por el número total de valores. \\[ \\bar{x} = \\frac{1}{N} \\sum_{i=1}^{N} x_i \\]\n\nmedia_altura &lt;- mean(datos_curso$altura)\n\nmedia_altura\n\n[1] 168.5455"
   },
   {
     "objectID": "clases/clase_06.html#mediana-alturas",
     "href": "clases/clase_06.html#mediana-alturas",
     "title": "Estadística I",
     "section": "Mediana Alturas",
-    "text": "Mediana Alturas\nLa mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.\n\\[\n\\text{Mediana} =\n\\begin{cases}\n    x_{(N+1)/2} & \\text{si } N \\text{ es impar} \\\\\n    \\frac{x_{N/2} \\hspace{1pt} + \\hspace{1pt} x_{N/2 + 1}}{2} & \\text{si } N \\text{ es par}\n\\end{cases}\n\\]\n\n\nCódigo\nmediana_altura &lt;- median(datos_curso$altura)\n\nmediana_altura\n\n\n[1] 169"
+    "text": "Mediana Alturas\nLa mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.\n\\[\n\\text{Mediana} =\n\\begin{cases}\n    x_{(N+1)/2} & \\text{si } N \\text{ es impar} \\\\\n    \\frac{x_{N/2} \\hspace{1pt} + \\hspace{1pt} x_{N/2 + 1}}{2} & \\text{si } N \\text{ es par}\n\\end{cases}\n\\]\n\nmediana_altura &lt;- median(datos_curso$altura)\n\nmediana_altura\n\n[1] 169"
   },
   {
     "objectID": "clases/clase_06.html#desviación-típica-o-estándar-cont",
     "href": "clases/clase_06.html#desviación-típica-o-estándar-cont",
     "title": "Estadística I",
     "section": "Desviación Típica o Estándar-cont",
-    "text": "Desviación Típica o Estándar-cont\nMuestral: Se denota con la letra latina (s).\nLa desviación estándar \\((s)\\) mide la dispersión de los datos respecto a la media muestral y se usa la Corrección de Bessel \\((n−1)\\) para calcularla.\n\\[s = \\sqrt{\\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n-1}}\\]\n\n\nCódigo\nsd_altura &lt;- sd(datos_curso$altura)\nsd_altura \n\n\n[1] 8.867394"
+    "text": "Desviación Típica o Estándar-cont\n\nMuestral: Se denota con la letra latina (s).\nLa desviación estándar \\((s)\\) mide la dispersión de los datos respecto a la media muestral y se usa la Corrección de Bessel \\((n−1)\\) para calcularla.\n\\[s = \\sqrt{\\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n-1}}\\]\n\nsd_altura &lt;- sd(datos_curso$altura)\nsd_altura \n\n[1] 8.867394"
   },
   {
     "objectID": "clases/clase_06.html#histograma-de-altura-1",
     "href": "clases/clase_06.html#histograma-de-altura-1",
     "title": "Estadística I",
     "section": "Histograma de Altura",
-    "text": "Histograma de Altura\ncon línea media (rojo), 1 desviación estándar (azul) y 2 desviaciones estándar (verde)\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Desviaciones Estándar\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+    "text": "Histograma de Altura\n\ncon línea media (rojo), 1 desviación estándar (azul) y 2 desviaciones estándar (verde)\n\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = media_altura), \n             color = \"red\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - sd_altura), \n             color = \"blue\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura + 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  geom_vline(aes(xintercept = media_altura - 2 * sd_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Desviaciones Estándar\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#regresamos-histograma-de-altura-con-mediana",
     "href": "clases/clase_06.html#regresamos-histograma-de-altura-con-mediana",
     "title": "Estadística I",
     "section": "Regresamos: Histograma de altura con mediana",
-    "text": "Regresamos: Histograma de altura con mediana\nMediana en verde\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
+    "text": "Regresamos: Histograma de altura con mediana\nMediana en verde\n\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#representación-conjunta",
@@ -987,7 +987,7 @@
     "href": "clases/clase_06.html#representación-conjunta-histograma--boxplot",
     "title": "Estadística I",
     "section": "Representación Conjunta Histograma- Boxplot",
-    "text": "Representación Conjunta Histograma- Boxplot\n\n\nCódigo\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()"
+    "text": "Representación Conjunta Histograma- Boxplot\n\nggplot(datos_curso, \n       aes(x = altura)) +\n  geom_histogram(binwidth = 5, \n                 fill = \"#15616D\", \n                 color = \"black\") +\n  geom_vline(aes(xintercept = mediana_altura), \n             color = \"green\", \n             linetype = \"dashed\", \n             size = 1) +\n  labs(title = \"Histograma de Altura con Media y Mediana\",\n       x = \"Altura\",\n       y = \"Frecuencia\") +\n  theme_minimal()\n\n\n\n\n\n\n\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#ric",
@@ -1001,28 +1001,28 @@
     "href": "clases/clase_06.html#boxplot-en-representación-horizontal-y-tabla-sumario-de-altura",
     "title": "Estadística I",
     "section": "Boxplot en representación horizontal y tabla sumario de altura",
-    "text": "Boxplot en representación horizontal y tabla sumario de altura\n\n\nCódigo\nsummary(datos_curso$altura)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  152.0   163.0   169.0   168.5   172.0   195.0 \n\n\n\n\nCódigo\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()+\n  labs(title = \"Boxplot de Altura\",\n       subtitle =  'Orientación Horizontal',\n       x = \"Altura (cm)\") +\n  theme_minimal()"
+    "text": "Boxplot en representación horizontal y tabla sumario de altura\n\nsummary(datos_curso$altura)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  152.0   163.0   169.0   168.5   172.0   195.0 \n\n\n\nggplot(datos_curso, aes(y = altura)) +\n  geom_boxplot(outlier.colour = \"red\",\n               outlier.size = 2,\n               whisker.colour = 'blue',\n               staplewidth = 0.2) +\n  coord_flip() +\n  theme_minimal()+\n  labs(title = \"Boxplot de Altura\",\n       subtitle =  'Orientación Horizontal',\n       x = \"Altura (cm)\") +\n  theme_minimal()"
   },
   {
     "objectID": "clases/clase_06.html#datos-agrupados-vs.-no-agrupados",
     "href": "clases/clase_06.html#datos-agrupados-vs.-no-agrupados",
     "title": "Estadística I",
     "section": "Datos Agrupados vs. No Agrupados",
-    "text": "Datos Agrupados vs. No Agrupados\nNo Agrupados\nÚtil cuando hay pocos valores únicos (ej. número de hijos).\nAgrupados\nNecesario para variables continuas (como la altura) donde los valores exactos rara vez se repiten."
+    "text": "Datos Agrupados vs. No Agrupados\n\nNo Agrupados\nÚtil cuando hay pocos valores únicos (ej. número de hijos).\n\n\nAgrupados\nNecesario para variables continuas (como la altura) donde los valores exactos rara vez se repiten."
   },
   {
     "objectID": "clases/clase_06.html#creación-de-intervalos-binning",
     "href": "clases/clase_06.html#creación-de-intervalos-binning",
     "title": "Estadística I",
     "section": "Creación de Intervalos (Binning)",
-    "text": "Creación de Intervalos (Binning)\nUsaremos la regla de Sturges o un ancho fijo para definir los intervalos. Vamos a crear cortes cada 8 cm (aproximadamente) para facilitar la lectura.\n\nDatos de alturas\n\n\n\nCódigo\ndatos_curso$altura\n\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nValor mínimo\n\n\n\nCódigo\nmin(datos_curso$altura) # altura mínima\n\n\n[1] 152\n\n\nSe pueden crear cerca de 6 intervalos - Valor máximo\n\n\nCódigo\nmax(datos_curso$altura) # altura máxima\n\n\n[1] 195"
+    "text": "Creación de Intervalos (Binning)\nUsaremos la regla de Sturges o un ancho fijo para definir los intervalos. Vamos a crear cortes cada 8 cm (aproximadamente) para facilitar la lectura.\n\nDatos de alturas\n\n\ndatos_curso$altura\n\n [1] 164 166 180 169 169 182 172 158 163 164 178 171 171 169 164 182 172 152 174 164 159\n[22] 166 160 162 163 155 175 169 159 178 171 166 195\n\n\n\nValor mínimo\n\n\nmin(datos_curso$altura) # altura mínima\n\n[1] 152\n\n\nSe pueden crear cerca de 6 intervalos - Valor máximo\n\nmax(datos_curso$altura) # altura máxima\n\n[1] 195"
   },
   {
     "objectID": "clases/clase_06.html#estadísticos",
     "href": "clases/clase_06.html#estadísticos",
     "title": "Estadística I",
     "section": "Estadísticos",
-    "text": "Estadísticos\nEl RIC es:\n\\[\\text{RIC} = Q_3 - Q_1\\]\n\n\nCódigo\nestadisticos &lt;- datos_curso %&gt;%\n  summarise(\n    Media = mean(altura),\n    Mediana = median(altura),\n    Q1 = quantile(altura, 0.25),\n    Q3 = quantile(altura, 0.75),\n    RIC = IQR(altura),\n    Min = min(altura),\n    Max = max(altura)\n  )\n\ngt(estadisticos)%&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(title = \"Estadísticos Descriptivos de Altura\") %&gt;%\n  fmt_number(everything(), decimals = 2)\n\n\n\n\n\n\n\n\nEstadísticos Descriptivos de Altura\n\n\nMedia\nMediana\nQ1\nQ3\nRIC\nMin\nMax\n\n\n\n\n168.55\n169.00\n163.00\n172.00\n9.00\n152.00\n195.00"
+    "text": "Estadísticos\nEl RIC es:\n\\[\\text{RIC} = Q_3 - Q_1\\]\n\nestadisticos &lt;- datos_curso %&gt;%\n  summarise(\n    Media = mean(altura),\n    Mediana = median(altura),\n    Q1 = quantile(altura, 0.25),\n    Q3 = quantile(altura, 0.75),\n    RIC = IQR(altura),\n    Min = min(altura),\n    Max = max(altura)\n  )\n\ngt(estadisticos)%&gt;%\n   gt_theme_excel()%&gt;%\n  tab_header(title = \"Estadísticos Descriptivos de Altura\") %&gt;%\n  fmt_number(everything(), decimals = 2)\n\n\n\n\n\n\n\nEstadísticos Descriptivos de Altura\n\n\nMedia\nMediana\nQ1\nQ3\nRIC\nMin\nMax\n\n\n\n\n168.55\n169.00\n163.00\n172.00\n9.00\n152.00\n195.00"
   },
   {
     "objectID": "clases/clase_06.html#boxplot",
@@ -1051,5 +1051,306 @@
     "title": "Estadística I",
     "section": "Notas",
     "text": "Notas\n\n\nSi tienes un conjunto de datos como \\(x1​,x2​,...,xn​\\), el recíproco de cada valor es \\(\\frac{1}{x1}​, \\frac{1}{x2}​,..., \\frac{1}{xn}\\)↩︎"
+  },
+  {
+    "objectID": "scripts/curtosis.html#introducción-fórmulas-a-usar",
+    "href": "scripts/curtosis.html#introducción-fórmulas-a-usar",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "1. Introducción: Fórmulas a Usar",
+    "text": "1. Introducción: Fórmulas a Usar\nRecordatorio de las tres principales medidas de asimetría que practicaremos.\n\n\n\n\n\n\n\n\nCoeficiente\nTipo de Medida\nFórmula\n\n\n\n\nPrimer Coeficiente de Pearson (\\(Sk_1\\))\nBasado en Mediana\n\\[Sk_1 = \\frac{\\bar{x} - M_e}{s}\\]\n\n\nSegundo Coeficiente de Pearson (\\(Sk_2\\))\nBasado en Moda\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\n\n\nCoeficiente de Sesgo Cuartílico (\\(Sk_Q\\))\nBasado en Cuartiles\n\\[Sk_Q = \\frac{(Q_3 - M_e) - (M_e - Q_1)}{Q_3 - Q_1}\\]"
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-1-sk_1-asimetría-positiva",
+    "href": "scripts/curtosis.html#ejercicio-1-sk_1-asimetría-positiva",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 1: \\(Sk_1\\) (Asimetría Positiva)",
+    "text": "Ejercicio 1: \\(Sk_1\\) (Asimetría Positiva)\nSe midió el número de ventas diarias de una tienda durante 10 días:\n\\[\\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\\}\\]\nPregunta: Calcule el Primer Coeficiente de Pearson (\\(Sk_1\\)) e interprete la asimetría.\n```{r} # SOLUCIÓN (Cálculo Manual) datos_e1 &lt;- c(2, 5, 6, 6, 7, 7, 8, 10, 11, 18)"
+  },
+  {
+    "objectID": "scripts/curtosis.html#introducción-fórmulas-a-utilizar",
+    "href": "scripts/curtosis.html#introducción-fórmulas-a-utilizar",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Introducción: Fórmulas a Utilizar",
+    "text": "Introducción: Fórmulas a Utilizar\nResumen de los coeficientes para la clase práctica.\n\n\n\n\n\n\n\n\nCoeficiente\nFórmula\nUso Principal\n\n\n\n\n2do Coef. Pearson (\\(Sk_1\\))\n\\[Sk_1 = \\frac{3(\\bar{x} - M_e)}{s}\\]\nUsa la Mediana. General y robusto.\n\n\n1 er Coef. Pearson (\\(Sk_2\\))\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\nUsa la Moda. Para distribuciones unimodales.\n\n\nSesgo Cuartílico (\\(Sk_Q\\))\n\\[Sk_Q = \\frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}\\]\nUsa Cuartiles. Cuando hay valores atípicos (outliers)."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-1-primer-coeficiente-de-pearson-sk_1",
+    "href": "scripts/curtosis.html#ejercicio-1-primer-coeficiente-de-pearson-sk_1",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 1: Primer Coeficiente de Pearson (\\(Sk_1\\))",
+    "text": "Ejercicio 1: Primer Coeficiente de Pearson (\\(Sk_1\\))\nDatos: Ventas diarias (unidades) durante 10 días: \\[\\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\\}\\]\nConsigna: Calcule el \\(Sk_1\\) e interprete."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_2",
+    "href": "scripts/curtosis.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_2",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_2\\))",
+    "text": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_2\\))\nDatos: Ventas diarias (unidades) durante 10 días: \\[\\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\\}\\]\nConsigna: Calcule el \\(Sk_1\\) e interprete."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-3-coeficiente-de-sesgo-cuartílico-sk_q",
+    "href": "scripts/curtosis.html#ejercicio-3-coeficiente-de-sesgo-cuartílico-sk_q",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 3: Coeficiente de Sesgo Cuartílico (\\(Sk_Q\\))",
+    "text": "Ejercicio 3: Coeficiente de Sesgo Cuartílico (\\(Sk_Q\\))\nDatos: Tiempos de espera en minutos (n=9): \\[\\{15, 17, 18, 19, 20, 22, 25, 25, 30\\}\\]\nConsigna: Calcule la asimetría usando la posición de los cuartiles."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-4-sk_1-simetría",
+    "href": "scripts/curtosis.html#ejercicio-4-sk_1-simetría",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 4: \\(Sk_1\\) (Simetría)",
+    "text": "Ejercicio 4: \\(Sk_1\\) (Simetría)\nDatos: Duración de baterías en horas: \\[\\{25, 26, 27, 27, 28, 28, 29, 30\\}\\] (Media \\(\\bar{x} = 27.5\\), Desv. Estándar \\(s = 1.77\\))\nConsigna: Sin calcular todo de nuevo, halle \\(Sk_1\\) observando la Mediana."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-5-sk_2-asimetría-negativa",
+    "href": "scripts/curtosis.html#ejercicio-5-sk_2-asimetría-negativa",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 5: \\(Sk_2\\) (Asimetría Negativa)",
+    "text": "Ejercicio 5: \\(Sk_2\\) (Asimetría Negativa)\nDatos: Edades de un grupo (n=15), donde: * Media (\\(\\bar{x}\\)) = 91.6 * Moda (\\(M_o\\)) = 98 * Desviación (\\(s\\)) = 6.3\nConsigna: Calcule el Segundo Coeficiente de Pearson con estos datos resumen.\n\nMedia &lt;- 91.6\nMo &lt;- 98\ns &lt;- 6.3\n\n# Cálculo Sk2\nSk2 &lt;- (Media - Mo) / s\n\n#cat(\"Numerador (Media - Moda):\", Media - Mo, \"\\n\")\n#cat(\"Resultado Sk2:\", round(Sk2, 4))\n# Interpretación: -1.01 (Asimetría Negativa / Cola izquierda)"
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-6-sk_q-sesgo-leve",
+    "href": "scripts/curtosis.html#ejercicio-6-sk_q-sesgo-leve",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)",
+    "text": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)\nDatos: Pesos de muestras en kg: \\[\\{2.0, 2.1, 2.2, 2.3, 2.5, 2.6, 2.8, 3.0, 3.2, 4.0\\}\\]\nConsigna: Calcule el Sesgo Cuartílico."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_2",
+    "href": "scripts/curtosis.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_2",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_2\\))",
+    "text": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_2\\))\nDatos: Notas de un examen (n=11): \\[\\{10, 10, 10, 12, 12, 14, 15, 16, 17, 18, 20, 25\\}\\]\nConsigna: Calcule el \\(Sk_2\\) asumiendo que la moda representativa es 10 (peor escenario)."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_1",
+    "href": "scripts/curtosis.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_1",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_1\\))",
+    "text": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_1\\))\nDatos: Ventas diarias (unidades) durante 10 días: \\[\\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\\}\\]\nConsigna: Calcule el \\(Sk_1\\) e interprete."
+  },
+  {
+    "objectID": "scripts/curtosis.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_1",
+    "href": "scripts/curtosis.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_1",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_1\\))",
+    "text": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_1\\))\nDatos: Notas de un examen (n=12): \\[\\{10, 10, 10, 12, 12, 14, 15, 16, 17, 18, 19, 20\\}\\]\nConsigna: Calcule el \\(Sk_1\\) asumiendo que la moda representativa es 10 (peor escenario)."
+  },
+  {
+    "objectID": "clases/clase_07.html#qué-son-los-momentos",
+    "href": "clases/clase_07.html#qué-son-los-momentos",
+    "title": "Estadística I",
+    "section": "¿Qué son los Momentos?",
+    "text": "¿Qué son los Momentos?\n\nSon medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+  },
+  {
+    "objectID": "clases/clase_07.html#el-primer-momento-la-media-barx",
+    "href": "clases/clase_07.html#el-primer-momento-la-media-barx",
+    "title": "Estadística I",
+    "section": "El Primer Momento: La Media ( \\(\\bar{X}\\) )",
+    "text": "El Primer Momento: La Media ( \\(\\bar{X}\\) )\nLa media es el promedio de los datos. Nos dice dónde está el “centro” de nuestros valores.\n\\(xˉ=\\frac{\\sum_{i=1}^{n}​}{n}​=\\frac{x1​+x2​+⋯+xn}{n}\\)\nEjemplo : El salario promedio de los empleados de una empresa."
+  },
+  {
+    "objectID": "clases/clase_07.html#el-segundo-momento-central-la-varianza-s2",
+    "href": "clases/clase_07.html#el-segundo-momento-central-la-varianza-s2",
+    "title": "Estadística I",
+    "section": "El Segundo Momento Central: La Varianza ( \\(S^2\\) )",
+    "text": "El Segundo Momento Central: La Varianza ( \\(S^2\\) )\nLa varianza mide cuánto se dispersan los datos alrededor de la media. Una varianza alta significa que los datos están muy dispersos; una varianza baja, que están más agrupados.\n\\(s^2=\\frac{\\sum_{i=1}^{n}​(xi​−\\bar{x})^2}{n-1}\\)\nLa desviación estándar (s) es la raíz cuadrada de la varianza y se interpreta más fácilmente.\n\\(s=\\sqrt{s^2}\\)​"
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplo-varianza",
+    "href": "clases/clase_07.html#ejemplo-varianza",
+    "title": "Estadística I",
+    "section": "Ejemplo Varianza: ",
+    "text": "Ejemplo Varianza: \nLa varianza del rendimiento diario de las acciones indica qué tan volátil es el precio."
+  },
+  {
+    "objectID": "clases/clase_07.html#el-tercer-momento-central-asimetría",
+    "href": "clases/clase_07.html#el-tercer-momento-central-asimetría",
+    "title": "Estadística I",
+    "section": "El Tercer Momento Central: Asimetría",
+    "text": "El Tercer Momento Central: Asimetría\nLa asimetría nos dice si la distribución de los datos es simétrica o si está “cargada” hacia un lado.\n\nAsimetría positiva (sesgado a la derecha): La cola derecha es más larga.\nAsimetría negativa (sesgado a la izquierda): La cola izquierda es más larga.\nAsimetría cercana a cero: Distribución aproximadamente simétrica."
+  },
+  {
+    "objectID": "clases/clase_07.html#coeficiente-de-asimetría-muestral",
+    "href": "clases/clase_07.html#coeficiente-de-asimetría-muestral",
+    "title": "Estadística I",
+    "section": "Coeficiente de Asimetría Muestral",
+    "text": "Coeficiente de Asimetría Muestral\nEl coeficiente de asimetría muestral  ( \\(A_s\\)​ ) oscila entre -1 y 1\nSu comportamiento, cuando la distribución está sesgada, está dado porque la media tienda a situarse con respecto a la mediana al mismo lado que la cola más larga ubicarse"
+  },
+  {
+    "objectID": "clases/clase_07.html#cálculo-de-coeficiente-de-asimetría",
+    "href": "clases/clase_07.html#cálculo-de-coeficiente-de-asimetría",
+    "title": "Estadística I",
+    "section": "Cálculo de Coeficiente de Asimetría",
+    "text": "Cálculo de Coeficiente de Asimetría\nSe puede calcular de distintas formas.\n\nPrimer coeficiente de Pearson\n\\(Sesgo=​\\frac{Media-Moda}{desviación\\,típica}=​\\frac{\\bar{X}-moda}{s}\\)\nSegundo coeficiente de Pearson\n\\(Sesgo = ​\\frac{3(Media-Mediana)}{desviación\\,típica}=​\\frac{3(\\bar{X}-mediana)}{s}\\)\nEn el segundo caso se omite el uso de la “moda”"
+  },
+  {
+    "objectID": "clases/clase_07.html#cálculo-de-coeficiente-de-asimetría-2",
+    "href": "clases/clase_07.html#cálculo-de-coeficiente-de-asimetría-2",
+    "title": "Estadística I",
+    "section": "Cálculo de Coeficiente de Asimetría /2",
+    "text": "Cálculo de Coeficiente de Asimetría /2\n\nCoeficiente de Sesgo Cuartílico\n\\(Sesgo=​\\frac{(Q_3 - Q_2)-(Q_2-Q_1)}{Q_3-Q_1}= \\frac{Q_3-2Q_2+Q_1}{Q_3-Q_1}\\)\nCoeficiente de Sesgo percentílico\n\\(Sesgo=​\\frac{(P_{90}-P_{50})- (P_{50}-P_{10})}{P_{90}-P_{10}}=​\\frac{P_{90}-2P_{50}+P_{10}}{P_{90}-P_{10}}\\)"
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplo-asimetría",
+    "href": "clases/clase_07.html#ejemplo-asimetría",
+    "title": "Estadística I",
+    "section": "Ejemplo Asimetría: ",
+    "text": "Ejemplo Asimetría: \nLa distribución de los ingresos en un país puede tener asimetría positiva si hay pocos individuos con ingresos muy altos."
+  },
+  {
+    "objectID": "clases/clase_07.html#el-cuarto-momento-curtosis",
+    "href": "clases/clase_07.html#el-cuarto-momento-curtosis",
+    "title": "Estadística I",
+    "section": "El Cuarto Momento: Curtosis",
+    "text": "El Cuarto Momento: Curtosis\nLa curtosis nos indica qué tan “puntiaguda” es la distribución y qué tan pesadas son sus “colas” (los extremos).\n\nLeptocúrtica: Más puntiaguda y con colas más pesadas que una distribución normal.\nPlaticúrtica: Más achatada y con colas más ligeras que una distribución normal.\nMesocúrtica: Similar a una distribución normal.\n\nEl coeficiente de curtosis muestral (\\(K_u\\)​) también se puede calcular."
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplo-curtosis",
+    "href": "clases/clase_07.html#ejemplo-curtosis",
+    "title": "Estadística I",
+    "section": "Ejemplo Curtosis: ",
+    "text": "Ejemplo Curtosis: \nLa rentabilidad de algunos activos financieros puede tener alta curtosis, lo que significa que ocurren eventos extremos (grandes ganancias o pérdidas) con más frecuencia de lo que se esperaría en una distribución normal."
+  },
+  {
+    "objectID": "clases/clase_07.html#distribución-mesocúrtica",
+    "href": "clases/clase_07.html#distribución-mesocúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Mesocúrtica",
+    "text": "Distribución Mesocúrtica"
+  },
+  {
+    "objectID": "clases/clase_07.html#distribución-leptocúrtica",
+    "href": "clases/clase_07.html#distribución-leptocúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Leptocúrtica",
+    "text": "Distribución Leptocúrtica\nColas más pesadas y pico más alto"
+  },
+  {
+    "objectID": "clases/clase_07.html#distribución-platicúrtica",
+    "href": "clases/clase_07.html#distribución-platicúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Platicúrtica",
+    "text": "Distribución Platicúrtica"
+  },
+  {
+    "objectID": "clases/clase_07.html#resumen-de-los-momentos",
+    "href": "clases/clase_07.html#resumen-de-los-momentos",
+    "title": "Estadística I",
+    "section": "Resumen de los Momentos",
+    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas\n\n\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_11.html",
+    "href": "clases/clase_11.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Son medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+  },
+  {
+    "objectID": "clases/clase_11.html#qué-son-los-momentos",
+    "href": "clases/clase_11.html#qué-son-los-momentos",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Son medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+  },
+  {
+    "objectID": "clases/clase_11.html#el-primer-momento-la-media-barx",
+    "href": "clases/clase_11.html#el-primer-momento-la-media-barx",
+    "title": "Estadística I",
+    "section": "El Primer Momento: La Media ( \\(\\bar{X}\\) )",
+    "text": "El Primer Momento: La Media ( \\(\\bar{X}\\) )\nLa media es el promedio de los datos. Nos dice dónde está el “centro” de nuestros valores.\n\\(xˉ=\\frac{\\sum_{i=1}^{n}​}{n}​=\\frac{x1​+x2​+⋯+xn}{n}\\)\nEjemplo : El salario promedio de los empleados de una empresa."
+  },
+  {
+    "objectID": "clases/clase_11.html#el-segundo-momento-central-la-varianza-s2",
+    "href": "clases/clase_11.html#el-segundo-momento-central-la-varianza-s2",
+    "title": "Estadística I",
+    "section": "El Segundo Momento Central: La Varianza ( \\(S^2\\) )",
+    "text": "El Segundo Momento Central: La Varianza ( \\(S^2\\) )\nLa varianza mide cuánto se dispersan los datos alrededor de la media. Una varianza alta significa que los datos están muy dispersos; una varianza baja, que están más agrupados.\n\\(s^2=\\frac{\\sum_{i=1}^{n}​(xi​−\\bar{x})^2}{n-1}\\)\nLa desviación estándar (s) es la raíz cuadrada de la varianza y se interpreta más fácilmente.\n\\(s=\\sqrt{s^2}\\)​"
+  },
+  {
+    "objectID": "clases/clase_11.html#ejemplo-varianza",
+    "href": "clases/clase_11.html#ejemplo-varianza",
+    "title": "Estadística I",
+    "section": "Ejemplo Varianza: ",
+    "text": "Ejemplo Varianza: \nLa varianza del rendimiento diario de las acciones indica qué tan volátil es el precio."
+  },
+  {
+    "objectID": "clases/clase_11.html#el-tercer-momento-central-asimetría",
+    "href": "clases/clase_11.html#el-tercer-momento-central-asimetría",
+    "title": "Estadística I",
+    "section": "El Tercer Momento Central: Asimetría",
+    "text": "El Tercer Momento Central: Asimetría\nLa asimetría nos dice si la distribución de los datos es simétrica o si está “cargada” hacia un lado.\n\nAsimetría positiva (sesgado a la derecha): La cola derecha es más larga.\nAsimetría negativa (sesgado a la izquierda): La cola izquierda es más larga.\nAsimetría cercana a cero: Distribución aproximadamente simétrica."
+  },
+  {
+    "objectID": "clases/clase_11.html#coeficiente-de-asimetría-muestral",
+    "href": "clases/clase_11.html#coeficiente-de-asimetría-muestral",
+    "title": "Estadística I",
+    "section": "Coeficiente de Asimetría Muestral",
+    "text": "Coeficiente de Asimetría Muestral\nEl coeficiente de asimetría muestral  ( \\(A_s\\)​ ) oscila entre -1 y 1\nSu comportamiento, cuando la distribución está sesgada, está dado porque la media tienda a situarse con respecto a la moda al mismo lado que la cola más larga ubicarse"
+  },
+  {
+    "objectID": "clases/clase_11.html#cálculo-de-coeficiente-de-asimetría",
+    "href": "clases/clase_11.html#cálculo-de-coeficiente-de-asimetría",
+    "title": "Estadística I",
+    "section": "Cálculo de Coeficiente de Asimetría",
+    "text": "Cálculo de Coeficiente de Asimetría\nSe puede calcular de distintas formas.\n\nPrimer coeficiente de Pearson\n\\(Sesgo=​\\frac{Media-Moda}{desviación\\,típica}=​\\frac{\\bar{X}-moda}{s}\\)\nSegundo coeficiente de Pearson\n\\(Sesgo = ​\\frac{3(Media-Mediana)}{desviación\\,típica}=​\\frac{3(\\bar{X}-mediana)}{s}\\)\nEn el segundo caso se omite el uso de la “moda”"
+  },
+  {
+    "objectID": "clases/clase_11.html#cálculo-de-coeficiente-de-asimetría-2",
+    "href": "clases/clase_11.html#cálculo-de-coeficiente-de-asimetría-2",
+    "title": "Estadística I",
+    "section": "Cálculo de Coeficiente de Asimetría /2",
+    "text": "Cálculo de Coeficiente de Asimetría /2\n\nCoeficiente de Sesgo Cuartílico\n\\(Sesgo=​\\frac{(Q_3 - Q_2)-(Q_2-Q_1)}{Q_3-Q_1}= \\frac{Q_3-2Q_2+Q_1}{Q_3-Q_1}\\)\nCoeficiente de Sesgo percentílico\n\\(Sesgo=​\\frac{(P_{90}-P_{50})- (P_{50}-P_{10})}{P_{90}-P_{10}}=​\\frac{P_{90}-2P_{50}+P_{10}}{P_{90}-P_{10}}\\)"
+  },
+  {
+    "objectID": "clases/clase_11.html#ejemplo-asimetría",
+    "href": "clases/clase_11.html#ejemplo-asimetría",
+    "title": "Estadística I",
+    "section": "Ejemplo Asimetría: ",
+    "text": "Ejemplo Asimetría: \nLa distribución de los ingresos en un país puede tener asimetría positiva si hay pocos individuos con ingresos muy altos."
+  },
+  {
+    "objectID": "clases/clase_11.html#el-cuarto-momento-curtosis",
+    "href": "clases/clase_11.html#el-cuarto-momento-curtosis",
+    "title": "Estadística I",
+    "section": "El Cuarto Momento: Curtosis",
+    "text": "El Cuarto Momento: Curtosis\nLa curtosis nos indica qué tan “puntiaguda” es la distribución y qué tan pesadas son sus “colas” (los extremos).\n\nLeptocúrtica: Más puntiaguda y con colas más pesadas que una distribución normal.\nPlaticúrtica: Más achatada y con colas más ligeras que una distribución normal.\nMesocúrtica: Similar a una distribución normal.\n\nEl coeficiente de curtosis muestral (\\(K_u\\)​) también se puede calcular. Próxima clase"
+  },
+  {
+    "objectID": "clases/clase_11.html#ejemplo-curtosis",
+    "href": "clases/clase_11.html#ejemplo-curtosis",
+    "title": "Estadística I",
+    "section": "Ejemplo Curtosis: ",
+    "text": "Ejemplo Curtosis: \nLa rentabilidad de algunos activos financieros puede tener alta curtosis, lo que significa que ocurren eventos extremos (grandes ganancias o pérdidas) con más frecuencia de lo que se esperaría en una distribución normal."
+  },
+  {
+    "objectID": "clases/clase_11.html#distribución-mesocúrtica",
+    "href": "clases/clase_11.html#distribución-mesocúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Mesocúrtica",
+    "text": "Distribución Mesocúrtica"
+  },
+  {
+    "objectID": "clases/clase_11.html#distribución-leptocúrtica",
+    "href": "clases/clase_11.html#distribución-leptocúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Leptocúrtica",
+    "text": "Distribución Leptocúrtica\nColas más pesadas y pico más alto"
+  },
+  {
+    "objectID": "clases/clase_11.html#distribución-platicúrtica",
+    "href": "clases/clase_11.html#distribución-platicúrtica",
+    "title": "Estadística I",
+    "section": "Distribución Platicúrtica",
+    "text": "Distribución Platicúrtica"
+  },
+  {
+    "objectID": "clases/clase_11.html#resumen-de-los-momentos",
+    "href": "clases/clase_11.html#resumen-de-los-momentos",
+    "title": "Estadística I",
+    "section": "Resumen de los Momentos",
+    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas"
   }
 ]

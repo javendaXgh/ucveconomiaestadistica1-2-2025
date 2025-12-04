@@ -82,12 +82,16 @@ Denotada como $n_i$, es el número de veces que aparece un valor o categoría es
 Si tenemos una muestra de tamaño N: $$ \sum_{i=1}^{k} n_i = N $$
 
 ## Datos de Alturas
-- En orden de recolección
+
+-   En orden de recolección
+
 ```{r}
 datos_curso$altura
 
 ```
-- Ordenados ascendentemente
+
+-   Ordenados ascendentemente
+
 ```{r}
 sort(datos_curso$altura)
 ```
@@ -174,6 +178,7 @@ $$ N_i = n_1 + n_2 + ... + n_i $$
 $$ F_i = f_1 + f_2 + ... + f_i $$
 
 ## Tabla de Frecuencias: Absolutas, Relativas y Acumuladas para Alturas
+
 ```{r}
 freq_altura_acumulada <- datos_curso%>%
   group_by(altura)%>%
@@ -188,8 +193,6 @@ gt(freq_altura_acumulada)%>%
   gt_theme_excel()
 ```
 
-
-
 # Datos Agrupados
 
 ## ¿Por qué agrupar datos?
@@ -201,8 +204,6 @@ Cuando trabajamos con variables continuas (como la altura, el ingreso o el PIB),
 **Solución:** Creamos **Intervalos de Clase**.
 
 Al agrupar, asumimos que los valores se distribuyen uniformemente dentro del intervalo. Esto implica una leve pérdida de información a cambio de ganar claridad sobre la distribución.
-
-
 
 ## Componentes de la Tabla Agrupada
 
@@ -227,22 +228,23 @@ $$x_i = \frac{160 + 170}{2} = 165$$
 Vamos a mejorar nuestra tabla anterior calculando explícitamente la *Marca de Clase*. Esto es necesario para calcular la media aproximada desde la tabla sin tener los datos originales.
 
 ## Creación de Intervalos (Binning)
+
 Usaremos la regla de Sturges o un ancho fijo para definir los intervalos. Vamos a crear cortes cada 8 cm (aproximadamente) para facilitar la lectura.
 
+-   Datos de alturas
 
-
-- Datos de alturas
 ```{r}
 datos_curso$altura
 ```
 
-- Valor mínimo
+-   Valor mínimo
+
 ```{r}
 min(datos_curso$altura) # altura mínima
 ```
 
-Se pueden crear cerca de 6 intervalos
-- Valor máximo
+Se pueden crear cerca de 6 intervalos - Valor máximo
+
 ```{r}
 
 max(datos_curso$altura) # altura máxima
@@ -250,28 +252,28 @@ max(datos_curso$altura) # altura máxima
 ```
 
 ## Pasos Previos/ Cont.
+
 Crear 6 intervalos
 
+-   Rango
 
-- Rango
 ```{r}
 range(datos_curso$altura) # rango de alturas
 ```
 
+-   Partes del Rango a 6 partes
 
-- Partes del Rango a 6 partes
 ```{r}
 (max( datos_curso$altura)- min(datos_curso$altura)) /6
 ```
 
+-   Aproximación a la secuencia de los intervalos
 
-- Aproximación a la secuencia de los intervalos
 ```{r}
 seq(min(datos_curso$altura), 
     max(datos_curso$altura),
     8) # crear secuencias con brincos de 8 aproximadamente
 ```
-
 
 ## Procesamiento de Datos para Marca de Clase
 
@@ -302,7 +304,8 @@ tabla_detallada <- datos_curso %>%
   )
 
 ```
-*Nota:* cut divide los datos en rangos como [148,156).
+
+*Nota:* cut divide los datos en rangos como \[148,156).
 
 ## Tabla de frecuencia para Datos Agregados (altura)
 
@@ -334,12 +337,12 @@ tabla_detallada %>%
 ```
 
 ## Histograma de altura
+
 El histograma es la representación gráfica de la tabla de frecuencias para datos agrupados.
 
-- La base de la barra es el intervalo.
+-   La base de la barra es el intervalo.
 
-- La altura de la barra es proporcional a la frecuencia $(n_i)$
-
+-   La altura de la barra es proporcional a la frecuencia $(n_i)$
 
 ```{r}
 ggplot(datos_curso, 
@@ -353,10 +356,13 @@ ggplot(datos_curso,
 ```
 
 ## Datos Agrupados vs. No Agrupados
+
 #### No Agrupados
+
 Útil cuando hay pocos valores únicos (ej. número de hijos).
 
 #### Agrupados
+
 Necesario para variables continuas (como la altura) donde los valores exactos rara vez se repiten.
 
 # Estadísticas Descriptivas Altura
@@ -372,8 +378,11 @@ media_altura
 ```
 
 ## Mediana Alturas
+
 La mediana es el valor central cuando los datos están ordenados y se obtiene dividiendo el conjunto de datos en dos partes iguales.
+
 \usepackage{amsmath}
+
 $$
 \text{Mediana} =
 \begin{cases}
@@ -382,14 +391,14 @@ $$
 \end{cases}
 $$
 
-
-
 ```{r}
 mediana_altura <- median(datos_curso$altura)
 
 mediana_altura
 ```
+
 ## Estadísticos
+
 El RIC es:
 
 $$\text{RIC} = Q_3 - Q_1$$
@@ -447,9 +456,8 @@ gt(outliers)%>%
   gt_theme_excel()
 ```
 
-
-
 ## Histograma de altura con media y mediana
+
 Mediana en verde y media en rojo
 
 ```{r}
@@ -473,9 +481,10 @@ ggplot(datos_curso,
 ```
 
 ## Desviación Típica o Estándar
+
 ##### Desviación Estándar Poblacional (σ):
-Se denota con la letra griega sigma (σ).
-La desviación estándar ($\sigma$) mide la dispersión de los datos respecto a la media poblacional.
+
+Se denota con la letra griega sigma (σ). La desviación estándar ($\sigma$) mide la dispersión de los datos respecto a la media poblacional.
 
 $$\sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}$$
 
@@ -487,14 +496,14 @@ La desviación estándar $(s)$ mide la dispersión de los datos respecto a la me
 
 $$s = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n-1}}$$
 
-
 ```{r}
 
 sd_altura <- sd(datos_curso$altura)
 sd_altura 
 ```
 
-## Histograma de Altura 
+## Histograma de Altura
+
 #### con línea media (rojo), 1 desviación estándar (azul) y 2 desviaciones estándar (verde)
 
 ```{r}
@@ -531,7 +540,8 @@ ggplot(datos_curso,
 ```
 
 ## Regresamos: Histograma de altura con mediana
-Mediana en verde 
+
+Mediana en verde
 
 ```{r}
 ggplot(datos_curso, 
@@ -549,23 +559,23 @@ ggplot(datos_curso,
   theme_minimal()
 ```
 
-## Boxplot 
+## Boxplot
 
 El Boxplot visualiza los cuartiles.
 
-- Caja: Del $Q_1$ al $Q_3$ (contiene el 50% central).
+-   Caja: Del $Q_1$ al $Q_3$ (contiene el 50% central).
 
-- Línea central: Mediana.
+-   Línea central: Mediana.
 
-- Bigotes: Se extienden hasta 1.5×IQR.
+-   Bigotes: Se extienden hasta 1.5×IQR.
 
-- Puntos: Valores fuera de los bigotes (Outliers).
+-   Puntos: Valores fuera de los bigotes (Outliers).
 
-## Boxplot en representación horizontal y tabla sumario de altura 
+## Boxplot en representación horizontal y tabla sumario de altura
+
 ```{r}
 summary(datos_curso$altura)
 ```
-
 
 ```{r}
 ggplot(datos_curso, aes(y = altura)) +
@@ -583,6 +593,7 @@ ggplot(datos_curso, aes(y = altura)) +
 ```
 
 ## Representación Conjunta Histograma- Boxplot
+
 ```{r}
 ggplot(datos_curso, 
        aes(x = altura)) +
@@ -607,8 +618,6 @@ ggplot(datos_curso, aes(y = altura)) +
   theme_minimal()
 ```
 
-
-
 ## Boxplot de altura
 
 ```{r}
@@ -621,7 +630,9 @@ ggplot(datos_curso, aes(y = altura)) +
 ```
 
 ## Boxplot de altura por sexo
+
 ¿Cómo se comporta la distribución según el sexo?
+
 ```{r}
 ggplot(datos_curso, aes(x = sexo,
                         y = altura,
@@ -633,10 +644,6 @@ ggplot(datos_curso, aes(x = sexo,
   theme_minimal() +
   theme(legend.position = "none")
 ```
-
-
-
-
 
 ## Scatterplot: peso vs estatura
 
