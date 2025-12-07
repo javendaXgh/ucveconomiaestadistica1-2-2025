@@ -1,0 +1,201 @@
+---
+title: "Ejercicios Prácticos de Asimetría"
+subtitle: "Cálculo Manual: Pearson y Sesgo Cuartílico"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    css: styles.css
+editor: visual
+---
+
+## Introducción: Fórmulas a Utilizar
+
+Resumen de los coeficientes para la clase práctica.
+
+| Coeficiente | Fórmula | Uso Principal |
+|:-----------------------|:-----------------------|:-----------------------|
+| **2do Coef. Pearson (**$Sk_1$) | $$Sk_1 = \frac{3(\bar{x} - M_e)}{s}$$ | Usa la **Mediana**. General y robusto. |
+| **1 er Coef. Pearson (**$Sk_2$) | $$Sk_2 = \frac{\bar{x} - M_o}{s}$$ | Usa la **Moda**. Para distribuciones unimodales. |
+| **Sesgo Cuartílico (**$Sk_Q$) | $$Sk_Q = \frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}$$ | Usa **Cuartiles**. Cuando hay valores atípicos (outliers). |
+
+------------------------------------------------------------------------
+
+## Ejercicio 1: Segundo Coeficiente de Pearson ($Sk_1$)
+
+**Datos:** Notas de un examen (n=12): $$\{10, 10, 10, 12, 12, 14, 15, 16, 17, 18, 19, 20\}$$
+
+**Consigna:** Calcule el $Sk_1$ asumiendo que la moda representativa es 10 (peor escenario).
+
+```{r}
+#| echo: false
+#| eval: true
+
+
+x <- c(10, 10, 10, 12, 12, 14, 15, 16, 17, 18,19, 20)
+
+# 1. Moda (Mo): 10
+Mo <- 10
+
+# 2. Media (x_bar): 169 / 11 = 15.36
+Media <- mean(x)
+
+# 3. Desviación Estándar (s): 4.88
+s <- sd(x)
+
+# 4. Cálculo Sk2
+Sk1 <- (Media - Mo) / s
+
+#cat("Media:", round(Media, 2), "| Moda:", Mo, "| s:", round(s, 2), "\n")
+#cat("Resultado Sk1:", round(Sk2, 4))
+# Interpretación: 1.21xx ( Asimetría Positiva)
+```
+
+```{r}
+hist(x)
+```
+
+## Ejercicio 2: Segundo Coeficiente de Pearson ($Sk_2$)
+
+**Datos:** Ventas diarias (unidades) durante 10 días: $$\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\}$$
+
+**Consigna:** Calcule el $Sk_1$ e interprete.
+
+```{r}
+#| echo: false
+#| eval: true
+
+
+x <- c(2, 5, 6, 6, 7, 7, 8, 10, 11, 18)
+
+# 1. Mediana (Me): (7 + 8) / 2 = 7.5
+Me <- median(x)
+
+# 2. Media (x_bar): 80 / 10 = 8
+Media <- mean(x)
+
+# 3. Desviación Estándar (s): 4.108
+s <- sd(x)
+
+# 4. Cálculo Sk1
+Sk2 <- (Media - Me) / s
+
+#cat("Media:", Media, "| Mediana:", Me, "| s:", round(s, 3), "\n")
+#cat("Resultado Sk1:", round(Sk1, 4))
+# Interpretación: 0.1217 (Asimetría Positiva / Cola derecha)
+```
+
+```{r}
+hist(x)
+```
+
+## Ejercicio 3: Coeficiente de Sesgo Cuartílico ($Sk_Q$)
+
+**Datos:** Tiempos de espera en minutos (n=9): $$\{15, 17, 18, 19, 20, 22, 25, 25, 30\}$$
+
+**Consigna:** Calcule la asimetría usando la posición de los cuartiles.
+
+```{r}
+#| echo: false
+#| eval: true
+
+# 1. Mediana (Me) = Dato en posición 5 -> 20
+Me <- 20
+
+# 2. Cuartiles
+# Q1 (Mediana de 15,17,18,19) -> (17+18)/2 = 17.5
+Q1 <- 17.5
+# Q3 (Mediana de 22,25,25,30) -> (25+25)/2 = 25
+Q3 <- 25
+
+# 3. Cálculo SkQ
+# Numerador: (25 + 17.5) - 2(20) = 42.5 - 40 = 2.5
+# Denominador: 25 - 17.5 = 7.5
+SkQ <- (Q3 + Q1 - 2*Me) / (Q3 - Q1)
+
+#cat("Q1:", Q1, "| Me:", Me, "| Q3:", Q3, "\n")
+#cat("Resultado SkQ:", round(SkQ, 3))
+# Interpretación: 0.333 (Asimetría Positiva)
+```
+
+```{r}
+hist(x)
+```
+
+## Ejercicio 4: $Sk_1$ (Simetría)
+
+**Datos:** Duración de baterías en horas: $$\{25, 26, 27, 27, 28, 28, 29, 30\}$$ (Media $\bar{x} = 27.5$, Desv. Estándar $s = 1.77$)
+
+**Consigna:** Sin calcular todo de nuevo, halle $Sk_1$ observando la Mediana.
+
+```{r}
+#| echo: false
+#| eval: true
+
+# 1. Mediana (Me): (27+28)/2 = 27.5
+Me <- 27.5
+Media <- 27.5
+s <- 1.77
+
+# 2. Cálculo Sk1
+Sk1 <- (Media - Me) / s
+
+#cat("Media:", Media, "| Mediana:", Me, "\n")
+#cat("Resultado Sk1:", Sk1)
+# Interpretación: 0 (Distribución Simétrica)
+```
+
+## Ejercicio 5: $Sk_2$ (Asimetría Negativa)
+
+**Datos:** Edades de un grupo (n=15), donde: \* Media ($\bar{x}$) = 91.6 \* Moda ($M_o$) = 98 \* Desviación ($s$) = 6.3
+
+**Consigna:** Calcule el Segundo Coeficiente de Pearson con estos datos resumen.
+
+```{r}
+#| echo: true
+#| eval: true
+
+Media <- 91.6
+Mo <- 98
+s <- 6.3
+
+# Cálculo Sk2
+Sk2 <- (Media - Mo) / s
+
+#cat("Numerador (Media - Moda):", Media - Mo, "\n")
+#cat("Resultado Sk2:", round(Sk2, 4))
+# Interpretación: -1.01 (Asimetría Negativa / Cola izquierda)
+```
+
+------------------------------------------------------------------------
+
+## Ejercicio 6: $Sk_Q$ (Sesgo Leve)
+
+**Datos:** Pesos de muestras en kg: $$\{2.0, 2.1, 2.2, 2.3, 2.5, 2.6, 2.8, 3.0, 3.2, 4.0\}$$
+
+**Consigna:** Calcule el Sesgo Cuartílico.
+
+```{r}
+#| echo: false
+#| eval: true
+
+
+# 1. Mediana (Me): (2.5 + 2.6)/2 = 2.55
+Me <- 2.55
+
+# 2. Cuartiles
+# Q1 (Pos 2.75): 0.25*2.2 + 0.75*2.3 = 2.275 (Aprox manual: 2.25)
+# Usaremos aproximación simple de clase: (2.2+2.3)/2 = 2.25
+Q1 <- 2.25
+# Q3 (Pos 8.25): (3.0+3.2)/2 = 3.1
+Q3 <- 3.1
+
+# 3. Cálculo SkQ
+# Numerador: (3.1 + 2.25) - 2(2.55) = 5.35 - 5.10 = 0.25
+# Denominador: 3.1 - 2.25 = 0.85
+SkQ <- (3.1 + 2.25 - 2*Me) / (3.1 - 2.25)
+
+#cat("Q1:", Q1, "| Me:", Me, "| Q3:", Q3, "\n")
+#cat("Resultado SkQ:", round(SkQ, 3))
+# Interpretación: 0.294 (Leve Asimetría Positiva)
+```

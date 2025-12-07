@@ -1,0 +1,119 @@
+---
+title: "Estadística I"
+subtitle: "Clase 09: Complemento- Índice Bursatil"
+date: "2025/12/08"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## S&P 500
+
+-   Í**ndice bursátil** que representa el rendimiento de **500 de las mayores empresas que cotizan en bolsa en Estados Unidos**.
+
+-   Considerado uno de los mejores indicadores de la **salud del mercado de valores de EE.UU.** y de la economía en general.
+
+-   Es **ponderado por capitalización de mercado**, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice.
+
+------------------------------------------------------------------------
+
+## ¿Cómo se Seleccionan las Empresas del S&P 500?
+
+El índice es mantenido por **S&P Dow Jones Indices**. Los criterios principales para la inclusión son:
+
+-   **Capitalización de Mercado:** Deben tener una alta capitalización de mercado (miles de millones de dólares).
+
+-   **Liquidez:** Deben ser acciones líquidas, es decir, fáciles de comprar y vender.
+
+-   **Domicilio:** Principalmente empresas estadounidenses.
+
+-   **Rentabilidad:** Deben ser financieramente viables.
+
+------------------------------------------------------------------------
+
+## Ponderación por Capitalización de Mercado
+
+-   El peso de cada empresa en el índice es proporcional a su **capitalización de mercado** (precio de la acción × número de acciones en circulación).
+
+-   Las empresas más grandes tienen un mayor impacto en los movimientos del índice.
+
+## Ejemplo simplificado:
+
+Si la capitalización de mercado de la empresa A es el doble que la de la empresa B, un cambio porcentual en el precio de la acción de A tendrá el doble de impacto en el índice que el mismo cambio porcentual en el precio de la acción de B.
+
+------------------------------------------------------------------------
+
+## Importancia del SP 500 {.small}
+
+-   **Benchmark de Inversión:** Muchos inversores y fondos de inversión utilizan el S&P 500 como referencia para medir su propio rendimiento. El objetivo de muchos fondos es "batir al mercado" (superar el rendimiento del SP 500).
+
+-   **Indicador Económico:** barómetro de la economía estadounidense. Un SP 500 al alza suele interpretarse como optimismo económico, mientras que una caída puede indicar preocupación.
+
+-   **Base para Productos Financieros:** Sirve como base para muchos productos financieros derivados, como fondos indexados y ETFs (fondos cotizados) que buscan replicar su rendimiento.
+
+------------------------------------------------------------------------
+
+## Ejemplo Ilustrativo (Simplificado)
+
+Imagina un índice con solo 3 empresas ponderadas por capitalización de mercado:
+
+|  |  |  |  |  |
+|---------------|---------------|---------------|---------------|---------------|
+| **Empresa** | **Precio por Acción** | **Acciones en Circulación (millones)** | **Capitalización de Mercado (miles de millones \$)** | **Peso en el Índice (%)** |
+| A | 100 | 10 | 1000 | 47,62% |
+| B | 50 | 20 | 1000 | 47,62% |
+| C | 25 | 4 | 100 | 4,76% |
+| **Total** |  |  | **2100** | **100%** |
+
+## Ejemplo Ilustrativo (Simplificado)/ cont.
+
+En este ejemplo, las empresas A y B, a pesar de tener precios de acción diferentes, tienen la misma capitalización de mercado y, por lo tanto, el mismo peso en el índice. La empresa C, con menor capitalización, tiene un peso menor.
+
+------------------------------------------------------------------------
+
+## Ejemplo Ilustrativo en el Período t+1
+
+Supongamos que en el período t+1 los precios de las acciones cambian:
+
+|  |  |  |  |
+|------------------|------------------|------------------|------------------|
+| **Empresa** | **Precio por Acción (t+1)** | **Acciones en Circulación (millones)** | **Capitalización de Mercado (t+1) (miles de millones \$)** |
+| A | 110 | 10 | 1100 |
+| B | 55 | 20 | 1100 |
+| C | 20 | 4 | 80 |
+| **Total** |  |  | **2280** |
+
+## Ejemplo Ilustrativo en el Período t+1/cont.
+
+Para calcular el valor del índice en t+1, se compararía la capitalización de mercado total en t+1 con un valor base (usualmente la capitalización total en el período base) multiplicado por un factor inicial (como 100).
+
+## Índices Bursátiles y el Concepto de Ponderación
+
+Los índices bursátiles ponderados por capitalización de mercado, como el SP 500, se asemejan conceptualmente a un **índice de valor agregado**.
+
+-   **Valor en el período base:** La capitalización de mercado total de las empresas en el período base.
+
+-   **Valor en el período actual:** La capitalización de mercado total de las empresas en el período actual.
+
+## Fórmula General del Índice de Valor:
+
+$V_t = \left( \frac{\sum P_{it} Q_{it}}{\sum P_{i0} Q_{i0}} \right) \times 100$
+
+En el contexto de un índice bursátil ponderado por capitalización de mercado:
+
+-   $P_{it}Q_{it}$​ representa la capitalización de mercado de la empresa i en el período t.
+
+-   $P_{i0}Q_{i0}$ representa la capitalización de mercado de la empresa i en el período base.
+
+## Índice Bursátil
+
+El IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.
+
+No se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total.

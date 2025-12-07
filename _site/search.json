@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable[(https://www.youtube.com/playlist?list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8)🛠️ Ejecutar Notebook Ejercicio Sesgos]\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -310,8 +310,8 @@
     "objectID": "scripts/test_presentacion.html#nueva-lámina",
     "href": "scripts/test_presentacion.html#nueva-lámina",
     "title": "test pib",
-    "section": "nueva lámina",
-    "text": "nueva lámina\n\nprimer punto\nsegundo punto\n\nesto va en negrilla"
+    "section": "",
+    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
   },
   {
     "objectID": "scripts/test_presentacion.html#lámina-1-qué-es-el-producto-interno-bruto-pib",
@@ -346,7 +346,7 @@
     "href": "scripts/test_presentacion.html#lámina-5-por-qué-es-importante-el-pib",
     "title": "test pib",
     "section": "Lámina 5: ¿Por qué es importante el PIB?",
-    "text": "Lámina 5: ¿Por qué es importante el PIB?\n\nMedida del Crecimiento Económico: Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.\nComparaciones Internacionales: Permite comparar el tamaño de las economías de diferentes países.\nIndicador del Nivel de Vida (aproximado): Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.\nBase para Políticas Económicas: Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias."
+    "text": "Lámina 5: ¿Por qué es importante el PIB?\n\nMedida del Crecimiento Económico: Un aumento en el PIB real (ajustado por la inflación) indica que la economía está creciendo.\nComparaciones Internacionales: Permite comparar el tamaño de las economías de diferentes países.\nIndicador del Nivel de Vida (aproximado): Aunque no es una medida perfecta, un PIB per cápita (PIB dividido por la población) más alto a menudo se asocia con un mayor nivel de vida.\nBase para Políticas Económicas: Los gobiernos utilizan los datos del PIB para tomar decisiones sobre políticas fiscales y monetarias.\n\n\nEspero que estas láminas sean útiles para tus estudiantes. ¿Necesitas alguna modificación o lámina adicional?"
   },
   {
     "objectID": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
@@ -1070,8 +1070,8 @@
     "objectID": "scripts/curtosis.html#introducción-fórmulas-a-utilizar",
     "href": "scripts/curtosis.html#introducción-fórmulas-a-utilizar",
     "title": "Ejercicios Prácticos de Asimetría",
-    "section": "Introducción: Fórmulas a Utilizar",
-    "text": "Introducción: Fórmulas a Utilizar\nResumen de los coeficientes para la clase práctica.\n\n\n\n\n\n\n\n\nCoeficiente\nFórmula\nUso Principal\n\n\n\n\n2do Coef. Pearson (\\(Sk_1\\))\n\\[Sk_1 = \\frac{3(\\bar{x} - M_e)}{s}\\]\nUsa la Mediana. General y robusto.\n\n\n1 er Coef. Pearson (\\(Sk_2\\))\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\nUsa la Moda. Para distribuciones unimodales.\n\n\nSesgo Cuartílico (\\(Sk_Q\\))\n\\[Sk_Q = \\frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}\\]\nUsa Cuartiles. Cuando hay valores atípicos (outliers)."
+    "section": "",
+    "text": "Resumen de los coeficientes para la clase práctica.\n\n\n\n\n\n\n\n\nCoeficiente\nFórmula\nUso Principal\n\n\n\n\n2do Coef. Pearson (\\(Sk_1\\))\n\\[Sk_1 = \\frac{3(\\bar{x} - M_e)}{s}\\]\nUsa la Mediana. General y robusto.\n\n\n1 er Coef. Pearson (\\(Sk_2\\))\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\nUsa la Moda. Para distribuciones unimodales.\n\n\nSesgo Cuartílico (\\(Sk_Q\\))\n\\[Sk_Q = \\frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}\\]\nUsa Cuartiles. Cuando hay valores atípicos (outliers)."
   },
   {
     "objectID": "scripts/curtosis.html#ejercicio-1-primer-coeficiente-de-pearson-sk_1",
@@ -1140,8 +1140,8 @@
     "objectID": "clases/clase_07.html#qué-son-los-momentos",
     "href": "clases/clase_07.html#qué-son-los-momentos",
     "title": "Estadística I",
-    "section": "¿Qué son los Momentos?",
-    "text": "¿Qué son los Momentos?\n\nSon medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+    "section": "",
+    "text": "Son medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
   },
   {
     "objectID": "clases/clase_07.html#el-primer-momento-la-media-barx",
@@ -1239,7 +1239,7 @@
     "href": "clases/clase_07.html#resumen-de-los-momentos",
     "title": "Estadística I",
     "section": "Resumen de los Momentos",
-    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -1352,5 +1352,334 @@
     "title": "Estadística I",
     "section": "Resumen de los Momentos",
     "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas"
+  },
+  {
+    "objectID": "clases/clase_08.html#pregunta",
+    "href": "clases/clase_08.html#pregunta",
+    "title": "Estadística I",
+    "section": "Pregunta",
+    "text": "Pregunta\n¿Cómo considera en general la situación de nuestro país?"
+  },
+  {
+    "objectID": "clases/clase_08.html#respuesta",
+    "href": "clases/clase_08.html#respuesta",
+    "title": "Estadística I",
+    "section": "Respuesta",
+    "text": "Respuesta\n¿En comparación a qué o dónde?"
+  },
+  {
+    "objectID": "clases/clase_08.html#qué-son-los-números-índices",
+    "href": "clases/clase_08.html#qué-son-los-números-índices",
+    "title": "Estadística I",
+    "section": "¿Qué son los Números Índices?",
+    "text": "¿Qué son los Números Índices?\n\nSon medidas estadísticas diseñadas para mostrar cambios en una variable o un grupo de variables a lo largo del tiempo o en comparación con una ubicación geográfica u otra categoría.\nSe expresan generalmente en forma de porcentaje relativo a un período base o una ubicación base.\nSimplifican la comparación de datos a través del tiempo o entre diferentes categorías."
+  },
+  {
+    "objectID": "clases/clase_08.html#usos-de-los-números-índices-en-economía",
+    "href": "clases/clase_08.html#usos-de-los-números-índices-en-economía",
+    "title": "Estadística I",
+    "section": "Usos de los Números Índices en Economía",
+    "text": "Usos de los Números Índices en Economía\n\nMedir la inflación (Índice de Precios al Consumidor - IPC).\nAnalizar el crecimiento económico (Índice de Producción Industrial).\nEvaluar el desempeño del mercado de valores (Índices Bursátiles).\nComparar el costo de vida entre regiones."
+  },
+  {
+    "objectID": "clases/clase_08.html#elementos-clave-de-un-número-índice",
+    "href": "clases/clase_08.html#elementos-clave-de-un-número-índice",
+    "title": "Estadística I",
+    "section": "Elementos Clave de un Número Índice",
+    "text": "Elementos Clave de un Número Índice\n\nPeríodo Base: El período de referencia con el cual se comparan los demás períodos. El valor del índice en el período base suele ser 100.\nPeríodo Actual (o de Comparación): El período para el cual se calcula el número índice.\nValor(es) a Medir: El precio, la cantidad, el valor, etc., que se está midiendo."
+  },
+  {
+    "objectID": "clases/clase_08.html#tipos-de-números-índices",
+    "href": "clases/clase_08.html#tipos-de-números-índices",
+    "title": "Estadística I",
+    "section": "Tipos de Números Índices",
+    "text": "Tipos de Números Índices\n\nNúmeros Índices Simples: Miden el cambio en una única variable.\nNúmeros Índices Agregados: Miden el cambio promedio en un grupo de variables."
+  },
+  {
+    "objectID": "clases/clase_08.html#número-índice-simple",
+    "href": "clases/clase_08.html#número-índice-simple",
+    "title": "Estadística I",
+    "section": "Número Índice Simple",
+    "text": "Número Índice Simple\nFórmula:\n\\[\\text{Índice Simple} = \\left( \\frac{\\text{Valor en el período actual}}{\\text{Valor en el período base}} \\right) \\times 100\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-de-índice-simple-precio",
+    "href": "clases/clase_08.html#ejemplo-de-índice-simple-precio",
+    "title": "Estadística I",
+    "section": "Ejemplo de Índice Simple (Precio)",
+    "text": "Ejemplo de Índice Simple (Precio)\nSupongamos el precio de un bien en dos años:\n\n\n\nAño\nPrecio ($)\n\n\n\n\n2020 (Base)\n10\n\n\n2023\n12\n\n\n\nEl número índice simple para el precio en 2023 con base en 2020 es:\n\\[\\text{Índice} = \\left( \\frac{12}{10} \\right) \\times 100 = 120\\]\nInterpretación: El precio del bien aumentó en un 20% entre 2020 y 2023."
+  },
+  {
+    "objectID": "clases/clase_08.html#números-índices-agregados",
+    "href": "clases/clase_08.html#números-índices-agregados",
+    "title": "Estadística I",
+    "section": "Números Índices Agregados",
+    "text": "Números Índices Agregados\nExisten diferentes métodos para calcular índices agregados, considerando o no la importancia relativa de los elementos.\n\nÍndice Agregado Simple: Suma de los precios/cantidades en el período actual dividida por la suma en el período base.\nÍndices Ponderados: Asignan pesos a cada elemento según su importancia."
+  },
+  {
+    "objectID": "clases/clase_08.html#índice-agregado-simple-de-precios",
+    "href": "clases/clase_08.html#índice-agregado-simple-de-precios",
+    "title": "Estadística I",
+    "section": "Índice Agregado Simple de Precios",
+    "text": "Índice Agregado Simple de Precios\nFórmula:\n\\[\\text{Índice Agregado Simple} = \\left( \\frac{\\sum P_{it}}{\\sum P_{i0}} \\right) \\times 100\\]\nDonde: * \\(P_{it}\\) = Precio del artículo \\(i\\) en el período \\(t\\) (actual) * \\(P_{i0}\\) = Precio del artículo \\(i\\) en el período 0 (base)"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-de-índice-agregado-simple-de-precios",
+    "href": "clases/clase_08.html#ejemplo-de-índice-agregado-simple-de-precios",
+    "title": "Estadística I",
+    "section": "Ejemplo de Índice Agregado Simple de Precios",
+    "text": "Ejemplo de Índice Agregado Simple de Precios\n\n\n\nArtículo\nPrecio 2022 ($)\nPrecio 2024 ($)\n\n\n\n\nA\n5\n6\n\n\nB\n10\n12\n\n\nC\n3\n4\n\n\nSuma\n18\n22\n\n\n\nÍndice Agregado Simple (base 2022):\n\\[\\text{Índice} = \\left( \\frac{22}{18} \\right) \\times 100 \\approx 122.22\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-de-índice-agredado--cont",
+    "href": "clases/clase_08.html#ejemplo-de-índice-agredado--cont",
+    "title": "Estadística I",
+    "section": "Ejemplo de Índice Agredado- cont:",
+    "text": "Ejemplo de Índice Agredado- cont:\nInterpretación: Los precios promedio de estos artículos aumentaron aproximadamente en un 22.22% entre 2022 y 2024."
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-números-índice-producción",
+    "href": "clases/clase_08.html#ejemplo-números-índice-producción",
+    "title": "Estadística I",
+    "section": "Ejemplo Números Índice Producción",
+    "text": "Ejemplo Números Índice Producción\n\n\n\n\n\n\n\n\nano\nproduccion_de_hulla_en_millones_de_toneladas\nrel\nproduccion_de_antracita_en_millones_de_toneladas\nrel_1\nproduccion_de_petroleo_en_millones_de_bushels\nrel_2\n\n\n\n\n1922\n422.3\n100\n54.7\n100\n557.5\n100\n\n\n1923\n564.6\n134\n93.3\n171\n732.4\n131\n\n\n1924\n483.7\n115\n87.9\n161\n713.9\n128\n\n\n1925\n520.1\n123\n61.8\n113\n763.7\n137\n\n\n1926\n573.4\n136\n84.8\n154\n770.9\n138\n\n\n1927\n517.8\n123\n80.1\n146\n901.1\n162\n\n\n1928\n500.7\n119\n75.3\n138\n901.5\n162\n\n\n1929\n535.0\n127\n73.8\n135\n1007.3\n181\n\n\n1930\n467.5\n111\n69.4\n127\n898.0\n161\n\n\n1931\n382.1\n90\n59.6\n109\n851.1\n153\n\n\n1932\n309.7\n73\n49.9\n91\n785.2\n141\n\n\n1933\n333.6\n79\n49.5\n90\n905.7\n162\n\n\n1934\n359.4\n85\n57.2\n105\n908.1\n163\n\n\n1935\n372.4\n88\n52.2\n95\n996.6\n179\n\n\n1936\n434.1\n103\n54.8\n100\n1098.5\n197"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-números-índice-producción--promedio-o-imponderado",
+    "href": "clases/clase_08.html#ejemplo-números-índice-producción--promedio-o-imponderado",
+    "title": "Estadística I",
+    "section": "Ejemplo Números Índice Producción- Promedio o Imponderado",
+    "text": "Ejemplo Números Índice Producción- Promedio o Imponderado\n\n\n\n\n\n\n\n\nano\nrel\nrel_1\nrel_2\npromedio\n\n\n\n\n1922\n100\n100\n100\n100\n\n\n1923\n134\n171\n131\n145\n\n\n1924\n115\n161\n128\n135\n\n\n1925\n123\n113\n137\n124\n\n\n1926\n136\n154\n138\n143\n\n\n1927\n123\n146\n162\n144\n\n\n1928\n119\n138\n162\n140\n\n\n1929\n127\n135\n181\n148\n\n\n1930\n111\n127\n161\n133\n\n\n1931\n90\n109\n153\n117\n\n\n1932\n73\n91\n141\n102\n\n\n1933\n79\n90\n162\n110\n\n\n1934\n85\n105\n163\n118\n\n\n1935\n88\n95\n179\n121\n\n\n1936\n103\n100\n197\n133"
+  },
+  {
+    "objectID": "clases/clase_08.html#índices-ponderados-de-precios",
+    "href": "clases/clase_08.html#índices-ponderados-de-precios",
+    "title": "Estadística I",
+    "section": "Índices Ponderados de Precios",
+    "text": "Índices Ponderados de Precios\nConsideran la importancia relativa de cada artículo, usualmente a través de las cantidades consumidas o producidas. Dos de los más comunes son:\n\nÍndice de Laspeyres: Utiliza las cantidades del período base como ponderaciones.\nÍndice de Paasche: Utiliza las cantidades del período actual como ponderaciones."
+  },
+  {
+    "objectID": "clases/clase_08.html#índice-de-laspeyres-de-precios",
+    "href": "clases/clase_08.html#índice-de-laspeyres-de-precios",
+    "title": "Estadística I",
+    "section": "Índice de Laspeyres de Precios",
+    "text": "Índice de Laspeyres de Precios\nFórmula:\n\\[L_t = \\left( \\frac{\\sum P_{it} Q_{i0}}{\\sum P_{i0} Q_{i0}} \\right) \\times 100\\]\nDonde: * \\(Q_{i0}\\) = Cantidad del artículo \\(i\\) en el período base."
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-de-índice-de-laspeyres",
+    "href": "clases/clase_08.html#ejemplo-de-índice-de-laspeyres",
+    "title": "Estadística I",
+    "section": "Ejemplo de Índice de Laspeyres",
+    "text": "Ejemplo de Índice de Laspeyres\n\n\n\nArtículo\n\\(P_{i0}\\) (2020)\n\\(Q_{i0}\\) (2020)\n\\(P_{it}\\) (2023)\n\n\n\n\nX\n2\n10\n2.5\n\n\nY\n5\n5\n6\n\n\n\nCálculo:\n\n\\(\\sum P_{i0} Q_{i0} = (2 \\times 10) + (5 \\times 5) = 20 + 25 = 45\\)\n\\(\\sum P_{it} Q_{i0} = (2.5 \\times 10) + (6 \\times 5) = 25 + 30 = 55\\)\n\n\\[L_{2023} = \\left( \\frac{55}{45} \\right) \\times 100 \\approx 122.22\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#índice-de-paasche-de-precios",
+    "href": "clases/clase_08.html#índice-de-paasche-de-precios",
+    "title": "Estadística I",
+    "section": "Índice de Paasche de Precios",
+    "text": "Índice de Paasche de Precios\nFórmula:\n\\[P_t = \\left( \\frac{\\sum P_{it} Q_{it}}{\\sum P_{i0} Q_{it}} \\right) \\times 100\\]\nDonde: * \\(Q_{it}\\) = Cantidad del artículo \\(i\\) en el período actual."
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-de-índice-de-paasche",
+    "href": "clases/clase_08.html#ejemplo-de-índice-de-paasche",
+    "title": "Estadística I",
+    "section": "Ejemplo de Índice de Paasche",
+    "text": "Ejemplo de Índice de Paasche\n\n\n\nArtículo\n\\(P_{i0}\\) (2020)\n\\(Q_{it}\\) (2023)\n\\(P_{it}\\) (2023)\n\n\n\n\nX\n2\n12\n2.5\n\n\nY\n5\n6\n6\n\n\n\nCálculo:\n\n\\(\\sum P_{i0} Q_{it} = (2 \\times 12) + (5 \\times 6) = 24 + 30 = 54\\)\n\\(\\sum P_{it} Q_{it} = (2.5 \\times 12) + (6 \\times 6) = 30 + 36 = 66\\)\n\n\\[P_{2023} = \\left( \\frac{66}{54} \\right) \\times 100 \\approx 122.22\\]\n(En este ejemplo particular, coinciden, pero generalmente no es así)"
+  },
+  {
+    "objectID": "clases/clase_08.html#índice-de-fisher-o-índice-ideal",
+    "href": "clases/clase_08.html#índice-de-fisher-o-índice-ideal",
+    "title": "Estadística I",
+    "section": "Índice de Fisher (o Índice Ideal)",
+    "text": "Índice de Fisher (o Índice Ideal)\nEs la media geométrica de los índices de Laspeyres y Paasche. Se considera un índice más representativo.\nFórmula:\n\\[F_t = \\sqrt{L_t \\times P_t} = \\sqrt{\\left( \\frac{\\sum P_{it} Q_{i0}}{\\sum P_{i0} Q_{i0}} \\right) \\times \\left( \\frac{\\sum P_{it} Q_{it}}{\\sum P_{i0} Q_{it}} \\right)} \\times 100\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#índice-de-fisher-cont.",
+    "href": "clases/clase_08.html#índice-de-fisher-cont.",
+    "title": "Estadística I",
+    "section": "Índice de Fisher /cont.",
+    "text": "Índice de Fisher /cont.\n\nPi,t es el precio del artículo individual en el período de observación\nPi,0 es el precio del artículo individual en el período base\nQi,t es la cantidad del artículo individual en el período de observación\nQi,0 es la cantidad del artículo individual en el período base"
+  },
+  {
+    "objectID": "clases/clase_08.html#pasos-cálculo-índice-de-fisher",
+    "href": "clases/clase_08.html#pasos-cálculo-índice-de-fisher",
+    "title": "Estadística I",
+    "section": "Pasos Cálculo Índice de Fisher",
+    "text": "Pasos Cálculo Índice de Fisher\n\nPaso 1: Calcule el índice de precios de Laspeyres para cada período\nPaso 2: Calcule el índice de precios de Paasche para cada período.\nPaso 3: Tome el promedio geométrico del índice de precios de Laspeyres y Paasche en cada período"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-cálculo-i.f-año-base",
+    "href": "clases/clase_08.html#ejemplo-cálculo-i.f-año-base",
+    "title": "Estadística I",
+    "section": "Ejemplo: Cálculo I.F año base",
+    "text": "Ejemplo: Cálculo I.F año base\n\n\n\n\n\n\n\n\naño_0\nproducto_a\nproducto_b\nproducto_c\n\n\n\n\nprecio\n2\n1\n1.5\n\n\ncantidad\n15\n20\n25.0\n\n\nvalor\n30\n20\n37.5"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-cálculo-i.f.-año-1",
+    "href": "clases/clase_08.html#ejemplo-cálculo-i.f.-año-1",
+    "title": "Estadística I",
+    "section": "Ejemplo: Cálculo I.F. año 1",
+    "text": "Ejemplo: Cálculo I.F. año 1\n\n\n\n\n\n\n\n\naño_1\nproducto_a\nproducto_b\nproducto_c\n\n\n\n\nprecio\n2.25\n1.1\n2.1\n\n\ncantidad\n20.00\n20.0\n17.0\n\n\nvalor\n45.00\n22.0\n35.7"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-cálculo-i.f.-año-2",
+    "href": "clases/clase_08.html#ejemplo-cálculo-i.f.-año-2",
+    "title": "Estadística I",
+    "section": "Ejemplo: Cálculo I.F. año 2",
+    "text": "Ejemplo: Cálculo I.F. año 2\n\n\n\n\n\n\n\n\naño_2\nproducto_a\nproducto_b\nproducto_c\n\n\n\n\nprecio\n2.35\n1.13\n2.4\n\n\ncantidad\n23.00\n25.00\n14.0\n\n\nvalor\n54.05\n28.25\n33.6"
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplo-cálculo-i.f.-evolución",
+    "href": "clases/clase_08.html#ejemplo-cálculo-i.f.-evolución",
+    "title": "Estadística I",
+    "section": "Ejemplo: Cálculo I.F. Evolución",
+    "text": "Ejemplo: Cálculo I.F. Evolución\n\n\n\n\n\n\n\n\ncomparativo\nBase\nAño1\nAño2\n\n\n\n\nLaspeyres\n100\n123.71\n134.69\n\n\nPaasche\n100\n117.31\n132.46\n\n\nFischer\n100\n120.50\n133.57\n\n\n\n\n\n\n\nejemplo y capturas de pantallas tomadas de https://corporatefinanceinstitute.com/resources/economics/fisher-price-index/"
+  },
+  {
+    "objectID": "clases/clase_08.html#aplicaciones-específicas-en-economía",
+    "href": "clases/clase_08.html#aplicaciones-específicas-en-economía",
+    "title": "Estadística I",
+    "section": "Aplicaciones Específicas en Economía",
+    "text": "Aplicaciones Específicas en Economía\n\nÍndice de Precios al Consumidor (IPC): Mide la variación de los precios de una canasta de bienes y servicios consumidos por los hogares. Generalmente utiliza una metodología tipo Laspeyres (con revisiones periódicas de la canasta).\nDeflactor del PIB: Un índice de precios que mide el nivel promedio de los precios de todos los bienes y servicios finales producidos en una economía."
+  },
+  {
+    "objectID": "clases/clase_08.html#consideraciones-al-usar-números-índices",
+    "href": "clases/clase_08.html#consideraciones-al-usar-números-índices",
+    "title": "Estadística I",
+    "section": "Consideraciones al Usar Números Índices",
+    "text": "Consideraciones al Usar Números Índices\n\nSelección del Período Base: Debe ser un período “normal” o representativo.\nSelección de los Elementos: Deben ser relevantes para lo que se quiere medir.\nPonderaciones: La elección de las ponderaciones afecta significativamente el resultado en los índices agregados.\nComparabilidad a lo largo del tiempo: Los cambios en la calidad de los bienes y servicios pueden ser difíciles de capturar."
+  },
+  {
+    "objectID": "clases/clase_08.html#ejemplos-de-números-índices-en-venezuela",
+    "href": "clases/clase_08.html#ejemplos-de-números-índices-en-venezuela",
+    "title": "Estadística I",
+    "section": "Ejemplos de Números Índices en Venezuela",
+    "text": "Ejemplos de Números Índices en Venezuela\nhttps://www.bolsadecaracas.com\nhttps://www.bcv.org.ve/estadisticas/consumidor"
+  },
+  {
+    "objectID": "clases/clase_08.html#indíce-nacional-de-precios-al-consumidor-bcv",
+    "href": "clases/clase_08.html#indíce-nacional-de-precios-al-consumidor-bcv",
+    "title": "Estadística I",
+    "section": "Indíce Nacional de Precios al Consumidor BCV",
+    "text": "Indíce Nacional de Precios al Consumidor BCV\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#sp-500",
+    "href": "clases/clase_08complemento.html#sp-500",
+    "title": "Estadística I",
+    "section": "S&P 500",
+    "text": "S&P 500\n\nÍndice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#cómo-se-seleccionan-las-empresas-del-sp-500",
+    "href": "clases/clase_08complemento.html#cómo-se-seleccionan-las-empresas-del-sp-500",
+    "title": "Estadística I",
+    "section": "¿Cómo se Seleccionan las Empresas del S&P 500?",
+    "text": "¿Cómo se Seleccionan las Empresas del S&P 500?\nEl índice es mantenido por S&P Dow Jones Indices. Los criterios principales para la inclusión son:\n\nCapitalización de Mercado: Deben tener una alta capitalización de mercado (miles de millones de dólares).\nLiquidez: Deben ser acciones líquidas, es decir, fáciles de comprar y vender.\nDomicilio: Principalmente empresas estadounidenses.\nRentabilidad: Deben ser financieramente viables."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ponderación-por-capitalización-de-mercado",
+    "href": "clases/clase_08complemento.html#ponderación-por-capitalización-de-mercado",
+    "title": "Estadística I",
+    "section": "Ponderación por Capitalización de Mercado",
+    "text": "Ponderación por Capitalización de Mercado\n\nEl peso de cada empresa en el índice es proporcional a su capitalización de mercado (precio de la acción × número de acciones en circulación).\nLas empresas más grandes tienen un mayor impacto en los movimientos del índice."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ejemplo-simplificado",
+    "href": "clases/clase_08complemento.html#ejemplo-simplificado",
+    "title": "Estadística I",
+    "section": "Ejemplo simplificado:",
+    "text": "Ejemplo simplificado:\nSi la capitalización de mercado de la empresa A es el doble que la de la empresa B, un cambio porcentual en el precio de la acción de A tendrá el doble de impacto en el índice que el mismo cambio porcentual en el precio de la acción de B."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#importancia-del-sp-500",
+    "href": "clases/clase_08complemento.html#importancia-del-sp-500",
+    "title": "Estadística I",
+    "section": "Importancia del SP 500",
+    "text": "Importancia del SP 500\n\nBenchmark de Inversión: Muchos inversores y fondos de inversión utilizan el S&P 500 como referencia para medir su propio rendimiento. El objetivo de muchos fondos es “batir al mercado” (superar el rendimiento del SP 500).\nIndicador Económico: barómetro de la economía estadounidense. Un SP 500 al alza suele interpretarse como optimismo económico, mientras que una caída puede indicar preocupación.\nBase para Productos Financieros: Sirve como base para muchos productos financieros derivados, como fondos indexados y ETFs (fondos cotizados) que buscan replicar su rendimiento."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ejemplo-ilustrativo-simplificado",
+    "href": "clases/clase_08complemento.html#ejemplo-ilustrativo-simplificado",
+    "title": "Estadística I",
+    "section": "Ejemplo Ilustrativo (Simplificado)",
+    "text": "Ejemplo Ilustrativo (Simplificado)\nImagina un índice con solo 3 empresas ponderadas por capitalización de mercado:\n\n\n\n\n\n\n\n\n\n\nEmpresa\nPrecio por Acción\nAcciones en Circulación (millones)\nCapitalización de Mercado (miles de millones $)\nPeso en el Índice (%)\n\n\nA\n100\n10\n1000\n47,62%\n\n\nB\n50\n20\n1000\n47,62%\n\n\nC\n25\n4\n100\n4,76%\n\n\nTotal\n\n\n2100\n100%"
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ejemplo-ilustrativo-simplificado-cont.",
+    "href": "clases/clase_08complemento.html#ejemplo-ilustrativo-simplificado-cont.",
+    "title": "Estadística I",
+    "section": "Ejemplo Ilustrativo (Simplificado)/ cont.",
+    "text": "Ejemplo Ilustrativo (Simplificado)/ cont.\nEn este ejemplo, las empresas A y B, a pesar de tener precios de acción diferentes, tienen la misma capitalización de mercado y, por lo tanto, el mismo peso en el índice. La empresa C, con menor capitalización, tiene un peso menor."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ejemplo-ilustrativo-en-el-período-t1",
+    "href": "clases/clase_08complemento.html#ejemplo-ilustrativo-en-el-período-t1",
+    "title": "Estadística I",
+    "section": "Ejemplo Ilustrativo en el Período t+1",
+    "text": "Ejemplo Ilustrativo en el Período t+1\nSupongamos que en el período t+1 los precios de las acciones cambian:\n\n\n\n\n\n\n\n\n\nEmpresa\nPrecio por Acción (t+1)\nAcciones en Circulación (millones)\nCapitalización de Mercado (t+1) (miles de millones $)\n\n\nA\n110\n10\n1100\n\n\nB\n55\n20\n1100\n\n\nC\n20\n4\n80\n\n\nTotal\n\n\n2280"
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#ejemplo-ilustrativo-en-el-período-t1cont.",
+    "href": "clases/clase_08complemento.html#ejemplo-ilustrativo-en-el-período-t1cont.",
+    "title": "Estadística I",
+    "section": "Ejemplo Ilustrativo en el Período t+1/cont.",
+    "text": "Ejemplo Ilustrativo en el Período t+1/cont.\nPara calcular el valor del índice en t+1, se compararía la capitalización de mercado total en t+1 con un valor base (usualmente la capitalización total en el período base) multiplicado por un factor inicial (como 100)."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#índices-bursátiles-y-el-concepto-de-ponderación",
+    "href": "clases/clase_08complemento.html#índices-bursátiles-y-el-concepto-de-ponderación",
+    "title": "Estadística I",
+    "section": "Índices Bursátiles y el Concepto de Ponderación",
+    "text": "Índices Bursátiles y el Concepto de Ponderación\nLos índices bursátiles ponderados por capitalización de mercado, como el SP 500, se asemejan conceptualmente a un índice de valor agregado.\n\nValor en el período base: La capitalización de mercado total de las empresas en el período base.\nValor en el período actual: La capitalización de mercado total de las empresas en el período actual."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#fórmula-general-del-índice-de-valor",
+    "href": "clases/clase_08complemento.html#fórmula-general-del-índice-de-valor",
+    "title": "Estadística I",
+    "section": "Fórmula General del Índice de Valor:",
+    "text": "Fórmula General del Índice de Valor:\n\\(V_t = \\left( \\frac{\\sum P_{it} Q_{it}}{\\sum P_{i0} Q_{i0}} \\right) \\times 100\\)\nEn el contexto de un índice bursátil ponderado por capitalización de mercado:\n\n\\(P_{it}Q_{it}\\)​ representa la capitalización de mercado de la empresa i en el período t.\n\\(P_{i0}Q_{i0}\\) representa la capitalización de mercado de la empresa i en el período base."
+  },
+  {
+    "objectID": "clases/clase_08complemento.html#índice-bursátil",
+    "href": "clases/clase_08complemento.html#índice-bursátil",
+    "title": "Estadística I",
+    "section": "Índice Bursátil",
+    "text": "Índice Bursátil\nEl IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.\nNo se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total.\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_08.html",
+    "href": "clases/clase_08.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "¿Cómo considera en general la situación de nuestro país?"
+  },
+  {
+    "objectID": "clases/clase_07.html",
+    "href": "clases/clase_07.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Son medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+  },
+  {
+    "objectID": "scripts/curtosis.html",
+    "href": "scripts/curtosis.html",
+    "title": "Ejercicios Prácticos de Asimetría",
+    "section": "",
+    "text": "Resumen de los coeficientes para la clase práctica.\n\n\n\n\n\n\n\n\nCoeficiente\nFórmula\nUso Principal\n\n\n\n\n2do Coef. Pearson (\\(Sk_1\\))\n\\[Sk_1 = \\frac{3(\\bar{x} - M_e)}{s}\\]\nUsa la Mediana. General y robusto.\n\n\n1 er Coef. Pearson (\\(Sk_2\\))\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\nUsa la Moda. Para distribuciones unimodales.\n\n\nSesgo Cuartílico (\\(Sk_Q\\))\n\\[Sk_Q = \\frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}\\]\nUsa Cuartiles. Cuando hay valores atípicos (outliers)."
+  },
+  {
+    "objectID": "scripts/test_presentacion.html",
+    "href": "scripts/test_presentacion.html",
+    "title": "test pib",
+    "section": "",
+    "text": "primer punto\nsegundo punto\n\nesto va en negrilla"
+  },
+  {
+    "objectID": "clases/clase_08complemento.html",
+    "href": "clases/clase_08complemento.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Índice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
   }
 ]
