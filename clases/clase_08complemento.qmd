@@ -1,6 +1,6 @@
 ---
 title: "Estadística I"
-subtitle: "Clase 09: Complemento- Índice Bursatil"
+subtitle: "Clase 08: Complemento- Índice Bursatil"
 date: "2025/12/08"
 format: revealjs
 lang: es

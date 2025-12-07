@@ -78,16 +78,22 @@ read.csv('data/indices.csv',
 apply(val_ind, 2, class)
 
 View(val_ind)
-t1 <- table(ames$Overall.Qual)
+library(openintro)
+t1 <- table(ames$Overall.Qual)%>%
+  as.data.frame()
+
+t1 <- table(quiz1$quiz1)%>%
+  as.data.frame()
 
 
 # identificar usar en segunda versi'on de curso
 # usar
 transform(t1, 
           cumulative = cumsum(Freq), 
-          relative = prop,
+          # relative = prop,
           table(Freq))
 
 ?transform
+
 # ver referencia p'agina 13 libro Statistics for Data Science Kaptein
 # investigar funcion tabulate

@@ -1,6 +1,6 @@
 ---
 title: "Estadística I"
-subtitle: "Clase 09: Números Índice"
+subtitle: "Clase 08: Números Índice"
 date: "2025/12/08"
 format: revealjs
 lang: es
