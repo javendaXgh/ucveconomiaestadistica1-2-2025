@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable[(https://www.youtube.com/playlist?list=PLkIselvEzpM6pZ76FD3NoCvvgkj_p-dE8)🛠️ Ejecutar Notebook Ejercicio Sesgos]\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable🛠️ Ejecutar Notebook Ejercicio Sesgos\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1681,5 +1681,54 @@
     "title": "Estadística I",
     "section": "",
     "text": "Índice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#introducción-fórmulas-a-utilizar",
+    "href": "notebooks/ejerciciosesgo.html#introducción-fórmulas-a-utilizar",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Introducción: Fórmulas a Utilizar",
+    "text": "Introducción: Fórmulas a Utilizar\nResumen de los coeficientes para la clase práctica.\n\n\n\n\n\n\n\n\nCoeficiente\nFórmula\nUso Principal\n\n\n\n\n2do Coef. Pearson (\\(Sk_1\\))\n\\[Sk_1 = \\frac{3(\\bar{x} - M_e)}{s}\\]\nUsa la Mediana. General y robusto.\n\n\n1 er Coef. Pearson (\\(Sk_2\\))\n\\[Sk_2 = \\frac{\\bar{x} - M_o}{s}\\]\nUsa la Moda. Para distribuciones unimodales.\n\n\nSesgo Cuartílico (\\(Sk_Q\\))\n\\[Sk_Q = \\frac{Q_3 + Q_1 - 2M_e}{Q_3 - Q_1}\\]\nUsa Cuartiles. Cuando hay valores atípicos (outliers)."
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_1",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-1-segundo-coeficiente-de-pearson-sk_1",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_1\\))",
+    "text": "Ejercicio 1: Segundo Coeficiente de Pearson (\\(Sk_1\\))\nDatos: Notas de un examen (n=12): \\[\\{10, 10, 10, 12, 12, 14, 15, 16, 17, 18, 19, 20\\}\\]\nObjetivo: Calcule el \\(Sk_1\\) asumiendo que la moda representativa es 10 (peor escenario).\n\nx1 &lt;- c(10, 10, 10, 12, 12, 14, 15, 16, 17, 18,19, 20)\n\n# 1. Moda (Mo): 10\nMo &lt;- 10\n\n# 2. Media (x_bar): 169 / 11 = 15.36\nMedia &lt;- mean(x1)\n\n# 3. Desviación Estándar (s): 4.88\ns &lt;- sd(x1)\n\n# 4. Cálculo Sk2\nSk1 &lt;- (Media - Mo) / s\n\ncat(\"Media:\", round(Media, 2), \"| Moda:\", Mo, \"| s:\", round(s, 2), \"\\n\")\ncat(\"Resultado Sk1:\", round(Sk1, 4))\n\n# Interpretación: 1.21 ( Asimetría Positiva)\n\n\n# visualizar histograma\nhist(x1)"
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_2",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-2-segundo-coeficiente-de-pearson-sk_2",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_2\\))",
+    "text": "Ejercicio 2: Segundo Coeficiente de Pearson (\\(Sk_2\\))\nDatos: Ventas diarias (unidades) durante 10 días: \\[\\{2, 5, 6, 6, 7, 7, 8, 10, 11, 18\\}\\]\nObjetivo: Calcule el \\(Sk_2\\) e interprete.\n\nx2 &lt;- c(2, 5, 6, 6, 7, 7, 8, 10, 11, 18)\n\n# 1. Mediana (Me): (7 + 8) / 2 = 7.5\nMe &lt;- median(x2)\n\n# 2. Media (x_bar): 80 / 10 = 8\nMedia &lt;- mean(x2)\n\n# 3. Desviación Estándar (s): 4.108\ns &lt;- sd(x2)\n\n# 4. Cálculo Sk1\nSk2 &lt;- (Media - Me) / s\n\ncat(\"Media:\", Media, \"| Mediana:\", Me, \"| s:\", round(s, 3), \"\\n\")\ncat(\"Resultado Sk2:\", round(Sk2, 4))\n#Interpretación: 0,23 (Asimetría Positiva / Cola derecha)\n\n\nhist(x2)"
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-3-coeficiente-de-sesgo-cuartílico-sk_q",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-3-coeficiente-de-sesgo-cuartílico-sk_q",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 3: Coeficiente de Sesgo Cuartílico (\\(Sk_Q\\))",
+    "text": "Ejercicio 3: Coeficiente de Sesgo Cuartílico (\\(Sk_Q\\))\nDatos: Tiempos de espera en minutos (n=9): \\[\\{15, 17, 18, 19, 20, 22, 25, 25, 30\\}\\]\nObjetivo: Calcule la asimetría usando la posición de los cuartiles.\n\nx3 &lt;- c(15,17,18,19,20,22,25,25,30)\n\n# 1. Mediana (Me) = Dato en posición 5 -&gt; 20\nMe &lt;- 20\n\n# 2. Cuartiles\n# Q1 (Mediana de 15,17,18,19) -&gt; (17+18)/2 = 17.5\nQ1 &lt;- 17.5\n\n# Q3 (Mediana de 22,25,25,30) -&gt; (25+25)/2 = 25\nQ3 &lt;- 25\n\n# 3. Cálculo SkQ\n# Numerador: (25 + 17.5) - 2(20) = 42.5 - 40 = 2.5\n# Denominador: 25 - 17.5 = 7.5\n\nSkQ &lt;- (Q3 + Q1 - 2*Me) / (Q3 - Q1)\n\ncat(\"Q1:\", Q1, \"| Me:\", Me, \"| Q3:\", Q3, \"\\n\")\ncat(\"Resultado SkQ:\", round(SkQ, 3))\n# Interpretación: 0.333 (Asimetría Positiva)\n\n\nhist(x3)"
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-4-sk_2-simetría",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-4-sk_2-simetría",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 4: \\(Sk_2\\) (Simetría)",
+    "text": "Ejercicio 4: \\(Sk_2\\) (Simetría)\nDatos: Duración de baterías en horas: \\[\\{25, 26, 27, 27, 28, 28, 29, 30\\}\\] (Media \\(\\bar{x} = 27.5\\), Desv. Estándar \\(s = 1.77\\))\nObjetivo: Sin calcular todo de nuevo, halle \\(Sk_2\\) observando la Mediana.\n\n# 1. Mediana (Me): (27+28)/2 = 27.5\nMe &lt;- 27.5\nMedia &lt;- 27.5\ns &lt;- 1.77\n\n# 2. Cálculo Sk2\nSk1 &lt;- (Media - Me) / s\n\ncat(\"Media:\", Media, \"| Mediana:\", Me, \"\\n\")\ncat(\"Resultado Sk2:\", Sk2)\n# Interpretación: 0 (Distribución Simétrica)"
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-5-sk_2-asimetría-negativa",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-5-sk_2-asimetría-negativa",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 5: \\(Sk_2\\) (Asimetría Negativa)",
+    "text": "Ejercicio 5: \\(Sk_2\\) (Asimetría Negativa)\nDatos: Edades de un grupo (n=15), donde: * Media (\\(\\bar{x}\\)) = 31.6\n* Moda (\\(M_o\\)) = 38\n* Desviación (\\(s\\)) = 4.3\nObjetivo: Calcule el Segundo Coeficiente de Pearson con estos datos resumen.\n\nMedia &lt;- 31.6\nMo &lt;- 38\ns &lt;- 4.3\n\n# Cálculo Sk2\nSk1 &lt;- (Media - Mo) / s\n\ncat(\"Numerador (Media - Moda):\", Media - Mo, \"\\n\")\ncat(\"Resultado Sk1:\", round(Sk1, 4))\n# Interpretación: -1.48 (Asimetría Negativa / Cola izquierda)"
+  },
+  {
+    "objectID": "notebooks/ejerciciosesgo.html#ejercicio-6-sk_q-sesgo-leve",
+    "href": "notebooks/ejerciciosesgo.html#ejercicio-6-sk_q-sesgo-leve",
+    "title": "Ejercicios Sesgos - Estadística I",
+    "section": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)",
+    "text": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)\nDatos: Pesos de muestras en kg: \\[\\{2.0, 2.1, 2.2, 2.3, 2.5, 2.6, 2.8, 3.0, 3.2, 4.0\\}\\]\nObjetivo: Calcule el Sesgo Cuartílico.\n\n# 1. Mediana (Me): (2.5 + 2.6)/2 = 2.55\nMe &lt;- 2.55\n\n# 2. Cuartiles\n# Q1 (Pos 2.75): 0.25*2.2 + 0.75*2.3 = 2.275 (Aprox manual: 2.25)\n\n# Usaremos aproximación simple de clase: (2.2+2.3)/2 = 2.25\nQ1 &lt;- 2.25\n\n# Q3 (Pos 8.25): (3.0+3.2)/2 = 3.1\nQ3 &lt;- 3.1\n\n# 3. Cálculo SkQ\n# Numerador: (3.1 + 2.25) - 2(2.55) = 5.35 - 5.10 = 0.25\n# Denominador: 3.1 - 2.25 = 0.85\nSkQ &lt;- (3.1 + 2.25 - 2*Me) / (3.1 - 2.25)\n\ncat(\"Q1:\", Q1, \"| Me:\", Me, \"| Q3:\", Q3, \"\\n\")\ncat(\"Resultado SkQ:\", round(SkQ, 3))\n# Interpretación: 0.294 (Leve Asimetría Positiva)"
   }
 ]
