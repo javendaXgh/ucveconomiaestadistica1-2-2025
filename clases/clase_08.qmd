@@ -119,6 +119,7 @@ Interpretación: Los precios promedio de estos artículos aumentaron aproximadam
 #| echo: false
 #| warning: false
 library(dplyr)
+library(gt)
 
 ruta <- '/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_Stats/ucveconomiaestadistica1/data/indices.csv'
 gt::gt(read.csv(ruta, 
@@ -211,7 +212,7 @@ Es la media geométrica de los índices de Laspeyres y Paasche. Se considera un 
 
 Fórmula:
 
-$$F_t = \sqrt{L_t \times P_t} = \sqrt{\left( \frac{\sum P_{it} Q_{i0}}{\sum P_{i0} Q_{i0}} \right) \times \left( \frac{\sum P_{it} Q_{it}}{\sum P_{i0} Q_{it}} \right)} \times 100$$
+$$F_t = \sqrt{L_t \times P_t} = \sqrt{\left( \frac{\sum P_{it} Q_{i0}}{\sum P_{i0} Q_{i0}} \right) \times \left( \frac{\sum P_{it} Q_{it}}{\sum P_{i0} Q_{it}} \right)} $$
 
 ## Índice de Fisher /cont.
 
@@ -231,68 +232,164 @@ $$F_t = \sqrt{L_t \times P_t} = \sqrt{\left( \frac{\sum P_{it} Q_{i0}}{\sum P_{i
 
 -   **Paso 3:** Tome el promedio geométrico del índice de precios de Laspeyres y Paasche en cada período
 
-## Ejemplo: Cálculo I.F año base
+## 
 
 ```{r}
 #| echo: false
-per_0 <- data.frame(año_0=c("precio","cantidad",'valor'),
-                    producto_a=c(2, 15, 30),
-                    producto_b=c(1,20,20),
-                    producto_c=c(1.5,25, 37.50)
-                    )
-per_1 <- data.frame(año_1=c("precio","cantidad",'valor'),
-                    producto_a=c(2.25,20,45),
-                    producto_b=c(1.10, 20,22),
-                    producto_c=c(2.1,17,35.7)
-)
+per_0 <- tribble(~producto, ~precio, ~cantidad,~valor,
+                 "a",        2,        15,         30,
+                 "b",        1,        20,         20,
+                 "c" ,      1.5,      25,         37.50)
 
-per_2 <- data.frame(año_2=c("precio","cantidad",'valor'),
-                    producto_a=c(2.35,23,54.05 ),
-                    producto_b=c(1.13,25,28.25),
-                    producto_c=c(2.4,14,33.6)
-)
 
-i_fis<- data.frame(comparativo=c("Laspeyres","Paasche",'Fischer'),
-                    Base=c(100, 100, 100 ),
-                    Año1=c(123.71, 117.31, 120.5),
-                    Año2=c(134.69,132.46, 133.57)
-)
-gt::gt(per_0)
+per_1 <- tribble(~producto, ~precio, ~cantidad,~valor,
+                  "a",       2.25,       20,       45,
+                  "b",       1.10,       20,       22,
+                  "c",       2.1,   17,       35.7)
+
+per_2 <- tribble(~producto, ~precio, ~cantidad,~valor,
+                 "a",         2.35,       23,  54.05 ,
+                 "b",         1.13,       25,  28.25,
+                 "c",         2.4,        14,  33.6)
+
+i_fis<- tribble(~Período, ~Laspeyres, ~Paasche, ~Fischer,
+                   "Base", 100,        100,      100 ,
+                   "Año1", 123.71,     117.31,   120.5,
+                   "Año2",  134.69,     132.46,  133.57
+                )
+
+```
+
+## Periodo base
+
+```{r}
+gt::gt(per_0)|>
+  tab_options(
+    # 1. Aumentar el tamaño de la letra (24px - 30px suele ir bien en proyectores)
+    table.font.size = px(28),
+    
+    # 2. Forzar que la tabla use el 100% del ancho de la diapositiva
+    table.width = pct(100),
+    
+    # 3. Darle "aire" a las filas para que no se vea apretada
+    data_row.padding = px(12),
+    
+    # Opcional: Aumentar también el tamaño del título y subtítulo si los tienes
+    heading.title.font.size = px(32),
+    heading.subtitle.font.size = px(24)
+  )
+```
+
+## Período 1
+
+```{r}
+gt::gt(per_1)|>
+  tab_options(
+    # 1. Aumentar el tamaño de la letra (24px - 30px suele ir bien en proyectores)
+    table.font.size = px(28),
+    
+    # 2. Forzar que la tabla use el 100% del ancho de la diapositiva
+    table.width = pct(100),
+    
+    # 3. Darle "aire" a las filas para que no se vea apretada
+    data_row.padding = px(12),
+    
+    # Opcional: Aumentar también el tamaño del título y subtítulo si los tienes
+    heading.title.font.size = px(32),
+    heading.subtitle.font.size = px(24)
+  )
+```
+
+## Período 2
+
+```{r}
+gt::gt(per_2)|>
+  tab_options(
+    # 1. Aumentar el tamaño de la letra (24px - 30px suele ir bien en proyectores)
+    table.font.size = px(28),
+    
+    # 2. Forzar que la tabla use el 100% del ancho de la diapositiva
+    table.width = pct(100),
+    
+    # 3. Darle "aire" a las filas para que no se vea apretada
+    data_row.padding = px(12),
+    
+    # Opcional: Aumentar también el tamaño del título y subtítulo si los tienes
+    heading.title.font.size = px(32),
+    heading.subtitle.font.size = px(24)
+  )
 ```
 
 <br><br>
+
+## Cálculo I.F. año 0
+
+```{r}
+
+gt::gt(per_0)|>
+  tab_options(
+    # 1. Aumentar el tamaño de la letra (24px - 30px suele ir bien en proyectores)
+    table.font.size = px(28),
+    
+    # 2. Forzar que la tabla use el 100% del ancho de la diapositiva
+    table.width = pct(100),
+    
+    # 3. Darle "aire" a las filas para que no se vea apretada
+    data_row.padding = px(12),
+    
+    # Opcional: Aumentar también el tamaño del título y subtítulo si los tienes
+    heading.title.font.size = px(32),
+    heading.subtitle.font.size = px(24)
+  )
+```
 
 ![](images/clase12/0_2.png){fig-align="center" width="600"}
 
 ![]()
 
-## Ejemplo: Cálculo I.F. año 1
+## - Cálculo I.F. año 1 {.small}
 
 ```{r}
 #| echo: false
+#| layout-ncol: 2
 
-gt::gt(per_1)
+
+gt::gt(per_0)%>%tab_header("Período Base")
+gt::gt(per_1)%>%tab_header("Período 1")
 
 ```
 
 <br><br>
 
-![](images/clase12/1_2.png){fig-align="center" width="600"}
+$$\begin{align*}
+\textbf{Laspeyres} &= \frac{(\$2.25 \times 15) + (\$1.10 \times 20) + (\$2.10 \times 25)}{\$30 + \$20 + \$37.50} \times 100 = 123.71 \\
+\textbf{Paasche} &= \frac{\$45 + \$22 + \$35.70}{\$30 + \$20 + \$37.50} \times 100 = 117.37 \\
+\textbf{Fisher } &=\sqrt{ (123.71 \times 117.37)}= 120.50
+\end{align*}
+$$
 
-## Ejemplo: Cálculo I.F. año 2
+## - Cálculo I.F. año 2 {.small}
 
 ```{r}
 #| echo: false
+#| layout-ncol: 2
 
-gt::gt(per_2)
+gt::gt(per_0)%>%tab_header("Período Base")
+gt::gt(per_2)%>%tab_header("Período 2")
 
 ```
 
 <br><br>
 
-![](images/clase12/2_2.png){fig-align="center" width="600"}
+$$
+\begin{align*}
+\textbf{Laspeyres} &= \frac{(\$2.35 \times 15) + (\$1.13 \times 20) + (\$2.40 \times 25)}{\$30 + \$20 + \$37.50} \times 100 = 134.69 \\
+\textbf{Paasche} &= \frac{\$54.05 + \$28.25 + \$33.60}{\$30 + \$20 + \$37.50} \times 100 = 132.46 \\
+\textbf{Fisher } &= (134.69 \times 132.46)^{0.5} = 133.57
+\end{align*}
+$$
 
-## Ejemplo: Cálculo I.F. Evolución
+## - Cálculo I.F. Evolución
 
 ```{r}
 #| echo: false

@@ -1357,8 +1357,8 @@
     "objectID": "clases/clase_08.html#pregunta",
     "href": "clases/clase_08.html#pregunta",
     "title": "Estadística I",
-    "section": "",
-    "text": "¿Cómo considera en general la situación de nuestro país?"
+    "section": "Pregunta",
+    "text": "Pregunta\n¿Cómo considera en general la situación de nuestro país?"
   },
   {
     "objectID": "clases/clase_08.html#respuesta",
@@ -1491,7 +1491,7 @@
     "href": "clases/clase_08.html#índice-de-fisher-o-índice-ideal",
     "title": "Estadística I",
     "section": "Índice de Fisher (o Índice Ideal)",
-    "text": "Índice de Fisher (o Índice Ideal)\nEs la media geométrica de los índices de Laspeyres y Paasche. Se considera un índice más representativo.\nFórmula:\n\\[F_t = \\sqrt{L_t \\times P_t} = \\sqrt{\\left( \\frac{\\sum P_{it} Q_{i0}}{\\sum P_{i0} Q_{i0}} \\right) \\times \\left( \\frac{\\sum P_{it} Q_{it}}{\\sum P_{i0} Q_{it}} \\right)} \\times 100\\]"
+    "text": "Índice de Fisher (o Índice Ideal)\nEs la media geométrica de los índices de Laspeyres y Paasche. Se considera un índice más representativo.\nFórmula:\n\\[F_t = \\sqrt{L_t \\times P_t} = \\sqrt{\\left( \\frac{\\sum P_{it} Q_{i0}}{\\sum P_{i0} Q_{i0}} \\right) \\times \\left( \\frac{\\sum P_{it} Q_{it}}{\\sum P_{i0} Q_{it}} \\right)} \\]"
   },
   {
     "objectID": "clases/clase_08.html#índice-de-fisher-cont.",
@@ -1512,7 +1512,7 @@
     "href": "clases/clase_08.html#ejemplo-cálculo-i.f-año-base",
     "title": "Estadística I",
     "section": "Ejemplo: Cálculo I.F año base",
-    "text": "Ejemplo: Cálculo I.F año base\n\n\n\n\n\n\n\n\naño_0\nproducto_a\nproducto_b\nproducto_c\n\n\n\n\nprecio\n2\n1\n1.5\n\n\ncantidad\n15\n20\n25.0\n\n\nvalor\n30\n20\n37.5"
+    "text": "Ejemplo: Cálculo I.F año base"
   },
   {
     "objectID": "clases/clase_08.html#ejemplo-cálculo-i.f.-año-1",
@@ -1561,7 +1561,7 @@
     "href": "clases/clase_08.html#indíce-nacional-de-precios-al-consumidor-bcv",
     "title": "Estadística I",
     "section": "Indíce Nacional de Precios al Consumidor BCV",
-    "text": "Indíce Nacional de Precios al Consumidor BCV"
+    "text": "Indíce Nacional de Precios al Consumidor BCV\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_08complemento.html#sp-500",
@@ -1730,5 +1730,54 @@
     "title": "Ejercicios Sesgos - Estadística I",
     "section": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)",
     "text": "Ejercicio 6: \\(Sk_Q\\) (Sesgo Leve)\nDatos: Pesos de muestras en kg: \\[\\{2.0, 2.1, 2.2, 2.3, 2.5, 2.6, 2.8, 3.0, 3.2, 4.0\\}\\]\nObjetivo: Calcule el Sesgo Cuartílico.\n\n# 1. Mediana (Me): (2.5 + 2.6)/2 = 2.55\nMe &lt;- 2.55\n\n# 2. Cuartiles\n# Q1 (Pos 2.75): 0.25*2.2 + 0.75*2.3 = 2.275 (Aprox manual: 2.25)\n\n# Usaremos aproximación simple de clase: (2.2+2.3)/2 = 2.25\nQ1 &lt;- 2.25\n\n# Q3 (Pos 8.25): (3.0+3.2)/2 = 3.1\nQ3 &lt;- 3.1\n\n# 3. Cálculo SkQ\n# Numerador: (3.1 + 2.25) - 2(2.55) = 5.35 - 5.10 = 0.25\n# Denominador: 3.1 - 2.25 = 0.85\nSkQ &lt;- (3.1 + 2.25 - 2*Me) / (3.1 - 2.25)\n\ncat(\"Q1:\", Q1, \"| Me:\", Me, \"| Q3:\", Q3, \"\\n\")\ncat(\"Resultado SkQ:\", round(SkQ, 3))\n# Interpretación: 0.294 (Leve Asimetría Positiva)"
+  },
+  {
+    "objectID": "clases/clase_08.html#periodo-base",
+    "href": "clases/clase_08.html#periodo-base",
+    "title": "Estadística I",
+    "section": "Periodo base",
+    "text": "Periodo base\n\n\n\n\n\n\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.0\n15\n30.0\n\n\nb\n1.0\n20\n20.0\n\n\nc\n1.5\n25\n37.5"
+  },
+  {
+    "objectID": "clases/clase_08.html#período-1",
+    "href": "clases/clase_08.html#período-1",
+    "title": "Estadística I",
+    "section": "Período 1",
+    "text": "Período 1\n\n\n\n\n\n\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.25\n20\n45.0\n\n\nb\n1.10\n20\n22.0\n\n\nc\n2.10\n17\n35.7"
+  },
+  {
+    "objectID": "clases/clase_08.html#período-2",
+    "href": "clases/clase_08.html#período-2",
+    "title": "Estadística I",
+    "section": "Período 2",
+    "text": "Período 2\n\n\n\n\n\n\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.35\n23\n54.05\n\n\nb\n1.13\n25\n28.25\n\n\nc\n2.40\n14\n33.60"
+  },
+  {
+    "objectID": "clases/clase_08.html#cálculo-i.f.-año-0",
+    "href": "clases/clase_08.html#cálculo-i.f.-año-0",
+    "title": "Estadística I",
+    "section": "Cálculo I.F. año 0",
+    "text": "Cálculo I.F. año 0\n\n\n\n\n\n\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.0\n15\n30.0\n\n\nb\n1.0\n20\n20.0\n\n\nc\n1.5\n25\n37.5"
+  },
+  {
+    "objectID": "clases/clase_08.html#cálculo-i.f.-año-1",
+    "href": "clases/clase_08.html#cálculo-i.f.-año-1",
+    "title": "Estadística I",
+    "section": "- Cálculo I.F. año 1",
+    "text": "- Cálculo I.F. año 1\n\n\n\n\n\n\n\n\n\n\n\nPeríodo Base\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.0\n15\n30.0\n\n\nb\n1.0\n20\n20.0\n\n\nc\n1.5\n25\n37.5\n\n\n\n\n\n\n\n\n\n\n\nPeríodo 1\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.25\n20\n45.0\n\n\nb\n1.10\n20\n22.0\n\n\nc\n2.10\n17\n35.7\n\n\n\n\n\n\n\n\n\\[\\begin{align*}\n\\textbf{Laspeyres} &= \\frac{(\\$2.25 \\times 15) + (\\$1.10 \\times 20) + (\\$2.10 \\times 25)}{\\$30 + \\$20 + \\$37.50} \\times 100 = 123.71 \\\\\n\\textbf{Paasche} &= \\frac{\\$45 + \\$22 + \\$35.70}{\\$30 + \\$20 + \\$37.50} \\times 100 = 117.37 \\\\\n\\textbf{Fisher } &=\\sqrt{ (123.71 \\times 117.37)}= 120.50\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#cálculo-i.f.-año-2",
+    "href": "clases/clase_08.html#cálculo-i.f.-año-2",
+    "title": "Estadística I",
+    "section": "- Cálculo I.F. año 2",
+    "text": "- Cálculo I.F. año 2\n\n\n\n\n\n\n\n\n\n\n\nPeríodo Base\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.0\n15\n30.0\n\n\nb\n1.0\n20\n20.0\n\n\nc\n1.5\n25\n37.5\n\n\n\n\n\n\n\n\n\n\n\nPeríodo 2\n\n\nproducto\nprecio\ncantidad\nvalor\n\n\n\n\na\n2.35\n23\n54.05\n\n\nb\n1.13\n25\n28.25\n\n\nc\n2.40\n14\n33.60\n\n\n\n\n\n\n\n\n\\[\n\\begin{align*}\n\\textbf{Laspeyres} &= \\frac{(\\$2.35 \\times 15) + (\\$1.13 \\times 20) + (\\$2.40 \\times 25)}{\\$30 + \\$20 + \\$37.50} \\times 100 = 134.69 \\\\\n\\textbf{Paasche} &= \\frac{\\$54.05 + \\$28.25 + \\$33.60}{\\$30 + \\$20 + \\$37.50} \\times 100 = 132.46 \\\\\n\\textbf{Fisher } &= (134.69 \\times 132.46)^{0.5} = 133.57\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "clases/clase_08.html#cálculo-i.f.-evolución",
+    "href": "clases/clase_08.html#cálculo-i.f.-evolución",
+    "title": "Estadística I",
+    "section": "- Cálculo I.F. Evolución",
+    "text": "- Cálculo I.F. Evolución\n\n\n\n\n\n\n\n\nPeríodo\nLaspeyres\nPaasche\nFischer\n\n\n\n\nBase\n100.00\n100.00\n100.00\n\n\nAño1\n123.71\n117.31\n120.50\n\n\nAño2\n134.69\n132.46\n133.57\n\n\n\n\n\n\n\nejemplo y capturas de pantallas tomadas de https://corporatefinanceinstitute.com/resources/economics/fisher-price-index/"
   }
 ]
