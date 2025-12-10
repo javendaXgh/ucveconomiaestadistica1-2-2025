@@ -1,6 +1,5 @@
 ---
 title: "Asignación Evaluada"
-format: revealjs
 ---
 
 ## Análisis Estadístico de Activos Financieros y Materias Primas

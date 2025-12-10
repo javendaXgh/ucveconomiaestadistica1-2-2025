@@ -1357,8 +1357,8 @@
     "objectID": "clases/clase_08.html#pregunta",
     "href": "clases/clase_08.html#pregunta",
     "title": "Estadística I",
-    "section": "Pregunta",
-    "text": "Pregunta\n¿Cómo considera en general la situación de nuestro país?"
+    "section": "",
+    "text": "¿Cómo considera en general la situación de nuestro país?"
   },
   {
     "objectID": "clases/clase_08.html#respuesta",
@@ -1561,14 +1561,14 @@
     "href": "clases/clase_08.html#indíce-nacional-de-precios-al-consumidor-bcv",
     "title": "Estadística I",
     "section": "Indíce Nacional de Precios al Consumidor BCV",
-    "text": "Indíce Nacional de Precios al Consumidor BCV\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Indíce Nacional de Precios al Consumidor BCV"
   },
   {
     "objectID": "clases/clase_08complemento.html#sp-500",
     "href": "clases/clase_08complemento.html#sp-500",
     "title": "Estadística I",
-    "section": "S&P 500",
-    "text": "S&P 500\n\nÍndice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
+    "section": "",
+    "text": "Índice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
   },
   {
     "objectID": "clases/clase_08complemento.html#cómo-se-seleccionan-las-empresas-del-sp-500",
@@ -1645,7 +1645,7 @@
     "href": "clases/clase_08complemento.html#índice-bursátil",
     "title": "Estadística I",
     "section": "Índice Bursátil",
-    "text": "Índice Bursátil\nEl IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.\nNo se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total.\n\n\n\n\n🔗 Estadística 1"
+    "text": "Índice Bursátil\nEl IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.\nNo se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total."
   },
   {
     "objectID": "clases/clase_08.html",
@@ -1783,63 +1783,63 @@
   {
     "objectID": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
     "href": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
-    "title": "Cálculo del Dow Jones",
-    "section": "1. La Fórmula (Price-Weighted)",
-    "text": "1. La Fórmula (Price-Weighted)\nEl Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
+    "title": "El Cálculo del Dow Jones",
+    "section": "",
+    "text": "El Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
   },
   {
     "objectID": "clases/clase_08complemento2.html#ejemplo-3-empresas",
     "href": "clases/clase_08complemento2.html#ejemplo-3-empresas",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "2. Ejemplo 3 Empresas",
     "text": "2. Ejemplo 3 Empresas\nSupongamos un mercado con 3 empresas y un divisor inicial \\(d=3\\).\n\nlibrary(dplyr)\nlibrary(knitr)\n\ndata &lt;- tibble(\n  Empresa = c(\"Empresa A\", \"Empresa B\", \"Empresa C\"),\n  Precio = c(150, 50, 10) # A tiene el precio más alto\n)\n\nkable(data)\n\n\n\n\nEmpresa\nPrecio\n\n\n\n\nEmpresa A\n150\n\n\nEmpresa B\n50\n\n\nEmpresa C\n10"
   },
   {
     "objectID": "clases/clase_08complemento2.html#obtención-del-índice",
     "href": "clases/clase_08complemento2.html#obtención-del-índice",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "3. Obtención del Índice",
     "text": "3. Obtención del Índice\nSumamos los precios y dividimos por \\(d=3\\).\n\nsuma &lt;- sum(data$Precio)\ndivisor &lt;- 3\nindice &lt;- suma / divisor\n\n\\[\\text{Índice} = \\frac{150 + 50 + 10}{3} = 70\\]\nEl valor del índice es 70."
   },
   {
     "objectID": "clases/clase_08complemento2.html#sensibilidad-al-precio",
     "href": "clases/clase_08complemento2.html#sensibilidad-al-precio",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "4. Sensibilidad al Precio",
     "text": "4. Sensibilidad al Precio\nComo se pondera por precio, si la empresa cara (A) se mueve, afecta más al índice que la barata (C).\n\n# Si A (150) sube 10% (+$15)\nnuevo_indice_A &lt;- (165 + 50 + 10) / 3\n\n# Si C (10) sube 10% (+$1)\nnuevo_indice_C &lt;- (150 + 50 + 11) / 3\n\n\nSi A sube 10%: Índice = 75\nSi C sube 10%: Índice = 70.33"
   },
   {
     "objectID": "clases/clase_08complemento2.html#el-divisor-y-los-splits",
     "href": "clases/clase_08complemento2.html#el-divisor-y-los-splits",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "5. El Divisor y los Splits",
     "text": "5. El Divisor y los Splits\nSi una empresa hace un Split 2:1 (el precio cae a la mitad), el índice colapsaría artificialmente. Para evitarlo, se cambia el divisor.\n\\[\\frac{\\text{Precios Viejos}}{d_{viejo}} = \\frac{\\text{Precios Nuevos}}{d_{nuevo}}\\]\nEl divisor actual real es &lt; 0.2, actuando como multiplicador."
   },
   {
     "objectID": "clases/clase_08complemento2.html#diferencias-dow-vs-sp-500",
     "href": "clases/clase_08complemento2.html#diferencias-dow-vs-sp-500",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "6. Diferencias: Dow vs S&P 500",
-    "text": "6. Diferencias: Dow vs S&P 500\n\n\n\n\n\n\n\n\n\nDow Jones\nS&P 500\n\n\n\n\nPonderación\nPor Precio de la acción (\\(P_i\\))\nPor Capitalización (\\(P_i \\times Q_i\\))\n\n\nMuestra\n30 empresas (Blue Chips)\n500 empresas\n\n\nSesgo\nFavorece acciones con precio nominal alto\nFavorece empresas con valor de mercado total alto\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "6. Diferencias: Dow vs S&P 500\n\n\n\n\n\n\n\n\n\nDow Jones\nS&P 500\n\n\n\n\nPonderación\nPor Precio de la acción (\\(P_i\\))\nPor Capitalización (\\(P_i \\times Q_i\\))\n\n\nMuestra\n30 empresas (Blue Chips)\n500 empresas\n\n\nSesgo\nFavorece acciones con precio nominal alto\nFavorece empresas con valor de mercado total alto"
   },
   {
     "objectID": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
     "href": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "Concepto: ¿Qué es un Stock Split?",
-    "text": "Concepto: ¿Qué es un Stock Split?\nUn Split es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.\nLa Analogía de la Pizza: Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.\n\nAntes: 1 acción de $100.\nDespués (Split 2:1): 2 acciones de $50.\n\n\n\n\n\n\n\nEl Problema para el Dow Jones\n\n\nComo el Dow Jones se calcula sumando precios, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor."
+    "text": "Concepto: ¿Qué es un Stock Split?\nUn Split es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.\nLa Analogía de la Pizza: Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.\n\nAntes: 1 acción de $100.\nDespués (Split 2:1): 2 acciones de $50.\n\n\n\n\n\n\n\nEl Problema para el Dow Jones\n\n\n\nComo el Dow Jones se calcula sumando precios, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor."
   },
   {
     "objectID": "clases/clase_08complemento2.html#el-ajuste-del-divisor",
     "href": "clases/clase_08complemento2.html#el-ajuste-del-divisor",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "5. El Ajuste del Divisor",
     "text": "5. El Ajuste del Divisor\nSi la Empresa A ($150) hace un Split 2:1, su precio cae a $75. El índice no debe cambiar de valor (70). Ajustamos el divisor."
   },
   {
     "objectID": "clases/clase_08complemento2.html#calculos",
     "href": "clases/clase_08complemento2.html#calculos",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "Calculos",
     "text": "Calculos\nPaso 1: Calcular nueva suma de precios \\[ 75 (\\text{A}) + 50 (\\text{B}) + 10 (\\text{C}) = 135 \\]\nPaso 2: Buscar el nuevo divisor (\\(d_{new}\\)) \\[ \\frac{135}{d_{new}} = 70 \\Rightarrow d_{new} = \\frac{135}{70} \\approx 1.928 \\]\n\n# Verificación en R\nnueva_suma &lt;- 135\nnuevo_divisor &lt;- 1.92857\n\nindice_ajustado &lt;- nueva_suma / nuevo_divisor\n\nEl índice se mantiene en 70."
   },
@@ -1847,8 +1847,8 @@
     "objectID": "asignacionI.html#análisis-estadístico-de-activos-financieros-y-materias-primas",
     "href": "asignacionI.html#análisis-estadístico-de-activos-financieros-y-materias-primas",
     "title": "Asignación Evaluada",
-    "section": "Análisis Estadístico de Activos Financieros y Materias Primas",
-    "text": "Análisis Estadístico de Activos Financieros y Materias Primas\nObjetivo: Aplicar herramientas de estadística descriptiva, números índices y análisis de series temporales para la interpretación del comportamiento de variables económicas reales.",
+    "section": "",
+    "text": "Objetivo: Aplicar herramientas de estadística descriptiva, números índices y análisis de series temporales para la interpretación del comportamiento de variables económicas reales.",
     "crumbs": [
       "Tareas",
       "Asignación I"
@@ -1892,7 +1892,7 @@
     "href": "asignacionI.html#series-temporales-4-puntos",
     "title": "Asignación Evaluada",
     "section": "4. Series Temporales (4 puntos)",
-    "text": "4. Series Temporales (4 puntos)\nAnalizar el comportamiento de las variables a lo largo del tiempo.\n\nGráfico de series: Representar gráficamente la evolución temporal conjunta o individual de las tres variables.\nAnálisis: Identificar y describir los aspectos temporales más relevantes observados en las series (tendencia, estacionalidad o puntos de quiebre estructurales si los hubiera).",
+    "text": "4. Series Temporales (4 puntos)\nAnalizar el comportamiento de las variables a lo largo del tiempo.\n\nGráfico de series: Representar gráficamente la evolución temporal conjunta o individual de las tres variables.\nAnálisis: Identificar y describir los aspectos temporales más relevantes observados en las series (tendencia, estacionalidad o puntos de quiebre estructurales si los hubiera).\n\n\nTotal: 20 puntos.\nPuede ser hecha en pareja y deberá ser entregada antes del 21 de enero de 2026 por correo electrónico en la dirección javenda@gmail.com . Las consultas al profesor sobre esta asignación serán atendidas hasta el día 9 de enero de 2026.",
     "crumbs": [
       "Tareas",
       "Asignación I"
@@ -1912,7 +1912,7 @@
   {
     "objectID": "clases/clase_08complemento2.html",
     "href": "clases/clase_08complemento2.html",
-    "title": "Cálculo del Dow Jones",
+    "title": "El Cálculo del Dow Jones",
     "section": "",
     "text": "El Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
   },
@@ -1935,7 +1935,7 @@
     "href": "clases/clase_09.html#gráfico-variaciones-inpc",
     "title": "Estadística I",
     "section": "Gráfico Variaciones INPC",
-    "text": "Gráfico Variaciones INPC"
+    "text": "Gráfico Variaciones INPC\n\n\n\n\n\n\n\n\nUtilidad Análisis Series Temporales\n\nIdentificar patrones y tendencias.\nRealizar pronósticos futuros.\nEvaluar el impacto de eventos.\nComprender la dinámica subyacente de los datos."
   },
   {
     "objectID": "clases/clase_09.html#gráfico-temperatura-caracas-serie-temporal",
@@ -2012,7 +2012,7 @@
     "href": "clases/clase_09.html#modelos-de-descomposición",
     "title": "Estadística I",
     "section": "Modelos de Descomposición",
-    "text": "Modelos de Descomposición\nDos modelos comunes:\n\nModelo Aditivo:\nYt​=Tt​+St​+Ct​+Rt​\nApropiado cuando la magnitud de los componentes no depende del nivel de la serie.\nModelo Multiplicativo:\nYt​=Tt​×St​×Ct​×Rt​\nApropiado cuando la magnitud de los componentes es proporcional al nivel de la serie.\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Modelos de Descomposición\nDos modelos comunes:\n\nModelo Aditivo:\nYt​=Tt​+St​+Ct​+Rt​\nApropiado cuando la magnitud de los componentes no depende del nivel de la serie.\nModelo Multiplicativo:\nYt​=Tt​×St​×Ct​×Rt​\nApropiado cuando la magnitud de los componentes es proporcional al nivel de la serie."
   },
   {
     "objectID": "clases/clase_09coplemento.html",
