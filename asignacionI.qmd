@@ -1,0 +1,64 @@
+---
+title: "Asignación Evaluada"
+format: revealjs
+---
+
+## Análisis Estadístico de Activos Financieros y Materias Primas
+
+**Objetivo:** Aplicar herramientas de estadística descriptiva, números índices y análisis de series temporales para la interpretación del comportamiento de variables económicas reales.
+
+------------------------------------------------------------------------
+
+## 1. Selección de Datos, Aspectos Metodológicos y obtención del conjunto de datos (4 puntos)
+
+El estudiante deberá seleccionar **tres (3) variables** de libre elección, que pueden corresponder a *commodities* (materias primas) o valores de acciones de empresas cotizadas.
+
+**Requisitos de los datos:**
+
+\* **Periodicidad:** Idealmente mensual.
+
+\* **Horizonte temporal:** Mínimo 30 períodos consecutivos.
+
+\* **Consistencia:** Las tres series deben coincidir exactamente en el mismo rango de fechas.
+
+**Criterios a evaluar:**
+
+\* Se evaluará la justificación de la fuente de datos, la limpieza de la base de datos y el cumplimiento riguroso de los aspectos metodológicos discutidos en clase (definición de variables, unidades de medida y coherencia temporal).
+
+Se debe representar los datos obtenidos en una tabla que contenga todas las observaciones y atributos incluidos.
+
+------------------------------------------------------------------------
+
+## 2. Estadística Descriptiva (8 puntos)
+
+Realizar un análisis de al menos dos variables (bivariante) de los datos seleccionados, incluyendo:
+
+-   **Distribución de frecuencias:** Construir una tabla de frecuencia para datos agrupados, justificando el criterio de agrupación seleccionado. Para cada variable usar cantidades de intervalos distintas. Son solo dos tablas las que realizará.
+-   **Visualización:** Generar los gráficos de caja (boxplot) e histogramas correspondientes para analizar la dispersión y forma de la distribución. Incluir la representación de una desviación típica o tantas como se puedan representar.
+-   **Resumen estadístico:** Presentar una tabla con las medidas de tendencia central, posición y dispersión para cada variable.
+-   **Análisis económico:** Seleccionar al menos dos de las variables, compararlas estadísticamente y ofrecer una interpretación económica de los resultados (relación entre ellas, volatilidad comparada, etc.).
+
+------------------------------------------------------------------------
+
+## 3. Números Índice (4 puntos)
+
+Construir un índice que integre el comportamiento de las tres variables seleccionadas.
+
+-   **Metodología:** El estudiante tiene la libertad de elegir el tipo de índice (entre los vistos en clase u otro de la literatura estadística) que mejor se adapte a la naturaleza de sus datos.
+-   **Ponderación:** De ser necesario para el tipo de índice elegido, deberá buscar e incorporar los valores relativos a las cantidades transadas (o una variable de ponderación equivalente).
+-   **Representación:** Presentar la tabla del índice calculado y explicar brevemente su evolución.
+
+------------------------------------------------------------------------
+
+## 4. Series Temporales (4 puntos)
+
+Analizar el comportamiento de las variables a lo largo del tiempo.
+
+-   **Gráfico de series:** Representar gráficamente la evolución temporal conjunta o individual de las tres variables.
+-   **Análisis:** Identificar y describir los aspectos temporales más relevantes observados en las series (tendencia, estacionalidad o puntos de quiebre estructurales si los hubiera).
+
+------------------------------------------------------------------------
+
+**Total: 20 puntos.**
+
+Puede ser hecha en pareja y deberá ser entregada antes del 21 de enero de 2026 por correo electrónico en la dirección javenda\@gmail.com . Las consultas al profesor sobre esta asignación serán atendidas hasta el día 9 de enero de 2026.

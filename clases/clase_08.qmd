@@ -343,7 +343,7 @@ gt::gt(per_0)|>
   )
 ```
 
-![](images/clase12/0_2.png){fig-align="center" width="600"}
+![](images/clase12/0_2.png){fig-align="center"}
 
 ![]()
 

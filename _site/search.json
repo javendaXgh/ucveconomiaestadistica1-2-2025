@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable🛠️ Ejecutar Notebook Ejercicio Sesgos\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nlun, 16 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable🛠️ Ejecutar Notebook Ejercicio Sesgos\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles 1🖥️ láminas clase 08 complemento: Índices Bursátiles 2🛠️ Ejecutar Notebook Ejercicio Números Índice\n\n\n9\nmié, 10 dic.\nSeries Temporales\n🖥️ láminas clase 09: Series Temporales\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nmié, 25 feb.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1779,5 +1779,246 @@
     "title": "Estadística I",
     "section": "- Cálculo I.F. Evolución",
     "text": "- Cálculo I.F. Evolución\n\n\n\n\n\n\n\n\nPeríodo\nLaspeyres\nPaasche\nFischer\n\n\n\n\nBase\n100.00\n100.00\n100.00\n\n\nAño1\n123.71\n117.31\n120.50\n\n\nAño2\n134.69\n132.46\n133.57\n\n\n\n\n\n\n\nejemplo y capturas de pantallas tomadas de https://corporatefinanceinstitute.com/resources/economics/fisher-price-index/"
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
+    "href": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
+    "title": "Cálculo del Dow Jones",
+    "section": "1. La Fórmula (Price-Weighted)",
+    "text": "1. La Fórmula (Price-Weighted)\nEl Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#ejemplo-3-empresas",
+    "href": "clases/clase_08complemento2.html#ejemplo-3-empresas",
+    "title": "Cálculo del Dow Jones",
+    "section": "2. Ejemplo 3 Empresas",
+    "text": "2. Ejemplo 3 Empresas\nSupongamos un mercado con 3 empresas y un divisor inicial \\(d=3\\).\n\nlibrary(dplyr)\nlibrary(knitr)\n\ndata &lt;- tibble(\n  Empresa = c(\"Empresa A\", \"Empresa B\", \"Empresa C\"),\n  Precio = c(150, 50, 10) # A tiene el precio más alto\n)\n\nkable(data)\n\n\n\n\nEmpresa\nPrecio\n\n\n\n\nEmpresa A\n150\n\n\nEmpresa B\n50\n\n\nEmpresa C\n10"
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#obtención-del-índice",
+    "href": "clases/clase_08complemento2.html#obtención-del-índice",
+    "title": "Cálculo del Dow Jones",
+    "section": "3. Obtención del Índice",
+    "text": "3. Obtención del Índice\nSumamos los precios y dividimos por \\(d=3\\).\n\nsuma &lt;- sum(data$Precio)\ndivisor &lt;- 3\nindice &lt;- suma / divisor\n\n\\[\\text{Índice} = \\frac{150 + 50 + 10}{3} = 70\\]\nEl valor del índice es 70."
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#sensibilidad-al-precio",
+    "href": "clases/clase_08complemento2.html#sensibilidad-al-precio",
+    "title": "Cálculo del Dow Jones",
+    "section": "4. Sensibilidad al Precio",
+    "text": "4. Sensibilidad al Precio\nComo se pondera por precio, si la empresa cara (A) se mueve, afecta más al índice que la barata (C).\n\n# Si A (150) sube 10% (+$15)\nnuevo_indice_A &lt;- (165 + 50 + 10) / 3\n\n# Si C (10) sube 10% (+$1)\nnuevo_indice_C &lt;- (150 + 50 + 11) / 3\n\n\nSi A sube 10%: Índice = 75\nSi C sube 10%: Índice = 70.33"
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#el-divisor-y-los-splits",
+    "href": "clases/clase_08complemento2.html#el-divisor-y-los-splits",
+    "title": "Cálculo del Dow Jones",
+    "section": "5. El Divisor y los Splits",
+    "text": "5. El Divisor y los Splits\nSi una empresa hace un Split 2:1 (el precio cae a la mitad), el índice colapsaría artificialmente. Para evitarlo, se cambia el divisor.\n\\[\\frac{\\text{Precios Viejos}}{d_{viejo}} = \\frac{\\text{Precios Nuevos}}{d_{nuevo}}\\]\nEl divisor actual real es &lt; 0.2, actuando como multiplicador."
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#diferencias-dow-vs-sp-500",
+    "href": "clases/clase_08complemento2.html#diferencias-dow-vs-sp-500",
+    "title": "Cálculo del Dow Jones",
+    "section": "6. Diferencias: Dow vs S&P 500",
+    "text": "6. Diferencias: Dow vs S&P 500\n\n\n\n\n\n\n\n\n\nDow Jones\nS&P 500\n\n\n\n\nPonderación\nPor Precio de la acción (\\(P_i\\))\nPor Capitalización (\\(P_i \\times Q_i\\))\n\n\nMuestra\n30 empresas (Blue Chips)\n500 empresas\n\n\nSesgo\nFavorece acciones con precio nominal alto\nFavorece empresas con valor de mercado total alto\n\n\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
+    "href": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
+    "title": "Cálculo del Dow Jones",
+    "section": "Concepto: ¿Qué es un Stock Split?",
+    "text": "Concepto: ¿Qué es un Stock Split?\nUn Split es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.\nLa Analogía de la Pizza: Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.\n\nAntes: 1 acción de $100.\nDespués (Split 2:1): 2 acciones de $50.\n\n\n\n\n\n\n\nEl Problema para el Dow Jones\n\n\nComo el Dow Jones se calcula sumando precios, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor."
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#el-ajuste-del-divisor",
+    "href": "clases/clase_08complemento2.html#el-ajuste-del-divisor",
+    "title": "Cálculo del Dow Jones",
+    "section": "5. El Ajuste del Divisor",
+    "text": "5. El Ajuste del Divisor\nSi la Empresa A ($150) hace un Split 2:1, su precio cae a $75. El índice no debe cambiar de valor (70). Ajustamos el divisor."
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html#calculos",
+    "href": "clases/clase_08complemento2.html#calculos",
+    "title": "Cálculo del Dow Jones",
+    "section": "Calculos",
+    "text": "Calculos\nPaso 1: Calcular nueva suma de precios \\[ 75 (\\text{A}) + 50 (\\text{B}) + 10 (\\text{C}) = 135 \\]\nPaso 2: Buscar el nuevo divisor (\\(d_{new}\\)) \\[ \\frac{135}{d_{new}} = 70 \\Rightarrow d_{new} = \\frac{135}{70} \\approx 1.928 \\]\n\n# Verificación en R\nnueva_suma &lt;- 135\nnuevo_divisor &lt;- 1.92857\n\nindice_ajustado &lt;- nueva_suma / nuevo_divisor\n\nEl índice se mantiene en 70."
+  },
+  {
+    "objectID": "asignacionI.html#análisis-estadístico-de-activos-financieros-y-materias-primas",
+    "href": "asignacionI.html#análisis-estadístico-de-activos-financieros-y-materias-primas",
+    "title": "Asignación Evaluada",
+    "section": "Análisis Estadístico de Activos Financieros y Materias Primas",
+    "text": "Análisis Estadístico de Activos Financieros y Materias Primas\nObjetivo: Aplicar herramientas de estadística descriptiva, números índices y análisis de series temporales para la interpretación del comportamiento de variables económicas reales.",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "asignacionI.html#selección-de-datos-aspectos-metodológicos-y-obtención-del-conjunto-de-datos-4-puntos",
+    "href": "asignacionI.html#selección-de-datos-aspectos-metodológicos-y-obtención-del-conjunto-de-datos-4-puntos",
+    "title": "Asignación Evaluada",
+    "section": "1. Selección de Datos, Aspectos Metodológicos y obtención del conjunto de datos (4 puntos)",
+    "text": "1. Selección de Datos, Aspectos Metodológicos y obtención del conjunto de datos (4 puntos)\nEl estudiante deberá seleccionar tres (3) variables de libre elección, que pueden corresponder a commodities (materias primas) o valores de acciones de empresas cotizadas.\nRequisitos de los datos:\n* Periodicidad: Idealmente mensual.\n* Horizonte temporal: Mínimo 30 períodos consecutivos.\n* Consistencia: Las tres series deben coincidir exactamente en el mismo rango de fechas.\nCriterios a evaluar:\n* Se evaluará la justificación de la fuente de datos, la limpieza de la base de datos y el cumplimiento riguroso de los aspectos metodológicos discutidos en clase (definición de variables, unidades de medida y coherencia temporal).\nSe debe representar los datos obtenidos en una tabla que contenga todas las observaciones y atributos incluidos.",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "asignacionI.html#estadística-descriptiva-8-puntos",
+    "href": "asignacionI.html#estadística-descriptiva-8-puntos",
+    "title": "Asignación Evaluada",
+    "section": "2. Estadística Descriptiva (8 puntos)",
+    "text": "2. Estadística Descriptiva (8 puntos)\nRealizar un análisis de al menos dos variables (bivariante) de los datos seleccionados, incluyendo:\n\nDistribución de frecuencias: Construir una tabla de frecuencia para datos agrupados, justificando el criterio de agrupación seleccionado. Para cada variable usar cantidades de intervalos distintas. Son solo dos tablas las que realizará.\nVisualización: Generar los gráficos de caja (boxplot) e histogramas correspondientes para analizar la dispersión y forma de la distribución. Incluir la representación de una desviación típica o tantas como se puedan representar.\nResumen estadístico: Presentar una tabla con las medidas de tendencia central, posición y dispersión para cada variable.\nAnálisis económico: Seleccionar al menos dos de las variables, compararlas estadísticamente y ofrecer una interpretación económica de los resultados (relación entre ellas, volatilidad comparada, etc.).",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "asignacionI.html#números-índice-4-puntos",
+    "href": "asignacionI.html#números-índice-4-puntos",
+    "title": "Asignación Evaluada",
+    "section": "3. Números Índice (4 puntos)",
+    "text": "3. Números Índice (4 puntos)\nConstruir un índice que integre el comportamiento de las tres variables seleccionadas.\n\nMetodología: El estudiante tiene la libertad de elegir el tipo de índice (entre los vistos en clase u otro de la literatura estadística) que mejor se adapte a la naturaleza de sus datos.\nPonderación: De ser necesario para el tipo de índice elegido, deberá buscar e incorporar los valores relativos a las cantidades transadas (o una variable de ponderación equivalente).\nRepresentación: Presentar la tabla del índice calculado y explicar brevemente su evolución.",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "asignacionI.html#series-temporales-4-puntos",
+    "href": "asignacionI.html#series-temporales-4-puntos",
+    "title": "Asignación Evaluada",
+    "section": "4. Series Temporales (4 puntos)",
+    "text": "4. Series Temporales (4 puntos)\nAnalizar el comportamiento de las variables a lo largo del tiempo.\n\nGráfico de series: Representar gráficamente la evolución temporal conjunta o individual de las tres variables.\nAnálisis: Identificar y describir los aspectos temporales más relevantes observados en las series (tendencia, estacionalidad o puntos de quiebre estructurales si los hubiera).",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "asignacionI.html",
+    "href": "asignacionI.html",
+    "title": "Asignación Evaluada",
+    "section": "",
+    "text": "Objetivo: Aplicar herramientas de estadística descriptiva, números índices y análisis de series temporales para la interpretación del comportamiento de variables económicas reales.",
+    "crumbs": [
+      "Tareas",
+      "Asignación I"
+    ]
+  },
+  {
+    "objectID": "clases/clase_08complemento2.html",
+    "href": "clases/clase_08complemento2.html",
+    "title": "Cálculo del Dow Jones",
+    "section": "",
+    "text": "El Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
+  },
+  {
+    "objectID": "clases/clase_09.html#serie-temporal",
+    "href": "clases/clase_09.html#serie-temporal",
+    "title": "Estadística I",
+    "section": "Serie Temporal",
+    "text": "Serie Temporal\n\nUna secuencia de datos ordenados cronológicamente.\nObservaciones tomadas en intervalos de tiempo regulares (ej. diario, mensual, anual).\nEl objetivo es entender y modelar el comportamiento de los datos a lo largo del tiempo."
+  },
+  {
+    "objectID": "clases/clase_09.html#ejemplos-de-series-temporales",
+    "href": "clases/clase_09.html#ejemplos-de-series-temporales",
+    "title": "Estadística I",
+    "section": "Ejemplos de Series Temporales",
+    "text": "Ejemplos de Series Temporales\n\nVentas mensuales de un producto.\nCotizaciones diarias de una acción.\nTemperatura horaria de una ciudad.\nVariaciones del Índice de Precios."
+  },
+  {
+    "objectID": "clases/clase_09.html#gráfico-variaciones-inpc",
+    "href": "clases/clase_09.html#gráfico-variaciones-inpc",
+    "title": "Estadística I",
+    "section": "Gráfico Variaciones INPC",
+    "text": "Gráfico Variaciones INPC"
+  },
+  {
+    "objectID": "clases/clase_09.html#gráfico-temperatura-caracas-serie-temporal",
+    "href": "clases/clase_09.html#gráfico-temperatura-caracas-serie-temporal",
+    "title": "Estadística I",
+    "section": "Gráfico Temperatura Caracas Serie Temporal",
+    "text": "Gráfico Temperatura Caracas Serie Temporal"
+  },
+  {
+    "objectID": "clases/clase_09.html#componentes-de-una-serie-temporal",
+    "href": "clases/clase_09.html#componentes-de-una-serie-temporal",
+    "title": "Estadística I",
+    "section": "Componentes de una Serie Temporal",
+    "text": "Componentes de una Serie Temporal\nUna serie temporal (Yt​) puede estar compuesta por varios componentes:\n\nTendencia (Tt​)\nEstacionalidad (St​)\nCiclicidad (Ct​)\nAleatoriedad (Rt​)"
+  },
+  {
+    "objectID": "clases/clase_09.html#componente-de-tendencia-tt",
+    "href": "clases/clase_09.html#componente-de-tendencia-tt",
+    "title": "Estadística I",
+    "section": "Componente de Tendencia (Tt​)",
+    "text": "Componente de Tendencia (Tt​)\n\nLa dirección general de la serie a largo plazo.\nPuede ser lineal, no lineal, creciente o decreciente."
+  },
+  {
+    "objectID": "clases/clase_09.html#componente-de-estacionalidad-st",
+    "href": "clases/clase_09.html#componente-de-estacionalidad-st",
+    "title": "Estadística I",
+    "section": "Componente de Estacionalidad (St​)",
+    "text": "Componente de Estacionalidad (St​)\n\nPatrones que se repiten a intervalos fijos y conocidos.\nDuración predecible (anual, trimestral, mensual, etc.)."
+  },
+  {
+    "objectID": "clases/clase_09.html#gráfico-temperatura-caracas",
+    "href": "clases/clase_09.html#gráfico-temperatura-caracas",
+    "title": "Estadística I",
+    "section": "Gráfico Temperatura Caracas",
+    "text": "Gráfico Temperatura Caracas"
+  },
+  {
+    "objectID": "clases/clase_09.html#ejemplos-de-estacionalidad",
+    "href": "clases/clase_09.html#ejemplos-de-estacionalidad",
+    "title": "Estadística I",
+    "section": "Ejemplos de Estacionalidad",
+    "text": "Ejemplos de Estacionalidad\n\nAumento de ventas en diciembre.\nMayor inflación en diciembre"
+  },
+  {
+    "objectID": "clases/clase_09.html#componente-de-ciclicidad-ct",
+    "href": "clases/clase_09.html#componente-de-ciclicidad-ct",
+    "title": "Estadística I",
+    "section": "Componente de Ciclicidad (Ct​)",
+    "text": "Componente de Ciclicidad (Ct​)\n\nFluctuaciones a largo plazo (más de un año).\nDuración y amplitud variables (relacionado con ciclos económicos)."
+  },
+  {
+    "objectID": "clases/clase_09.html#diferencia-entre-estacionalidad-y-ciclicidad",
+    "href": "clases/clase_09.html#diferencia-entre-estacionalidad-y-ciclicidad",
+    "title": "Estadística I",
+    "section": "Diferencia entre Estacionalidad y Ciclicidad",
+    "text": "Diferencia entre Estacionalidad y Ciclicidad\n\n\n\n\n\n\n\n\nCaracterística\nEstacionalidad\nCiclicidad\n\n\nDuración\nFija y conocida\nVariable e impredecible\n\n\nFrecuencia\nDentro de un período fijo (e.g., año)\nMayor que la estacionalidad\n\n\nCausa\nFactores naturales o institucionales\nFactores económicos o empresariales"
+  },
+  {
+    "objectID": "clases/clase_09.html#componente-de-aleatoriedad-rt",
+    "href": "clases/clase_09.html#componente-de-aleatoriedad-rt",
+    "title": "Estadística I",
+    "section": "Componente de Aleatoriedad (Rt​)",
+    "text": "Componente de Aleatoriedad (Rt​)\n\nVariaciones irregulares e impredecibles.\nTambién conocido como ruido o residuo."
+  },
+  {
+    "objectID": "clases/clase_09.html#identificando-los-componentes-visualmente",
+    "href": "clases/clase_09.html#identificando-los-componentes-visualmente",
+    "title": "Estadística I",
+    "section": "Identificando los Componentes Visualmente",
+    "text": "Identificando los Componentes Visualmente\n\nTendencia: Dirección general a largo plazo.\nEstacionalidad: Patrones repetitivos dentro de un período fijo.\nCiclicidad: Ondulaciones de mayor duración.\nAleatoriedad: Fluctuaciones irregulares."
+  },
+  {
+    "objectID": "clases/clase_09.html#modelos-de-descomposición",
+    "href": "clases/clase_09.html#modelos-de-descomposición",
+    "title": "Estadística I",
+    "section": "Modelos de Descomposición",
+    "text": "Modelos de Descomposición\nDos modelos comunes:\n\nModelo Aditivo:\nYt​=Tt​+St​+Ct​+Rt​\nApropiado cuando la magnitud de los componentes no depende del nivel de la serie.\nModelo Multiplicativo:\nYt​=Tt​×St​×Ct​×Rt​\nApropiado cuando la magnitud de los componentes es proporcional al nivel de la serie.\n\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_09coplemento.html",
+    "href": "clases/clase_09coplemento.html",
+    "title": "clase_13complemento",
+    "section": "",
+    "text": "Descomposición Procedimental: Métodos\n\nPromedios Móviles: Para estimar la tendencia suavizada.\nDiferenciación: Para eliminar tendencia o estacionalidad.\nDescomposición Clásica: Estimar tendencia, luego estacionalidad, luego residuo.\n\n\n\n\nLámina 17: Descomposición con Promedios Móviles\n\nCalcula el promedio de un número fijo de observaciones consecutivas.\nAyuda a suavizar las fluctuaciones a corto plazo y revela la tendencia subyacente.\n\n\n\nLámina 18: Ejemplo de Descomposición (Conceptual)\n[Aquí podrías mostrar una serie original y, conceptualmente, cómo se verían sus componentes separados (tendencia suave, patrón estacional repetitivo, etc.).]\n\n\n\nLámina 19: Importancia de la Descomposición\n\nPermite comprender mejor los patrones subyacentes.\nFacilita la modelización y el pronóstico.\nAyuda a identificar las causas de las variaciones en la serie.\n\n\n\n\nLámina 20: Conclusiones y Próximos Pasos\n\nLas series temporales tienen componentes que influyen en su comportamiento.\nIdentificar y descomponer estos componentes es crucial para el análisis.\nExisten diferentes métodos para la descomposición.\n\n¿Qué te parece esta estructura inicial? Podemos ajustar el contenido y la cantidad de láminas según tus necesidades."
   }
 ]

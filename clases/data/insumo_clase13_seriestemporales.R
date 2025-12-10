@@ -102,7 +102,7 @@ data_inpc <- INPC%>%
   mutate(year=year(fecha_nva),
          mes= month(fecha_nva))
 
-View(data_inpc)
+# View(data_inpc)
 
 ipc_linea <- ggplot(data_inpc, 
        aes(x=fecha_nva, 

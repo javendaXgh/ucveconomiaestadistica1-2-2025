@@ -1,0 +1,127 @@
+---
+title: "El Cálculo del Dow Jones"
+subtitle: "Un ejemplo simplificado (Toy Model)"
+format: 
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+editor: visual
+---
+
+## 1. La Fórmula (Price-Weighted)
+
+El **Dow Jones** se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.
+
+$$\text{DJIA} = \frac{\sum P_i}{d}$$
+
+-   $P_i$: Precio de la acción.
+-   $d$: Divisor Dow (ajustable).
+
+```{r}
+#| echo: false
+#| warning: false
+library(dplyr) 
+library(knitr)
+```
+
+## 2. Ejemplo 3 Empresas
+
+Supongamos un mercado con 3 empresas y un divisor inicial $d=3$.
+
+```{r}
+#| echo: true
+#| warning: false
+library(dplyr)
+library(knitr)
+
+data <- tibble(
+  Empresa = c("Empresa A", "Empresa B", "Empresa C"),
+  Precio = c(150, 50, 10) # A tiene el precio más alto
+)
+
+kable(data)
+```
+
+## 3. Obtención del Índice
+
+Sumamos los precios y dividimos por $d=3$.
+
+```{r}
+#| echo: true
+suma <- sum(data$Precio)
+divisor <- 3
+indice <- suma / divisor
+```
+
+$$\text{Índice} = \frac{150 + 50 + 10}{3} = 70$$
+
+El valor del índice es **`r indice`**.
+
+## 4. Sensibilidad al Precio
+
+Como se pondera por precio, si la empresa cara (A) se mueve, afecta más al índice que la barata (C).
+
+```{r}
+#| echo: true
+# Si A (150) sube 10% (+$15)
+nuevo_indice_A <- (165 + 50 + 10) / 3
+
+# Si C (10) sube 10% (+$1)
+nuevo_indice_C <- (150 + 50 + 11) / 3
+```
+
+-   Si A sube 10%: Índice = **`r round(nuevo_indice_A, 2)`**
+-   Si C sube 10%: Índice = **`r round(nuevo_indice_C, 2)`**
+
+## Concepto: ¿Qué es un Stock Split?
+
+Un **Split** es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.
+
+**La Analogía de la Pizza:** Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.
+
+-   **Antes:** 1 acción de **\$100**.
+-   **Después (Split 2:1):** 2 acciones de **\$50**.
+
+::: callout-warning
+### El Problema para el Dow Jones
+
+Como el Dow Jones se calcula **sumando precios**, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor.
+:::
+
+## 5. El Divisor y los Splits
+
+Si una empresa hace un **Split 2:1** (el precio cae a la mitad), el índice colapsaría artificialmente. Para evitarlo, **se cambia el divisor**.
+
+$$\frac{\text{Precios Viejos}}{d_{viejo}} = \frac{\text{Precios Nuevos}}{d_{nuevo}}$$
+
+*El divisor actual real es \< 0.2, actuando como multiplicador.*
+
+## 5. El Ajuste del Divisor
+
+Si la **Empresa A** (\$150) hace un **Split 2:1**, su precio cae a \$75. El índice no debe cambiar de valor (70). Ajustamos el divisor.
+
+## Calculos
+
+**Paso 1: Calcular nueva suma de precios** $$ 75 (\text{A}) + 50 (\text{B}) + 10 (\text{C}) = 135 $$
+
+**Paso 2: Buscar el nuevo divisor (**$d_{new}$) $$ \frac{135}{d_{new}} = 70 \Rightarrow d_{new} = \frac{135}{70} \approx 1.928 $$
+
+```{r}
+#| echo: true
+# Verificación en R
+nueva_suma <- 135
+nuevo_divisor <- 1.92857
+
+indice_ajustado <- nueva_suma / nuevo_divisor
+```
+
+El índice se mantiene en **`r round(indice_ajustado, 0)`**.
+
+## 6. Diferencias: Dow vs S&P 500
+
+|   | Dow Jones | S&P 500 |
+|------------------------|------------------------|------------------------|
+| **Ponderación** | Por **Precio** de la acción ($P_i$) | Por **Capitalización** ($P_i \times Q_i$) |
+| **Muestra** | 30 empresas (Blue Chips) | 500 empresas |
+| **Sesgo** | Favorece acciones con precio nominal alto | Favorece empresas con valor de mercado total alto |

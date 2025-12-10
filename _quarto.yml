@@ -58,6 +58,9 @@ website:
           - href: participantes.qmd
             text: Alumnos Curso
       - section: Tareas
+        contents:
+          - href: asignacionI.qmd
+            text: Asignación I
       - section: "Talleres-Otros"
         contents:
           - href: glos.qmd

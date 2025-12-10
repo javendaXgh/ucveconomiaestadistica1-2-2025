@@ -1,0 +1,169 @@
+---
+title: "Estadística I"
+subtitle: "Clase 09: Series Temporales"
+date: "2025/12/10"
+format: revealjs
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+------------------------------------------------------------------------
+
+```{r}
+#| warning: false
+#| echo: false
+source('data/insumo_clase13_seriestemporales.R')
+```
+
+## Serie Temporal
+
+-   Una secuencia de datos ordenados cronológicamente.
+
+-   Observaciones tomadas en intervalos de tiempo regulares (ej. diario, mensual, anual).
+
+-   El objetivo es entender y modelar el comportamiento de los datos a lo largo del tiempo.
+
+------------------------------------------------------------------------
+
+## Ejemplos de Series Temporales
+
+-   Ventas mensuales de un producto.
+
+-   Cotizaciones diarias de una acción.
+
+-   Temperatura horaria de una ciudad.
+
+-   Variaciones del Índice de Precios.
+
+## Gráfico Variaciones INPC
+
+```{r}
+#| echo: false
+ipc_linea%>%
+  ggplotly()
+```
+
+------------------------------------------------------------------------
+
+### Utilidad Análisis Series Temporales
+
+-   Identificar patrones y tendencias.
+
+-   Realizar pronósticos futuros.
+
+-   Evaluar el impacto de eventos.
+
+-   Comprender la dinámica subyacente de los datos.
+
+## Gráfico Temperatura Caracas Serie Temporal
+
+```{r}
+#| echo: false
+ccs_linea%>%
+  ggplotly()
+```
+
+------------------------------------------------------------------------
+
+## Componentes de una Serie Temporal
+
+Una serie temporal (Yt​) puede estar compuesta por varios componentes:
+
+-   **Tendencia** (Tt​)
+
+-   **Estacionalidad** (St​)
+
+-   **Ciclicidad** (Ct​)
+
+-   **Aleatoriedad** (Rt​)
+
+------------------------------------------------------------------------
+
+## Componente de Tendencia (Tt​)
+
+-   La dirección general de la serie a largo plazo.
+
+-   Puede ser lineal, no lineal, creciente o decreciente.
+
+## Componente de Estacionalidad (St​)
+
+-   Patrones que se repiten a intervalos fijos y conocidos.
+
+-   Duración predecible (anual, trimestral, mensual, etc.).
+
+## Gráfico Temperatura Caracas
+
+```{r}
+#| echo: false
+
+
+ccs_gr%>%
+  ggplotly()
+
+```
+
+## Ejemplos de Estacionalidad
+
+-   Aumento de ventas en diciembre.
+
+-   Mayor inflación en diciembre
+
+```{r}
+var_inpc%>%
+  ggplotly()
+```
+
+## Componente de Ciclicidad (Ct​)
+
+-   Fluctuaciones a largo plazo (más de un año).
+
+-   Duración y amplitud variables (relacionado con ciclos económicos).
+
+## Diferencia entre Estacionalidad y Ciclicidad
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Característica** | **Estacionalidad** | **Ciclicidad** |
+| Duración | Fija y conocida | Variable e impredecible |
+| Frecuencia | Dentro de un período fijo (e.g., año) | Mayor que la estacionalidad |
+| Causa | Factores naturales o institucionales | Factores económicos o empresariales |
+
+------------------------------------------------------------------------
+
+## Componente de Aleatoriedad (Rt​)
+
+-   Variaciones irregulares e impredecibles.
+
+-   También conocido como ruido o residuo.
+
+## Identificando los Componentes Visualmente
+
+-   **Tendencia**: Dirección general a largo plazo.
+
+-   **Estacionalidad**: Patrones repetitivos dentro de un período fijo.
+
+-   **Ciclicidad**: Ondulaciones de mayor duración.
+
+-   **Aleatoriedad**: Fluctuaciones irregulares.
+
+## Modelos de Descomposición {style="small"}
+
+Dos modelos comunes:
+
+1.  Modelo Aditivo:
+
+    Yt​=Tt​+St​+Ct​+Rt​
+
+    Apropiado cuando la magnitud de los componentes no depende del nivel de la serie.
+
+2.  Modelo Multiplicativo:
+
+    Yt​=Tt​×St​×Ct​×Rt​
+
+    Apropiado cuando la magnitud de los componentes es proporcional al nivel de la serie.

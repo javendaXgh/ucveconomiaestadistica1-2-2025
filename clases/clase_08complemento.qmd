@@ -65,7 +65,7 @@ Si la capitalización de mercado de la empresa A es el doble que la de la empres
 Imagina un índice con solo 3 empresas ponderadas por capitalización de mercado:
 
 |  |  |  |  |  |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | **Empresa** | **Precio por Acción** | **Acciones en Circulación (millones)** | **Capitalización de Mercado (miles de millones \$)** | **Peso en el Índice (%)** |
 | A | 100 | 10 | 1000 | 47,62% |
 | B | 50 | 20 | 1000 | 47,62% |
@@ -83,7 +83,7 @@ En este ejemplo, las empresas A y B, a pesar de tener precios de acción diferen
 Supongamos que en el período t+1 los precios de las acciones cambian:
 
 |  |  |  |  |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | **Empresa** | **Precio por Acción (t+1)** | **Acciones en Circulación (millones)** | **Capitalización de Mercado (t+1) (miles de millones \$)** |
 | A | 110 | 10 | 1100 |
 | B | 55 | 20 | 1100 |
