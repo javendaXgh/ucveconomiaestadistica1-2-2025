@@ -1,0 +1,513 @@
+---
+title: "Respuestas 1 er. Examen Parcial "
+format: html
+---
+
+### Prof. José M. Avendaño I.
+
+### Realizado el 25-11-2025
+
+```{r}
+#| warning: false
+#| echo: false
+library(tidyverse)
+library(gt)
+library(gtExtras)
+library(rvest)
+library(knitr)
+# urban_ccs <- read_html("https://www.megaoffice.com.ve/codigo-postales-de-venezuela?estado=distrito%20capital&srsltid=AfmBOopDk7mfBfE0rEUq0o0ODr0m-eZ44lVeI32S7aSG631x3Yv5xztm") %>%
+#   html_nodes("td+ td") %>%
+#   html_text()
+
+urban_ccs <- readRDS('urban_ccs_raw.csv')
+
+urban_ccs_df <- data.frame(
+  urban_area = urban_ccs[seq(1, length(urban_ccs), by = 2)],
+  postal_code = urban_ccs[seq(2, length(urban_ccs), by = 2)])%>%
+  mutate(urban_area=str_remove_all( urban_area,'Urbanización |Barrio |Caracas|\\(\\)'),
+         urban_area=str_remove_all( urban_area,'\\(\\)'),
+         urban_area=str_squish(urban_area))
+
+set.seed(456) # Cambiamos la semilla para variar los datos
+
+# 1. Generar estructura base
+datos_hogares <- data.frame(
+  Hogar_ID = 1:200,
+  # Ingresos log-normales (común en economía)
+  Ingreso_Mensual = round(rlnorm(200, meanlog = 6.8, sdlog = 0.7), 2), 
+  Miembros = sample(1:7, 200, replace = TRUE, prob = c(0.15, 0.25, 0.25, 0.15, 0.1, 0.05, 0.05))
+)
+
+# 2. Calcular Gasto en Alimentación con lógica económica
+# Fórmula: Gasto Fijo por Persona (Necesidad) + Propensión Marginal al Consumo (Lujo/Variedad)
+datos_hogares <- datos_hogares %>%
+  mutate(
+    # Costo base por persona (entre 40$ y 60$ por cabeza + ruido aleatorio)
+    Costo_Basico = Miembros * runif(n(), 40, 60),
+    
+    # Gasto adicional según ingreso (la gente con más dinero compra comida más cara)
+    # Usamos logaritmo para que decrezca proporcionalmente (Ley de Engel)
+    Gasto_Extra = Ingreso_Mensual * runif(n(), 0.10, 0.20),
+    
+    # Gasto Total preliminar
+    Gasto_Alimentacion = round(Costo_Basico + Gasto_Extra, 2)
+  )
+
+# 3. Ajuste de Realidad (Constraint)
+# El gasto en comida no puede superar el 90% del ingreso (caso pobreza extrema)
+datos_hogares$Gasto_Alimentacion <- pmin(
+  datos_hogares$Gasto_Alimentacion, 
+  datos_hogares$Ingreso_Mensual * 0.90
+)
+
+# Limpiar columnas auxiliares
+datos_hogares <- datos_hogares %>% select(Hogar_ID, Ingreso_Mensual, Gasto_Alimentacion, Miembros)
+datos_hogares <- datos_hogares%>%
+  mutate(Ingreso_Mensual=Ingreso_Mensual/10,
+         Gasto_Alimentacion= Gasto_Alimentacion/10)
+
+datos_hogares <- datos_hogares%>%
+  bind_cols(urban_ccs_df%>%
+              sample_n(20, replace = TRUE)%>%
+              sample_n(200, replace = TRUE))%>%
+  mutate(Ingreso_Mensual=round(Ingreso_Mensual),
+         Gasto_Alimentacion=round( Gasto_Alimentacion))%>%
+  rename(Ingreso= Ingreso_Mensual,
+         Gastos= Gasto_Alimentacion,
+         zona=urban_area,
+         `cod postal`=postal_code)
+
+```
+
+## 1 Análisis Conjunto de Datos
+
+En la cátedra de Estadística de la carrera de Contaduría se realizó un estudio de tipo ***observacional*** para obtener una muestra de estudiantes de la FACES.
+
+La recolección de datos se llevó a cabo en la zona de espera de los ascensores (planta baja), aprovechando el tiempo de espera de los usuarios para realizar la entrevista. Se registraron las siguientes variables: ingreso mensual del núcleo familiar, gasto mensual en alimentación (ambos en unidades monetarias), número de miembros del grupo familiar, zona de residencia y código postal.
+
+A continuación se presentan las primeras 4 filas del conjunto de datos recolectados que contiene un total de 200 observaciones.
+
+```{r}
+#| echo: false
+
+#datos_hogares%>%
+#  sample_n(5)%>%
+# select(-Hogar_ID)%>%
+#  gt()
+
+kable(datos_hogares%>%
+  sample_n(4)%>%
+  select(-Hogar_ID))
+```
+
+1.  Indique los tipos de variables recolectadas y el tipo de estudio realizado (linea subrayada anterior) (3 ptos).
+
+    |                |                       |
+    |----------------|-----------------------|
+    | **Variable**   | **Tipo de Variable**  |
+    | **Ingreso**    | Cuantitativa Continua |
+    | **Gastos**     | Cuantitativa Continua |
+    | **Miembros**   | Cuantitativa Discreta |
+    | **Zona**       | Categórica Nominal    |
+    | **Cod postal** | Categórica Nominal    |
+
+    ### Explicación
+
+    |  |  |  |
+    |----|----|----|
+    | **Variable** | **Tipo de Variable** | **Justificación Económica / Estadística** |
+    | **Ingreso** | Cuantitativa Continua | Representa una magnitud monetaria que, aunque se registre en enteros, puede admitir decimales y escalas infinitas. |
+    | **Gastos** | Cuantitativa Continua | Al igual que el ingreso, mide un flujo monetario con capacidad de fraccionamiento decimal. |
+    | **Miembros** | Cuantitativa Discreta | Representa un conteo de unidades indivisibles (personas); no existen "2.5 miembros" en un hogar. |
+    | **Zona** | Categórica Nominal | Clasifica los datos en categorías de ubicación geográfica (nombres) sin que exista un orden jerárquico natural entre ellas. |
+    | **Cod postal** | Categórica Nominal | Aunque utiliza dígitos numéricos, estos funcionan exclusivamente como etiquetas de identificación de una zona; no poseen propiedades aritméticas. |
+
+    ------------------------------------------------------------------------
+
+    En la siguiente figura se presenta un histograma para la variable "Ingreso Mensual" donde las línea verticales representan la mediana y la media.
+
+    ```{r}
+    #| echo: false
+    #| warning: false
+    #| fig-height: 2
+
+    ggplot(datos_hogares, 
+           aes(x = `Ingreso`)) +
+      geom_histogram( alpha = 0.3, bins =10) +
+      theme_minimal() +
+      labs(#title = "Ingresos Mensual",
+           #subtitle = "n = 200 hogares",
+        x = "Ingreso Mensual",
+        y = "Frecuencia"
+      )+ #añadir linea media y mediana
+      geom_vline(aes(xintercept=mean(`Ingreso`)),
+                 color='blue',
+                 linetype='dashed',
+                 size=1)+
+      geom_vline(aes(xintercept=median(`Ingreso`)),
+                 color='red',
+                 # linetype='dashed',
+                 size=1)
+    ```
+
+    Adicionalmente, la variable en estudio presenta los siguientes estadísticos:
+
+    ```{r}
+    #| echo: false
+    summary(datos_hogares$Ingreso)
+    cat('La desviación típica (dt) es', round(sd(datos_hogares$Ingreso),2))
+    ```
+
+2.  Represente en el gráfico mediante líneas verticales 1 y 2 desviaciones típicas (solo para valores positivos en el eje de las $x$), y en la intersección con dicho eje, señale el valor donde ocurre la intersección, teniendo de referencia la medida de tendencia central apropiada. (1 pto.)
+
+    ```{r}
+    #| echo: false
+    # valor media + 1 sd
+    mean(datos_hogares$Ingreso)+sd(datos_hogares$Ingreso)
+    # valor media - 1 sd
+    mean(datos_hogares$Ingreso)-sd(datos_hogares$Ingreso)
+    # valor media + 2 sd
+    mean(datos_hogares$Ingreso)+2*sd(datos_hogares$Ingreso)
+    # valor media - 2 sd
+    mean(datos_hogares$Ingreso)-2*sd(datos_hogares$Ingreso)
+      
+    ```
+
+    ```{r}
+    #| echo: false
+
+
+    ggplot(datos_hogares, 
+           aes(x = `Ingreso`)) +
+      
+      geom_histogram( alpha = 0.3, bins =10) +
+      theme_minimal() +
+      labs(#title = "Ingresos Mensual",
+           #subtitle = "n = 200 hogares",
+        x = "Ingreso Mensual",
+        y = "Frecuencia"
+      )+ #añadir linea media y mediana
+      geom_vline(aes(xintercept=mean(`Ingreso`)),
+                 color='blue',
+                 linetype='dashed',
+                 size=1)+
+      annotate("text", x = mean(datos_hogares$`Ingreso`), y = 50, label = paste("Media:", round(mean(datos_hogares$`Ingreso`)),2), 
+               angle = 90, vjust = -0.5, color = "blue") +
+      geom_vline(aes(xintercept=median(`Ingreso`)),
+                 color='red',
+                 # linetype='dashed',
+                 size=1)+
+      annotate("text", x = median(datos_hogares$`Ingreso`), y = 50, label = paste("Mediana:", round(median(datos_hogares$`Ingreso`)),2), 
+               angle = 90, vjust = -0.5, color = "red") +
+      # añadir sd´s
+       geom_vline(aes(xintercept=mean(`Ingreso`)+sd(Ingreso)),
+                 color='purple',
+                 # linetype='dashed',
+                 size=1)+
+      annotate("text", x = (mean(datos_hogares$`Ingreso`)+sd(datos_hogares$`Ingreso`)), y = 55, label = paste("+ 1 sd:",round( mean(datos_hogares$`Ingreso`)+sd(datos_hogares$`Ingreso`)),2), 
+               angle = 90, vjust = -0.5, color = "purple") +
+      # añadir sd´s
+       geom_vline(aes(xintercept=mean(`Ingreso`)-sd(Ingreso)),
+                 color='purple',
+                 # linetype='dashed',
+                 size=1)+
+      annotate("text", x = (mean(datos_hogares$`Ingreso`)-sd(datos_hogares$`Ingreso`)), y = 55, label = paste("- 1 sd:",round( mean(datos_hogares$`Ingreso`)-sd(datos_hogares$`Ingreso`)),2), 
+               angle = 90, vjust = -0.5, color = "purple") +
+      # añadir sd´s
+       geom_vline(aes(xintercept=mean(`Ingreso`)+2*sd(Ingreso)),
+                 color='orange',
+                 # linetype='dashed',
+                 size=1)+
+      annotate("text", x = (mean(datos_hogares$`Ingreso`)+2*sd(datos_hogares$`Ingreso`)), y = 60, label = paste("+ 2 sd:",round( mean(datos_hogares$`Ingreso`)+2*sd(datos_hogares$`Ingreso`)),2), 
+               angle = 90, vjust = -0.5, color = "orange")
+
+      
+    ```
+
+3.  Cuántos valores de la variable ingreso mensual, identifica que se encuentran a) en el primer cuartil b) tercer cuartil (0,5 ptos).
+
+    el conjunto de datos recolectados contiene un total de **200 observaciones**.
+
+    ### Cálculo de frecuencias por cuartil
+
+    Los cuartiles dividen a un conjunto de datos ordenados en cuatro partes iguales, cada una con el **25%** de las observaciones totales.
+
+    -   **a) Primer Cuartil (**$Q_1$): Representa el valor por debajo del cual se encuentra el primer 25% de los datos. Para una muestra de 200 personas, se identifican **50 valores** (200 $\times$ 0.25) que se encuentran en este rango.
+
+    -   **b) Tercer Cuartil (**$Q_3$): Representa el valor por debajo del cual se encuentra el 75% de los datos. Esto significa que existen **150 valores** acumulados hasta este punto (200 $\times$ 0.75). Si se analiza desde la perspectiva de cuántos valores hay específicamente en el *tramo* del tercer cuartil, serían **50 valores**.
+
+4.  ¿Cuál es el RIC (IQR) del Ingreso Mensual? (0,5 ptos.)
+
+    Q3 158.25 - Q1 54.75
+
+    ```{r}
+    #| echo: false
+    IQR(datos_hogares$Ingreso)
+    # Q3 158.25 - Q1 54.75
+    ```
+
+5.  Para la variable Ingreso Mensual, cree un gráfico de caja para la variable Ingreso mensual (2 ptos.)
+
+    ```{r}
+    #| echo: false
+    # boxplot(datos_hogares$Ingreso)
+
+    # 1. Creamos una tabla con los estadísticos por grupo
+    # resumen_gastos <- datos_hogares %>%
+    #   # group_by(Miembros) %>%
+    #   summarise(
+    #     med = median(Ingreso),
+    #     q1 = quantile(Ingreso, 0.25),
+    #     q3 = quantile(Ingreso, 0.75)
+    #   )
+    # 
+    # # 2. Graficamos usando esa tabla para las etiquetas
+    # ggplot(datos_hogares, 
+    #        aes( y = Ingreso)) +
+    #   geom_boxplot() +
+    #   # Etiquetas de Mediana
+    #   geom_text(data = resumen_gastos, aes(x=.5,y = med, label = med), 
+    #             size = 4, color = "blue") +
+    #   # Etiquetas de Q1
+    #   geom_text(data = resumen_gastos, aes(x=.5,y = q1, label = q1), 
+    #             size = 3, vjust = .5, color = "red") +
+    #   # Etiquetas de Q3
+    #   geom_text(data = resumen_gastos, aes( x=.5,y = q3, label = q3), 
+    #             size = 3, vjust = .5, color = "red")
+    stats_values <- boxplot.stats(datos_hogares$Ingreso)$stats
+    df_etiquetas <- data.frame(
+      valor = stats_values,
+      label = c("Bigote Inf", "Q1", "Mediana", "Q3", "Bigote Sup")
+    )
+
+    # 2. Creamos el gráfico
+    ggplot(datos_hogares, 
+           aes(y = Ingreso, x = "")) +
+      geom_boxplot(fill = "lightblue", 
+                   color = "black",
+                   outlier.color = "red",
+                   coef = 1.5) +
+      stat_boxplot(geom = "errorbar", 
+                   width = 0.2, 
+                   color='red') +
+      # Añadimos los textos de los valores
+      geom_text(data = df_etiquetas, 
+                aes(x = 1.4, 
+                    y = valor, 
+                    label = paste(label, ":", round(valor, 2))),
+                hjust = 0, 
+                fontface = "bold", 
+                size = 3) +
+      labs(title = "Distribución de Ingreso Mensual",
+           y = "Ingreso (unidades monetarias)",
+           x = "") +
+      theme_minimal()+
+      # Ajustamos el margen derecho para que se vean bien las etiquetas
+      theme(plot.margin = unit(c(0, 0, 1, 1), "cm"))
+
+
+    ```
+
+6.  Calcule para la variable Ingreso Mensual los valores que definen a los bigotes (whiskers) y añádalos al gráfico anterior. (1 pto.)
+
+    ```{r}
+    #| echo: false
+    calcular_whiskers <- function(x) {
+      # Eliminar valores NA para evitar errores
+      x <- x[!is.na(x)]
+      
+      # Calcular Cuartiles (Q1 y Q3)
+      stats <- quantile(x, probs = c(0.25, 0.75))
+      q1 <- stats[1]
+      q3 <- stats[2]
+      
+      # Calcular el Rango Intercuartílico (IQR)
+      iqr <- q3 - q1
+      
+      # Definir los límites teóricos
+      limite_inf <- q1 - 1.5 * iqr
+      limite_sup <- q3 + 1.5 * iqr
+      
+      # Los whiskers reales son los valores más extremos dentro de esos límites
+      whisker_inferior <- min(x[x >= limite_inf])
+      whisker_superior <- max(x[x <= limite_sup])
+      
+      list(
+        inferior = whisker_inferior,
+        superior = whisker_superior,
+        inferior_calculo= limite_inf,
+        superior2_calculo= limite_sup,
+        q1 = q1,
+        q3 = q3,
+        iqr = iqr
+      )
+    }
+    calcular_whiskers(datos_hogares$Ingreso)
+    ```
+
+    limite_inf \<- q1 - 1.5 \* iqr = (54.75 -1.5\*103.5 ) = -100.5, que es menor a los valores presentes y al ser negativo, no tiene sentido económico
+
+    limite_sup \<- q3 + 1.5 \* iqr = (158.25+1.5\*103.5) = 311
+
+7.  Indique la modalidad de la distribución, los posibles sesgos o asimetría en caso de aplicar. Cuál es el significado de la asimetría desde un punto de vista económico y las razones que motivan que ambas medidas de tendencia central no sean iguales y cuál medida cree que representa mejor a la familia del estudiante típico (4 ptos.)
+
+    ### 1. Modalidad de la distribución
+
+    La distribución es unimodal.
+
+    Se observa un único pico (la barra más alta) en el intervalo que va aproximadamente de 25 a 75 unidades de "Ingreso Mensual". Esto indica que la mayor concentración de familias se encuentra en ese rango de ingresos bajos-medios.
+
+    ### 2. Sesgo o Asimetría
+
+    La distribución presenta una asimetría positiva (o sesgo a la derecha).
+
+    Podemos confirmar esto de dos maneras:
+
+    -   **Visualmente:** La "cola" de la distribución se extiende mucho más hacia la derecha (valores altos de ingreso) que hacia la izquierda.
+
+    -   **Analíticamente:** Se cumple la relación característica de la asimetría positiva: $\text{Media} (113.34) > \text{Mediana} (87.50)$ o que la $\text{Mediana} (87.50) < \text{Media} (113.34)$.
+
+    ------------------------------------------------------------------------
+
+    ### 3. Significado económico de la asimetría
+
+    Desde un punto de vista económico, una asimetría positiva en los ingresos refleja desigualdad distributiva.
+
+    Indica que la gran mayoría de la población percibe ingresos relativamente bajos (concentrados a la izquierda), mientras que un grupo muy pequeño de la población percibe ingresos extremadamente altos (la cola larga a la derecha). En economía, esto sugiere que la riqueza no está distribuida de forma equitativa.
+
+    ------------------------------------------------------------------------
+
+    ### 4. ¿Por qué la media y la mediana no son iguales?
+
+    La razón principal es la **sensibilidad a los valores extremos (valores atípicos)**:
+
+    -   **La Media:** Se ve "arrastrada" hacia la derecha por los ingresos muy altos (como el valor máximo de 443.00). Al sumar todos los valores y dividir, esos pocos sueldos altos inflan el promedio general.
+
+    -   **La Mediana:** Es una medida robusta. Solo le interesa el orden de los datos. El hecho de que el ingreso más alto sea 400 o 4,000 no cambia la posición del valor central ($87.50$).
+
+    ------------------------------------------------------------------------
+
+    ### 5. Medida que representa mejor a la familia "típica"
+
+    Para este caso, la **Mediana (**$87.50$) representa mejor a la familia del estudiante típico.
+
+    **¿Por qué?** Porque en distribuciones sesgadas, la media ofrece una visión distorsionada (demasiado optimista en este caso). Decir que el ingreso "promedio" es $113.34$ es engañoso, ya que la gran mayoría de las familias ganan menos de esa cantidad. La mediana nos dice que exactamente el **50% de las familias** ganan $87.50$ o menos, lo cual se acerca mucho más a la realidad de la "clase media" o el sector más poblado de la muestra.
+
+8.  Del siguiente gráfico de caja, qué relaciones puede apreciar entre las variables Miembros del Grupo Familiar y el Gasto Mensual en alimentación (1 pto.)
+
+    ```{r}
+    #| echo: false
+    #| warning: false
+    #| fig-height: 2
+    ggplot(datos_hogares,
+           aes(x = factor(Miembros), 
+               y = Gastos)) +
+      geom_boxplot(fill = "lightblue", 
+                   alpha = 0.6,
+                   outlier.colour = "red",
+                    outlier.size = 2,
+                    staplewidth = 0.2) +
+      theme_minimal() +
+      labs(
+        title = "Miembros vs Gasto en Alimentación",
+        x = "Número de Miembros en el Hogar",
+        y = "Gasto en Alimentación "
+      )
+    ```
+
+9.  ¿Qué observaciones puede hacer sobre la recolección de datos que realizaron los estudiantes de contaduría, de acuerdo a lo repasado con respecto al muestreo?¿Considera que la entrevista a 200 personas, sabiendo que pueden haber unos 800 estudiantes, le parece un método adecuado que representa a todos los estudiantes de la Facultad? (1 pto.)
+
+    ### 1. Relación Directa (Tendencia Positiva)
+
+    Existe una **correlación positiva** entre el número de miembros y el gasto en alimentación. A medida que aumenta el tamaño del grupo familiar (del nivel 2 al 7), la **mediana** del gasto (la línea negra gruesa dentro de cada caja) tiende a subir de forma sostenida. Esto tiene lógica económica: a más personas en el hogar, mayor es la necesidad de consumo básico.
+
+    ### 2. Comportamiento de la Dispersión (Variabilidad)
+
+    -   **Hogares pequeños (1 miembro):** Presentan la mayor variabilidad o "incertidumbre" relativa en el gasto, con una caja muy alta y bigotes extensos. Esto sugiere que los hábitos de consumo de personas que viven solas son muy heterogéneos.
+
+    -   **Hogares grandes (7 miembros):** La caja es mucho más compacta, lo que indica que en grupos familiares grandes el gasto está más "estandarizado" o concentrado en un rango específico (posiblemente debido a presupuestos más ajustados por economía de escala).
+
+    ### 3. Presencia de Valores Atípicos (Outliers)
+
+    Se observan varios **puntos rojos** por encima de los bigotes en casi todos los grupos (especialmente en los de 4, 2 y 6 miembros).
+
+    -   **Significado:** Existen familias que, a pesar de tener pocos miembros, gastan significativamente más que el promedio de su grupo. Esto puede deberse a un mayor nivel de ingresos o a hábitos de consumo de lujo.
+
+    -   **Caso especial:** En el grupo de 6 miembros, hay un valor atípico por debajo (un punto rojo inferior), lo que representa un hogar que gasta inusualmente poco para su tamaño.
+
+10. Cuál de las relaciones de asociación, según lo que se muestra cada gráfico, le parece que tiene más sentido. Sólo para el gráfico que seleccionado, justifique su elección, indique el tipo de relación y cualquier otro elemento de importancia. (2 ptos.)
+
+    ```{r}
+    #| layout-ncol: 2
+    #| fig-height: 3
+    #| echo: false
+    options(scipen=999)
+    plot(datos_hogares$Gastos~datos_hogares$Ingreso,
+         xlab='Gastos Mensuales Alimentación',ylab ='Ingresos Mensuales',
+         cex = .2)
+
+    plot(datos_hogares$Ingreso~datos_hogares$Gastos,
+         ylab='Gastos Mensuales Alimentación',xlab ='Ingresos Mensuales',
+         cex = .2,)
+    ```
+
+### Gráfico seleccionado: El de la derecha
+
+El gráfico que tiene más sentido económico es el de la **derecha**, donde el **Ingreso Mensual** está en el eje X (variable independiente) y el **Gasto en Alimentación** está en el eje Y (variable dependiente).
+
+------------------------------------------------------------------------
+
+### 
+
+Ls teoría económica y la estadística descriptiva, la elección se basa en los siguientes puntos:
+
+-   **Posible existencia de relación de Causalidad:** El nivel de ingresos es el que según la teoría económica puede determinar o limitar la capacidad de gasto de un hogar, y no al revés. Es más lógico decir que "si gano más, gasto más en comida" a decir que "si gasto más en comida, mi sueldo aumenta".
+
+-   **Variable Independiente vs. Dependiente:** En un diagrama de dispersión (scatter plot), la variable que explica el fenómeno (causa) se coloca tradicionalmente en el eje horizontal ($X$). En este caso, el ingreso es el factor explicativo del consumo.
+
+### Tipo de relación
+
+-   **Relación Lineal Positiva (Directa):** Se observa una tendencia ascendente; a medida que aumentan los ingresos, el gasto en alimentación también tiende a crecer.
+
+### Otros elementos de importancia
+
+-   **Propensión Marginal al Consumo:** Nota que a niveles muy altos de ingreso (hacia la derecha del eje X), la dispersión de los puntos en el eje Y aumenta. Esto sugiere que para los más ricos, el gasto en alimentación es más discrecional o variado.
+
+-   **Valores Atípicos:** En el extremo superior derecho de ambos gráficos se observa un punto muy alejado de la masa principal (un hogar con ingresos y gastos excepcionalmente altos), lo cual es común en datos económicos de este tipo.
+
+1.  
+
+    -   
+
+        |  |  |  |
+        |----|----|----|
+        | **Medida** | **Uso Principal en Economía** | **Ventaja Clave** |
+        | **Aritmética** | Resumen general de datos simétricos | Facilidad de cálculo e interpretación |
+        | **Ponderada** | Índices de precios y carteras | Refleja la importancia relativa de cada rubro |
+        | **Geométrica** | Crecimiento del PIB / Tasas de interés | Maneja correctamente factores multiplicativos |
+        | **Armónica** | Rendimientos y promedios de ratios | Ideal para promediar tasas de cambio o productividad |
+
+2.  Una empresa de capital de riesgo registra las siguientes **tasas de crecimiento porcentual anual** (R) sobre su portafolio de inversión durante un período de **cinco años** (2019-2023).
+
+    |         |                                    |
+    |---------|------------------------------------|
+    | **Año** | **Tasa de Crecimiento Anual (Ri​)** |
+    | 2019    | **3,5%**                           |
+    | 2020    | **2,6%**                           |
+    | 2021    | **3,1%**                           |
+    | 2022    | **4,2%**                           |
+    | 2023    | **5,3%**                           |
+
+    Para calcular la media que representa la **tasa de crecimiento promedio anual compuesta** (o el factor multiplicativo promedio) de la inversión, se deben usar los **factores de crecimiento** (1+Ri​), es decir: x1​=1+0,035=1,035 ; x2​=1+0,026=1,026;....; x5​=1+0,053=1,053
+
+    1.  **Medida de Tendencia Central :** Indique cuál es la **medida de tendencia central** (de las cuatro listadas) que mejor representaría la **tasa de crecimiento promedio anual compuesta** de esta serie, y justifique *brevemente* su elección en términos económicos. (1 pto.)
+
+        La medida que mejor representa la tasa de crecimiento promedio anual compuesta es la **Media Geométrica**.
+
+        -   **Justificación:** En términos económicos, las tasas de crecimiento financiero son multiplicativas, no aditivas. La media geométrica permite hallar una tasa constante que, aplicada año tras año, daría el mismo valor final de inversión, evitando la sobreestimación que suele causar la media aritmética en series temporales con variabilidad.
+
+    2.  **Implementación de la Fórmula**  Indique la implementación de la fórmula con la cuál se calcularía dicha media, utilizando los valores transformados de la serie (es decir, xi​=1+Ri​). (No es necesario realizar el cálculo final). (1 pto.)
+
+        Para calcularla con los valores transformados $x_i = (1 + R_i)$, la implementación sería la raíz quinta del producto de los factores:
+
+        \$\$G = \\sqrt\[5\]{1,035 \\times 1,026 \\times 1,031 \\times 1,042 \\times 1,053}\$\$

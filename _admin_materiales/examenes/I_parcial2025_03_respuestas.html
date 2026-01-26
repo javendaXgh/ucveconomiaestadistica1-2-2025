@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Respuestas 1 er. Examen Parcial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="I_parcial2025_03_respuestas_files/libs/clipboard/clipboard.min.js"></script>
+<script src="I_parcial2025_03_respuestas_files/libs/quarto-html/quarto.js"></script>
+<script src="I_parcial2025_03_respuestas_files/libs/quarto-html/popper.min.js"></script>
+<script src="I_parcial2025_03_respuestas_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="I_parcial2025_03_respuestas_files/libs/quarto-html/anchor.min.js"></script>
+<link href="I_parcial2025_03_respuestas_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="I_parcial2025_03_respuestas_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="I_parcial2025_03_respuestas_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="I_parcial2025_03_respuestas_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="I_parcial2025_03_respuestas_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Respuestas 1 er. Examen Parcial</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="prof.-josé-m.-avendaño-i." class="level3">
+<h3 class="anchored" data-anchor-id="prof.-josé-m.-avendaño-i.">Prof.&nbsp;José M. Avendaño I.</h3>
+</section>
+<section id="realizado-el-25-11-2025" class="level3">
+<h3 class="anchored" data-anchor-id="realizado-el-25-11-2025">Realizado el 25-11-2025</h3>
+</section>
+<section id="análisis-conjunto-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-conjunto-de-datos">1 Análisis Conjunto de Datos</h2>
+<p>En la cátedra de Estadística de la carrera de Contaduría se realizó un estudio de tipo <strong><em>observacional</em></strong> para obtener una muestra de estudiantes de la FACES.</p>
+<p>La recolección de datos se llevó a cabo en la zona de espera de los ascensores (planta baja), aprovechando el tiempo de espera de los usuarios para realizar la entrevista. Se registraron las siguientes variables: ingreso mensual del núcleo familiar, gasto mensual en alimentación (ambos en unidades monetarias), número de miembros del grupo familiar, zona de residencia y código postal.</p>
+<p>A continuación se presentan las primeras 4 filas del conjunto de datos recolectados que contiene un total de 200 observaciones.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ingreso</th>
+<th style="text-align: right;">Gastos</th>
+<th style="text-align: right;">Miembros</th>
+<th style="text-align: left;">zona</th>
+<th style="text-align: left;">cod postal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Nazareno</td>
+<td style="text-align: left;">1073</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Corocito</td>
+<td style="text-align: left;">1209</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Antonio José de Sucre</td>
+<td style="text-align: left;">1073</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Colonia Mendoza</td>
+<td style="text-align: left;">1209</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ol type="1">
+<li><p>Indique los tipos de variables recolectadas y el tipo de estudio realizado (linea subrayada anterior) (3 ptos).</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Tipo de Variable</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Ingreso</strong></td>
+<td>Cuantitativa Continua</td>
+</tr>
+<tr class="odd">
+<td><strong>Gastos</strong></td>
+<td>Cuantitativa Continua</td>
+</tr>
+<tr class="even">
+<td><strong>Miembros</strong></td>
+<td>Cuantitativa Discreta</td>
+</tr>
+<tr class="odd">
+<td><strong>Zona</strong></td>
+<td>Categórica Nominal</td>
+</tr>
+<tr class="even">
+<td><strong>Cod postal</strong></td>
+<td>Categórica Nominal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explicación" class="anchored">Explicación</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Tipo de Variable</strong></td>
+<td><strong>Justificación Económica / Estadística</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Ingreso</strong></td>
+<td>Cuantitativa Continua</td>
+<td>Representa una magnitud monetaria que, aunque se registre en enteros, puede admitir decimales y escalas infinitas.</td>
+</tr>
+<tr class="odd">
+<td><strong>Gastos</strong></td>
+<td>Cuantitativa Continua</td>
+<td>Al igual que el ingreso, mide un flujo monetario con capacidad de fraccionamiento decimal.</td>
+</tr>
+<tr class="even">
+<td><strong>Miembros</strong></td>
+<td>Cuantitativa Discreta</td>
+<td>Representa un conteo de unidades indivisibles (personas); no existen “2.5 miembros” en un hogar.</td>
+</tr>
+<tr class="odd">
+<td><strong>Zona</strong></td>
+<td>Categórica Nominal</td>
+<td>Clasifica los datos en categorías de ubicación geográfica (nombres) sin que exista un orden jerárquico natural entre ellas.</td>
+</tr>
+<tr class="even">
+<td><strong>Cod postal</strong></td>
+<td>Categórica Nominal</td>
+<td>Aunque utiliza dígitos numéricos, estos funcionan exclusivamente como etiquetas de identificación de una zona; no poseen propiedades aritméticas.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>En la siguiente figura se presenta un histograma para la variable “Ingreso Mensual” donde las línea verticales representan la mediana y la media.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Adicionalmente, la variable en estudio presenta los siguientes estadísticos:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  18.00   54.75   87.50  113.34  158.25  443.00 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La desviación típica (dt) es 79.45</code></pre>
+</div>
+</div></li>
+<li><p>Represente en el gráfico mediante líneas verticales 1 y 2 desviaciones típicas (solo para valores positivos en el eje de las <span class="math inline">\(x\)</span>), y en la intersección con dicho eje, señale el valor donde ocurre la intersección, teniendo de referencia la medida de tendencia central apropiada. (1 pto.)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 192.7912</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 33.88884</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 272.2423</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -45.56232</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div></li>
+<li><p>Cuántos valores de la variable ingreso mensual, identifica que se encuentran a) en el primer cuartil b) tercer cuartil (0,5 ptos).</p>
+<p>el conjunto de datos recolectados contiene un total de <strong>200 observaciones</strong>.</p>
+<h3 id="cálculo-de-frecuencias-por-cuartil" class="anchored">Cálculo de frecuencias por cuartil</h3>
+<p>Los cuartiles dividen a un conjunto de datos ordenados en cuatro partes iguales, cada una con el <strong>25%</strong> de las observaciones totales.</p>
+<ul>
+<li><p><strong>a) Primer Cuartil (</strong><span class="math inline">\(Q_1\)</span>): Representa el valor por debajo del cual se encuentra el primer 25% de los datos. Para una muestra de 200 personas, se identifican <strong>50 valores</strong> (200 <span class="math inline">\(\times\)</span> 0.25) que se encuentran en este rango.</p></li>
+<li><p><strong>b) Tercer Cuartil (</strong><span class="math inline">\(Q_3\)</span>): Representa el valor por debajo del cual se encuentra el 75% de los datos. Esto significa que existen <strong>150 valores</strong> acumulados hasta este punto (200 <span class="math inline">\(\times\)</span> 0.75). Si se analiza desde la perspectiva de cuántos valores hay específicamente en el <em>tramo</em> del tercer cuartil, serían <strong>50 valores</strong>.</p></li>
+</ul></li>
+<li><p>¿Cuál es el RIC (IQR) del Ingreso Mensual? (0,5 ptos.)</p>
+<p>Q3 158.25 - Q1 54.75</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 103.5</code></pre>
+</div>
+</div></li>
+<li><p>Para la variable Ingreso Mensual, cree un gráfico de caja para la variable Ingreso mensual (2 ptos.)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div></li>
+<li><p>Calcule para la variable Ingreso Mensual los valores que definen a los bigotes (whiskers) y añádalos al gráfico anterior. (1 pto.)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$inferior
+[1] 18
+
+$superior
+[1] 311
+
+$inferior_calculo
+   25% 
+-100.5 
+
+$superior2_calculo
+  75% 
+313.5 
+
+$q1
+  25% 
+54.75 
+
+$q3
+   75% 
+158.25 
+
+$iqr
+  75% 
+103.5 </code></pre>
+</div>
+</div>
+<p>limite_inf &lt;- q1 - 1.5 * iqr = (54.75 -1.5*103.5 ) = -100.5, que es menor a los valores presentes y al ser negativo, no tiene sentido económico</p>
+<p>limite_sup &lt;- q3 + 1.5 * iqr = (158.25+1.5*103.5) = 311</p></li>
+<li><p>Indique la modalidad de la distribución, los posibles sesgos o asimetría en caso de aplicar. Cuál es el significado de la asimetría desde un punto de vista económico y las razones que motivan que ambas medidas de tendencia central no sean iguales y cuál medida cree que representa mejor a la familia del estudiante típico (4 ptos.)</p>
+<h3 id="modalidad-de-la-distribución" class="anchored">1. Modalidad de la distribución</h3>
+<p>La distribución es unimodal.</p>
+<p>Se observa un único pico (la barra más alta) en el intervalo que va aproximadamente de 25 a 75 unidades de “Ingreso Mensual”. Esto indica que la mayor concentración de familias se encuentra en ese rango de ingresos bajos-medios.</p>
+<h3 id="sesgo-o-asimetría" class="anchored">2. Sesgo o Asimetría</h3>
+<p>La distribución presenta una asimetría positiva (o sesgo a la derecha).</p>
+<p>Podemos confirmar esto de dos maneras:</p>
+<ul>
+<li><p><strong>Visualmente:</strong> La “cola” de la distribución se extiende mucho más hacia la derecha (valores altos de ingreso) que hacia la izquierda.</p></li>
+<li><p><strong>Analíticamente:</strong> Se cumple la relación característica de la asimetría positiva: <span class="math inline">\(\text{Media} (113.34) &gt; \text{Mediana} (87.50)\)</span> o que la <span class="math inline">\(\text{Mediana} (87.50) &lt; \text{Media} (113.34)\)</span>.</p></li>
+</ul>
+<hr>
+<h3 id="significado-económico-de-la-asimetría" class="anchored">3. Significado económico de la asimetría</h3>
+<p>Desde un punto de vista económico, una asimetría positiva en los ingresos refleja desigualdad distributiva.</p>
+<p>Indica que la gran mayoría de la población percibe ingresos relativamente bajos (concentrados a la izquierda), mientras que un grupo muy pequeño de la población percibe ingresos extremadamente altos (la cola larga a la derecha). En economía, esto sugiere que la riqueza no está distribuida de forma equitativa.</p>
+<hr>
+<h3 id="por-qué-la-media-y-la-mediana-no-son-iguales" class="anchored">4. ¿Por qué la media y la mediana no son iguales?</h3>
+<p>La razón principal es la <strong>sensibilidad a los valores extremos (valores atípicos)</strong>:</p>
+<ul>
+<li><p><strong>La Media:</strong> Se ve “arrastrada” hacia la derecha por los ingresos muy altos (como el valor máximo de 443.00). Al sumar todos los valores y dividir, esos pocos sueldos altos inflan el promedio general.</p></li>
+<li><p><strong>La Mediana:</strong> Es una medida robusta. Solo le interesa el orden de los datos. El hecho de que el ingreso más alto sea 400 o 4,000 no cambia la posición del valor central (<span class="math inline">\(87.50\)</span>).</p></li>
+</ul>
+<hr>
+<h3 id="medida-que-representa-mejor-a-la-familia-típica" class="anchored">5. Medida que representa mejor a la familia “típica”</h3>
+<p>Para este caso, la <strong>Mediana (</strong><span class="math inline">\(87.50\)</span>) representa mejor a la familia del estudiante típico.</p>
+<p><strong>¿Por qué?</strong> Porque en distribuciones sesgadas, la media ofrece una visión distorsionada (demasiado optimista en este caso). Decir que el ingreso “promedio” es <span class="math inline">\(113.34\)</span> es engañoso, ya que la gran mayoría de las familias ganan menos de esa cantidad. La mediana nos dice que exactamente el <strong>50% de las familias</strong> ganan <span class="math inline">\(87.50\)</span> o menos, lo cual se acerca mucho más a la realidad de la “clase media” o el sector más poblado de la muestra.</p></li>
+<li><p>Del siguiente gráfico de caja, qué relaciones puede apreciar entre las variables Miembros del Grupo Familiar y el Gasto Mensual en alimentación (1 pto.)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div></li>
+<li><p>¿Qué observaciones puede hacer sobre la recolección de datos que realizaron los estudiantes de contaduría, de acuerdo a lo repasado con respecto al muestreo?¿Considera que la entrevista a 200 personas, sabiendo que pueden haber unos 800 estudiantes, le parece un método adecuado que representa a todos los estudiantes de la Facultad? (1 pto.)</p>
+<h3 id="relación-directa-tendencia-positiva" class="anchored">1. Relación Directa (Tendencia Positiva)</h3>
+<p>Existe una <strong>correlación positiva</strong> entre el número de miembros y el gasto en alimentación. A medida que aumenta el tamaño del grupo familiar (del nivel 2 al 7), la <strong>mediana</strong> del gasto (la línea negra gruesa dentro de cada caja) tiende a subir de forma sostenida. Esto tiene lógica económica: a más personas en el hogar, mayor es la necesidad de consumo básico.</p>
+<h3 id="comportamiento-de-la-dispersión-variabilidad" class="anchored">2. Comportamiento de la Dispersión (Variabilidad)</h3>
+<ul>
+<li><p><strong>Hogares pequeños (1 miembro):</strong> Presentan la mayor variabilidad o “incertidumbre” relativa en el gasto, con una caja muy alta y bigotes extensos. Esto sugiere que los hábitos de consumo de personas que viven solas son muy heterogéneos.</p></li>
+<li><p><strong>Hogares grandes (7 miembros):</strong> La caja es mucho más compacta, lo que indica que en grupos familiares grandes el gasto está más “estandarizado” o concentrado en un rango específico (posiblemente debido a presupuestos más ajustados por economía de escala).</p></li>
+</ul>
+<h3 id="presencia-de-valores-atípicos-outliers" class="anchored">3. Presencia de Valores Atípicos (Outliers)</h3>
+<p>Se observan varios <strong>puntos rojos</strong> por encima de los bigotes en casi todos los grupos (especialmente en los de 4, 2 y 6 miembros).</p>
+<ul>
+<li><p><strong>Significado:</strong> Existen familias que, a pesar de tener pocos miembros, gastan significativamente más que el promedio de su grupo. Esto puede deberse a un mayor nivel de ingresos o a hábitos de consumo de lujo.</p></li>
+<li><p><strong>Caso especial:</strong> En el grupo de 6 miembros, hay un valor atípico por debajo (un punto rojo inferior), lo que representa un hogar que gasta inusualmente poco para su tamaño.</p></li>
+</ul></li>
+<li><p>Cuál de las relaciones de asociación, según lo que se muestra cada gráfico, le parece que tiene más sentido. Sólo para el gráfico que seleccionado, justifique su elección, indique el tipo de relación y cualquier otro elemento de importancia. (2 ptos.)</p>
+<div>
+
+</div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="I_parcial2025_03_respuestas_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div></li>
+</ol>
+<section id="gráfico-seleccionado-el-de-la-derecha" class="level3">
+<h3 class="anchored" data-anchor-id="gráfico-seleccionado-el-de-la-derecha">Gráfico seleccionado: El de la derecha</h3>
+<p>El gráfico que tiene más sentido económico es el de la <strong>derecha</strong>, donde el <strong>Ingreso Mensual</strong> está en el eje X (variable independiente) y el <strong>Gasto en Alimentación</strong> está en el eje Y (variable dependiente).</p>
+<hr>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>Ls teoría económica y la estadística descriptiva, la elección se basa en los siguientes puntos:</p>
+<ul>
+<li><p><strong>Posible existencia de relación de Causalidad:</strong> El nivel de ingresos es el que según la teoría económica puede determinar o limitar la capacidad de gasto de un hogar, y no al revés. Es más lógico decir que “si gano más, gasto más en comida” a decir que “si gasto más en comida, mi sueldo aumenta”.</p></li>
+<li><p><strong>Variable Independiente vs.&nbsp;Dependiente:</strong> En un diagrama de dispersión (scatter plot), la variable que explica el fenómeno (causa) se coloca tradicionalmente en el eje horizontal (<span class="math inline">\(X\)</span>). En este caso, el ingreso es el factor explicativo del consumo.</p></li>
+</ul>
+</section>
+<section id="tipo-de-relación" class="level3">
+<h3 class="anchored" data-anchor-id="tipo-de-relación">Tipo de relación</h3>
+<ul>
+<li><strong>Relación Lineal Positiva (Directa):</strong> Se observa una tendencia ascendente; a medida que aumentan los ingresos, el gasto en alimentación también tiende a crecer.</li>
+</ul>
+</section>
+<section id="otros-elementos-de-importancia" class="level3">
+<h3 class="anchored" data-anchor-id="otros-elementos-de-importancia">Otros elementos de importancia</h3>
+<ul>
+<li><p><strong>Propensión Marginal al Consumo:</strong> Nota que a niveles muy altos de ingreso (hacia la derecha del eje X), la dispersión de los puntos en el eje Y aumenta. Esto sugiere que para los más ricos, el gasto en alimentación es más discrecional o variado.</p></li>
+<li><p><strong>Valores Atípicos:</strong> En el extremo superior derecho de ambos gráficos se observa un punto muy alejado de la masa principal (un hogar con ingresos y gastos excepcionalmente altos), lo cual es común en datos económicos de este tipo.</p></li>
+</ul>
+<ol type="1">
+<li><ul>
+<li><table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Medida</strong></td>
+<td><strong>Uso Principal en Economía</strong></td>
+<td><strong>Ventaja Clave</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Aritmética</strong></td>
+<td>Resumen general de datos simétricos</td>
+<td>Facilidad de cálculo e interpretación</td>
+</tr>
+<tr class="odd">
+<td><strong>Ponderada</strong></td>
+<td>Índices de precios y carteras</td>
+<td>Refleja la importancia relativa de cada rubro</td>
+</tr>
+<tr class="even">
+<td><strong>Geométrica</strong></td>
+<td>Crecimiento del PIB / Tasas de interés</td>
+<td>Maneja correctamente factores multiplicativos</td>
+</tr>
+<tr class="odd">
+<td><strong>Armónica</strong></td>
+<td>Rendimientos y promedios de ratios</td>
+<td>Ideal para promediar tasas de cambio o productividad</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+<li><p>Una empresa de capital de riesgo registra las siguientes&nbsp;<strong>tasas de crecimiento porcentual anual</strong>&nbsp;(R)&nbsp;sobre su portafolio de inversión durante un período de&nbsp;<strong>cinco años</strong>&nbsp;(2019-2023).</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Año</strong></td>
+<td><strong>Tasa de Crecimiento Anual (Ri​)</strong></td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td><strong>3,5%</strong></td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td><strong>2,6%</strong></td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td><strong>3,1%</strong></td>
+</tr>
+<tr class="odd">
+<td>2022</td>
+<td><strong>4,2%</strong></td>
+</tr>
+<tr class="even">
+<td>2023</td>
+<td><strong>5,3%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Para calcular la media que representa la&nbsp;<strong>tasa de crecimiento promedio anual compuesta</strong>&nbsp;(o el factor multiplicativo promedio) de la inversión, se deben usar los&nbsp;<strong>factores de crecimiento</strong>&nbsp;(1+Ri​), es decir: x1​=1+0,035=1,035 ; x2​=1+0,026=1,026;….; x5​=1+0,053=1,053</p>
+<ol type="1">
+<li><p><strong>Medida de Tendencia Central :</strong>&nbsp;Indique cuál es la&nbsp;<strong>medida de tendencia central</strong>&nbsp;(de las cuatro listadas) que mejor representaría la&nbsp;<strong>tasa de crecimiento promedio anual compuesta</strong>&nbsp;de esta serie, y justifique <em>brevemente</em> su elección en términos económicos. (1 pto.)</p>
+<p>La medida que mejor representa la tasa de crecimiento promedio anual compuesta es la <strong>Media Geométrica</strong>.</p>
+<ul>
+<li><strong>Justificación:</strong> En términos económicos, las tasas de crecimiento financiero son multiplicativas, no aditivas. La media geométrica permite hallar una tasa constante que, aplicada año tras año, daría el mismo valor final de inversión, evitando la sobreestimación que suele causar la media aritmética en series temporales con variabilidad.</li>
+</ul></li>
+<li><p><strong>Implementación de la Fórmula</strong> &nbsp;Indique la implementación de la fórmula con la cuál se calcularía dicha media, utilizando los valores transformados de la serie (es decir,&nbsp;xi​=1+Ri​). (No es necesario realizar el cálculo final). (1 pto.)</p>
+<p>Para calcularla con los valores transformados <span class="math inline">\(x_i = (1 + R_i)\)</span>, la implementación sería la raíz quinta del producto de los factores:</p>
+<p>$$G = \sqrt[5]{1,035 \times 1,026 \times 1,031 \times 1,042 \times 1,053}$$</p></li>
+</ol></li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

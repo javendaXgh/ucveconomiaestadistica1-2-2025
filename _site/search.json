@@ -2172,8 +2172,8 @@
     "objectID": "clases/practica_introprobabilidad.html#el-escenario-estudiantes-de-faces",
     "href": "clases/practica_introprobabilidad.html#el-escenario-estudiantes-de-faces",
     "title": "Estadística I",
-    "section": "",
-    "text": "Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.\nDatos de la muestra (N = 100):\n\n\n\nEscuela\nMasculino (M)\nFemenino (F)\nTotal\n\n\n\n\nEconomía\n15\n10\n25\n\n\nSociología\n10\n20\n30\n\n\nEstudios Int.\n20\n25\n45\n\n\nTotal\n45\n55\n100"
+    "section": "El Escenario: Estudiantes de FACES",
+    "text": "El Escenario: Estudiantes de FACES\nImaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.\nDatos de la muestra (N = 100):\n\n\n\nEscuela\nMasculino (M)\nFemenino (F)\nTotal\n\n\n\n\nEconomía\n15\n10\n25\n\n\nSociología\n10\n20\n30\n\n\nEstudios Int.\n20\n25\n45\n\n\nTotal\n45\n55\n100"
   },
   {
     "objectID": "clases/practica_introprobabilidad.html#definición-de-eventos",
@@ -2215,7 +2215,7 @@
     "href": "clases/practica_introprobabilidad.html#ejercicio-rápido-para-la-clase",
     "title": "Estadística I",
     "section": "Ejercicio Rápido para la Clase",
-    "text": "Ejercicio Rápido para la Clase\nUtilizando la tabla inicial, calcular:\n\n¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de Estudios Internacionales o sea de sexo Masculino?\n\nRecordar identificar: 1. \\(P(\\text{EEI})\\) 2. \\(P(\\text{M})\\) 3. \\(P(\\text{EEI} \\cap \\text{M})\\)"
+    "text": "Ejercicio Rápido para la Clase\nUtilizando la tabla inicial, calcular:\n\n¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de Estudios Internacionales o sea de sexo Masculino?\n\nRecordar identificar: 1. \\(P(\\text{EEI})\\) 2. \\(P(\\text{M})\\) 3. \\(P(\\text{EEI} \\cap \\text{M})\\)\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/practica_introprobabilidad.html#paso-a-paso-aplicando-la-fórmula-1",

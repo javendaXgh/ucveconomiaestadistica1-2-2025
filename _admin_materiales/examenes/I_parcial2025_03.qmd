@@ -1,0 +1,224 @@
+---
+title: ""
+format: 
+  pdf:
+      #documentclass: article
+      geometry:
+        - margin=.3in 
+      spacing: single 
+      fontsize: 9pt
+---
+
+## 1 er. Examen Parcial / Prof. José M. Avendaño I. / Fecha: 25-11-2025
+
+## Nombre y Apellido: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ / C.I.: \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+```{r}
+#| warning: false
+#| echo: false
+library(tidyverse)
+library(gt)
+library(gtExtras)
+library(rvest)
+library(knitr)
+# urban_ccs <- read_html("https://www.megaoffice.com.ve/codigo-postales-de-venezuela?estado=distrito%20capital&srsltid=AfmBOopDk7mfBfE0rEUq0o0ODr0m-eZ44lVeI32S7aSG631x3Yv5xztm") %>%
+#   html_nodes("td+ td") %>%
+#   html_text()
+
+urban_ccs <- readRDS('urban_ccs_raw.csv')
+
+urban_ccs_df <- data.frame(
+  urban_area = urban_ccs[seq(1, length(urban_ccs), by = 2)],
+  postal_code = urban_ccs[seq(2, length(urban_ccs), by = 2)])%>%
+  mutate(urban_area=str_remove_all( urban_area,'Urbanización |Barrio |Caracas|\\(\\)'),
+         urban_area=str_remove_all( urban_area,'\\(\\)'),
+         urban_area=str_squish(urban_area))
+
+set.seed(456) # Cambiamos la semilla para variar los datos
+
+# 1. Generar estructura base
+datos_hogares <- data.frame(
+  Hogar_ID = 1:200,
+  # Ingresos log-normales (común en economía)
+  Ingreso_Mensual = round(rlnorm(200, meanlog = 6.8, sdlog = 0.7), 2), 
+  Miembros = sample(1:7, 200, replace = TRUE, prob = c(0.15, 0.25, 0.25, 0.15, 0.1, 0.05, 0.05))
+)
+
+# 2. Calcular Gasto en Alimentación con lógica económica
+# Fórmula: Gasto Fijo por Persona (Necesidad) + Propensión Marginal al Consumo (Lujo/Variedad)
+datos_hogares <- datos_hogares %>%
+  mutate(
+    # Costo base por persona (entre 40$ y 60$ por cabeza + ruido aleatorio)
+    Costo_Basico = Miembros * runif(n(), 40, 60),
+    
+    # Gasto adicional según ingreso (la gente con más dinero compra comida más cara)
+    # Usamos logaritmo para que decrezca proporcionalmente (Ley de Engel)
+    Gasto_Extra = Ingreso_Mensual * runif(n(), 0.10, 0.20),
+    
+    # Gasto Total preliminar
+    Gasto_Alimentacion = round(Costo_Basico + Gasto_Extra, 2)
+  )
+
+# 3. Ajuste de Realidad (Constraint)
+# El gasto en comida no puede superar el 90% del ingreso (caso pobreza extrema)
+datos_hogares$Gasto_Alimentacion <- pmin(
+  datos_hogares$Gasto_Alimentacion, 
+  datos_hogares$Ingreso_Mensual * 0.90
+)
+
+# Limpiar columnas auxiliares
+datos_hogares <- datos_hogares %>% select(Hogar_ID, Ingreso_Mensual, Gasto_Alimentacion, Miembros)
+datos_hogares <- datos_hogares%>%
+  mutate(Ingreso_Mensual=Ingreso_Mensual/10,
+         Gasto_Alimentacion= Gasto_Alimentacion/10)
+
+datos_hogares <- datos_hogares%>%
+  bind_cols(urban_ccs_df%>%
+              sample_n(20, replace = TRUE)%>%
+              sample_n(200, replace = TRUE))%>%
+  mutate(Ingreso_Mensual=round(Ingreso_Mensual),
+         Gasto_Alimentacion=round( Gasto_Alimentacion))%>%
+  rename(Ingreso= Ingreso_Mensual,
+         Gastos= Gasto_Alimentacion,
+         zona=urban_area,
+         `cod postal`=postal_code)
+
+```
+
+## 1 Análisis Conjunto de Datos
+
+En la cátedra de Estadística de la carrera de Contaduría se realizó un estudio de tipo \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ para obtener una muestra de estudiantes de la FACES.
+
+La recolección de datos se llevó a cabo en la zona de espera de los ascensores (planta baja), aprovechando el tiempo de espera de los usuarios para realizar la entrevista. Se registraron las siguientes variables: ingreso mensual del núcleo familiar, gasto mensual en alimentación (ambos en unidades monetarias), número de miembros del grupo familiar, zona de residencia y código postal.
+
+A continuación se presentan las primeras 4 filas del conjunto de datos recolectados que contiene un total de 200 observaciones.
+
+```{r}
+#| echo: false
+
+#datos_hogares%>%
+#  sample_n(5)%>%
+# select(-Hogar_ID)%>%
+#  gt()
+
+kable(datos_hogares%>%
+  sample_n(4)%>%
+  select(-Hogar_ID))
+```
+
+1.  Indique los tipos de variables recolectadas y el tipo de estudio realizado (linea subrayada anterior) (3 ptos).
+
+    ------------------------------------------------------------------------
+
+    En la siguiente figura se presenta un histograma para la variable "Ingreso Mensual" donde las línea verticales representan la mediana y la media.
+
+    ```{r}
+    #| echo: false
+    #| warning: false
+    #| fig-height: 2
+
+    ggplot(datos_hogares, 
+           aes(x = `Ingreso`)) +
+      geom_histogram( alpha = 0.3, bins =10) +
+      theme_minimal() +
+      labs(#title = "Ingresos Mensual",
+           #subtitle = "n = 200 hogares",
+        x = "Ingreso Mensual",
+        y = "Frecuencia"
+      )+ #añadir linea media y mediana
+      geom_vline(aes(xintercept=mean(`Ingreso`)),
+                 color='blue',
+                 linetype='dashed',
+                 size=1)+
+      geom_vline(aes(xintercept=median(`Ingreso`)),
+                 color='red',
+                 # linetype='dashed',
+                 size=1)
+    ```
+
+    Adicionalmente, la variable en estudio presenta los siguientes estadísticos:
+
+    ```{r}
+    #| echo: false
+    summary(datos_hogares$Ingreso)
+    cat('La desviación típica (dt) es', round(sd(datos_hogares$Ingreso),2))
+    ```
+
+2.  Represente en el gráfico mediante líneas verticales 1 y 2 desviaciones típicas (solo para valores positivos en el eje de las $x$), y en la intersección con dicho eje, señale el valor donde ocurre la intersección, teniendo de referencia la medida de tendencia central apropiada. (1 pto.)
+
+3.  Cuántos valores de la variable ingreso mensual, identifica que se encuentran a) en el primer cuartil b) tercer cuartil (0,5 ptos).
+
+4.  ¿Cuál es el RIC (IQR) del Ingreso Mensual? (0,5 ptos.)
+
+5.  Para la variable Ingreso Mensual, cree un gráfico de caja para la variable Ingreso mensual (2 ptos.)
+
+6.  Calcule para la variable Ingreso Mensual los valores que definen a los bigotes (whiskers) y añádalos al gráfico anterior. (1 pto.)
+
+7.  Indique la modalidad de la distribución, los posibles sesgos o asimetría en caso de aplicar. Cuál es el significado de la asimetría desde un punto de vista económico y las razones que motivan que ambas medidas de tendencia central no sean iguales y cuál medida cree que representa mejor a la familia del estudiante típico (4 ptos.)
+
+8.  Del siguiente gráfico de caja, qué relaciones puede apreciar entre las variables Miembros del Grupo Familiar y el Gasto Mensual en alimentación (1 pto.)
+
+    ```{r}
+    #| echo: false
+    #| warning: false
+    #| fig-height: 2
+    ggplot(datos_hogares,
+           aes(x = factor(Miembros), 
+               y = Gastos)) +
+      geom_boxplot(fill = "lightblue", 
+                   alpha = 0.6,
+                   outlier.colour = "red",
+                    outlier.size = 2,
+                    staplewidth = 0.2) +
+      theme_minimal() +
+      labs(
+        title = "Miembros vs Gasto en Alimentación",
+        x = "Número de Miembros en el Hogar",
+        y = "Gasto en Alimentación "
+      )
+    ```
+
+9.  ¿Qué observaciones puede hacer sobre la recolección de datos que realizaron los estudiantes de contaduría, de acuerdo a lo repasado con respecto al muestreo?¿Considera que la entrevista a 200 personas, sabiendo que pueden haber unos 800 estudiantes, le parece un método adecuado que representa a todos los estudiantes de la Facultad? (1 pto.)
+
+10. Cuál de las relaciones de asociación, según lo que se muestra cada gráfico, le parece que tiene más sentido. Sólo para el gráfico que seleccionado, justifique su elección, indique el tipo de relación y cualquier otro elemento de importancia. (2 ptos.)
+
+    ```{r}
+    #| layout-ncol: 2
+    #| fig-height: 3
+    #| echo: false
+    options(scipen=999)
+    plot(datos_hogares$Gastos~datos_hogares$Ingreso,
+         xlab='Gastos Mensuales Alimentación',ylab ='Ingresos Mensuales',
+         cex = .2)
+
+    plot(datos_hogares$Ingreso~datos_hogares$Gastos,
+         ylab='Gastos Mensuales Alimentación',xlab ='Ingresos Mensuales',
+         cex = .2,)
+    ```
+
+## II- Medidas de Tendencia Central
+
+La elección de una medida de tendencia central adecuada es crucial para la interpretación económica. Teniendo en cuenta las siguientes fórmulas para el cálculo de distintos tipos de medias:
+
+| Ponderada | Armónica | Geométrica | Aritmética |
+|:--:|:--:|:--:|:--:|
+| $$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$ | $$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$ | $$G = \sqrt[n]{x_1 \times x_2 \times \cdots \times x_n}$$ | $xˉ=\frac{\sum_{i=1}^{n}​}{n}​=\frac{x1​+x2​+⋯+xn}{n}$ |
+
+1.  Indique un **caso o contexto económico específico** en el cuál es *recomendado* o *necesario* el uso de cada una de estas cuatro medias. Explique brevemente por qué es la medida más apropiada en ese escenario. (2 ptos.)
+
+2.  Una empresa de capital de riesgo registra las siguientes **tasas de crecimiento porcentual anual** (R) sobre su portafolio de inversión durante un período de **cinco años** (2019-2023).
+
+    |         |                                    |
+    |---------|------------------------------------|
+    | **Año** | **Tasa de Crecimiento Anual (Ri​)** |
+    | 2019    | **3,5%**                           |
+    | 2020    | **2,6%**                           |
+    | 2021    | **3,1%**                           |
+    | 2022    | **4,2%**                           |
+    | 2023    | **5,3%**                           |
+
+    Para calcular la media que representa la **tasa de crecimiento promedio anual compuesta** (o el factor multiplicativo promedio) de la inversión, se deben usar los **factores de crecimiento** (1+Ri​), es decir: x1​=1+0,035=1,035 ; x2​=1+0,026=1,026;....; x5​=1+0,053=1,053
+
+    1.  **Medida de Tendencia Central :** Indique cuál es la **medida de tendencia central** (de las cuatro listadas) que mejor representaría la **tasa de crecimiento promedio anual compuesta** de esta serie, y justifique *brevemente* su elección en términos económicos. (1 pto.)
+
+    2.  **Implementación de la Fórmula**  Indique la implementación de la fórmula con la cuál se calcularía dicha media, utilizando los valores transformados de la serie (es decir, xi​=1+Ri​). (No es necesario realizar el cálculo final). (1 pto.)

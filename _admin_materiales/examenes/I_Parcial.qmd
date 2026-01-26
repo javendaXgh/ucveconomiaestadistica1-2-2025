@@ -33,7 +33,7 @@ ames_subset <- ames%>%
 `ames` contiene información de la "Ames Assessor's Office" y se utiliza para calcular los valores de precios de propiedades residenciales individuales vendidas en Iowa, Estados Unidos, con datos comprendidos entre los años 2006 y 2010. El conjunto de datos inicialmente incluye 2.930 observaciones y del total de variables que lo componen solo se tomarán 7.
 
 | **Nombre Variable** | **Descripción** |
-|----|----|
+|------------------------------------|------------------------------------|
 | area | área en mts2 |
 | price | precio de venta |
 | Kitchen.Qual | calificación otorgada al área de la cocina (Ex:Excellent, Gd: Good, TA: Typical/Average, Fa: Fair, Po: Poor) |
@@ -69,7 +69,7 @@ kable(head(ames_subset, 5))
 1.  Para cada uno de los siguientes estudios, mencione de qué tipo es cada uno (lo puede hacer directamente en la tabla) (1 pto.):
 
     | ítem | **Descripción** | **Tipo** |
-    |----|----|----|
+    |------------------------|------------------------|------------------------|
     | 1 | Otorgar microcréditos aleatoriamente a un grupo de familias de bajos ingresos en una comunidad y comparar el desarrollo de sus pequeños negocios y su bienestar económico con un grupo similar que no recibió los microcréditos. |  |
     | 2 | Realizar una encuesta en Guarenas para determinar la relación entre el nivel educativo de los adultos y sus ingresos anuales en un momento dado. |  |
     | 3 | En la ciudad Mérida, seguir a un grupo de jóvenes que acceden a programas de formación profesional y a otro grupo que no lo hace, durante cinco años, para comparar sus tasas de empleo y salarios. |  |
@@ -93,7 +93,7 @@ kable(head(ames_subset, 5))
 Teniendo presente las fórmulas para calcular distintos tipos de medias:
 
 | Ponderada | Armónica | Geométrica | Aritmética |
-|:--:|:--:|:--:|:--:|
+|:----------------:|:----------------:|:----------------:|:----------------:|
 | $$\bar{x}_w = \frac{\sum_{i=1}^{n} w_i x_i}{\sum_{i=1}^{n} w_i}$$ | $$H = \frac{n}{\sum_{i=1}^{n} \frac{1}{x_i}}$$ | $$G = \sqrt[n]{x_1 \times x_2 \times \cdots \times x_n}$$ | $xˉ=\frac{\sum_{i=1}^{n}​}{n}​=\frac{x1​+x2​+⋯+xn}{n}$ |
 
 1.  Indique un caso en la cuál es recomendado el uso de cada una de ellas (2 pto.)
