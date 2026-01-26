@@ -2,8 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
-._admin_materiales/*
+_admin_materiales/
 /.quarto/
 _apps/app_recolecion/
 _apps/app_recolecion/creden.json
 _apps/rsconnect/
+_admin_materiales/
+
+
