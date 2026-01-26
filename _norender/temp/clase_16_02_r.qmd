@@ -1,0 +1,143 @@
+---
+title: "Estadística I"
+subtitle: "Clase 16: $R^2$ (Coeficiente de Determinación)"
+format: revealjs
+date: "2025/06/10"
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## $R^2$
+
+-   Medida estadística que representa la proporción de la varianza de la variable dependiente ($Y$) que es predecible a partir de la variable independiente ($X$) en un modelo de regresión lineal.
+
+-   Forma rápida de indicar lo bien que el modelo de regresión se ajusta a los datos observados.
+
+-   Su valor siempre se encuentra entre **0** y **1** (o 0% y 100%).
+
+## Importancia
+
+-   En economía, $R^2$ nos ayuda a entender la capacidad predictiva de nuestros modelos.
+-   Por ejemplo, si estamos modelando el consumo en función del ingreso, un $R^2$ alto indicaría que el ingreso explica una gran parte de la variabilidad del consumo.
+-   Nos permite evaluar la "bondad de ajuste" de nuestro modelo antes de sacar conclusiones sobre las relaciones entre variables económicas.
+
+## Interpretación del valor de $R^2$ {.small}
+
+-   $R^2 = 0$: El modelo de regresión no explica absolutamente nada de la variabilidad de la variable dependiente. Las variables independientes no tienen ningún poder predictivo.
+
+-   $R^2 = 1$: El modelo de regresión explica el 100% de la variabilidad de la variable dependiente. Todas las observaciones se encuentran exactamente sobre la línea de regresión. Esto es extremadamente raro en datos económicos reales.
+
+-   $0 < R^2 < 1$: Indica que el modelo explica una parte de la variabilidad de la variable dependiente.
+
+## Ejemplo:
+
+-   Si $R^2 = 0.60$ (o 60%), significa que el 60% de la variabilidad total de la variable dependiente puede ser explicada por las variables independientes incluidas en el modelo. El 40% restante es variabilidad no explicada (residual).
+
+## Consideraciones importantes al interpretar $R^2$ {.small}
+
+-   Un $R^2$ alto no siempre significa que el modelo es "bueno" o que las variables independientes son las únicas causas. Puede haber causalidad inversa, variables omitidas, etc.
+-   Un $R^2$ bajo no siempre significa que el modelo es "malo". En algunas áreas de la economía, donde hay mucha variabilidad no controlada, un $R^2$ de 0.20 o 0.30 puede ser considerado aceptable.
+-   $R^2$ tiende a aumentar con cada variable independiente que se añade al modelo, incluso si esa variable no es estadísticamente significativa.
+
+------------------------------------------------------------------------
+
+# Calcular $R^2$: Tipos de variabilidad:
+
+## **Suma Total de Cuadrados (SST - Total Sum of Squares):** {.small}
+
+Mide la variabilidad total de la variable dependiente (Y) con respecto a su media. $$SST = \sum_{i=1}^{n} (Y_i - \bar{Y})^2$$ Donde:
+
+-   $Y_i$ es el valor observado de la variable dependiente para la observación $i$.
+-   $\bar{Y}$ es la media de la variable dependiente.
+-   $n$ es el número de observaciones.
+
+## **Suma Explicada de Cuadrados:** {.small}
+
+La SSE - Explained Sum of Squares / Sum of Squares Regression) mide la variabilidad de la variable dependiente que es explicada por el modelo de regresión. Es la diferencia entre los valores predichos y la media de Y. $$SSE = \sum_{i=1}^{n} (\hat{Y}_i - \bar{Y})^2$$ Donde:
+
+-   $\hat{Y}_i$ es el valor predicho de la variable dependiente para la observación $i$ por el modelo de regresión.
+-   $\bar{Y}$ es la media de la variable dependiente.
+
+## **Suma de Cuadrados de los Errores:** {.small}
+
+**L**a SSR - Sum of Squares Residual / Sum of Squares Error) mide la variabilidad no explicada por el modelo, es decir, la suma de los cuadrados de los residuos (la diferencia entre los valores observados y los predichos). $$SSR = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2$$ Donde:
+
+-   $Y_i$ es el valor observado de la variable dependiente para la observación $i$.
+-   $\hat{Y}_i$ es el valor predicho de la variable dependiente para la observación $i$.
+
+## La relación fundamental
+
+La variabilidad total se puede descomponer en la variabilidad explicada y la variabilidad no explicada: $$SST = SSE + SSR$$
+
+------------------------------------------------------------------------
+
+## Fórmula general de $R^2$
+
+El coeficiente de determinación $R^2$ se calcula como la proporción de la variabilidad total que es explicada por el modelo:
+
+$$R^2 = \frac{SSE}{SST}$$
+
+## Alternativa
+
+Usar la Suma de Cuadrados de los Errores:
+
+Dado que $SST = SSE + SSR$, podemos reescribir $SSE = SST - SSR$. Sustituyendo esto en la fórmula de $R^2$:
+
+$$R^2 = \frac{SST - SSR}{SST}$$
+
+$$R^2 = 1 - \frac{SSR}{SST}$$
+
+Esta segunda fórmula es en general más usada y conceptualmente clara, ya que muestra $R^2$ como 1 menos la proporción de la variabilidad no explicada.
+
+## Ejemplo de cálculo (conceptual) {.small}
+
+Si tenemos: \* $SST = 100$ (La variabilidad total de Y es 100 unidades) \* $SSR = 30$ (La variabilidad no explicada por el modelo es 30 unidades)
+
+Entonces: \* $SSE = SST - SSR = 100 - 30 = 70$
+
+Y el $R^2$ sería: $$R^2 = \frac{SSE}{SST} = \frac{70}{100} = 0.70$$O$$R^2 = 1 - \frac{SSR}{SST} = 1 - \frac{30}{100} = 1 - 0.30 = 0.70$$
+
+Esto significa que el 70% de la variabilidad de la variable dependiente es explicada por el modelo de regresión.
+
+------------------------------------------------------------------------
+
+## $R$ vs. $R^2$
+
+-   El **coeficiente de correlación lineal de Pearson (R)** es una medida estadística que cuantifica la **fuerza y dirección** de la relación lineal entre dos variables cuantitativas.
+-   Su valor se encuentra siempre entre **-1 y +1**.
+
+## Interpretación del valor de $R$ {.small}
+
+-   $R = +1$: Indica una **correlación lineal positiva perfecta**. A medida que una variable aumenta, la otra aumenta proporcionalmente en una línea recta.
+-   $R = -1$: Indica una **correlación lineal negativa perfecta**. A medida que una variable aumenta, la otra disminuye proporcionalmente en una línea recta.
+-   $R = 0$: Indica que **no hay relación lineal** entre las dos variables. Esto no significa que no haya *ningún* tipo de relación, solo que no es lineal.
+-   **Valores entre 0 y** $\pm 1$: Indican la fuerza de la relación lineal. Cuanto más cerca esté $R$ de $\pm 1$, más fuerte es la relación lineal. Cuanto más cerca esté de 0, más débil es.
+
+## La Relación $R^2$ con $R$ {.small}
+
+-   En una **regresión lineal simple** (**cuando solo se tiene una variable independiente**), el coeficiente de determinación ($R^2$) es literalmente el **cuadrado del coeficiente de correlación lineal (**$R$). $$R^2 = (R)^2$$
+-   Por ejemplo, si el coeficiente de correlación ($R$) entre el consumo y el ingreso es $0.80$, entonces el $R^2$ será $(0.80)^2 = 0.64$.
+-   Esto significa que si $R = 0.80$, hay una fuerte relación lineal positiva. Y si $R^2 = 0.64$, el 64% de la variabilidad del consumo es explicada por la variabilidad del ingreso.
+
+## Diferencias {.small}
+
+A pesar de esta relación matemática, sus interpretaciones son distintas:
+
+1.  **R (Coeficiente de Correlación):**
+    -   Mide la **dirección** (positiva o negativa) y la **fuerza** de la *relación lineal* entre dos variables.
+    -   No tiene una interpretación directa en términos de "porcentaje explicado".
+2.  $R^2$ (Coeficiente de Determinación):
+    -   Mide la **proporción de la varianza** de la variable dependiente que es explicada por el modelo de regresión (o por la(s) variable(s) independiente(s)).
+    -   Su interpretación es siempre en términos de "porcentaje" o "proporción" de la variabilidad explicada.
+    -   No tiene signo, ya que es un cuadrado, lo que significa que no indica la dirección de la relación.
+
+## ¿Cuándo es importante esta diferencia?
+
+-   En **regresión lineal simple**, se calcula $R$ y luego es elevado al cuadrado para obtener $R^2$..
+-   En **regresión lineal múltiple** (cuando se tienen dos o más variables independientes), la relación $R^2 = (R)^2$ ya no se sostiene directamente.

@@ -1,0 +1,379 @@
+---
+title: "Estadística I"
+subtitle: "Clase 16: Complemento RLS"
+format: revealjs
+date: "2025/06/10"
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## Estimación Óptimo 1
+
+```{r}
+library(plotly)
+library(dplyr)
+
+# 1. Simular datos para una regresión lineal simple
+set.seed(123) # Para reproducibilidad
+n <- 50
+x <- runif(n, 0, 10)
+true_beta0 <- 2
+true_beta1 <- 0.5
+y <- true_beta0 + true_beta1 * x + rnorm(n, 0, 1.5)
+
+# Crear un dataframe con los datos simulados
+df <- data.frame(x = x, y = y)
+
+# 2. Función para calcular la Suma de los Residuales Cuadrados (RSS)
+calculate_rss <- function(data, beta0, beta1) {
+  predictions <- beta0 + beta1 * data$x
+  residuals <- data$y - predictions
+  rss <- sum(residuals^2)
+  return(rss)
+}
+
+# 3. Generar una malla de valores para beta0 y beta1
+# Puedes ajustar estos rangos según tus datos y las expectativas de los parámetros
+beta0_range <- seq(true_beta0 - 2, true_beta0 + 2, length.out = 50)
+beta1_range <- seq(true_beta1 - 0.5, true_beta1 + 0.5, length.out = 50)
+
+# Inicializar una matriz para almacenar los valores de RSS
+rss_matrix <- matrix(NA, nrow = length(beta0_range), ncol = length(beta1_range))
+
+# Calcular RSS para cada combinación de beta0 y beta1
+for (i in 1:length(beta0_range)) {
+  for (j in 1:length(beta1_range)) {
+    rss_matrix[i, j] <- calculate_rss(df, beta0_range[i], beta1_range[j])
+  }
+}
+
+# 4. Crear el contour plot 3D interactivo con Plotly
+fig <- plot_ly(
+  x = beta0_range,
+  y = beta1_range,
+  z = rss_matrix,
+  type = "contour",
+  contours = list(
+    coloring = "heatmap" # Puedes usar 'heatmap' o 'lines'
+  ),
+  colorscale = "Viridis", # Opciones como "Jet", "Hot", "Greys", "Viridis", etc.
+  showscale = TRUE
+) %>%
+  layout(
+    title = "Contour Plot 3D de la Suma de los Residuales Cuadrados (RSS)",
+    scene = list(
+      xaxis = list(title = "Parámetro Beta0 (Intercepto)"),
+      yaxis = list(title = "Parámetro Beta1 (Pendiente)"),
+      zaxis = list(title = "Suma de los Residuales Cuadrados (RSS)")
+    )
+  )
+
+# Mostrar el gráfico
+fig
+
+```
+
+## Estimación Óptimo 2 {.small}
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+
+
+library(plotly)
+library(dplyr)
+
+# 1. Simular datos para una regresión lineal simple
+set.seed(123) # Para reproducibilidad
+n <- 50
+x <- runif(n, 0, 10)
+true_beta0 <- 2
+true_beta1 <- 0.5
+y <- true_beta0 + true_beta1 * x + rnorm(n, 0, 1.5)
+
+# Crear un dataframe con los datos simulados
+df <- data.frame(x = x, y = y)
+
+# 2. Función para calcular la Suma de los Residuales Cuadrados (RSS)
+calculate_rss <- function(data, beta0, beta1) {
+  predictions <- beta0 + beta1 * data$x
+  residuals <- data$y - predictions
+  rss <- sum(residuals^2)
+  return(rss)
+}
+
+# 3. Generar una malla de valores para beta0 y beta1
+# Ajustamos los rangos para que la "curva" sea más pronunciada y el óptimo esté bien centrado
+# Aumentamos length.out para una superficie más suave
+beta0_range <- seq(true_beta0 - 2, true_beta0 + 2, length.out = 100) # Más puntos para suavidad
+beta1_range <- seq(true_beta1 - 0.5, true_beta1 + 0.5, length.out = 100) # Más puntos para suavidad
+
+# Inicializar una matriz para almacenar los valores de RSS
+rss_matrix <- matrix(NA, nrow = length(beta0_range), ncol = length(beta1_range))
+
+# Calcular RSS para cada combinación de beta0 y beta1
+for (i in 1:length(beta0_range)) {
+  for (j in 1:length(beta1_range)) {
+    rss_matrix[i, j] <- calculate_rss(df, beta0_range[i], beta1_range[j])
+  }
+}
+
+# 4. Calcular los parámetros óptimos (mínimos cuadrados) y su RSS
+# Realizar la regresión lineal para encontrar los coeficientes óptimos
+lm_model <- lm(y ~ x, data = df)
+optimal_beta0 <- coef(lm_model)[1] # Intercepto
+optimal_beta1 <- coef(lm_model)[2] # Pendiente
+optimal_rss <- sum(lm_model$residuals^2) # RSS del modelo óptimo
+
+# 5. Crear el plot 3D de superficie interactivo con Plotly
+fig <- plot_ly(
+  x = beta0_range,
+  y = beta1_range,
+  z = rss_matrix,
+  type = "surface",
+  colorscale = "Viridis", # Un esquema de color que ayuda a visualizar la profundidad
+  showscale = FALSE,
+  # Opcional: configurar la opacidad para ver a través de la superficie si es necesario
+  opacity = 0.8
+) %>%
+  # Añadir el punto rojo del óptimo
+  add_trace(
+    x = optimal_beta0,
+    y = optimal_beta1,
+    z = optimal_rss,
+    type = "scatter3d", # Usar scatter3d para puntos en 3D
+    mode = "markers",
+    marker = list(
+      size = 8,          # Tamaño del punto
+      color = "red",     # Color rojo
+      symbol = "circle", # Símbolo del punto
+      opacity = 1,       # Asegurarse de que el punto sea completamente visible
+      line = list(color = "black", width = 1) # Borde para mayor visibilidad
+    ),
+    name = "Óptimo (Mínimos Cuadrados)" # Leyenda para el punto
+  ) %>%
+  layout(
+    # title = "Superficie 3D de la Suma de RSS con Óptimo",
+    scene = list(
+      xaxis = list(title = "Parámetro Beta0 (Intercepto)"),
+      yaxis = list(title = "Parámetro Beta1 (Pendiente)"),
+      zaxis = list(title = "Suma de RSS"),
+      # Ajustar la cámara para una mejor perspectiva inicial
+      camera = list(
+        eye = list(x = 1.8, y = 1.8, z = 0.8) # Posición de la cámara: x, y, z
+      )
+    )
+  )
+
+# Mostrar el gráfico
+fig%>%
+  layout(showlegend = FALSE)
+```
+
+## Supuestos para aplicar un modelo de R.L. {.small}
+
+1.  **Linealidad:** los datos representados en un gráfico de dispersión deben mostrar una tendencia lineal
+
+2.  **Residuos casi normales.** Generalmente, los residuos deben ser casi normales. Cuando esta condición resulta irrazonable, suele deberse a **valores atípicos** o a la preocupación por los **puntos influyentes**.
+
+3.  **Variabilidad de los puntos:** alrededor de la línea de mínimos cuadrados permanece aproximadamente constante
+
+4.  **Observaciones independientes:** Se debe tener cuidado al aplicar la regresión a datos de series temporales, que son observaciones secuenciales en el tiempo, como el precio diario de una acción.
+
+## Representación Gráfica
+
+![](images/clase15/supuestos.png){fig-align="center" width="900"}
+
+## Elementos de la RL:
+
+-   Se puede estimar con la fórmula
+
+    $$\beta_1 = \frac{DT_y}{DT_x}R$$
+
+-   Siendo R la correlación entre las dos variables y $DT$ la desviación típica de la variable explicativa y de respuesta de la muestra.
+
+-   Si $\bar{x}$ es la media muestral de la variable explicativa e $\bar{y}$​ es la media muestral de la variable vertical, entonces el punto $(\bar{x},\bar{y}​)$ está en la línea de mínimos cuadrados.
+
+## Valores Atípicos
+
+Los valores atípicos en las regresiones son aquellos que se encuentran alejados de las "nubes" de puntos
+
+![](images/clase15/outliers.png){fig-align="center"}
+
+## Puntos de Apalancamiento y Puntos Influyentes
+
+![](images/clase15/levarage.png){fig-align="center"}
+
+## Puntos de Apalancamiento y Puntos Influyentes
+
+-   Los puntos que se encuentran horizontalmente alejados del centro de la "nube" de datos tienden a ejercer una mayor atracción sobre la línea, por lo que los llamamos puntos con alto apalancamiento.
+
+-   Si uno de estos puntos de alto apalancamiento parece ejercer realmente su influencia en la pendiente de la línea, entonces lo llamamos un punto influyente.
+
+## Ejemplo Regresión Lineal Simple {.small}
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase15/advertising.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+El gráfico muestra las ventas, en miles de unidades, en función de los presupuestos de gastos en publicidad en TV en miles de dólares, para 200 mercados diferentes. Igualmente se muestra el ajuste de mínimos cuadrados simple de las ventas a esa variable, es decir, la línea azul representa un modelo simple que puede usarse para predecir las ventas
+:::
+:::::
+
+## Preguntas a Responder
+
+1.  ¿Existe una relación entre la inversión en publicidad y las ventas obtenidas?
+
+2.  ¿Cuán fuerte es la relación entre la inversión en publicidad y las ventas obtenidas?
+
+3.  ¿Cuán precisos podemos predecir las ventas futuras cuando modificamos el presupuesto en publicidad?
+
+4.  ¿La relación que se presenta es lineal?
+
+## Representación del Modelo RLS
+
+-   $ventas ≈β0​+β1​×TV$
+
+    $TV=$ Presupuesto de publicidad en televisión
+
+-   En este caso X representa la publicidad en TV e Y representa las ventas.
+
+-   Se puede leer "≈" como "se modela aproximadamente como". También se dice que estamos **regresando Y en X** (o Y sobre X).
+
+-   Entonces podemos regresar las ventas sobre la TV ajustando el modelo
+
+## Estimación de los Coeficientes -1 {.small}
+
+![](images/clase15/advertv.png){fig-align="center" width="400"}
+
+-   Debemos usar los datos $(x1​,y1​),(x2​,y2​),…,(xn​,yn​)$ para estimar los coeficientes:
+
+-   Sea $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$ la predicción para $Y$ basada en el $i-ésimo$ valor de $X$.
+
+-   Entonces $e_i = y_i - \hat{y}_i$ representa el $i-ésimo$ **residuo**; esta es la diferencia entre el $i-ésimo$ valor de respuesta observado y el $i-ésimo$ valor de respuesta predicho por nuestro modelo lineal.
+
+## Estimación de los Coeficientes -2 {.small}
+
+Definimos la **suma de cuadrados residual (RSS)** como $RSS=e_1^2​+e_2^2​+⋯+e_n^2$​, o:
+
+$$
+\text{RSS} = (y_1 - \hat{\beta}_0 - \hat{\beta}_1 x_1)^2 + (y_2 - \hat{\beta}_0 - \hat{\beta}_1 x_2)^2 + \dots + (y_n - \hat{\beta}_0 - \hat{\beta}_1 x_n)^2 
+$$
+
+El enfoque de mínimos cuadrados elige $β^​0​$ y $β^​1$​ para minimizar la RSS. Usando algo de cálculo,los minimizadores son:
+
+$$
+\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}
+$$
+
+y
+
+$$
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x},
+$$
+
+donde $\bar{x}$ ​y $\bar{y}$ son las medias muestrales.
+
+## Estimación de los Coeficientes -3
+
+El ajuste de regresión lineal simple para los gastos de publicidad en TV es $$β^​0​=7.03$$ y $$β^​1​=0.0475$$
+
+Significado: un gasto adicional de \$1.000 en publicidad televisiva se asocia con la venta de aproximadamente 47.5 unidades adicionales del producto.
+
+## Representación Gráfica Parámetros
+
+![](images/clase15/optimoRL.png){fig-align="center" width="900"}
+
+Ejemplo tomado del libro "Introduction To Statistical Learning", capítulo Regresión Lineal. *Witten et. all, 2023.*
+
+# Distribución Normal
+
+## Tablero de Galton
+
+{{< video images/clase15/galton.mp4 height="600" >}}
+
+## Representación Gráfica
+
+```{r}
+#| echo: false
+#| warning: false
+library(ggplot2)
+
+# Parámetros de la distribución normal
+media <- 0
+desviacion_estandar <- 1
+
+# Crear un rango de valores para la función de densidad de probabilidad (PDF)
+x_valores <- seq(media - 4 * desviacion_estandar, media + 4 * desviacion_estandar, length.out = 500)
+y_valores <- dnorm(x_valores, mean = media, sd = desviacion_estandar)
+
+# Crear un dataframe para ggplot
+df_normal <- data.frame(x = x_valores, y = y_valores)
+
+# Crear el gráfico con ggplot2
+ggplot(df_normal, aes(x = x, y = y)) +
+  geom_line(color = "steelblue", size = 1) + # Línea de la distribución
+  geom_vline(aes(xintercept = media), linetype = "solid", color = "red", size = 0.8, alpha = 0.7) + # Línea para la media
+  geom_vline(aes(xintercept = media + desviacion_estandar), linetype = "dashed", color = "darkgreen", size = 0.6, alpha = 0.7) + # +1 std dev
+  geom_vline(aes(xintercept = media - desviacion_estandar), linetype = "dashed", color = "darkgreen", size = 0.6, alpha = 0.7) + # -1 std dev
+  geom_vline(aes(xintercept = media + 2 * desviacion_estandar), linetype = "dotted", color = "purple", size = 0.6, alpha = 0.7) + # +2 std dev
+  geom_vline(aes(xintercept = media - 2 * desviacion_estandar), linetype = "dotted", color = "purple", size = 0.6, alpha = 0.7) + # -2 std dev
+  labs(
+    title = "Distribución Normal Estándar",
+    subtitle = "Media y Desviaciones Estándar Marcadas",
+    x = "Valores",
+    y = "Densidad de Probabilidad"
+  ) +
+  annotate("text", x = media, y = max(y_valores) * 0.95, label = expression(mu), color = "red", size = 5) +
+  annotate("text", x = media + desviacion_estandar, y = max(y_valores) * 0.85, label = expression(mu + sigma), color = "darkgreen", size = 4) +
+  annotate("text", x = media - desviacion_estandar, y = max(y_valores) * 0.85, label = expression(mu - sigma), color = "darkgreen", size = 4) +
+  annotate("text", x = media + 2 * desviacion_estandar, y = max(y_valores) * 0.75, label = expression(mu + 2*sigma), color = "purple", size = 4) +
+  annotate("text", x = media - 2 * desviacion_estandar, y = max(y_valores) * 0.75, label = expression(mu - 2*sigma), color = "purple", size = 4) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5)) # Centrar títulos
+
+```
+
+------------------------------------------------------------------------
+
+## Introducción a la Distribución Normal
+
+La **Distribución Normal**, también conocida como **Distribución Gaussiana** o "Campana de Gauss", es una de las distribuciones de probabilidad más importantes en estadística.
+
+-   **Forma de Campana:** Su gráfico tiene una forma simétrica y acampanada.
+
+-   **Fundamental:** Es crucial en muchas áreas, especialmente en econometría y finanzas, por su capacidad de modelar muchos fenómenos naturales y sociales.
+
+------------------------------------------------------------------------
+
+### Características Clave {.small}
+
+-   La distribución normal está completamente definida por dos parámetros:
+
+    -   **Media (**μ): Es el centro de la distribución, donde la "campana" alcanza su punto más alto e indica el valor promedio de los datos.
+
+    -   **Desviación Estándar (**σ): Mide la dispersión o la "anchura" de la campana. Una σ pequeña significa datos agrupados cerca de la media, mientras que una σ grande indica mayor dispersión.
+
+-   **Simetría:** El 50% de los datos están por debajo de la media y el 50% por encima.
+
+------------------------------------------------------------------------
+
+### La Regla 68-95-99.7 (Regla Empírica)
+
+Esta regla es una característica clave de la distribución normal y nos ayuda a entender la dispersión de los datos:
+
+-   Aproximadamente el **68%** de los datos caen dentro de 1 desviación estándar (μ±1σ) de la media.
+
+-   Aproximadamente el **95%** de los datos caen dentro de 2 desviaciones estándar (μ±2σ) de la media.
+
+-   Aproximadamente el **99.7%** de los datos caen dentro de 3 desviaciones estándar (μ±3σ) de la media.

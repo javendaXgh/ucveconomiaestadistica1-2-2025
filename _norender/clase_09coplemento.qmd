@@ -1,0 +1,45 @@
+---
+title: "clase_13complemento"
+---
+
+### Descomposición Procedimental: Métodos
+
+-   **Promedios Móviles**: Para estimar la tendencia suavizada.
+
+-   **Diferenciación**: Para eliminar tendencia o estacionalidad.
+
+-   **Descomposición Clásica**: Estimar tendencia, luego estacionalidad, luego residuo.
+
+------------------------------------------------------------------------
+
+### Lámina 17: Descomposición con Promedios Móviles
+
+-   Calcula el promedio de un número fijo de observaciones consecutivas.
+
+-   Ayuda a suavizar las fluctuaciones a corto plazo y revela la tendencia subyacente.
+
+### Lámina 18: Ejemplo de Descomposición (Conceptual)
+
+\[Aquí podrías mostrar una serie original y, conceptualmente, cómo se verían sus componentes separados (tendencia suave, patrón estacional repetitivo, etc.).\]
+
+------------------------------------------------------------------------
+
+### Lámina 19: Importancia de la Descomposición
+
+-   Permite comprender mejor los patrones subyacentes.
+
+-   Facilita la modelización y el pronóstico.
+
+-   Ayuda a identificar las causas de las variaciones en la serie.
+
+------------------------------------------------------------------------
+
+### Lámina 20: Conclusiones y Próximos Pasos
+
+-   Las series temporales tienen componentes que influyen en su comportamiento.
+
+-   Identificar y descomponer estos componentes es crucial para el análisis.
+
+-   Existen diferentes métodos para la descomposición.
+
+¿Qué te parece esta estructura inicial? Podemos ajustar el contenido y la cantidad de láminas según tus necesidades.

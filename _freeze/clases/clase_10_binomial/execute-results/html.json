@@ -1,0 +1,15 @@
+{
+  "hash": "bba35211bd5400cb0a196e7a92d580c4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Estadística I\"\nsubtitle: \"Clase 10: Introducción a la Dist. Binomial\"\ndate: \"2026/01/19\"\nformat: revealjs\nlang: es\nauthor: M.Sc. José Miguel Avendaño I.\nincremental: true\nauto-stretch: false\nfig-align: center\nexecute:\n  echo: false\n  eval: true\n  fig-align: center\n---\n\n\n\n\n\n\\## 1. Los Cimientos: El Ensayo de Bernoulli\n\nPara entender la Binomial, primero debemos entender su \"ladrillo\" fundamental: el **Ensayo de Bernoulli**.\n\nEs un experimento único con solo dos resultados posibles:\n\n1.  **Éxito (1):** Ocurre el evento de interés (probabilidad $p$).\n2.  **Fracaso (0):** No ocurre (probabilidad $q = 1-p$).\n\n> Una **Binomial (**$n, p$) es simplemente la suma de $n$ ensayos de Bernoulli independientes.\n\n------------------------------------------------------------------------\n\n\\## 2. La Fórmula Matemática\n\nLa probabilidad de obtener exactamente $x$ éxitos en $n$ intentos no es solo $p^x$. Debemos contar todas las formas posibles de ordenar esos éxitos.\n\n$$f(x) = \\binom{n}{x} \\cdot p^x \\cdot (1-p)^{n-x}$$\n\nDonde: - $\\binom{n}{x}$: **Combinatorio**. Número de formas de elegir cuáles intentos fueron éxitos. - $p^x$: Probabilidad de los éxitos. - $(1-p)^{n-x}$: Probabilidad de los fracasos restantes.\n\n------------------------------------------------------------------------\n\n\\## 3. ¿Cómo afecta 'p' a la forma?\n\nLa forma de la distribución cambia drásticamente según el valor de $p$:\n\n-   $p = 0.5$: Simétrica (forma de campana perfecta).\n-   $p < 0.5$: Sesgo positivo (cola larga a la derecha).\n-   $p > 0.5$: Sesgo negativo (cola larga a la izquierda).\n\nVamos a demostrar esto visualmente en R simulando 3 escenarios con $n=20$.\n\n------------------------------------------------------------------------\n\n\\## 4. Código R: Comparando Probabilidades\n\nUsaremos `expand_grid` para generar escenarios para $p=0.2$, $p=0.5$ y $p=0.8$.\n\n\n\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,230 @@
+---
+title: "Estadística I"
+subtitle: "Práctica: Introducción a la Probabilidad"
+date: "2026/01/26"
+format: html
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+  transition: fade
+---
+
+## Instrucciones
+
+Resuelva los siguientes ejercicios basándose en los conceptos vistos en clase: Procesos aleatorios, Ley de los Grandes Números, Reglas de Adición y Multiplicación, e Independencia.
+
+------------------------------------------------------------------------
+
+## Parte I: Ejercicios Conceptuales y de Aplicación Directa (15 Puntos)
+
+**1. Definición de Probabilidad** Si $P(A)$ representa la probabilidad de un evento $A$, ¿cuál de las siguientes afirmaciones es **siempre** verdadera matemáticamente?
+
+a.  $P(A) > 1$
+
+<!-- -->
+
+b)  $-1 \leq P(A) \leq 1$
+
+c)  $0 \leq P(A) \leq 1$
+
+d)  $P(A) = 0.5$
+
+**2. Interpretación Frecuentista**
+
+Según la interpretación frecuentista, la probabilidad de que salga cara al lanzar una moneda es 0.5 porque:
+
+a)  Hay dos lados en la moneda.
+
+b)  Si lanzamos la moneda infinitas veces, la proporción de caras convergerá a 0.5.
+
+c)  Es mi creencia subjetiva basada en la simetría de la moneda.
+
+d)  El lanzamiento anterior fue cruz, así que ahora toca cara.
+
+**3. La Falacia del Jugador**
+
+Un jugador de ruleta observa que ha salido "Rojo" 5 veces seguidas. Decide apostar todo al "Negro" creyendo que "ya toca". Basado en la Ley de los Grandes Números, ¿es correcto su razonamiento?
+
+a)  Sí, los procesos aleatorios deben compensarse a corto plazo.
+
+b)  No, la ruleta no tiene memoria; la probabilidad sigue siendo la misma en cada giro independiente.
+
+c)  Sí, porque la probabilidad de 6 rojos seguidos es imposible.
+
+d)  Depende de si es un proceso Bayesiano.
+
+**4. Ley de los Grandes Números (LLN)** La LLN establece que a medida que aumenta el número de observaciones ($n$), la proporción observada $\hat{p}_n$: a) Se aleja de la probabilidad real $p$. b) Converge a la probabilidad real $p$. c) Oscila violentamente sin patrón. d) Se mantiene constante en 0.5.
+
+**5. Eventos Disjuntos** Seleccione el par de eventos que son **disjuntos (mutuamente excluyentes)**:
+
+a)  Sacar una carta roja y sacar un Rey de una baraja.
+
+b)  Lanzar un dado y obtener un número par y obtener un 2.
+
+c)  Estudiar Estadística y estudiar Economía el mismo semestre.
+
+d)  Lanzar una moneda y que el resultado sea Cara y Cruz al mismo tiempo.
+
+**6. Regla de Adición (Disjuntos)** Si la probabilidad de que llueva mañana es 0.3 y la probabilidad de que haga sol es 0.4, y asumimos que no pueden ocurrir ambos eventos al mismo tiempo (disjuntos en este modelo simple), ¿cuál es la probabilidad de que llueva **o** haga sol?
+
+a)  0.12
+
+b)  0.70
+
+c)  0.10
+
+d)  0.50
+
+**7. Regla de Adición (General)**
+
+¿Cuál es la fórmula correcta para calcular $P(A \text{ o } B)$ si los eventos **no** son disjuntos?
+
+a)  $P(A) + P(B)$
+
+b)  $P(A) \times P(B)$
+
+c)  $P(A) + P(B) - P(A \text{ y } B)$
+
+d)  $P(A) - P(B)$
+
+**8. Diagramas de Venn**
+
+En un diagrama de Venn de dos conjuntos $A$ y $B$, el área donde los dos círculos se superponen representa:
+
+a)  $P(A \text{ o } B)$
+
+b)  $P(A \text{ y } B)$
+
+c)  $P(A^c)$
+
+d)  Eventos disjuntos
+
+**9. Espacio Muestral** Si una pareja tiene dos hijos, ¿cuál es el espacio muestral $S$ completo de las combinaciones de género (M=Masculino, F=Femenino)?
+
+a)  $S = \{M, F\}$
+
+b)  $S = \{MM, FF\}$
+
+c)  $S = \{MM, MF, FM, FF\}$
+
+d)  $S = \{MM, MF, FF\}$
+
+**10. Complemento**
+
+Si la probabilidad de que un estudiante apruebe el examen es $P(A) = 0.85$, ¿cuál es la probabilidad de que **no** apruebe ($P(A^c)$)?
+
+a)  1.15
+
+b)  0.15
+
+c)  0.85
+
+d)  -0.15
+
+**11. Independencia**
+
+Dos eventos A y B son independientes si:
+
+a)  No pueden ocurrir al mismo tiempo.
+
+b)  La suma de sus probabilidades es 1.
+
+c)  Conocer el resultado de A no cambia la probabilidad de B.
+
+d)  $P(A \text{ y } B) = 0$.
+
+**12. Regla del Producto (Independientes)**
+
+Si lanzas una moneda (probabilidad de cara = 0.5) y lanzas un dado (probabilidad de sacar un 6 = 1/6), y los eventos son independientes, ¿cuál es la probabilidad de sacar Cara **y** un 6?
+
+a)  $0.5 + 0.166$
+
+b)  $0.5 \times (1/6) = 1/12$
+
+c)  $1/2 - 1/6$
+
+d)  $1/3$
+
+**13. Interpretación del "O"**
+
+En estadística, cuando decimos "A o B", nos referimos a:
+
+a)  Ocurre A, ocurre B, pero no ambos (O exclusivo).
+
+b)  Ocurre A, ocurre B, o ambos ocurren (O inclusivo).
+
+c)  Solo ocurre A.
+
+d)  Ninguno de los anteriores.
+
+**14. Lógica de Complementos**
+
+La suma de las probabilidades de un evento y su complemento ($P(A) + P(A^c)$) siempre es igual a:
+
+a)  0
+
+b)  0.5
+
+c)  1
+
+d)  Infinito
+
+**15. Múltiples intentos** Si lanzas una moneda 10 veces y obtienes 10 caras, la probabilidad de obtener cara en el lanzamiento número 11 es:
+
+a)  Menor a 0.5 (para equilibrar).
+
+b)  Mayor a 0.5 (racha de suerte).
+
+c)  Exactamente 0.5.
+
+d)  Depende del clima.
+
+------------------------------------------------------------------------
+
+## Parte II: Ejercicios de Desarrollo (5 Problemas)
+
+**16. Unión de Eventos No Disjuntos**
+
+En una clase universitaria, el 60% de los estudiantes aprueba Estadística, el 55% aprueba Economía y el 35% aprueba **ambas** materias. Seleccionamos un estudiante al azar. Calcule la probabilidad de que el estudiante haya aprobado Estadística **o** Economía. *Pista: Utilice la regla general de la adición.*
+
+> **Respuesta:**
+
+**17. Probabilidad con Barajas (Adición)**
+
+De una baraja estándar de 52 cartas, se extrae una carta al azar. Queremos saber la probabilidad de sacar una carta que sea una **Reina (Q)** O una carta de **Corazones**. \* Probabilidad de Reina: $4/52$ \* Probabilidad de Corazones: $13/52$ \* Nota: Existe una Reina de Corazones. Calcule la probabilidad final.
+
+> **Respuesta:**
+
+**18. Independencia y Regla del Producto**
+
+Un inversor está analizando dos acciones: A y B. La probabilidad de que la acción A suba de precio mañana es 0.4. La probabilidad de que la acción B suba es 0.3. Si el comportamiento de las acciones es **independiente**: a) ¿Cuál es la probabilidad de que **ambas** suban mañana? b) ¿Cuál es la probabilidad de que **ninguna** de las dos suba? (*Pista: use los complementos*).
+
+> **Respuesta:**
+
+**19. El Problema de "Al menos uno" (Complemento)** Una fábrica produce bombillos y se sabe que la tasa de defectos es del 5% ($p=0.05$). Un inspector toma una muestra aleatoria de 4 bombillos. ¿Cuál es la probabilidad de que **al menos uno** de los bombillos de la muestra sea defectuoso? *Pista:* $P(\text{al menos uno}) = 1 - P(\text{ninguno})$.
+
+> **Respuesta:**
+
+**20. Análisis de Tabla de Contingencia** Utilice la siguiente tabla sobre opiniones políticas para responder:
+
+|               | No Legalizar | Sí Legalizar | Total   |
+|---------------|--------------|--------------|---------|
+| **Partido A** | 20           | 30           | 50      |
+| **Partido B** | 40           | 10           | 50      |
+| **Total**     | **60**       | **40**       | **100** |
+
+Si seleccionamos una persona al azar, calcule:
+
+a\) $P(\text{Sí Legalizar})$
+
+b\) $P(\text{Partido A y Sí Legalizar})$
+
+c\) $P(\text{Partido A o Sí Legalizar})$
+
+> **Respuesta:**

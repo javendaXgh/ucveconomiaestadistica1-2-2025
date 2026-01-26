@@ -28,8 +28,8 @@
     "objectID": "clases/clase_01.html#aproximación-concepto-estadística",
     "href": "clases/clase_01.html#aproximación-concepto-estadística",
     "title": "Estadística I",
-    "section": "",
-    "text": "Los científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
+    "section": "Aproximación Concepto “Estadística”",
+    "text": "Aproximación Concepto “Estadística”\nLos científicos buscan responder preguntas utilizando métodos rigurosos y observaciones cuidadosas. Estas observaciones —recogidas a partir de notas de campo, encuestas y experimentos, entre otros— forman la columna vertebral de una investigación estadística y se denominan datos. \nLa estadística es el estudio sobre cómo recolectar, analizar y sacar conclusiones de los datos de la mejor manera posible."
   },
   {
     "objectID": "clases/clase_01.html#estudio-de-caso",
@@ -43,7 +43,7 @@
     "href": "clases/clase_01.html#datos-tabulares",
     "title": "Estadística I",
     "section": "Datos Tabulares",
-    "text": "Datos Tabulares\nHay observaciones que generalmente en los datos tabulares estarán representados por (filas) , las cuales a su vez contienen distintos atributos o variables, que generalmente corresponden a las (columnas).\n\n\n\n\n\n\n\n\npaciente\ngroup\noutcome\n\n\n\n\n62\ntreatment\nno event\n\n\n126\ntreatment\nno event\n\n\n311\ncontrol\nno event\n\n\n368\ncontrol\nno event\n\n\n371\ncontrol\nno event"
+    "text": "Datos Tabulares\nHay observaciones que generalmente en los datos tabulares estarán representados por (filas) , las cuales a su vez contienen distintos atributos o variables, que generalmente corresponden a las (columnas).\n\n\n\n\n\n\n\n\npaciente\ngroup\noutcome\n\n\n\n\n55\ntreatment\nno event\n\n\n149\ntreatment\nno event\n\n\n229\ncontrol\nstroke\n\n\n381\ncontrol\nno event\n\n\n449\ncontrol\nno event"
   },
   {
     "objectID": "clases/clase_01.html#asignados-por-grupo",
@@ -92,7 +92,7 @@
     "href": "clases/clase_01.html#pregunta-clave-a-responder",
     "title": "Estadística I",
     "section": "Pregunta Clave a Responder",
-    "text": "Pregunta Clave a Responder\n\n¿Los datos representados muestran que existe una diferencia entre los dos grupos?\nSupongamos que lanzas una moneda 100 veces. Si bien la probabilidad de que salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos.\nLa diferencia observada anteriormente entre los dos grupos puede ser real o deberse a la variación natural.\nDado que la diferencia es bastante grande, es más creíble que sea real.\nUtilizamos herramientas estadísticas para determinar si la diferencia es tan grande que deberíamos rechazar la idea de que se debió al azar."
+    "text": "Pregunta Clave a Responder\n¿Los datos representados muestran que existe una diferencia entre los dos grupos?\nSupongamos que lanzas una moneda 100 veces. Si bien la probabilidad de que salga cara en cualquier lanzamiento es del 50 %, probablemente no observemos exactamente 50 caras. Este tipo de fluctuación forma parte de casi cualquier proceso de generación de datos.\nLa diferencia observada anteriormente entre los dos grupos puede ser real o deberse a la variación natural.\nDado que la diferencia es bastante grande, es más creíble que sea real.\nUtilizamos herramientas estadísticas para determinar si la diferencia es tan grande que deberíamos rechazar la idea de que se debió al azar."
   },
   {
     "objectID": "clases/clase_01.html#ejercicio",
@@ -141,7 +141,7 @@
     "href": "clases/clase_01.html#variables-conjunto-de-datos",
     "title": "Estadística I",
     "section": "Variables Conjunto de Datos",
-    "text": "Variables Conjunto de Datos\n\n\n\n\n\n\n\n\nloan_amount\ninterest_rate\nterm\ngrade\nstate\ntotal_income\nhomeownership\n\n\n\n\n18500\n12.62\n60\nC\nFL\n192000\nmortgage\n\n\n6400\n9.92\n36\nB\nIN\n67000\nmortgage\n\n\n14500\n6.08\n36\nA\nMO\n80000\nmortgage\n\n\n18000\n19.42\n60\nD\nFL\n76000\nmortgage\n\n\n4400\n18.45\n36\nD\nIL\n58000\nrent\n\n\n30000\n21.45\n36\nD\nNV\n58500\nmortgage\n\n\n15000\n16.02\n36\nC\nNJ\n50000\nrent\n\n\n32000\n9.44\n36\nB\nNV\n112000\nmortgage"
+    "text": "Variables Conjunto de Datos\n\n\n\n\n\n\n\n\nloan_amount\ninterest_rate\nterm\ngrade\nstate\ntotal_income\nhomeownership\n\n\n\n\n6500\n6.08\n36\nA\nIL\n32000\nrent\n\n\n10000\n7.97\n60\nA\nFL\n34000\nrent\n\n\n25000\n7.96\n36\nA\nMN\n65000\nmortgage\n\n\n35000\n6.71\n36\nA\nMD\n325000\nmortgage\n\n\n9000\n15.04\n36\nC\nIN\n45000\nown\n\n\n17000\n17.09\n36\nD\nMD\n73000\nrent\n\n\n4400\n18.45\n36\nD\nIL\n58000\nrent\n\n\n6000\n9.92\n36\nB\nCA\n60000\nrent"
   },
   {
     "objectID": "clases/clase_01.html#descripción-variables",
@@ -183,7 +183,7 @@
     "href": "clases/clase_01.html#variables-explicativas-y-de-respuesta.",
     "title": "Estadística I",
     "section": "Variables explicativas y de respuesta.",
-    "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética."
+    "text": "Variables explicativas y de respuesta.\n\nVariables Explicativas: Se refiere a la variable que se utiliza para explicar o predecir los cambios en otra variable. Por lo tanto, “explicativa” captura esta esencia.\nVariable de Respuesta: Se refiere a la variable que se ve afectada o responde a los cambios en la variable explicativa. Por lo tanto, “de respuesta” es la traducción precisa.\n\n\nCuando hacemos preguntas sobre la relación entre dos variables, a veces también queremos determinar si el cambio en una variable provoca un cambio en la otra. Considere lo siguiente reformulación de una pregunta anterior sobre el conjunto de datos del condado: Si hay un aumento en el ingreso familiar medio en un condado, ¿impulsa esto una aumento de su población? En esta pregunta, nos preguntamos si una variable afecta a otra. Si este es nuestro subyacente creencia, entonces el ingreso familiar medio es la variable explicativa y el cambio poblacional es el variable de respuesta en la relación hipotética.\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "curso-equipo.html",
@@ -289,7 +289,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable🛠️ Ejecutar Notebook Ejercicio Sesgos\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles 1🖥️ láminas clase 08 complemento: Índices Bursátiles 2🛠️ Ejecutar Notebook Ejercicio Números Índice\n\n\n9\nmié, 10 dic.\nSeries Temporales\n🖥️ láminas clase 09: Series Temporales\n\n\n12\nmié, 28 ene.\nII do. Examen Parcial (tentativo)\n\n\n\n\n16\nmié, 25 feb.\nIII er. Examen Parcial (tentativo)",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nlun, 13 oct.\nPresentación Curso\n\n\n\n\n\n\nmié, 15 oct.\nIntroducción a los Datos\n🖥️ láminas clase 01\n\n\n2\nmié, 22 oct.\nIntroducción a los Datos\n\n\n\n\n3\nlun, 27 oct.\nVariables Asociadas\n🖥️ láminas clase 02: Variables Relacionadashttps://javenda.shinyapps.io/gapminder2007/🎦 videos 3 y 4 de la playlist\n\n\n\n\nmié, 29 oct.\nEstudios Observacionales/Muestreo\n🖥️ láminas clase 02: Estudios Observacionales y Muestreo🎦 videos 3 y 4 de la playlist\n\n\n4\nmié, 5 nov.\nExperimentos / Repaso tema I (opcional)\n🖥️ láminas clase 03 parte I: experimentos🖥️ láminas clase 03 parte II: resumen🎦 video 5 de la playlist🛠️ Ejecutar Notebook Laboratorio 1 en Google Colab\n\n\n4\nlun, 3 nov.\nInspeccionar Datos Numéricos- Parte I\n🖥️ láminas clase 04: inspeccionar datos numéricos🎦 video 6 y 7 de la playlist\n\n\n6\nlun, 17 nov.\nTaller Primer Tema\n🛠️ Ejecutar Notebook Taller Estadística Descri en Google Colab\n\n\n\n\nmié, 19 nov.\nMedias Especializádas\n🖥️ láminas clase 05: Medias Especializadas\n\n\n7\nlun, 24 nov.\nTablas de Frecuencia\n🖥️ láminas clase 06: Tablas de Frecuenciua\n\n\n7\nmié, 26 nov.\nI er. Exámen Parcial\n\n\n\n\n8\nmié, 3 dic.\nMomentos de una Variable\n🖥️ láminas clase 07: Momentos de una variable🛠️ Ejecutar Notebook Ejercicio Sesgos\n\n\n9\ndom, 7 dic.\nNúmeros Índice\n🖥️ láminas clase 08: Números Índice🖥️ láminas clase 08 complemento: Índices Bursátiles 1🖥️ láminas clase 08 complemento: Índices Bursátiles 2🛠️ Ejecutar Notebook Ejercicio Números Índice\n\n\n9\nmié, 10 dic.\nSeries Temporales\n🖥️ láminas clase 09: Series Temporales\n\n\n10\nlun, 19 ene.\nProbabilidad\n🖥️ láminas clase 10: Introducción a la Probabilidad🖥️ láminas ejercicio Probabilidad\n\n\n12\nlun, 2 feb.\nII Quiz (probabilidad)\n\n\n\n\n13\nlun, 9 feb.\nII do. Examen Parcial (tentativo)\n\n\n\n\n15\nmié, 25 feb.\nIII er. Quiz (correlación)\n\n\n\n\n16\nmié, 4 mar.\nIII er. Examen Parcial (tentativo)",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -352,8 +352,8 @@
     "objectID": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "href": "clases/clase_02.html#bloqueador-solar-cáncer-piel",
     "title": "Estadística I",
-    "section": "",
-    "text": "Supongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
+    "section": "Bloqueador Solar => Cáncer Piel ❌",
+    "text": "Bloqueador Solar =&gt; Cáncer Piel ❌\nSupongamos que en un estudio observacional se realiza un seguimiento del uso de protección solar y el cáncer de piel, y se descubre que cuanto más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\nCuando más protector solar utiliza una persona, más probabilidades tiene de padecer cáncer de piel.\n¿Significa esto que que la protección solar provoca cáncer de piel?"
   },
   {
     "objectID": "clases/clase_02.html#variable-confusión",
@@ -367,14 +367,14 @@
     "href": "clases/clase_02.html#correlación-no-implica-causación",
     "title": "Estadística I",
     "section": "Correlación No Implica Causación",
-    "text": "Correlación No Implica Causación\n\n\n\n\n\n\nImportante\n\n\n\nLa causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una “correlación espuria”\n\n\n\nCE 1CE 2CE 3La Regla es …"
+    "text": "Correlación No Implica Causación\n\n\n\n\n\n\nImportante\n\n\nLa causalidad solo puede inferirse de un experimento aleatorizado, sino podemos estar en presencia de una “correlación espuria”\n\n\n\n\nCE 1CE 2CE 3La Regla es …"
   },
   {
     "objectID": "clases/clase_02.html#estudios-observacionales-y-experimentos",
     "href": "clases/clase_02.html#estudios-observacionales-y-experimentos",
     "title": "Estadística I",
     "section": "Estudios Observacionales y Experimentos",
-    "text": "Estudios Observacionales y Experimentos\n\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\n\n\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal"
+    "text": "Estudios Observacionales y Experimentos\nObservacionales\nCuando se recolectan datos de una manera que no interfiere directamente con la forma en que surgen los datos\nNo pueden por sí solos mostrar una conexión causal.\nExperimentos\nSe realizan cuando se quiere evaluar una posible relación causal\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "codigoconducta.html",
@@ -496,8 +496,8 @@
     "objectID": "clases/clase_05.html#introducción-a-las-medias",
     "href": "clases/clase_05.html#introducción-a-las-medias",
     "title": "Estadística I",
-    "section": "",
-    "text": "En estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
+    "section": "Introducción a las Medias",
+    "text": "Introducción a las Medias\nEn estadística descriptiva, las medidas de tendencia central nos ayudan a resumir un conjunto de datos en un solo valor representativo.\nAdicionalmente a la media aritmética simple, que no siempre es la mejor medida para evaluar la tendencia central de los datos, existen otras medias que son más apropiadas en ciertos contextos.\n\n1- Media ponderada\n2- Media armónica\n3- Media geométrica"
   },
   {
     "objectID": "clases/clase_05.html#media-ponderada-weighted-mean",
@@ -532,7 +532,7 @@
     "href": "clases/clase_05.html#media-armónica-harmonic-mean",
     "title": "Estadística I",
     "section": "2- Media Armónica (Harmonic Mean)",
-    "text": "2- Media Armónica (Harmonic Mean)\nEs útil para calcular promedios de tasas o ratios. Se define como el recíproco1 de la media aritmética de los recíprocos de los valores.\nFórmula:\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores."
+    "text": "2- Media Armónica (Harmonic Mean)\nEs útil para calcular promedios de tasas o ratios. Se define como el recíproco1 de la media aritmética de los recíprocos de los valores.\nFórmula:\n\\[H = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}\\]\nDonde: \\(x_i\\) representa cada valor del conjunto de datos. \\(n\\) es el número total de valores.\nSi tienes un conjunto de datos como \\(x1​,x2​,...,xn​\\), el recíproco de cada valor es \\(\\frac{1}{x1}​, \\frac{1}{x2}​,..., \\frac{1}{xn}\\)"
   },
   {
     "objectID": "clases/clase_05.html#ejemplo-de-media-armónica",
@@ -616,7 +616,7 @@
     "href": "clases/clase_05.html#cómo-decidir-qué-media-usar",
     "title": "Estadística I",
     "section": "¿Cómo decidir qué media usar?",
-    "text": "¿Cómo decidir qué media usar?\n\nRecetario con uso discrecional\n\n¿Importancia desigual? → Media ponderada.\n¿Promedios de tasas? → Media armónica.\n¿Crecimiento o factores multiplicativos? → Media geométrica.\n¿Valores homogéneos? → Media aritmética."
+    "text": "¿Cómo decidir qué media usar?\nRecetario con uso discrecional\n\n¿Importancia desigual? → Media ponderada.\n¿Promedios de tasas? → Media armónica.\n¿Crecimiento o factores multiplicativos? → Media geométrica.\n¿Valores homogéneos? → Media aritmética.\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "notebooks/TallerPrimerTema.html#ejercicio-práctico",
@@ -1140,8 +1140,8 @@
     "objectID": "clases/clase_07.html#qué-son-los-momentos",
     "href": "clases/clase_07.html#qué-son-los-momentos",
     "title": "Estadística I",
-    "section": "",
-    "text": "Son medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
+    "section": "¿Qué son los Momentos?",
+    "text": "¿Qué son los Momentos?\n\nSon medidas que nos dan información sobre las características de un conjunto de datos.\nNos ayudan a entender dónde se concentran los datos, cuánto se dispersan y qué forma tienen.\nAlgunos son: la media, la varianza, la asimetría y la curtosis.\n\n\nlos momentos nos dan diferentes “perspectivas” de los datos, más allá del simple promedio."
   },
   {
     "objectID": "clases/clase_07.html#el-primer-momento-la-media-barx",
@@ -1239,7 +1239,7 @@
     "href": "clases/clase_07.html#resumen-de-los-momentos",
     "title": "Estadística I",
     "section": "Resumen de los Momentos",
-    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas"
+    "text": "Resumen de los Momentos\n\n\n\n\n\n\n\nMomento\n¿Qué mide?\n\n\nMedia ( \\(\\bar{X}\\) )\nEl centro de los datos\n\n\nVarianza ( \\(s^2\\) )\nLa dispersión de los datos\n\n\nAsimetría ( \\(A_s\\) )\nSi la distribución está sesgada hacia un lado\n\n\nCurtosis ( \\(K_u\\) )\nEl “apuntamiento” y el grosor de las colas\n\n\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -1357,8 +1357,8 @@
     "objectID": "clases/clase_08.html#pregunta",
     "href": "clases/clase_08.html#pregunta",
     "title": "Estadística I",
-    "section": "",
-    "text": "¿Cómo considera en general la situación de nuestro país?"
+    "section": "Pregunta",
+    "text": "Pregunta\n¿Cómo considera en general la situación de nuestro país?"
   },
   {
     "objectID": "clases/clase_08.html#respuesta",
@@ -1561,14 +1561,14 @@
     "href": "clases/clase_08.html#indíce-nacional-de-precios-al-consumidor-bcv",
     "title": "Estadística I",
     "section": "Indíce Nacional de Precios al Consumidor BCV",
-    "text": "Indíce Nacional de Precios al Consumidor BCV"
+    "text": "Indíce Nacional de Precios al Consumidor BCV\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_08complemento.html#sp-500",
     "href": "clases/clase_08complemento.html#sp-500",
     "title": "Estadística I",
-    "section": "",
-    "text": "Índice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
+    "section": "S&P 500",
+    "text": "S&P 500\n\nÍndice bursátil que representa el rendimiento de 500 de las mayores empresas que cotizan en bolsa en Estados Unidos.\nConsiderado uno de los mejores indicadores de la salud del mercado de valores de EE.UU. y de la economía en general.\nEs ponderado por capitalización de mercado, lo que significa que las empresas con mayor valor de mercado tienen una mayor influencia enel índice."
   },
   {
     "objectID": "clases/clase_08complemento.html#cómo-se-seleccionan-las-empresas-del-sp-500",
@@ -1645,7 +1645,7 @@
     "href": "clases/clase_08complemento.html#índice-bursátil",
     "title": "Estadística I",
     "section": "Índice Bursátil",
-    "text": "Índice Bursátil\nEl IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.\nNo se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total."
+    "text": "Índice Bursátil\nEl IB ponderado por capitalización de mercado es el que mide el cambio relativo en el valor de mercado total de las empresas que lo componen.\nNo se adscribe directamente a las fórmulas de Laspeyres (que usa cantidades base) o Paasche (que usa cantidades actuales) de manera estricta para los precios, sino que se enfoca en el cambio del valor total.\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_08.html",
@@ -1784,8 +1784,8 @@
     "objectID": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
     "href": "clases/clase_08complemento2.html#la-fórmula-price-weighted",
     "title": "El Cálculo del Dow Jones",
-    "section": "",
-    "text": "El Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
+    "section": "1. La Fórmula (Price-Weighted)",
+    "text": "1. La Fórmula (Price-Weighted)\nEl Dow Jones se calcula sumando los precios de las acciones y dividiendo por un divisor. No importa el tamaño de la empresa, solo el precio de su acción.\n\\[\\text{DJIA} = \\frac{\\sum P_i}{d}\\]\n\n\\(P_i\\): Precio de la acción.\n\\(d\\): Divisor Dow (ajustable)."
   },
   {
     "objectID": "clases/clase_08complemento2.html#ejemplo-3-empresas",
@@ -1820,14 +1820,14 @@
     "href": "clases/clase_08complemento2.html#diferencias-dow-vs-sp-500",
     "title": "El Cálculo del Dow Jones",
     "section": "6. Diferencias: Dow vs S&P 500",
-    "text": "6. Diferencias: Dow vs S&P 500\n\n\n\n\n\n\n\n\n\nDow Jones\nS&P 500\n\n\n\n\nPonderación\nPor Precio de la acción (\\(P_i\\))\nPor Capitalización (\\(P_i \\times Q_i\\))\n\n\nMuestra\n30 empresas (Blue Chips)\n500 empresas\n\n\nSesgo\nFavorece acciones con precio nominal alto\nFavorece empresas con valor de mercado total alto"
+    "text": "6. Diferencias: Dow vs S&P 500\n\n\n\n\n\n\n\n\n\nDow Jones\nS&P 500\n\n\n\n\nPonderación\nPor Precio de la acción (\\(P_i\\))\nPor Capitalización (\\(P_i \\times Q_i\\))\n\n\nMuestra\n30 empresas (Blue Chips)\n500 empresas\n\n\nSesgo\nFavorece acciones con precio nominal alto\nFavorece empresas con valor de mercado total alto\n\n\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
     "href": "clases/clase_08complemento2.html#concepto-qué-es-un-stock-split",
     "title": "El Cálculo del Dow Jones",
     "section": "Concepto: ¿Qué es un Stock Split?",
-    "text": "Concepto: ¿Qué es un Stock Split?\nUn Split es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.\nLa Analogía de la Pizza: Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.\n\nAntes: 1 acción de $100.\nDespués (Split 2:1): 2 acciones de $50.\n\n\n\n\n\n\n\nEl Problema para el Dow Jones\n\n\n\nComo el Dow Jones se calcula sumando precios, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor."
+    "text": "Concepto: ¿Qué es un Stock Split?\nUn Split es una división de acciones. La empresa aumenta el número de acciones en circulación, reduciendo proporcionalmente su precio.\nLa Analogía de la Pizza: Cortar una pizza en 8 trozos en lugar de 4 no crea más comida, solo trozos más pequeños.\n\nAntes: 1 acción de $100.\nDespués (Split 2:1): 2 acciones de $50.\n\n\n\n\n\n\n\nEl Problema para el Dow Jones\n\n\nComo el Dow Jones se calcula sumando precios, si un precio baja de 100 a 50 por un split, la suma total baja y el índice colapsaría artificialmente si no intervenimos el divisor."
   },
   {
     "objectID": "clases/clase_08complemento2.html#el-ajuste-del-divisor",
@@ -1935,7 +1935,7 @@
     "href": "clases/clase_09.html#gráfico-variaciones-inpc",
     "title": "Estadística I",
     "section": "Gráfico Variaciones INPC",
-    "text": "Gráfico Variaciones INPC\n\n\n\n\n\n\n\n\nUtilidad Análisis Series Temporales\n\nIdentificar patrones y tendencias.\nRealizar pronósticos futuros.\nEvaluar el impacto de eventos.\nComprender la dinámica subyacente de los datos."
+    "text": "Gráfico Variaciones INPC"
   },
   {
     "objectID": "clases/clase_09.html#gráfico-temperatura-caracas-serie-temporal",
@@ -2012,7 +2012,7 @@
     "href": "clases/clase_09.html#modelos-de-descomposición",
     "title": "Estadística I",
     "section": "Modelos de Descomposición",
-    "text": "Modelos de Descomposición\nDos modelos comunes:\n\nModelo Aditivo:\nYt​=Tt​+St​+Ct​+Rt​\nApropiado cuando la magnitud de los componentes no depende del nivel de la serie.\nModelo Multiplicativo:\nYt​=Tt​×St​×Ct​×Rt​\nApropiado cuando la magnitud de los componentes es proporcional al nivel de la serie."
+    "text": "Modelos de Descomposición\nDos modelos comunes:\n\nModelo Aditivo:\nYt​=Tt​+St​+Ct​+Rt​\nApropiado cuando la magnitud de los componentes no depende del nivel de la serie.\nModelo Multiplicativo:\nYt​=Tt​×St​×Ct​×Rt​\nApropiado cuando la magnitud de los componentes es proporcional al nivel de la serie.\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_09coplemento.html",
@@ -2020,5 +2020,509 @@
     "title": "clase_13complemento",
     "section": "",
     "text": "Descomposición Procedimental: Métodos\n\nPromedios Móviles: Para estimar la tendencia suavizada.\nDiferenciación: Para eliminar tendencia o estacionalidad.\nDescomposición Clásica: Estimar tendencia, luego estacionalidad, luego residuo.\n\n\n\n\nLámina 17: Descomposición con Promedios Móviles\n\nCalcula el promedio de un número fijo de observaciones consecutivas.\nAyuda a suavizar las fluctuaciones a corto plazo y revela la tendencia subyacente.\n\n\n\nLámina 18: Ejemplo de Descomposición (Conceptual)\n[Aquí podrías mostrar una serie original y, conceptualmente, cómo se verían sus componentes separados (tendencia suave, patrón estacional repetitivo, etc.).]\n\n\n\nLámina 19: Importancia de la Descomposición\n\nPermite comprender mejor los patrones subyacentes.\nFacilita la modelización y el pronóstico.\nAyuda a identificar las causas de las variaciones en la serie.\n\n\n\n\nLámina 20: Conclusiones y Próximos Pasos\n\nLas series temporales tienen componentes que influyen en su comportamiento.\nIdentificar y descomponer estos componentes es crucial para el análisis.\nExisten diferentes métodos para la descomposición.\n\n¿Qué te parece esta estructura inicial? Podemos ajustar el contenido y la cantidad de láminas según tus necesidades."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#objetivos-de-la-clase",
+    "href": "clases/clase_10_variablesaleatorias.html#objetivos-de-la-clase",
+    "title": "Estadística I",
+    "section": "Objetivos de la Clase",
+    "text": "Objetivos de la Clase\n\nDefinir el concepto de Variable Aleatoria (V.A.).\nDiferenciar entre V.A. Discretas y Continuas.\nEntender la Función de Masa vs. Función de Densidad.\nVisualizar distribuciones."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#definición-de-variable-aleatoria",
+    "href": "clases/clase_10_variablesaleatorias.html#definición-de-variable-aleatoria",
+    "title": "Estadística I",
+    "section": "1. Definición de Variable Aleatoria",
+    "text": "1. Definición de Variable Aleatoria\nUna Variable Aleatoria (\\(X\\)) es una función que asigna un número real a cada resultado posible de un experimento aleatorio.\n\\[X: \\Omega \\rightarrow \\mathbb{R}\\]\n\nNo es una variable algebraica, es una función de mapeo.\n\nEjemplo: Lanzar dos dados y sumar sus caras. El resultado del experimento es físico, el valor de \\(X\\) es el número (2 al 12)."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#tipos-de-variables-aleatorias",
+    "href": "clases/clase_10_variablesaleatorias.html#tipos-de-variables-aleatorias",
+    "title": "Estadística I",
+    "section": "Tipos de Variables Aleatorias",
+    "text": "Tipos de Variables Aleatorias\n\n\nDiscretas\nToman valores contables (finitos o infinitos numerables). Se asocian a conteos.\n\nNº de estudiantes en clase.\nNº de goles en un partido.\n\n\nContinuas\nToman valores en un intervalo de números reales. Se asocian a mediciones.\n\nTiempo de espera del metro.\nInflación mensual."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#función-de-masa-de-probabilidad-pmf",
+    "href": "clases/clase_10_variablesaleatorias.html#función-de-masa-de-probabilidad-pmf",
+    "title": "Estadística I",
+    "section": "Función de Masa de Probabilidad (PMF)",
+    "text": "Función de Masa de Probabilidad (PMF)\nAsigna la probabilidad a cada valor exacto de la variable.\n\\[f(x) = P(X = x)\\]\nPropiedades:\n1. \\(0 \\le f(x) \\le 1\\)\n2. \\(\\sum f(x) = 1\\)"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#ejemplo-distribución-binomial",
+    "href": "clases/clase_10_variablesaleatorias.html#ejemplo-distribución-binomial",
+    "title": "Estadística I",
+    "section": "Ejemplo: Distribución Binomial",
+    "text": "Ejemplo: Distribución Binomial\nExperimento: Lanzar una moneda 10 veces (\\(n=10\\)).\nVariable \\(X\\): Número de caras obtenidas.\nProbabilidad de éxito: \\(p=0.5\\).\n\\[X \\sim Bin(10, 0.5)\\]"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#gráfico-de-v.a.-discreta-barras",
+    "href": "clases/clase_10_variablesaleatorias.html#gráfico-de-v.a.-discreta-barras",
+    "title": "Estadística I",
+    "section": "Gráfico de V.A. Discreta (Barras)",
+    "text": "Gráfico de V.A. Discreta (Barras)"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#función-de-distribución-acumulada-cdf",
+    "href": "clases/clase_10_variablesaleatorias.html#función-de-distribución-acumulada-cdf",
+    "title": "Estadística I",
+    "section": "Función de Distribución Acumulada (CDF)",
+    "text": "Función de Distribución Acumulada (CDF)\nProbabilidad de que la variable tome un valor menor o igual a \\(x\\).\n\\[F(x) = P(X \\le x)\\]\nEjemplo: Probabilidad de obtener máximo 3 caras.\n\n\n[1] \"La probabilidad de X &lt;= 3 es: 0.171875\""
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#función-de-densidad-de-probabilidad-pdf",
+    "href": "clases/clase_10_variablesaleatorias.html#función-de-densidad-de-probabilidad-pdf",
+    "title": "Estadística I",
+    "section": "Función de Densidad de Probabilidad (PDF)",
+    "text": "Función de Densidad de Probabilidad (PDF)\nEn variables continuas, la probabilidad de un punto exacto es 0. La probabilidad se define como el área bajo la curva en un intervalo.\n\\[P(a \\le X \\le b) = \\int_{a}^{b} f(x) dx\\]"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#ejemplo-distribución-normal",
+    "href": "clases/clase_10_variablesaleatorias.html#ejemplo-distribución-normal",
+    "title": "Estadística I",
+    "section": "Ejemplo: Distribución Normal",
+    "text": "Ejemplo: Distribución Normal\nFundamental en econometría y estadística inferencial.\n\\[X \\sim N(\\mu, \\sigma)\\]\nSupongamos la rentabilidad diaria de una acción:\nMedia (\\(\\mu\\)) = 0%\nDesviación (\\(\\sigma\\)) = 2%"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#gráfico-de-v.a.-continua-línea",
+    "href": "clases/clase_10_variablesaleatorias.html#gráfico-de-v.a.-continua-línea",
+    "title": "Estadística I",
+    "section": "Gráfico de V.A. Continua (Línea)",
+    "text": "Gráfico de V.A. Continua (Línea)"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#esperanza-y-varianza",
+    "href": "clases/clase_10_variablesaleatorias.html#esperanza-y-varianza",
+    "title": "Estadística I",
+    "section": "Esperanza y Varianza",
+    "text": "Esperanza y Varianza\nMomentos centrales de la variable aleatoria:\n\nEsperanza (\\(E[X]\\)): El centro de gravedad de la distribución. Es el promedio ponderado de los valores posibles.\nVarianza (\\(Var(X)\\)): Medida de dispersión. Qué tanto se alejan los datos de la esperanza."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#simulación-en-r",
+    "href": "clases/clase_10_variablesaleatorias.html#simulación-en-r",
+    "title": "Estadística I",
+    "section": "Simulación en R",
+    "text": "Simulación en R\nLa Ley de los Grandes Números establece que el promedio muestral converge a la Esperanza teórica al aumentar \\(n\\).\n\n\n# A tibble: 2 × 3\n  Estadistico Teorico Simulado\n  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 Media             0   0.0323\n2 Desviación        2   1.98"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#visualizando-simulación-vs-teoría",
+    "href": "clases/clase_10_variablesaleatorias.html#visualizando-simulación-vs-teoría",
+    "title": "Estadística I",
+    "section": "Visualizando Simulación vs Teoría",
+    "text": "Visualizando Simulación vs Teoría"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#resumen",
+    "href": "clases/clase_10_variablesaleatorias.html#resumen",
+    "title": "Estadística I",
+    "section": "Resumen",
+    "text": "Resumen\n\n\n\nConcepto\nDiscreta\nContinua\n\n\n\n\nValores\nSaltos\nIntervalos\n\n\nFunción\nMasa (PMF)\nDensidad (PDF)\n\n\nP(X=x)\n\\(\\ge 0\\)\n\\(0\\)\n\n\nCálculo\nSumatoria \\(\\sum\\)\nIntegral \\(\\int\\)\n\n\n\n¡Fin de la clase!\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#explicación",
+    "href": "clases/clase_10_variablesaleatorias.html#explicación",
+    "title": "Estadística I",
+    "section": "Explicación",
+    "text": "Explicación\nLo que estamos construyendo aquí es el modelo teórico perfecto de un experimento Binomial. Imaginen que lanzamos una moneda “limpia” (equilibrada, probabilidad 50/50) al aire 10 veces seguidas.\n\nLa variable x representa todos los escenarios posibles de ese experimento: desde el caso extremo donde no sale ninguna cara (\\(x=0\\)), pasando por obtener una sola cara (\\(x=1\\)), hasta el otro extremo de obtener puras caras (\\(x=10\\)).\nLa columna prob representa la Función de Masa de Probabilidad (PMF). Es decir, nos dice con exactitud matemática qué tan probable es que ocurra cada uno de esos escenarios específicos antes de realizar el experimento."
+  },
+  {
+    "objectID": "clases/clase_10_variablesaleatorias.html#interpretación-del-resultado-la-tabla",
+    "href": "clases/clase_10_variablesaleatorias.html#interpretación-del-resultado-la-tabla",
+    "title": "Estadística I",
+    "section": "Interpretación del Resultado (La Tabla)",
+    "text": "Interpretación del Resultado (La Tabla)\nAl ejecutar este bloque, obtenemos una tabla que es el “mapa de ruta” de la variable aleatoria.\nSi miramos los primeros valores (que es lo que muestra head):\n\nPara x = 0: La probabilidad es sumamente baja (\\(\\approx 0.0009\\)). Esto tiene sentido: es muy difícil lanzar una moneda 10 veces y que nunca salga cara.\nPara x = 1, 2…: Vemos cómo la probabilidad va aumentando a medida que nos acercamos al centro (5 caras), que es el resultado más esperado."
+  },
+  {
+    "objectID": "clases/clase_10_binomial.html#objetivos-de-la-sesión",
+    "href": "clases/clase_10_binomial.html#objetivos-de-la-sesión",
+    "title": "Estadística I",
+    "section": "Objetivos de la Sesión",
+    "text": "Objetivos de la Sesión\n\nDefinir formalmente qué es una Variable Aleatoria.\nDistinguir entre variables Discretas y Continuas.\nComprender las funciones de masa (PMF) y densidad (PDF).\nModelar distribuciones clásicas"
+  },
+  {
+    "objectID": "clases/clase_10_binomial.html#concepto-de-variable-aleatoria",
+    "href": "clases/clase_10_binomial.html#concepto-de-variable-aleatoria",
+    "title": "Estadística I",
+    "section": "1. Concepto de Variable Aleatoria",
+    "text": "1. Concepto de Variable Aleatoria\n\nUna Variable Aleatoria (V.A.) es una función que asigna un valor numérico a cada resultado posible de un experimento aleatorio.\n\n\\[X: \\Omega \\rightarrow \\mathbb{R}\\]\n\n\\(\\Omega\\) (Espacio Muestral): Todos los resultados posibles (ej. Cara/Sello).\n\\(\\mathbb{R}\\) (Reales): El número asignado (ej. 1 si es Cara, 0 si es Sello)."
+  },
+  {
+    "objectID": "clases/clase_10_binomial.html#diferencia-clave-el-soporte",
+    "href": "clases/clase_10_binomial.html#diferencia-clave-el-soporte",
+    "title": "Estadística I",
+    "section": "Diferencia Clave: El Soporte",
+    "text": "Diferencia Clave: El Soporte\nEl tipo de variable depende de los valores que puede tomar:\n\n\nV.A. Discretas\n\nValores: Saltos (Finitos o Numerables).\nNaturaleza: Conteos.\nEjemplo: Número de materias aprobadas.\n\n\nV.A. Continuas\n\nValores: Intervalos (Infinitos no numerables).\nNaturaleza: Mediciones.\nEjemplo: Salario mensual en USD."
+  },
+  {
+    "objectID": "clases/clase_10_binomial.html#función-de-masa-de-probabilidad-pmf",
+    "href": "clases/clase_10_binomial.html#función-de-masa-de-probabilidad-pmf",
+    "title": "Estadística I",
+    "section": "Función de Masa de Probabilidad (PMF)",
+    "text": "Función de Masa de Probabilidad (PMF)\nPara variables discretas, asignamos probabilidad a puntos exactos.\n\\[f(x) = P(X = x)\\]\nPropiedades: 1. \\(f(x) \\ge 0\\) 2. $_{x} f(x) = 1\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#objetivos-de-la-sesión",
+    "href": "clases/practica_introprobabilidad.html#objetivos-de-la-sesión",
+    "title": "Estadística I",
+    "section": "Objetivos de la Sesión",
+    "text": "Objetivos de la Sesión\n\nDefinir la probabilidad de la unión de dos eventos.\nComprender por qué restamos la intersección en eventos no excluyentes.\nAplicar el concepto a la realidad de nuestra Facultad (FACES)."
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#el-escenario-estudiantes-de-faces",
+    "href": "clases/practica_introprobabilidad.html#el-escenario-estudiantes-de-faces",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.\nDatos de la muestra (N = 100):\n\n\n\nEscuela\nMasculino (M)\nFemenino (F)\nTotal\n\n\n\n\nEconomía\n15\n10\n25\n\n\nSociología\n10\n20\n30\n\n\nEstudios Int.\n20\n25\n45\n\n\nTotal\n45\n55\n100"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#definición-de-eventos",
+    "href": "clases/practica_introprobabilidad.html#definición-de-eventos",
+    "title": "Estadística I",
+    "section": "Definición de Eventos",
+    "text": "Definición de Eventos\nSupongamos que queremos calcular la probabilidad de que un estudiante sea de Economía (A) O sea Mujer (B).\n\nEvento A: El estudiante es de Economía. \\(P(A) = \\frac{25}{100} = 0.25\\)\nEvento B: El estudiante es de sexo Femenino. \\(P(B) = \\frac{55}{100} = 0.55\\)\n\n¿Podemos simplemente sumar \\(0.25 + 0.55\\)?"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#el-problema-del-doble-conteo",
+    "href": "clases/practica_introprobabilidad.html#el-problema-del-doble-conteo",
+    "title": "Estadística I",
+    "section": "El Problema del “Doble Conteo”",
+    "text": "El Problema del “Doble Conteo”\nSi sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando dos veces a las mujeres que estudian economía.\nLa intersección (\\(A \\cap B\\)) representa a las 10 estudiantes que son mujeres de Economía.\n\\[P(A \\cap B) = \\frac{10}{100} = 0.10\\]"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#la-regla-general-de-la-adición",
+    "href": "clases/practica_introprobabilidad.html#la-regla-general-de-la-adición",
+    "title": "Estadística I",
+    "section": "La Regla General de la Adición",
+    "text": "La Regla General de la Adición\nPara evitar el doble conteo, la fórmula es:\n\\[P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\]\nDonde:\n* \\(P(A \\cup B)\\): Probabilidad de A o B (unión).\n* \\(P(A \\cap B)\\): Probabilidad de A y B (intersección)."
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#paso-a-paso-aplicando-la-fórmula",
+    "href": "clases/practica_introprobabilidad.html#paso-a-paso-aplicando-la-fórmula",
+    "title": "Estadística I",
+    "section": "Paso a Paso: Aplicando la Fórmula",
+    "text": "Paso a Paso: Aplicando la Fórmula\nSustituimos nuestros valores de FACES:\nCOMPLETAR\n\nProbabilidad de Economía: completar\nProbabilidad de Femenino: completar\nRestamos la intersección: completar\n\nCOMPLETAR"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#y-si-los-eventos-fueran-mutuamente-excluyentes",
+    "href": "clases/practica_introprobabilidad.html#y-si-los-eventos-fueran-mutuamente-excluyentes",
+    "title": "Estadística I",
+    "section": "¿Y si los eventos fueran mutuamente excluyentes?",
+    "text": "¿Y si los eventos fueran mutuamente excluyentes?\nSi preguntamos por la probabilidad de ser de Economía (A) O de Sociología (C):\n\nUn estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.\n\\(P(A \\cap C) = 0\\)\n\nEn este caso, la regla se simplifica: \\[P(A \\cup C) = P(A) + P(C)\\] \\[P(A \\cup C) = 0.25 + 0.30 = 0.55\\]"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#ejercicio-rápido-para-la-clase",
+    "href": "clases/practica_introprobabilidad.html#ejercicio-rápido-para-la-clase",
+    "title": "Estadística I",
+    "section": "Ejercicio Rápido para la Clase",
+    "text": "Ejercicio Rápido para la Clase\nUtilizando la tabla inicial, calcular:\n\n¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de Estudios Internacionales o sea de sexo Masculino?\n\nRecordar identificar: 1. \\(P(\\text{EEI})\\) 2. \\(P(\\text{M})\\) 3. \\(P(\\text{EEI} \\cap \\text{M})\\)"
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html#paso-a-paso-aplicando-la-fórmula-1",
+    "href": "clases/practica_introprobabilidad.html#paso-a-paso-aplicando-la-fórmula-1",
+    "title": "Estadística I",
+    "section": "Paso a Paso: Aplicando la Fórmula",
+    "text": "Paso a Paso: Aplicando la Fórmula\nSustituimos nuestros valores de FACES:\n\nProbabilidad de Economía: \\(P(A) = 0.25\\)\nProbabilidad de Femenino: \\(P(B) = 0.55\\)\nRestamos la intersección: \\(P(A \\cap B) = 0.10\\)\n\n\\[P(A \\cup B) = 0.25 + 0.55 - 0.10\\] \\[P(A \\cup B) = 0.70\\]\nResultado: Existe un 70% de probabilidad de que el estudiante sea de Economía o mujer."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#nota",
+    "href": "clases/clase_10_introprob.html#nota",
+    "title": "Estadística I",
+    "section": "Nota",
+    "text": "Nota\n\n\n\n\n\n\nTip\n\n\nTodas las láminas que se muestran a continuación pertenecen al proyecto OpenIntroStats openintro.org/os, y se encuentra disponible en su formato original en el siguiente enlace"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#procesos-aleatorios",
+    "href": "clases/clase_10_introprob.html#procesos-aleatorios",
+    "title": "Estadística I",
+    "section": "Procesos Aleatorios",
+    "text": "Procesos Aleatorios\n\nUn proceso aleatorio es una situación en la que sabemos qué resultados podrían ocurrir, pero no sabemos qué resultado particular ocurrirá.\nEjemplos: lanzamientos de moneda, tiradas de dados, el modo aleatorio de spotify, si el mercado de valores subirá o bajará mañana, etc.\nPuede ser útil modelar un proceso como aleatorio incluso si no lo es realmente."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#probabilidad",
+    "href": "clases/clase_10_introprob.html#probabilidad",
+    "title": "Estadística I",
+    "section": "Probabilidad",
+    "text": "Probabilidad\nHay varias posibles interpretaciones de la probabilidad, pero (casi) coinciden completamente en las reglas matemáticas que la probabilidad debe seguir.\n\n\\(P(A)\\) = Probabilidad del evento A\n\\(0≤P(A)≤1\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#probabilidad-interpretación-frecuentista",
+    "href": "clases/clase_10_introprob.html#probabilidad-interpretación-frecuentista",
+    "title": "Estadística I",
+    "section": "Probabilidad Interpretación Frecuentista:",
+    "text": "Probabilidad Interpretación Frecuentista:\nLa probabilidad de un resultado es la proporción de veces que el resultado ocurriría si observáramos el proceso aleatorio un número infinito de veces.\n\n\n\n\n\nLa proporción de sacar 3 tiende a acercarse a la probabilidad de 1/6 ≈ 0.167 a medida que aumenta el número de tiradas (n)."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#probabilidad-interpretación-bayesiana",
+    "href": "clases/clase_10_introprob.html#probabilidad-interpretación-bayesiana",
+    "title": "Estadística I",
+    "section": "Probabilidad Interpretación Bayesiana:",
+    "text": "Probabilidad Interpretación Bayesiana:\nUn Bayesiano interpreta la probabilidad como un grado de creencia subjetivo: Para el mismo evento, dos personas distintas podrían tener diferentes puntos de vista y, por lo tanto, asignar diferentes probabilidades.\nPopularizada en gran medida por los avances revolucionarios en la tecnología y los métodos computacionales durante los últimos veinte años."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica",
+    "href": "clases/clase_10_introprob.html#práctica",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\n¿Cuál de los siguientes eventos te sorprendería más?\n(a) exactamente 3 caras seguidas en 10 lanzamientos de moneda\n(b) exactamente 3 caras seguidas en 100 lanzamientos de moneda\n(c) exactamente 3 caras seguidas en 1000 lanzamientos de moneda"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#ley-de-los-largos-números",
+    "href": "clases/clase_10_introprob.html#ley-de-los-largos-números",
+    "title": "Estadística I",
+    "section": "Ley de los Largos Números",
+    "text": "Ley de los Largos Números\nCuando se lanza una moneda no cargada, si sale cara en cada uno de los primeros 10 lanzamientos, ¿cuál crees que es la probabilidad de que salga otra cara en el siguiente lanzamiento? ¿0.5, menos de 0.5 o más de 0.5?\n\\(C\\,|C|\\,C |\\,C|\\, C|\\, C|\\, C |\\,C|\\, C|\\,C​|\\, ?\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#ley-de-los-largos-números-cont.",
+    "href": "clases/clase_10_introprob.html#ley-de-los-largos-números-cont.",
+    "title": "Estadística I",
+    "section": "Ley de los Largos Números cont.",
+    "text": "Ley de los Largos Números cont.\n\nLa probabilidad sigue siendo 0.5, o todavía hay un 50% de posibilidades de que salga otra cara en el siguiente lanzamiento.\n\\(P(C\\, en\\, el\\, 11º\\, lanzamiento)=P(S\\, en\\, el\\, 11º\\, lanzamiento)=0.5\\)\nLa moneda no está “en deuda” con un sello.\nEl error común de interpretación de la LLN es que se supone que los procesos aleatorios compensan lo que haya ocurrido en el pasado; esto simplemente no es cierto y también se llama falacia del jugador (o ley de los promedios)."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#ley-de-los-grandes-números",
+    "href": "clases/clase_10_introprob.html#ley-de-los-grandes-números",
+    "title": "Estadística I",
+    "section": "Ley de los Grandes Números",
+    "text": "Ley de los Grandes Números\nA medida que se recolectan más observaciones, la proporción \\(\\hat{p}_n​\\) de ocurrencias con un resultado particular converge a la probabilidad p de ese resultado."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#resultados-disjuntos-mutuamente-excluyentes-no-pueden-ocurrir-al-mismo-tiempo.",
+    "href": "clases/clase_10_introprob.html#resultados-disjuntos-mutuamente-excluyentes-no-pueden-ocurrir-al-mismo-tiempo.",
+    "title": "Estadística I",
+    "section": "Resultados disjuntos (mutuamente excluyentes): No pueden ocurrir al mismo tiempo.",
+    "text": "Resultados disjuntos (mutuamente excluyentes): No pueden ocurrir al mismo tiempo.\n\nEl resultado de un solo lanzamiento de moneda no puede ser cara y cruz.\nUn estudiante no puede reprobar y aprobar una clase a la vez.\nUna sola carta sacada de una baraja no puede ser un as y una reina."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#regla-de-la-adición-para-resultados-disjuntos",
+    "href": "clases/clase_10_introprob.html#regla-de-la-adición-para-resultados-disjuntos",
+    "title": "Estadística I",
+    "section": "REGLA DE LA ADICIÓN PARA RESULTADOS DISJUNTOS",
+    "text": "REGLA DE LA ADICIÓN PARA RESULTADOS DISJUNTOS\nSi \\(A_1\\)​ y \\(A_2\\)​ representan dos resultados disjuntos, entonces la probabilidad de que ocurra uno de ellos está dada por\n\n\\(P(A_1​\\, o\\, A_2​)=P(A_1​)+P(A_2​)\\)\n\nSi hay muchos resultados disjuntos \\(A_1​,…,A_k​\\) entonces la probabilidad de que ocurra uno de estos resultados es\n\n\\(P(A_1​)+P(A_2​)+⋯+P(A_k​)\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#resultados-no-disjuntos-pueden-ocurrir-al-mismo-tiempo.",
+    "href": "clases/clase_10_introprob.html#resultados-no-disjuntos-pueden-ocurrir-al-mismo-tiempo.",
+    "title": "Estadística I",
+    "section": "Resultados no disjuntos: Pueden ocurrir al mismo tiempo.",
+    "text": "Resultados no disjuntos: Pueden ocurrir al mismo tiempo.\nUn estudiante puede obtener una 20 en Estadística y una 20 en Economía en el mismo semestre."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#unión-de-eventos-no-disjuntos",
+    "href": "clases/clase_10_introprob.html#unión-de-eventos-no-disjuntos",
+    "title": "Estadística I",
+    "section": "Unión de eventos no disjuntos",
+    "text": "Unión de eventos no disjuntos\n¿Cuál es la probabilidad de sacar una jota o una carta roja de una baraja completa bien barajada?\n\n\n\n\n\n\\(P(\\text{sota o roja}) = P(\\text{sota}) + P(\\text{roja}) - P(\\text{sota y roja})\\)\n\\(=\\frac{4}{52} + \\frac{26}{52} - \\frac{2}{52} = \\frac{28}{52}\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#diagrámas-de-venn",
+    "href": "clases/clase_10_introprob.html#diagrámas-de-venn",
+    "title": "Estadística I",
+    "section": "Diagrámas de Venn",
+    "text": "Diagrámas de Venn\nLos diagramas de Venn son útiles cuando los resultados pueden categorizarse como “dentro” o “fuera” para dos o tres variables, atributos o procesos aleatorios. El siguiente diagrama utiliza un círculo para representar los diamantes y otro para representar las figuras.\n\n\n\n\n\n\nSi una carta es a la vez un diamante y una figura, cae en la intersección de los círculos.\nSi es un diamante pero no una figura, estará en la parte del círculo izquierdo que no está en el círculo derecho (y así sucesivamente)."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#regla-general-de-la-adición",
+    "href": "clases/clase_10_introprob.html#regla-general-de-la-adición",
+    "title": "Estadística I",
+    "section": "REGLA GENERAL DE LA ADICIÓN",
+    "text": "REGLA GENERAL DE LA ADICIÓN\nSi A y B son dos eventos cualesquiera, disjuntos o no, entonces la probabilidad de que al menos uno de ellos ocurra es\n\\(P(A\\, o\\, B)=P(A)+P(B)−P(A\\, y \\,B)\\)\ndonde \\(P(A\\, y\\, B)\\) es la probabilidad de que ambos eventos ocurran.\n\n\n\n\n\n\n“o” es inclusivo\n\n\nCuando escribimos “o” en estadística, nos referimos a “y/o” a menos que explícitamente declaremos lo contrario. Así, A o B ocurre significa A, B, o ambos A y B ocurren."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-1",
+    "href": "clases/clase_10_introprob.html#práctica-1",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\n¿Cuál es la probabilidad de que un estudiante seleccionado al azar piense que la marihuana debería legalizarse o que esté de acuerdo con las opiniones políticas de sus padres?\n\n\n\n\n\n\n_____________________ Compartir la Política de los Padres\n\n\n\n\n\n\nLegalizar MJ\n__No\n__Sí\nTotal\n\n\nNo\n11\n40\n51\n\n\nSí\n36\n78\n114\n\n\nTotal\n__47\n__118\n165\n\n\n\n(a) (40+36−78)/165\n(b) (114+118−78)/165\nc) 78/165 \n(d) 78/188\n(e) 11/47"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#repaso",
+    "href": "clases/clase_10_introprob.html#repaso",
+    "title": "Estadística I",
+    "section": "Repaso",
+    "text": "Repaso\nRegla general de la adición\n\\(P(A\\, o\\, B)\\,=\\,P(A)+P(B)−P(A\\, y\\, B)\\)\n\nNota: Para eventos disjuntos \n\\(P(A \\,y\\, B)=0\\), por lo que la fórmula anterior se simplifica a \\(P(A\\, o \\,B)=P(A)+P(B)\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#distribución-de-probabilidad",
+    "href": "clases/clase_10_introprob.html#distribución-de-probabilidad",
+    "title": "Estadística I",
+    "section": "Distribución de Probabilidad",
+    "text": "Distribución de Probabilidad\nUna distribución de probabilidad enumera todos los eventos posibles y las probabilidades con las que ocurren.\n\nLa distribución de probabilidad para el género de un hijo:\n\n\n\n\nEvento\nMasculino\nFemenino\n\n\nProbabilidad\n0.5\n0.5"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#reglas-para-las-distribuciones-de-probabilidad",
+    "href": "clases/clase_10_introprob.html#reglas-para-las-distribuciones-de-probabilidad",
+    "title": "Estadística I",
+    "section": "Reglas para las distribuciones de probabilidad:",
+    "text": "Reglas para las distribuciones de probabilidad:\n\nLos eventos listados deben ser disjuntos.\nCada probabilidad debe estar entre 0 y 1.\nLas probabilidades deben sumar 1.\n\n\nLa distribución de probabilidad para los géneros de dos hijos:\n\n\n\n\nEvento\nMM\nFF\nMF\nFM\n\n\nProbabilidad\n0.25\n0.25\n0.25\n0.25"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-2",
+    "href": "clases/clase_10_introprob.html#práctica-2",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\nEn una encuesta, el 52% de los encuestados dijo ser demócrata. ¿Cuál es la probabilidad de que un encuestado seleccionado al azar de esta muestra sea republicano?\n(a) 0.48\n(b) más de 0.48\n(c) menos de 0.48\n(d) no se puede calcular usando solo la información proporcionada"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-3",
+    "href": "clases/clase_10_introprob.html#práctica-3",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\nEn una encuesta, el 52% de los encuestados dijo ser demócrata. ¿Cuál es la probabilidad de que un encuestado seleccionado al azar de esta muestra sea republicano?\n(a) 0.48\n(b) más de 0.48\n(c) menos de 0.48\n(d) no se puede calcular usando solo la información proporcionada\nSi los únicos dos partidos políticos son Republicano y Demócrata, entonces (a) es posible. Sin embargo, también es posible que algunas personas no se afilien a un partido político o se afilien a un partido distinto a estos dos. Entonces (c) también es posible. Sin embargo, (b) definitivamente no es posible ya que resultaría en que la probabilidad total para el espacio muestral sea superior a 1."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#espacio-muestral-y-complementos",
+    "href": "clases/clase_10_introprob.html#espacio-muestral-y-complementos",
+    "title": "Estadística I",
+    "section": "Espacio Muestral y Complementos",
+    "text": "Espacio Muestral y Complementos\nEl espacio muestral es la colección de todos los posibles resultados de un ensayo.\n\nUna pareja tiene un hijo, ¿cuál es el espacio muestral para el género de este hijo? S={M,F}\nUna pareja tiene dos hijos, ¿cuál es el espacio muestral para el género de estos hijos? S={MM,FF,FM,MF}"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#eventos-complementarios",
+    "href": "clases/clase_10_introprob.html#eventos-complementarios",
+    "title": "Estadística I",
+    "section": "Eventos Complementarios",
+    "text": "Eventos Complementarios\nLos eventos complementarios son dos eventos mutuamente excluyentes cuyas probabilidades suman 1.\n\nUna pareja tiene un hijo. Si sabemos que el hijo no es un niño, ¿cuál es el género de este hijo? \n{M,F} Niño y niña son resultados complementarios.\nUna pareja tiene dos hijos, si sabemos que no son ambas niñas, ¿cuáles son las posibles combinaciones de género para estos hijos?\n S={MM,FF,FM,MF}"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#independencia",
+    "href": "clases/clase_10_introprob.html#independencia",
+    "title": "Estadística I",
+    "section": "Independencia",
+    "text": "Independencia\nDos procesos son independientes si conocer el resultado de uno no proporciona información útil sobre el resultado del otro.\n\nSaber que la moneda cayó en cara en el primer lanzamiento no proporciona ninguna información útil para determinar en qué caerá la moneda en el segundo lanzamiento.\n\n\nLos resultados de dos lanzamientos de una moneda son independientes.\n\n\nSaber que la primera carta sacada de una baraja es un as sí proporciona información útil para determinar la probabilidad de sacar un as en la segunda extracción.\n\n\nLos resultados de dos extracciones de una baraja de cartas (sin reemplazo) son dependientes."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-4",
+    "href": "clases/clase_10_introprob.html#práctica-4",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\nAproximadamente el 20% de los estudiantes universitarios de una universidad son vegetarianos o veganos. ¿Cuál es la probabilidad de que, en una muestra aleatoria de 3 estudiantes universitarios, al menos uno sea vegetariano o vegano?\n(a) \\(1−0.2 × 3\\)\n(b) \\(1−0.2^3\\)\n(c) \\(0.8^3\\)\n(d) \\(1−0.8×3\\)\n(e) \\(1−0.8^3\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#determinando-la-dependencia",
+    "href": "clases/clase_10_introprob.html#determinando-la-dependencia",
+    "title": "Estadística I",
+    "section": "Determinando la Dependencia",
+    "text": "Determinando la Dependencia\nDeterminando la Dependencia basado en datos de muestra\n\nSi las probabilidades condicionales calculadas en base a datos de muestra sugieren dependencia entre dos variables, el siguiente paso es realizar una prueba de hipótesis para determinar si la diferencia observada entre las probabilidades es probable o improbable que haya ocurrido por casualidad.\nSi la diferencia observada entre las probabilidades condicionales es grande, entonces hay una evidencia más fuerte de que la diferencia es real.\nSi una muestra es grande, incluso una pequeña diferencia puede proporcionar una fuerte evidencia de una diferencia real."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#regla-del-producto-para-eventos-independientes",
+    "href": "clases/clase_10_introprob.html#regla-del-producto-para-eventos-independientes",
+    "title": "Estadística I",
+    "section": "Regla del producto para eventos independientes",
+    "text": "Regla del producto para eventos independientes\n\\(P(A \\,y\\, B)\\, = \\,P(A)×P(B)\\)\n\nO más generalmente,\\[P(A_1​,\\, \\text y\\, ,…, \\, \\text y\\, Ak​) = P(A_1​)×⋯×P(A_k​)\\]\nLanzas una moneda dos veces, ¿cuál es la probabilidad de obtener dos caras seguidas?\n\nP(C en el 1er lzto) × P(C en el 2do lzto) = 1/2 ​× 1/2 ​=1/4​"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#disjunto-vs.-complementario",
+    "href": "clases/clase_10_introprob.html#disjunto-vs.-complementario",
+    "title": "Estadística I",
+    "section": "Disjunto vs. complementario",
+    "text": "Disjunto vs. complementario\n¿La suma de las probabilidades de dos eventos disjuntos siempre suma 1?\nNo necesariamente, puede haber más de 2 eventos en el espacio muestral, por ejemplo, la afiliación a un partido.\n¿La suma de las probabilidades de dos eventos complementarios siempre suma 1?\nSí, esa es la definición de complementario, por ejemplo, caras y cruces."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#reuniendo-todo",
+    "href": "clases/clase_10_introprob.html#reuniendo-todo",
+    "title": "Estadística I",
+    "section": "Reuniendo todo…",
+    "text": "Reuniendo todo…\nEl Complemento: “Al menos uno”\nA veces es más fácil calcular la probabilidad de que algo no ocurra para encontrar la probabilidad de que sí ocurra.\nEjemplo: En un proyecto de investigación en FACES, se sabe por estadísticas históricas que la probabilidad de que un estudiante falte a una clase en el semestre es del 20% (\\(p = 0.20\\)).\nSi formamos un grupo de 5 estudiantes seleccionados al azar, ¿cuál es la probabilidad de que al menos uno falte a una clase en el semestre?"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#reuniendo-todo-1",
+    "href": "clases/clase_10_introprob.html#reuniendo-todo-1",
+    "title": "Estadística I",
+    "section": "Reuniendo todo…",
+    "text": "Reuniendo todo…\nDado que la probabilidad del espacio muestral debe sumar 1:\nP (al menos 1 sin asegurar)\n\n\\(=1−P(ninguno\\, sin\\, asegurar)\\)\n\\(=1−(1−0.255)^5\\)\n\\(=1−0.745^5\\)\n\\(=1−0.23\\)\n\\(=0.77\\)\n\nAl menos 1:\nP(al menos uno)= 1−P (ninguno)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-5",
+    "href": "clases/clase_10_introprob.html#práctica-5",
+    "title": "Estadística I",
+    "section": "Práctica",
+    "text": "Práctica\nAproximadamente el 20% de los estudiantes universitarios de una universidad son vegetarianos o veganos. ¿Cuál es la probabilidad de que, en una muestra aleatoria de 3 estudiantes universitarios, al menos uno sea vegetariano o vegano?\n(a) \\(1−0.2 × 3\\)\n(b) \\(1−0.2^3\\)\n(c) \\(0.8^3\\)\n(d) \\(1−0.8×3\\)\n(e) \\(1−0.8^3\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#solución",
+    "href": "clases/clase_10_introprob.html#solución",
+    "title": "Estadística I",
+    "section": "Solución",
+    "text": "Solución\n\\(P( al\\, menos\\, 1\\,vegetariano)\\)\n\\(=1−P(\\,ninguno\\, vegetariano)\\)\n\\(=1−0.8^3\\)\n\\(=1−0.512=0.488\\)\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#el-complemento-al-menos-uno",
+    "href": "clases/clase_10_introprob.html#el-complemento-al-menos-uno",
+    "title": "Estadística I",
+    "section": "El Complemento: “Al menos uno”",
+    "text": "El Complemento: “Al menos uno”\nA veces es más fácil calcular la probabilidad de que algo no ocurra para encontrar la probabilidad de que sí ocurra.\nEjemplo: En un proyecto de investigación en FACES, se sabe por estadísticas históricas que la probabilidad de que un estudiante falte a una reunión de coordinación es del 20% (\\(p = 0.20\\)).\nSi formamos un grupo de 5 estudiantes seleccionados al azar, ¿cuál es la probabilidad de que al menos uno falte a la reunión?"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#simplificando-el-espacio-muestral",
+    "href": "clases/clase_10_introprob.html#simplificando-el-espacio-muestral",
+    "title": "Estadística I",
+    "section": "Simplificando el Espacio Muestral",
+    "text": "Simplificando el Espacio Muestral\nEl número de personas que pueden faltar es \\(S = \\{0, 1, 2, 3, 4, 5\\}\\).\n\n“Al menos uno” abarca casi todo el espacio: \\(\\{1, 2, 3, 4, 5\\}\\).\nLo único que queda fuera es el cero (que nadie falte).\n\nPor lo tanto, podemos dividir el espacio en dos categorías: 1. Nadie falta (Evento complementario). 2. Al menos uno falta."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#aplicando-la-regla-del-complemento",
+    "href": "clases/clase_10_introprob.html#aplicando-la-regla-del-complemento",
+    "title": "Estadística I",
+    "section": "Aplicando la Regla del Complemento",
+    "text": "Aplicando la Regla del Complemento\nDado que la suma de todas las probabilidades es 1:\n\\[P(\\text{al menos 1 falte}) = 1 - P(\\text{ninguno falte})\\]\nSi la probabilidad de que alguien falte es \\(0.20\\), la probabilidad de que asista es \\(0.80\\). Para 5 personas independientes:\n\\[= 1 - (0.80)^5\\] \\[= 1 - 0.327\\] \\[= 0.673\\]\nConclusión: Hay un 67.3% de probabilidad de que al menos un integrante del grupo falte a una clase."
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#práctica-la-regla-del-complemento",
+    "href": "clases/clase_10_introprob.html#práctica-la-regla-del-complemento",
+    "title": "Estadística I",
+    "section": "Práctica: La Regla del Complemento",
+    "text": "Práctica: La Regla del Complemento\nSe estima que el 20% de los estudiantes de la UCV utiliza el transporte universitario para llegar a la Facultad. Si seleccionamos una muestra aleatoria de 3 estudiantes, ¿cuál es la probabilidad de que al menos uno use el transporte universitario?\nOpciones:\n\n\\(1 - 0.2 \\times 3\\)\n\\(1 - 0.2^3\\)\n\\(0.8^3\\)\n\\(1 - 0.8 \\times 3\\)\n\\(1 - 0.8^3\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#solución-paso-a-paso",
+    "href": "clases/clase_10_introprob.html#solución-paso-a-paso",
+    "title": "Estadística I",
+    "section": "Solución Paso a Paso",
+    "text": "Solución Paso a Paso\nPara resolver “al menos uno”, calculamos la probabilidad de que ninguno cumpla la condición y se la restamos al total (1).\n\nProbabilidad de que SI use el transporte: \\(P(U) = 0.20\\)\nProbabilidad de que NO use el transporte: \\(P(U^c) = 1 - 0.20 = 0.80\\)\nProbabilidad de que los 3 NO lo usen: \\(0.80 \\times 0.80 \\times 0.80 = 0.8^3\\)"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html#cálculo-final",
+    "href": "clases/clase_10_introprob.html#cálculo-final",
+    "title": "Estadística I",
+    "section": "Cálculo final:",
+    "text": "Cálculo final:\n\\[P(\\text{al menos 1}) = 1 - P(\\text{ninguno})\\] \\[P(\\text{al menos 1}) = 1 - 0.8^3\\] \\[P(\\text{al menos 1}) = 1 - 0.512 = 0.488\\]\nResultado: Hay un 48.8% de probabilidad.\n\n\n\n\n🔗 Estadística 1"
+  },
+  {
+    "objectID": "notebooks/notebook2_apoyo_ejercicio_estadistica_i.html",
+    "href": "notebooks/notebook2_apoyo_ejercicio_estadistica_i.html",
+    "title": "UCV Economía Estadística I",
+    "section": "",
+    "text": "# Instalamos las librerías si no están presentes\nif (!require(\"readxl\")) install.packages(\"readxl\") # Para guardar excel con datos\nif (!require(\"writexl\")) install.packages(\"writexl\") # Para escribir el excel\n\n# Cargar librerias necesarias\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(writexl)\n\n\nif (!require(\"fdth\")) install.packages(\"fdth\") # Para procesar las tablas de frecuencia\nlibrary(fdth)\n\n\nif (!require(\"pdfetch\")) install.packages(\"pdfetch\") # Para procesar los datos\nlibrary(pdfetch)\n\n\n# Descargar precios mensuales\n# Descargar precios (ej. Apple y Futuros de Oro)\n\n# \"from\"= desde\n# \"to\" = hasta\n\n# tickets identificadores\n# c(\"AAPL\",\"GC=F\",\"IBM\")\n# listado tickets en https://finance.yahoo.com/markets/\n\ndatos_financieros &lt;- pdfetch_YAHOO(c(\"AAPL\",\n                                    \"GC=F\",\n                                    \"IBM\"),\n                                  from = \"2023-01-01\",\n                                  to   = \"2025-12-31\")\n\n\n# ver contenido de la descarga\ndatos_financieros\n\n\n# ver cantidad de observaciones\nnrow(datos_financieros)\n\n\n# Descargar precios (ej. Apple y Futuros de Oro) con periodicidad mensual\n\n# periodididad . opciones \"1d\", \"1wk\", \"1mo\", \"daily\", \"weekly\", \"monthly\"\n# interval=\"monthly\"  mensual\n\ndatos_financieros &lt;- pdfetch_YAHOO(c(\"AAPL\",\n                                    \"GC=F\",\n                                    \"IBM\"),\n                                  from = \"2023-01-01\",\n                                  to   = \"2025-12-31\",\n                                  interval='monthly')\n\n\n# ver contenido de la descarga\ndatos_financieros\n\n\n# Descargar precios solo Apple\n\n# fields c(\"open\", \"high\", \"low\", \"close\", \"adjclose\", \"volume\"),\n\ndatos_financieros_apple &lt;- pdfetch_YAHOO(\"AAPL\",\n                                        from = \"2023-01-01\",\n                                        to   = \"2025-12-31\",\n                                        interval='monthly',\n                                        fields= c(\"open\", \"volume\"))\n\n\n# cantidad de observaciones de valores apple\nnrow(datos_financieros_apple)\n\n\n# ver datos de valores apple\ndatos_financieros_apple\n\n\n# obtener datos nvidia\ndatos_financieros_nvidia &lt;- pdfetch_YAHOO(\"NVDA\",\n                                          from = \"2023-01-01\",\n                                          to   = \"2025-12-31\",\n                                          interval='monthly',\n                                          fields= c(\"open\")) #no se incluye el volúmen\n\n\n# ver los datos descargados\ndatos_financieros_nvidia\n\n\n# acceder a los valores específicos de una columna con el operador $.\n# Obviar la aparece la columna de la fecha\n\ndatos_financieros_apple$AAPL.open\n\n\n# acceder a la columna de los volúmenes de apple\ndatos_financieros_apple$AAPL.volume\n\n\n# 2. Generamos la tabla de frecuencia sobre el precio de cierre ('close')\n\n# usar el símbolo dolar para acceder a la variable o atributo de interés\n# fdt = Frequency Distribution Table\n\ntabla_distribucion_apple &lt;- fdt(datos_financieros_apple$AAPL.open , breaks = \"Sturges\")\n\n# 3. Ver la tabla\ntabla_distribucion_apple\n\nEn el caso anterior se usó el argumento breaks = \"Sturges\" para que la tabla se genere usando el método de Sturges, el cual es un procedemiento matemático para decidir calcular cuántos intervalos (o “clases”) debe tener la tabla de frecuencias o histograma para que los datos se vean bien representados.\nNo obstante, la idea de este ejercicio es ver qué pasa si se varían la cantidad de interválos y para eso vamos a aplicar la función nuevamente fdt con el argumento k= 4 o 5 o ... para que pueda evaluar las variaciones en los agrupamientos.\n\n# ahora aplicamos el argumento k\ntabla_custom_apple &lt;- fdt(datos_financieros_apple$AAPL.open, k = 6)\ntabla_custom_apple\n\n\n# generar histograma\nhist(datos_financieros$AAPL.open)\n\n\n# variar la cantidad de breaks y enlazar conceptos con la tabla de frecuencia para datos agrupados\nhist(datos_financieros$AAPL.open, breaks = 4)\n\n\n# generar el gráfico de caja\nboxplot(datos_financieros$AAPL.open)\n\n\nValores estadísticos\n\n# tabla resúmen\nsummary(datos_financieros$AAPL.open)\n\n\n# desviación típica\nsd(datos_financieros$AAPL.open)\n\n\n\nEjemplo de descarga de datos a excel\n\n# 1. Obtener datos de precios del oro\n\ndf_oro &lt;-  pdfetch_YAHOO(\"GC=F\",\n                         from = \"2023-01-01\",\n                         to   = \"2025-12-31\",\n                         interval='monthly',\n                         fields= c(\"open\"))\n\n\n\n# revisar los datos\ndf_oro\n\n\n# 2. Guardar en Excel\n# se incluye un trozo de código `%&gt;%as.data.frame` para convertir los datos a un formato que se pueda exportar a excel\n# queda fuera del alcance del ejercicio explicar porqué es necesario añadir este segmento.\n\nwrite_xlsx(df_oro%&gt;%as.data.frame, \"precios_oro.xlsx\")"
+  },
+  {
+    "objectID": "clases/clase_10_binomial.html",
+    "href": "clases/clase_10_binomial.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "## 1. Los Cimientos: El Ensayo de Bernoulli\nPara entender la Binomial, primero debemos entender su “ladrillo” fundamental: el Ensayo de Bernoulli.\nEs un experimento único con solo dos resultados posibles:\n\nÉxito (1): Ocurre el evento de interés (probabilidad \\(p\\)).\nFracaso (0): No ocurre (probabilidad \\(q = 1-p\\)).\n\n\nUna Binomial (\\(n, p\\)) es simplemente la suma de \\(n\\) ensayos de Bernoulli independientes.\n\n\n## 2. La Fórmula Matemática\nLa probabilidad de obtener exactamente \\(x\\) éxitos en \\(n\\) intentos no es solo \\(p^x\\). Debemos contar todas las formas posibles de ordenar esos éxitos.\n\\[f(x) = \\binom{n}{x} \\cdot p^x \\cdot (1-p)^{n-x}\\]\nDonde: - \\(\\binom{n}{x}\\): Combinatorio. Número de formas de elegir cuáles intentos fueron éxitos. - \\(p^x\\): Probabilidad de los éxitos. - \\((1-p)^{n-x}\\): Probabilidad de los fracasos restantes.\n\n## 3. ¿Cómo afecta ‘p’ a la forma?\nLa forma de la distribución cambia drásticamente según el valor de \\(p\\):\n\n\\(p = 0.5\\): Simétrica (forma de campana perfecta).\n\\(p &lt; 0.5\\): Sesgo positivo (cola larga a la derecha).\n\\(p &gt; 0.5\\): Sesgo negativo (cola larga a la izquierda).\n\nVamos a demostrar esto visualmente en R simulando 3 escenarios con \\(n=20\\).\n\n## 4. Código R: Comparando Probabilidades\nUsaremos expand_grid para generar escenarios para \\(p=0.2\\), \\(p=0.5\\) y \\(p=0.8\\)."
+  },
+  {
+    "objectID": "clases/practica_introprobabilidad.html",
+    "href": "clases/practica_introprobabilidad.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.\nDatos de la muestra (N = 100):\n\n\n\nEscuela\nMasculino (M)\nFemenino (F)\nTotal\n\n\n\n\nEconomía\n15\n10\n25\n\n\nSociología\n10\n20\n30\n\n\nEstudios Int.\n20\n25\n45\n\n\nTotal\n45\n55\n100"
+  },
+  {
+    "objectID": "clases/clase_10_introprob.html",
+    "href": "clases/clase_10_introprob.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "Tip\n\n\n\nTodas las láminas que se muestran a continuación pertenecen al proyecto OpenIntroStats openintro.org/os, y se encuentra disponible en su formato original en el siguiente enlace"
+  },
+  {
+    "objectID": "notebooks/notebook_apoyo_ejercicio_estadistica_i.html",
+    "href": "notebooks/notebook_apoyo_ejercicio_estadistica_i.html",
+    "title": "Nueva sección",
+    "section": "",
+    "text": "# Instalamos las librerías si no están presentes\nif (!require(\"readxl\")) install.packages(\"readxl\") # Para guardar excel con datos\nif (!require(\"writexl\")) install.packages(\"writexl\") # Para escribir el excel\nif (!require(\"tidyquant\")) install.packages(\"tidyquant\") # Para procesar los datos\nif (!require(\"fdth\")) install.packages(\"fdth\") # Para procesar las tablas de frecuencia\n\n\n# Cargar librerias necesarias\nlibrary(tidyquant)\nlibrary(readxl)\nlibrary(writexl)\nlibrary(tidyverse)\nlibrary(fdth)\n\n\n\n# Descargar precios (ej. Apple y Futuros de Oro)\n\n# \"from\"= desde\n# \"to\" = hasta\ndatos_financieros &lt;- tq_get(c(\"AAPL\",\n                              \"GC=F\",\n                              \"IBM\"),\n\n                            get  = \"stock.prices\",\n                            from = \"2023-01-01\",\n                            to   = \"2025-12-31\")\n\n\n\n# Ver el resultado (es un data frame normal)\nhead(datos_financieros)\n\n\ndatos_financieros%&gt;%\n  filter(symbol==\"GC=F\" )\n\n\n# no es necesario compender a fondo esté código\nprocesar_precios_mensuales &lt;- function(datos) {\n\n  datos %&gt;%\n    # 1. Crear una columna que represente el mes (redondeando la fecha hacia abajo)\n    mutate(mes = floor_date(date, unit = \"month\")) %&gt;%\n\n    # 2. Agrupar por el símbolo (acción/commodity) y por el mes\n    group_by(symbol, mes) %&gt;%\n\n    # 3. Calcular el promedio del precio de cierre (close)\n    summarise(precio_promedio = mean(close, na.rm = TRUE), .groups = \"drop\") %&gt;%\n\n    # 4. Transformar: Los símbolos se vuelven columnas\n    pivot_wider(names_from = symbol, values_from = precio_promedio)\n\n}\n\n\nprocesar_precios_mensuales(datos_financieros)\n\n\n# 1. Filtramos para quedarnos con UNA sola acción (ej. Apple)\ndatos_aapl &lt;- datos_financieros %&gt;%\n  filter(symbol == \"AAPL\")\n\n# 2. Generamos la tabla de frecuencia sobre el precio de cierre ('close')\n# fdt = Frequency Distribution Table\ntabla_distribucion &lt;- fdt(datos_aapl$close, breaks = \"Sturges\")\n\n# 3. Ver la tabla\nprint(tabla_distribucion)\n\n\ntabla_custom &lt;- fdt(datos_aapl$close, k = 4)\ntabla_custom\n\n\nhist(datos_aapl$close)\n\n\nboxplot(datos_aapl$close)\n\n\n# 1. Bajar datos\ndf_oro &lt;- tq_get(\"GC=F\", from = \"2023-01-01\")\n\n# 2. Guardar en Excel\nwrite_xlsx(df_oro, \"precios_oro.xlsx\")\n\n\n# Leer el archivo excel\n# Asegúrate de que el nombre coincida con el archivo que subiste\ndf &lt;- read_excel(\"datos.xlsx\", sheet = 1)\n\n# Ver las primeras filas para confirmar\nhead(df)\n\n\nNueva sección"
   }
 ]
