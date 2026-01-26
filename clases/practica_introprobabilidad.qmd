@@ -1,0 +1,108 @@
+---
+title: "Estadística I"
+subtitle: "Practica: Intro a la Probabilidad"
+date: "2026/01/26"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+  transition: fade
+  chalkboard: true
+---
+
+## El Escenario: Estudiantes de FACES
+
+Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.
+
+**Datos de la muestra (N = 100):**
+
+| Escuela       | Masculino (M) | Femenino (F) | Total   |
+|---------------|---------------|--------------|---------|
+| Economía      | 15            | 10           | **25**  |
+| Sociología    | 10            | 20           | **30**  |
+| Estudios Int. | 20            | 25           | **45**  |
+| **Total**     | **45**        | **55**       | **100** |
+
+## Definición de Eventos
+
+Supongamos que queremos calcular la probabilidad de que un estudiante sea de **Economía (A)** O sea **Mujer (B)**.
+
+-   **Evento A:** El estudiante es de Economía. $P(A) = \frac{25}{100} = 0.25$
+-   **Evento B:** El estudiante es de sexo Femenino. $P(B) = \frac{55}{100} = 0.55$
+
+¿Podemos simplemente sumar $0.25 + 0.55$?
+
+## El Problema del "Doble Conteo"
+
+Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando **dos veces** a las mujeres que estudian economía.
+
+La intersección ($A \cap B$) representa a las 10 estudiantes que son **mujeres de Economía**.
+
+$$P(A \cap B) = \frac{10}{100} = 0.10$$
+
+## La Regla General de la Adición
+
+Para evitar el doble conteo, la fórmula es:
+
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
+Donde:
+
+\* $P(A \cup B)$: Probabilidad de A o B (unión).
+
+\* $P(A \cap B)$: Probabilidad de A y B (intersección).
+
+## Paso a Paso: Aplicando la Fórmula
+
+Sustituimos nuestros valores de FACES:
+
+***COMPLETAR***
+
+1.  **Probabilidad de Economía:** *completar*
+2.  **Probabilidad de Femenino:** *completar*
+3.  **Restamos la intersección:** *completar*
+
+
+***COMPLETAR***
+
+## Paso a Paso: Aplicando la Fórmula
+
+Sustituimos nuestros valores de FACES:
+
+1.  **Probabilidad de Economía:** $P(A) = 0.25$
+2.  **Probabilidad de Femenino:** $P(B) = 0.55$
+3.  **Restamos la intersección:** $P(A \cap B) = 0.10$
+
+$$P(A \cup B) = 0.25 + 0.55 - 0.10$$ $$P(A \cup B) = 0.70$$
+
+**Resultado:** Existe un **70%** de probabilidad de que el estudiante sea de Economía o mujer.
+
+------------------------------------------------------------------------
+
+## ¿Y si los eventos fueran mutuamente excluyentes?
+
+Si preguntamos por la probabilidad de ser de **Economía (A)** O de **Sociología (C)**:
+
+-   Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.
+-   $P(A \cap C) = 0$
+
+En este caso, la regla se simplifica: $$P(A \cup C) = P(A) + P(C)$$ $$P(A \cup C) = 0.25 + 0.30 = 0.55$$
+
+------------------------------------------------------------------------
+
+## Ejercicio Rápido para la Clase
+
+Utilizando la tabla inicial, calcular:
+
+> ¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de **Estudios Internacionales** o sea de sexo **Masculino**?
+
+Recordar identificar: 
+1. $P(\text{EEI})$ 
+2. $P(\text{M})$ 
+3. $P(\text{EEI} \cap \text{M})$

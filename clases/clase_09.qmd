@@ -128,7 +128,7 @@ var_inpc%>%
 ## Diferencia entre Estacionalidad y Ciclicidad
 
 |  |  |  |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Característica** | **Estacionalidad** | **Ciclicidad** |
 | Duración | Fija y conocida | Variable e impredecible |
 | Frecuencia | Dentro de un período fijo (e.g., año) | Mayor que la estacionalidad |

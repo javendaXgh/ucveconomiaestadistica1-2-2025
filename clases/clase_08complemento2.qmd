@@ -3,7 +3,6 @@ title: "El Cálculo del Dow Jones"
 subtitle: "Un ejemplo simplificado (Toy Model)"
 format: 
   revealjs:
-    theme: simple
     transition: slide
     slide-number: true
 editor: visual

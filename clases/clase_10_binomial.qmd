@@ -1,0 +1,70 @@
+---
+title: "Estadística I"
+subtitle: "Clase 10: Introducción a la Dist. Binomial"
+date: "2026/01/19"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+\## 1. Los Cimientos: El Ensayo de Bernoulli
+
+Para entender la Binomial, primero debemos entender su "ladrillo" fundamental: el **Ensayo de Bernoulli**.
+
+Es un experimento único con solo dos resultados posibles:
+
+1.  **Éxito (1):** Ocurre el evento de interés (probabilidad $p$).
+2.  **Fracaso (0):** No ocurre (probabilidad $q = 1-p$).
+
+> Una **Binomial (**$n, p$) es simplemente la suma de $n$ ensayos de Bernoulli independientes.
+
+------------------------------------------------------------------------
+
+\## 2. La Fórmula Matemática
+
+La probabilidad de obtener exactamente $x$ éxitos en $n$ intentos no es solo $p^x$. Debemos contar todas las formas posibles de ordenar esos éxitos.
+
+$$f(x) = \binom{n}{x} \cdot p^x \cdot (1-p)^{n-x}$$
+
+Donde: - $\binom{n}{x}$: **Combinatorio**. Número de formas de elegir cuáles intentos fueron éxitos. - $p^x$: Probabilidad de los éxitos. - $(1-p)^{n-x}$: Probabilidad de los fracasos restantes.
+
+------------------------------------------------------------------------
+
+\## 3. ¿Cómo afecta 'p' a la forma?
+
+La forma de la distribución cambia drásticamente según el valor de $p$:
+
+-   $p = 0.5$: Simétrica (forma de campana perfecta).
+-   $p < 0.5$: Sesgo positivo (cola larga a la derecha).
+-   $p > 0.5$: Sesgo negativo (cola larga a la izquierda).
+
+Vamos a demostrar esto visualmente en R simulando 3 escenarios con $n=20$.
+
+------------------------------------------------------------------------
+
+\## 4. Código R: Comparando Probabilidades
+
+Usaremos `expand_grid` para generar escenarios para $p=0.2$, $p=0.5$ y $p=0.8$.
+
+```{r}
+#| label: setup-compare
+library(tidyverse)
+
+# Parámetros
+n_ensayos <- 20
+probs <- c(0.2, 0.5, 0.8)
+
+# Creamos un data frame expandido para las 3 probabilidades
+df_comparacion <- expand_grid(x = 0:n_ensayos, p = probs) %>%
+  mutate(
+    densidad = dbinom(x, size = n_ensayos, prob = p),
+    etiqueta = paste("p =", p) # Para los títulos del gráfico
+  )
+```
