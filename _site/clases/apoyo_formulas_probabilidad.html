@@ -12,8 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="M.Sc. José Miguel Avendaño I.">
-  <meta name="dcterms.date" content="2026-01-26">
-  <title>UCV Economía Estadística I – Estadística I</title>
+  <title>UCV Economía Estadística I – Hoja de Referencia: Fórmulas de Probabilidad</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -333,8 +332,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Estadística I – UCV Economía Estadística I">
-<meta property="og:description" content="Practica: Intro a la Probabilidad">
+<meta property="og:title" content="Hoja de Referencia: Fórmulas de Probabilidad – UCV Economía Estadística I">
 <meta property="og:site_name" content="UCV Economía Estadística I">
 </head>
 <body class="quarto-light">
@@ -342,8 +340,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Estadística I</h1>
-  <p class="subtitle">Practica: Intro a la Probabilidad</p>
+  <h1 class="title">Hoja de Referencia: Fórmulas de Probabilidad</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -356,113 +353,41 @@ M.Sc. José Miguel Avendaño I.
     </div>
 </div>
 
-  <p class="date">2026-01-26</p>
 </section>
-<section id="el-escenario-estudiantes-de-faces" class="slide level2">
-<h2>El Escenario: Estudiantes de FACES</h2>
-<p>Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.</p>
-<p><strong>Datos de la muestra (N = 100):</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Escuela</th>
-<th>Masculino (M)</th>
-<th>Femenino (F)</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Economía</td>
-<td>15</td>
-<td>10</td>
-<td><strong>25</strong></td>
-</tr>
-<tr class="even">
-<td>Sociología</td>
-<td>10</td>
-<td>20</td>
-<td><strong>30</strong></td>
-</tr>
-<tr class="odd">
-<td>Estudios Int.</td>
-<td>20</td>
-<td>25</td>
-<td><strong>45</strong></td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>45</strong></td>
-<td><strong>55</strong></td>
-<td><strong>100</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="definición-de-eventos" class="slide level2">
-<h2>Definición de Eventos</h2>
-<p>Supongamos que queremos calcular la probabilidad de que un estudiante sea de <strong>Economía (A)</strong> O sea <strong>Mujer (B)</strong>.</p>
+<section id="fórmulas-de-apoyo" class="slide level2 xsmall">
+<h2>Fórmulas de Apoyo</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reglas-básicas">1. Reglas Básicas</h3>
 <ul>
-<li><strong>Evento A:</strong> El estudiante es de Economía. <span class="math inline">\(P(A) = \frac{25}{100} = 0.25\)</span></li>
-<li><strong>Evento B:</strong> El estudiante es de sexo Femenino. <span class="math inline">\(P(B) = \frac{55}{100} = 0.55\)</span></li>
+<li><strong>Rango de Probabilidad</strong> <span class="math display">\[0 \leq P(A) \leq 1\]</span></li>
 </ul>
-<p>¿Podemos simplemente sumar <span class="math inline">\(0.25 + 0.55\)</span>?</p>
-</section>
-<section id="el-problema-del-doble-conteo" class="slide level2">
-<h2>El Problema del “Doble Conteo”</h2>
-<p>Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando <strong>dos veces</strong> a las mujeres que estudian economía.</p>
-<p>La intersección (<span class="math inline">\(A \cap B\)</span>) representa a las 10 estudiantes que son <strong>mujeres de Economía</strong>.</p>
-<p><span class="math display">\[P(A \cap B) = \frac{10}{100} = 0.10\]</span></p>
-</section>
-<section id="la-regla-general-de-la-adición" class="slide level2">
-<h2>La Regla General de la Adición</h2>
-<p>Para evitar el doble conteo, la fórmula es:</p>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
-<p>Donde:</p>
-<p>* <span class="math inline">\(P(A \cup B)\)</span>: Probabilidad de A o B (unión).</p>
-<p>* <span class="math inline">\(P(A \cap B)\)</span>: Probabilidad de A y B (intersección).</p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<p><strong><em>COMPLETAR</em></strong></p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <em>completar</em></li>
-<li><strong>Probabilidad de Femenino:</strong> <em>completar</em></li>
-<li><strong>Restamos la intersección:</strong> <em>completar</em></li>
-</ol>
-<p><strong><em>COMPLETAR</em></strong></p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula-1" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <span class="math inline">\(P(A) = 0.25\)</span></li>
-<li><strong>Probabilidad de Femenino:</strong> <span class="math inline">\(P(B) = 0.55\)</span></li>
-<li><strong>Restamos la intersección:</strong> <span class="math inline">\(P(A \cap B) = 0.10\)</span></li>
-</ol>
-<p><span class="math display">\[P(A \cup B) = 0.25 + 0.55 - 0.10\]</span> <span class="math display">\[P(A \cup B) = 0.70\]</span></p>
-<p><strong>Resultado:</strong> Existe un <strong>70%</strong> de probabilidad de que el estudiante sea de Economía o mujer.</p>
-</section>
-<section id="y-si-los-eventos-fueran-mutuamente-excluyentes" class="slide level2">
-<h2>¿Y si los eventos fueran mutuamente excluyentes?</h2>
-<p>Si preguntamos por la probabilidad de ser de <strong>Economía (A)</strong> O de <strong>Sociología (C)</strong>:</p>
+<p><strong>Regla del Complemento</strong> <span class="math display">\[P(A^c) = 1 - P(A)\]</span> <span class="math display">\[P(A) + P(A^c) = 1\]</span></p>
+<p><strong>Lógica de “Al Menos Uno”</strong> <span class="math display">\[P(\text{al menos } 1) = 1 - P(\text{ninguno})\]</span></p>
+</div><div class="column" style="width:50%;">
+<h3 id="unión-e-intersección">2. Unión e Intersección</h3>
+<p><strong>Regla General de la Adición (“o”)</strong> <span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span> <em>(Si son disjuntos,</em> <span class="math inline">\(P(A \cap B) = 0\)</span>)</p>
+<p><strong>Independencia (“y”)</strong> Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son independientes: <span class="math display">\[P(A \cap B) = P(A) \times P(B)\]</span></p>
+<p><strong>Probabilidad Condicional</strong> <span class="math display">\[P(A|B) = \frac{P(A \cap B)}{P(B)}\]</span></p>
+</div></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Recordatorio de Notación</strong></p>
+</div>
+<div class="callout-content">
 <ul>
-<li>Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.</li>
-<li><span class="math inline">\(P(A \cap C) = 0\)</span></li>
+<li><span class="math inline">\(\cup\)</span> : Unión (ocurre A <strong>o</strong> B, o ambos).</li>
+<li><span class="math inline">\(\cap\)</span> : Intersección (ocurre A <strong>y</strong> B simultáneamente).</li>
+<li><span class="math inline">\(A^c\)</span> : Complemento (NO ocurre A).</li>
+<li>Disjuntos: No pueden ocurrir al mismo tiempo.</li>
 </ul>
-<p>En este caso, la regla se simplifica: <span class="math display">\[P(A \cup C) = P(A) + P(C)\]</span> <span class="math display">\[P(A \cup C) = 0.25 + 0.30 = 0.55\]</span></p>
-</section>
-<section id="ejercicio-rápido-para-la-clase" class="slide level2">
-<h2>Ejercicio Rápido para la Clase</h2>
-<p>Utilizando la tabla inicial, calcular:</p>
-<blockquote>
-<p>¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de <strong>Estudios Internacionales</strong> o sea de sexo <strong>Masculino</strong>?</p>
-</blockquote>
-<p>Pasos:</p>
-<p>1. <span class="math inline">\(P(\text{EEI})\)</span></p>
-<p>2. <span class="math inline">\(P(\text{M})\)</span></p>
-<p>3. <span class="math inline">\(P(\text{EEI} \cap \text{M})\)</span></p>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo2.png" class="slide-logo"></p>

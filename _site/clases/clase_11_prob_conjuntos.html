@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="M.Sc. José Miguel Avendaño I.">
-  <meta name="dcterms.date" content="2026-01-26">
+  <meta name="dcterms.date" content="2026-01-28">
   <title>UCV Economía Estadística I – Estadística I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -334,7 +334,7 @@
     }
   </style>
 <meta property="og:title" content="Estadística I – UCV Economía Estadística I">
-<meta property="og:description" content="Practica: Intro a la Probabilidad">
+<meta property="og:description" content="Clase 11: Introducción a la Probabilidad /Conjuntos">
 <meta property="og:site_name" content="UCV Economía Estadística I">
 </head>
 <body class="quarto-light">
@@ -343,7 +343,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Estadística I</h1>
-  <p class="subtitle">Practica: Intro a la Probabilidad</p>
+  <p class="subtitle">Clase 11: Introducción a la Probabilidad /Conjuntos</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -356,113 +356,283 @@ M.Sc. José Miguel Avendaño I.
     </div>
 </div>
 
-  <p class="date">2026-01-26</p>
+  <p class="date">2026-01-28</p>
 </section>
-<section id="el-escenario-estudiantes-de-faces" class="slide level2">
-<h2>El Escenario: Estudiantes de FACES</h2>
-<p>Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.</p>
-<p><strong>Datos de la muestra (N = 100):</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Escuela</th>
-<th>Masculino (M)</th>
-<th>Femenino (F)</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Economía</td>
-<td>15</td>
-<td>10</td>
-<td><strong>25</strong></td>
-</tr>
-<tr class="even">
-<td>Sociología</td>
-<td>10</td>
-<td>20</td>
-<td><strong>30</strong></td>
-</tr>
-<tr class="odd">
-<td>Estudios Int.</td>
-<td>20</td>
-<td>25</td>
-<td><strong>45</strong></td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>45</strong></td>
-<td><strong>55</strong></td>
-<td><strong>100</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="definición-de-eventos" class="slide level2">
-<h2>Definición de Eventos</h2>
-<p>Supongamos que queremos calcular la probabilidad de que un estudiante sea de <strong>Economía (A)</strong> O sea <strong>Mujer (B)</strong>.</p>
+<section id="teoría-de-conjuntos" class="slide level2">
+<h2>1. Teoría de Conjuntos</h2>
+<h3 id="conceptos-clave">Conceptos Clave</h3>
 <ul>
-<li><strong>Evento A:</strong> El estudiante es de Economía. <span class="math inline">\(P(A) = \frac{25}{100} = 0.25\)</span></li>
-<li><strong>Evento B:</strong> El estudiante es de sexo Femenino. <span class="math inline">\(P(B) = \frac{55}{100} = 0.55\)</span></li>
-</ul>
-<p>¿Podemos simplemente sumar <span class="math inline">\(0.25 + 0.55\)</span>?</p>
-</section>
-<section id="el-problema-del-doble-conteo" class="slide level2">
-<h2>El Problema del “Doble Conteo”</h2>
-<p>Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando <strong>dos veces</strong> a las mujeres que estudian economía.</p>
-<p>La intersección (<span class="math inline">\(A \cap B\)</span>) representa a las 10 estudiantes que son <strong>mujeres de Economía</strong>.</p>
-<p><span class="math display">\[P(A \cap B) = \frac{10}{100} = 0.10\]</span></p>
-</section>
-<section id="la-regla-general-de-la-adición" class="slide level2">
-<h2>La Regla General de la Adición</h2>
-<p>Para evitar el doble conteo, la fórmula es:</p>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
-<p>Donde:</p>
-<p>* <span class="math inline">\(P(A \cup B)\)</span>: Probabilidad de A o B (unión).</p>
-<p>* <span class="math inline">\(P(A \cap B)\)</span>: Probabilidad de A y B (intersección).</p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<p><strong><em>COMPLETAR</em></strong></p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <em>completar</em></li>
-<li><strong>Probabilidad de Femenino:</strong> <em>completar</em></li>
-<li><strong>Restamos la intersección:</strong> <em>completar</em></li>
-</ol>
-<p><strong><em>COMPLETAR</em></strong></p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula-1" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <span class="math inline">\(P(A) = 0.25\)</span></li>
-<li><strong>Probabilidad de Femenino:</strong> <span class="math inline">\(P(B) = 0.55\)</span></li>
-<li><strong>Restamos la intersección:</strong> <span class="math inline">\(P(A \cap B) = 0.10\)</span></li>
-</ol>
-<p><span class="math display">\[P(A \cup B) = 0.25 + 0.55 - 0.10\]</span> <span class="math display">\[P(A \cup B) = 0.70\]</span></p>
-<p><strong>Resultado:</strong> Existe un <strong>70%</strong> de probabilidad de que el estudiante sea de Economía o mujer.</p>
-</section>
-<section id="y-si-los-eventos-fueran-mutuamente-excluyentes" class="slide level2">
-<h2>¿Y si los eventos fueran mutuamente excluyentes?</h2>
-<p>Si preguntamos por la probabilidad de ser de <strong>Economía (A)</strong> O de <strong>Sociología (C)</strong>:</p>
+<li><strong>Conjunto</strong>: Una colección bien definida de objetos.
 <ul>
-<li>Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.</li>
-<li><span class="math inline">\(P(A \cap C) = 0\)</span></li>
+<li>Ej: <span class="math inline">\(S = \{1, 2, 3, 4, 5, 6\}\)</span> (resultados de un dado).</li>
+</ul></li>
+<li><strong>Complemento (</strong><span class="math inline">\(\mathbf{A^c}\)</span> o <span class="math inline">\(\mathbf{\bar{A}}\)</span>): Todos los elementos que no están en el conjunto A, pero sí en el espacio muestral.
+<ul>
+<li>Ej: Si <span class="math inline">\(A = \{2, 4, 6\}\)</span> (pares), entonces <span class="math inline">\(A^c = \{1, 3, 5\}\)</span> (impares).</li>
+</ul></li>
 </ul>
-<p>En este caso, la regla se simplifica: <span class="math display">\[P(A \cup C) = P(A) + P(C)\]</span> <span class="math display">\[P(A \cup C) = 0.25 + 0.30 = 0.55\]</span></p>
 </section>
-<section id="ejercicio-rápido-para-la-clase" class="slide level2">
-<h2>Ejercicio Rápido para la Clase</h2>
-<p>Utilizando la tabla inicial, calcular:</p>
-<blockquote>
-<p>¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de <strong>Estudios Internacionales</strong> o sea de sexo <strong>Masculino</strong>?</p>
-</blockquote>
-<p>Pasos:</p>
-<p>1. <span class="math inline">\(P(\text{EEI})\)</span></p>
-<p>2. <span class="math inline">\(P(\text{M})\)</span></p>
-<p>3. <span class="math inline">\(P(\text{EEI} \cap \text{M})\)</span></p>
+<section id="teoría-de-conjuntos--cont." class="slide level2">
+<h2>1. Teoría de Conjuntos- cont.</h2>
+<ul>
+<li><strong>Unión (</strong><span class="math inline">\(\mathbf{A \cup B}\)</span>): Todos los elementos que están en A, o en B, o en ambos.
+<ul>
+<li>Ej: Si <span class="math inline">\(A = \{1, 2, 3\}\)</span> y <span class="math inline">\(B = \{3, 4, 5\}\)</span>, entonces <span class="math inline">\(A \cup B = \{1, 2, 3, 4, 5\}\)</span>.</li>
+</ul></li>
+<li><strong>Intersección (</strong><span class="math inline">\(\mathbf{A \cap B}\)</span>): Todos los elementos que están tanto en A como en B.
+<ul>
+<li>Ej: Si <span class="math inline">\(A = \{1, 2, 3\}\)</span> y <span class="math inline">\(B = \{3, 4, 5\}\)</span>, entonces <span class="math inline">\(A \cap B = \{3\}\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="experimento-y-espacio-muestral" class="slide level2 small">
+<h2>2. Experimento y Espacio Muestral</h2>
+<h3 id="experimento">2.1. Experimento</h3>
+<ul>
+<li>Cualquier proceso que produce un resultado observable.</li>
+<li><strong>Características</strong>:
+<ul>
+<li>Se conoce el conjunto de todos los resultados posibles.</li>
+<li>No se puede predecir con certeza el resultado particular de una ejecución.</li>
+<li>Puede ser repetido bajo condiciones similares.</li>
+</ul></li>
+<li><strong>Ejemplo</strong>:
+<ul>
+<li>Lanzar una moneda.</li>
+<li>Observar el tipo de cambio euro-dólar en un día específico.</li>
+<li>Contar el número de clientes que entran a un banco en una hora.</li>
+</ul></li>
+</ul>
+</section>
+<section id="espacio-muestral-mathbfs-o-mathbfomega" class="slide level2">
+<h2>2.2. Espacio Muestral (<span class="math inline">\(\mathbf{S}\)</span> o <span class="math inline">\(\mathbf{\Omega}\)</span>)</h2>
+<ul>
+<li><p>El conjunto de <strong>todos los resultados posibles (puntos muestrales)</strong> de un experimento.</p></li>
+<li><p><strong>Ejemplos</strong>:</p>
+<ul>
+<li><strong>Lanzar un dado</strong>: <span class="math inline">\(S = \{1, 2, 3, 4, 5, 6\}\)</span></li>
+<li><strong>Lanzar dos monedas</strong>: <span class="math inline">\(S = \{\text{CC, CS, SC, SS}\}\)</span></li>
+<li><strong>Tiempo de espera en una fila (en minutos)</strong>: <span class="math inline">\(S = \{t \mid t \ge 0\}\)</span> (un espacio muestral continuo)</li>
+</ul></li>
+</ul>
+</section>
+<section id="eventos-subconjuntos-del-espacio-muestral" class="slide level2 small">
+<h2>3. Eventos: Subconjuntos del Espacio Muestral</h2>
+<h3 id="definición-de-evento">3.1. Definición de Evento</h3>
+<ul>
+<li>Un <strong>evento</strong> es cualquier <strong>subconjunto</strong> del espacio muestral. Es un resultado o un grupo de resultados de interés.</li>
+</ul>
+<h3 id="tipos-de-eventos">3.2. Tipos de Eventos</h3>
+<ul>
+<li><strong>Evento Simple (o Elemental)</strong>: Un evento que consta de un solo resultado del espacio muestral.
+<ul>
+<li><strong>Ejemplo</strong>: Al lanzar un dado, el evento “obtener un 3” es simple: <span class="math inline">\(E = \{3\}\)</span>.</li>
+</ul></li>
+<li><strong>Evento Compuesto</strong>: Un evento que consta de más de un resultado del espacio muestral.
+<ul>
+<li><strong>Ejemplo</strong>: Al lanzar un dado, el evento “obtener un número par” es compuesto: <span class="math inline">\(E = \{2, 4, 6\}\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="eventos-desde-la-perspectiva-de-conjuntos" class="slide level2">
+<h2>4. Eventos desde la Perspectiva de Conjuntos</h2>
+<ul>
+<li><p>Dado que los eventos son subconjuntos del espacio muestral, podemos aplicar las operaciones de la teoría de conjuntos:</p>
+<ul>
+<li><strong>Unión de Eventos (</strong><span class="math inline">\(\mathbf{A \cup B}\)</span>): Ocurre si el evento A ocurre, o el evento B ocurre, o ambos ocurren.
+<ul>
+<li>Ej: Evento A = “Sacar un 1 o 2”, Evento B = “Sacar un 2 o 3”. <span class="math inline">\(A \cup B\)</span> = “Sacar 1, 2 o 3”.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="eventos-desde-la-perspectiva-de-conjuntos--cont." class="slide level2">
+<h2>4. Eventos desde la Perspectiva de Conjuntos- cont.</h2>
+<ul>
+<li><strong>Intersección de Eventos (</strong><span class="math inline">\(\mathbf{A \cap B}\)</span>): Ocurre si el evento A y el evento B ocurren simultáneamente.
+<ul>
+<li>Ej: Evento A = “Sacar un número par”, Evento B = “Sacar un número menor que 4”. <span class="math inline">\(A \cap B\)</span> = “Sacar un 2”.</li>
+</ul></li>
+<li><strong>Complemento de un Evento (</strong><span class="math inline">\(\mathbf{A^c}\)</span>): Ocurre si el evento A no ocurre.
+<ul>
+<li>Ej: Evento A = “Sacar un número par”. <span class="math inline">\(A^c\)</span> = “Sacar un número impar”.</li>
+</ul></li>
+</ul>
+</section>
+<section id="evento-nulo-mathbfemptyset-o" class="slide level2">
+<h2>Evento Nulo (<span class="math inline">\(\mathbf{\emptyset}\)</span> o {})</h2>
+<ul>
+<li>Un evento que <strong>no contiene ningún resultado</strong> del espacio muestral. Es un evento imposible.
+<ul>
+<li><strong>Ejemplo</strong>: Al lanzar un dado, el evento “obtener un 7” es el evento nulo.</li>
+<li><strong>Formalmente</strong>: <span class="math inline">\(A \cap A^c = \emptyset\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="diagramas-de-venn" class="slide level2">
+<h2>5. Diagramas de Venn</h2>
+<ul>
+<li><p>Representaciones visuales de eventos y sus relaciones dentro de un espacio muestral.</p>
+<ul>
+<li>El espacio muestral (<span class="math inline">\(S\)</span>) se representa como un rectángulo.</li>
+<li>Los eventos (<span class="math inline">\(A, B, \dots\)</span>) se representan como círculos dentro del rectángulo.</li>
+</ul></li>
+</ul>
+</section>
+<section id="diagramas-de-venn.-casos" class="slide level2">
+<h2>5. Diagramas de Venn. Casos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clase18/venn_conjunto.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="diagramas-de-venn--ejemplos" class="slide level2">
+<h2>5. Diagramas de Venn- Ejemplos</h2>
+<ul>
+<li><p><strong>Evento A:</strong></p>
+<pre><code>+-------------------+
+| S                 |
+|    +-------+      |
+|    |   A   |      |
+|    |       |      |
+|    +-------+      |
+|                   |
++-------------------+</code></pre></li>
+</ul>
+</section>
+<section id="diagramas-de-venn--ejemplos-1" class="slide level2">
+<h2>5. Diagramas de Venn- Ejemplos</h2>
+<ul>
+<li><p><strong>A Complemento (</strong><span class="math inline">\(A^c\)</span>): (Área fuera de A)</p>
+<pre><code>+-------------------+
+| S     +-------+   |
+|       |       |   |
+|#######| A     |###|
+|#######|       |###|
+|#######+-------+###|
+|###################|
++-------------------+
+(El área sombreada es A^c)</code></pre></li>
+</ul>
+</section>
+<section id="diagramas-de-venn--ejemplos-2" class="slide level2">
+<h2>5. Diagramas de Venn- Ejemplos</h2>
+<ul>
+<li><p><strong>Unión (</strong><span class="math inline">\(\mathbf{A \cup B}\)</span>): (Área de A, B, o ambos)</p>
+<pre><code>+-------------------+
+| S                 |
+|    +-------+      |
+|    | A     |      |
+|    |     +-----+  |
+|    +-----+ B   |  |
+|          |     |  |
+|          +-----+  |
+|                   |
++-------------------+
+(Las áreas combinadas de A y B)</code></pre></li>
+</ul>
+</section>
+<section id="diagramas-de-venn--ejemplos-3" class="slide level2">
+<h2>5. Diagramas de Venn- Ejemplos</h2>
+<ul>
+<li><p><strong>Intersección (</strong><span class="math inline">\(\mathbf{A \cap B}\)</span>): (Área donde A y B se superponen)</p>
+<pre><code>+-------------------+
+| S                 |
+|    +-------+      |
+|    | A     |      |
+|    |   ### | B    |
+|    +-----+ ### +  |
+|          | ### |  |
+|          +-----+  |
+|                   |
++-------------------+
+(El área sombreada es A intersección B)</code></pre></li>
+</ul>
+</section>
+<section id="axiomas-de-la-probabilidad" class="slide level2">
+<h2>6. Axiomas de la Probabilidad</h2>
+<ul>
+<li>Fundamentos matemáticos sobre los cuales se construye la teoría de la probabilidad.</li>
+</ul>
+<h3 id="axioma-1-no-negatividad">Axioma 1: No Negatividad</h3>
+<ul>
+<li>Para cualquier evento A, la probabilidad de A es no negativa: <span class="math display">\[P(A) \ge 0\]</span></li>
+<li><strong>Ejemplo</strong>: La probabilidad de que llueva mañana no puede ser <span class="math inline">\(-0.2\)</span>. Siempre será un valor igual o mayor que cero.</li>
+</ul>
+</section>
+<section id="axiomas-de-la-probabilidad-1" class="slide level2">
+<h2>6. Axiomas de la Probabilidad</h2>
+<h3 id="axioma-2-probabilidad-del-espacio-muestral">Axioma 2: Probabilidad del Espacio Muestral</h3>
+<ul>
+<li>La probabilidad del espacio muestral completo es igual a 1. <span class="math display">\[P(S) = 1\]</span></li>
+<li><strong>Ejemplo</strong>: Si lanzamos una moneda, la probabilidad de que salga “cara” o “sello” es 1, ya que cubre todos los resultados posibles.</li>
+</ul>
+</section>
+<section id="axiomas-de-la-probabilidad-2" class="slide level2">
+<h2>6. Axiomas de la Probabilidad</h2>
+<h3 id="axioma-3-aditividad-para-eventos-mutuamente-excluyentes">Axioma 3: Aditividad para Eventos Mutuamente Excluyentes</h3>
+<ul>
+<li>Si A y B son eventos <strong>mutuamente excluyentes</strong> (es decir, no pueden ocurrir al mismo tiempo, <span class="math inline">\(A \cap B = \emptyset\)</span>), entonces la probabilidad de su unión es la suma de sus probabilidades individuales: <span class="math display">\[P(A \cup B) = P(A) + P(B) \quad \text{si } A \cap B = \emptyset\]</span></li>
+</ul>
+</section>
+<section id="axioma-3-aditividad-para-eventos-mutuamente-excluyentes--cont." class="slide level2">
+<h2>Axioma 3: Aditividad para Eventos Mutuamente Excluyentes- cont.</h2>
+<ul>
+<li><strong>Ejemplo</strong>:</li>
+</ul>
+<p>Si en un dado, A = “sacar un número par” (<span class="math inline">\(\{2,4,6\}\)</span>) y B = “sacar un 1” (<span class="math inline">\(\1/6\}\)</span>).</p>
+<p>Son mutuamente excluyentes.</p>
+<ul>
+<li><span class="math inline">\(P(A) = 3/6 = 1/2\)</span></li>
+<li><span class="math inline">\(P(B) = 1/6\)</span></li>
+<li><span class="math inline">\(P(A \cup B) = P(\text{sacar un par o un 1}) = P(\{1,2,4,6\}) = 4/6 = 2/3\)</span>.</li>
+<li>Verificamos: <span class="math inline">\(P(A) + P(B) = 1/2 + 1/6 = 3/6 + 1/6 = 4/6 = 2/3\)</span>.</li>
+</ul>
+</section>
+<section id="proposiciones-clave-de-la-probabilidad" class="slide level2">
+<h2>7. Proposiciones Clave de la Probabilidad</h2>
+<h3 id="probabilidad-del-complemento">7.1. Probabilidad del Complemento</h3>
+<ul>
+<li>Para cualquier evento A, la probabilidad de A más la probabilidad de su complemento es 1. <span class="math display">\[P(A) + P(A^c) = 1\]</span></li>
+<li>De esto se deriva que: <span class="math display">\[P(A^c) = 1 - P(A)\]</span></li>
+</ul>
+</section>
+<section id="probabilidad-del-complemento.-ejemplo" class="slide level2">
+<h2>7.1. Probabilidad del Complemento. Ejemplo</h2>
+<ul>
+<li><strong>Ejemplo</strong>: Si la probabilidad de que un proyecto tenga éxito (<span class="math inline">\(A\)</span>) es <span class="math inline">\(P(A) = 0.7\)</span>, entonces la probabilidad de que no tenga éxito (<span class="math inline">\(A^c\)</span>) es <span class="math inline">\(P(A^c) = 1 - 0.7 = 0.3\)</span>.</li>
+</ul>
+</section>
+<section id="proposiciones-clave-de-la-probabilidad-1" class="slide level2">
+<h2>7. Proposiciones Clave de la Probabilidad</h2>
+<h3 id="límite-superior-de-la-probabilidad">7.2. Límite Superior de la Probabilidad</h3>
+<ul>
+<li>Para cualquier evento A, la probabilidad de A es menor o igual a 1. (Esto se desprende del Axioma 1 y Axioma 2, ya que <span class="math inline">\(P(A) \le P(S) = 1\)</span>). <span class="math display">\[P(A) \le 1\]</span></li>
+<li><strong>Ejemplo</strong>: La probabilidad de que un evento ocurra nunca puede ser mayor al 100%.</li>
+</ul>
+</section>
+<section id="proposiciones-clave-de-la-probabilidad-2" class="slide level2 small">
+<h2>7. Proposiciones Clave de la Probabilidad</h2>
+<h3 id="regla-de-adición-para-dos-eventos">7.3. Regla de Adición para Dos Eventos</h3>
+<ul>
+<li>Para dos eventos cualesquiera A y B (sean mutuamente excluyentes o no): <span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></li>
+<li><strong>Ejemplo</strong>:
+<ul>
+<li>Evento A: Estudiante aprueba Macroeconomía (<span class="math inline">\(P(A) = 0.6\)</span>).</li>
+<li>Evento B: Estudiante aprueba Microeconomía (<span class="math inline">\(P(B) = 0.5\)</span>).</li>
+<li>Evento <span class="math inline">\(A \cap B\)</span>: Estudiante aprueba ambas (<span class="math inline">\(P(A \cap B) = 0.3\)</span>).</li>
+<li>Probabilidad de aprobar al menos una: <span class="math inline">\(P(A \cup B) = 0.6 + 0.5 - 0.3 = 0.8\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="proposiciones-clave-de-la-probabilidad-3" class="slide level2 small">
+<h2>7. Proposiciones Clave de la Probabilidad</h2>
+<h3 id="regla-de-adición-para-tres-eventos">7.4. Regla de Adición para Tres Eventos</h3>
+<ul>
+<li>Para tres eventos cualesquiera A, B y C: <span class="math display">\[P(A \cup B \cup C) = \]</span> <br> <span class="math display">\[P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)\]</span></li>
+<li>Esta fórmula generaliza la regla de adición, asegurando que las intersecciones se resten adecuadamente para evitar el doble conteo de resultados.</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo2.png" class="slide-logo"></p>

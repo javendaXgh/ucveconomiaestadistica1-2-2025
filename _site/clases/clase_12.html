@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="M.Sc. José Miguel Avendaño I.">
-  <meta name="dcterms.date" content="2026-01-26">
+  <meta name="dcterms.date" content="2026-01-21">
   <title>UCV Economía Estadística I – Estadística I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -334,7 +334,7 @@
     }
   </style>
 <meta property="og:title" content="Estadística I – UCV Economía Estadística I">
-<meta property="og:description" content="Practica: Intro a la Probabilidad">
+<meta property="og:description" content="Clase 12: Variables Aleatorias y Distribuciones">
 <meta property="og:site_name" content="UCV Economía Estadística I">
 </head>
 <body class="quarto-light">
@@ -343,7 +343,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Estadística I</h1>
-  <p class="subtitle">Practica: Intro a la Probabilidad</p>
+  <p class="subtitle">Clase 12: Variables Aleatorias y Distribuciones</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -356,113 +356,337 @@ M.Sc. José Miguel Avendaño I.
     </div>
 </div>
 
-  <p class="date">2026-01-26</p>
+  <p class="date">2026-01-21</p>
 </section>
-<section id="el-escenario-estudiantes-de-faces" class="slide level2">
-<h2>El Escenario: Estudiantes de FACES</h2>
-<p>Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.</p>
-<p><strong>Datos de la muestra (N = 100):</strong></p>
+<section id="introducción" class="slide level2">
+<h2>Introducción</h2>
+<p><br></p>
+<p>Entender cómo pasamos de la incertidumbre de un evento (lanzar una moneda) a una función matemática que podemos analizar (La Variable Aleatoria).</p>
+<p><br></p>
+</section>
+<section class="slide level2">
+
+</section>
+<section id="el-problema-de-la-probabilidad-clásica" class="slide level2">
+<h2>El Problema de la Probabilidad Clásica</h2>
+<p>Hasta ahora, hemos trabajado con <strong>Espacios Muestrales (</strong><span class="math inline">\(\Omega\)</span>) que describen cualidades:</p>
+<ul>
+<li>Lanzar una moneda: <span class="math inline">\(\{Cara, Sello\}\)</span></li>
+<li>Estado de un producto: <span class="math inline">\(\{Defectuoso, Bueno\}\)</span></li>
+<li>Encuesta de satisfacción: <span class="math inline">\(\{Bajo, Medio, Alto\}\)</span></li>
+</ul>
+<p><strong>El problema:</strong> Es difícil hacer álgebra o cálculo con palabras como “Cara” o “Defectuoso”.</p>
+</section>
+<section id="la-solución-variable-aleatoria" class="slide level2">
+<h2>La Solución: Variable Aleatoria</h2>
+<p>Necesitamos traducir los resultados cualitativos a <strong>números</strong>.</p>
+<blockquote>
+<p>Una <strong>Variable Aleatoria (X)</strong> es una función que asigna un valor numérico a cada resultado posible de un experimento aleatorio.</p>
+</blockquote>
+<p><span class="math display">\[ X: \Omega \rightarrow \mathbb{R} \]</span></p>
+</section>
+<section id="visualizando-el-concepto" class="slide level2">
+<h2>Visualizando el Concepto</h2>
+<p>Imagina lanzar <strong>3 monedas</strong>. El espacio muestral es complejo: <span class="math inline">\(\{(C,C,C), (C,S,C), ...\}\)</span></p>
+<p>Si definimos <span class="math inline">\(X\)</span> = <strong>Número de Caras</strong>, simplificamos todo:</p>
+<ul>
+<li><span class="math inline">\((S,S,S) \rightarrow \mathbf{0}\)</span></li>
+<li><span class="math inline">\((C,S,S) \rightarrow \mathbf{1}\)</span></li>
+<li><span class="math inline">\((C,C,S) \rightarrow \mathbf{2}\)</span></li>
+<li><span class="math inline">\((C,C,C) \rightarrow \mathbf{3}\)</span></li>
+</ul>
+<p>Ahora trabajamos con números: <span class="math inline">\(0, 1, 2, 3\)</span>.</p>
+</section>
+<section id="tipos-de-variables-aleatorias" class="slide level2">
+<h2>Tipos de Variables Aleatorias</h2>
+<p>Es fundamental distinguir entre dos mundos:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="discretas">1. Discretas</h3>
+<ul>
+<li>“Saltos” entre valores.</li>
+<li>Generalmente provienen de <strong>contar</strong>.</li>
+<li>Ej: Goles en un partido, número de hijos, caras en una moneda.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="continuas">2. Continuas</h3>
+<ul>
+<li>Cualquier valor en un intervalo.</li>
+<li>Generalmente provienen de <strong>medir</strong>.</li>
+<li>Ej: Tiempo, distancia, temperatura, peso.</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+</section>
+<section>
+<section id="distribuciones-discretas" class="title-slide slide level1 center">
+<h1>Distribuciones Discretas</h1>
+
+</section>
+<section id="función-de-probabilidad" class="slide level2">
+<h2>Función de Probabilidad</h2>
+<p>En variables discretas, asignamos una probabilidad a cada valor exacto. Esto se llama <strong>Función de Masa de Probabilidad</strong>.</p>
+<p><span class="math display">\[ P(X = x) \]</span></p>
+<p>La suma de todas las barras debe ser siempre 1 (100%).</p>
+</section>
+<section id="profundizando-función-de-masa-de-probabilidad-pmf" class="slide level2">
+<h2>Profundizando: Función de Masa de Probabilidad (PMF)</h2>
+<p>Para variables <strong>discretas</strong>, la función de probabilidad <span class="math inline">\(f(x)\)</span> actúa como una balanza:</p>
+<p>Asigna un “peso” (probabilidad) a cada punto específico.</p>
+<p><span class="math display">\[ f(x) = P(X = x) \]</span></p>
+</section>
+<section id="propiedades-fundamentales" class="slide level2">
+<h2>Propiedades Fundamentales:</h2>
+<ol type="1">
+<li><p><strong>Positividad:</strong> <span class="math inline">\(f(x) \geq 0\)</span> (No existen probabilidades negativas).</p></li>
+<li><p><strong>Certeza Total:</strong> <span class="math inline">\(\sum f(x) = 1\)</span> (La suma de todos los pesos es el 100%).</p></li>
+</ol>
+</section>
+<section id="la-mecánica-de-la-suma-de-2-dados" class="slide level2">
+<h2>La Mecánica de la Suma de 2 Dados</h2>
+<ul>
+<li><strong>Resultados posibles</strong> de sumar Dado 1 + Dado 2.</li>
+<li>Frecuencia de 2 y 12 Vs. la del 7</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
 <table class="caption-top">
+<caption>Matriz de Posibles Resultados (Suma)</caption>
 <thead>
 <tr class="header">
-<th>Escuela</th>
-<th>Masculino (M)</th>
-<th>Femenino (F)</th>
-<th>Total</th>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">D2= 1</th>
+<th style="text-align: center;">D2= 2</th>
+<th style="text-align: center;">D2= 3</th>
+<th style="text-align: center;">D2= 4</th>
+<th style="text-align: center;">D2= 5</th>
+<th style="text-align: center;">D2= 6</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Economía</td>
-<td>15</td>
-<td>10</td>
-<td><strong>25</strong></td>
+<td style="text-align: left;">D1= 1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
 </tr>
 <tr class="even">
-<td>Sociología</td>
-<td>10</td>
-<td>20</td>
-<td><strong>30</strong></td>
+<td style="text-align: left;">D1= 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
 </tr>
 <tr class="odd">
-<td>Estudios Int.</td>
-<td>20</td>
-<td>25</td>
-<td><strong>45</strong></td>
+<td style="text-align: left;">D1= 3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
 </tr>
 <tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>45</strong></td>
-<td><strong>55</strong></td>
-<td><strong>100</strong></td>
+<td style="text-align: left;">D1= 4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D1= 5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D1= 6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">12</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 </section>
-<section id="definición-de-eventos" class="slide level2">
-<h2>Definición de Eventos</h2>
-<p>Supongamos que queremos calcular la probabilidad de que un estudiante sea de <strong>Economía (A)</strong> O sea <strong>Mujer (B)</strong>.</p>
-<ul>
-<li><strong>Evento A:</strong> El estudiante es de Economía. <span class="math inline">\(P(A) = \frac{25}{100} = 0.25\)</span></li>
-<li><strong>Evento B:</strong> El estudiante es de sexo Femenino. <span class="math inline">\(P(B) = \frac{55}{100} = 0.55\)</span></li>
-</ul>
-<p>¿Podemos simplemente sumar <span class="math inline">\(0.25 + 0.55\)</span>?</p>
+<section id="interpretación-gráfica-gráfico-de-bastones" class="slide level2">
+<h2>Interpretación Gráfica: Gráfico de Bastones</h2>
+<p>Si lanzamos dos dados y sumamos ¿cuál es el resultado más probable?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="el-problema-del-doble-conteo" class="slide level2">
-<h2>El Problema del “Doble Conteo”</h2>
-<p>Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando <strong>dos veces</strong> a las mujeres que estudian economía.</p>
-<p>La intersección (<span class="math inline">\(A \cap B\)</span>) representa a las 10 estudiantes que son <strong>mujeres de Economía</strong>.</p>
-<p><span class="math display">\[P(A \cap B) = \frac{10}{100} = 0.10\]</span></p>
+<section id="interpretación-gráfica-2-suma-de-dos-dados" class="slide level2">
+<h2>Interpretación Gráfica 2: Suma de dos dados</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="la-regla-general-de-la-adición" class="slide level2">
-<h2>La Regla General de la Adición</h2>
-<p>Para evitar el doble conteo, la fórmula es:</p>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
-<p>Donde:</p>
-<p>* <span class="math inline">\(P(A \cup B)\)</span>: Probabilidad de A o B (unión).</p>
-<p>* <span class="math inline">\(P(A \cap B)\)</span>: Probabilidad de A y B (intersección).</p>
+<section id="función-de-distribución-acumulada-cdf" class="slide level2">
+<h2>Función de Distribución Acumulada (CDF)</h2>
+<p><em>“¿Cuál es la probabilidad de sacar <strong>4 o menos</strong>?”</em></p>
+<p><strong>Función Acumulada <span class="math inline">\(F(x)\)</span></strong>:</p>
+<p><span class="math display">\[ F(x) = P(X \leq x) = \sum_{k \leq x} f(k) \]</span></p>
+<p>Es la suma de las probabilidades “hacia atrás”.</p>
 </section>
-<section id="paso-a-paso-aplicando-la-fórmula" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<p><strong><em>COMPLETAR</em></strong></p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <em>completar</em></li>
-<li><strong>Probabilidad de Femenino:</strong> <em>completar</em></li>
-<li><strong>Restamos la intersección:</strong> <em>completar</em></li>
-</ol>
-<p><strong><em>COMPLETAR</em></strong></p>
+<section id="visualizando-la-acumulada-la-escalera" class="slide level2">
+<h2>Visualizando la Acumulada: La Escalera</h2>
+<p>La CDF de una variable discreta siempre tiene forma de <strong>escalera</strong>. Sube en cada valor posible y se mantiene constante entre valores.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="paso-a-paso-aplicando-la-fórmula-1" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <span class="math inline">\(P(A) = 0.25\)</span></li>
-<li><strong>Probabilidad de Femenino:</strong> <span class="math inline">\(P(B) = 0.55\)</span></li>
-<li><strong>Restamos la intersección:</strong> <span class="math inline">\(P(A \cap B) = 0.10\)</span></li>
-</ol>
-<p><span class="math display">\[P(A \cup B) = 0.25 + 0.55 - 0.10\]</span> <span class="math display">\[P(A \cup B) = 0.70\]</span></p>
-<p><strong>Resultado:</strong> Existe un <strong>70%</strong> de probabilidad de que el estudiante sea de Economía o mujer.</p>
+<section id="esperanza-matemática-media" class="slide level2">
+<h2>Esperanza Matemática (Media)</h2>
+<p>Es el “centro de gravedad” de la distribución. Es el valor promedio que obtendríamos si repitiéramos el experimento infinitas veces.</p>
+<p><span class="math display">\[ E[X] = \mu \]</span></p>
+<p>En el gráfico anterior, el “punto de equilibrio” visual está claramente en el <strong>7</strong>.</p>
 </section>
-<section id="y-si-los-eventos-fueran-mutuamente-excluyentes" class="slide level2">
-<h2>¿Y si los eventos fueran mutuamente excluyentes?</h2>
-<p>Si preguntamos por la probabilidad de ser de <strong>Economía (A)</strong> O de <strong>Sociología (C)</strong>:</p>
-<ul>
-<li>Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.</li>
-<li><span class="math inline">\(P(A \cap C) = 0\)</span></li>
-</ul>
-<p>En este caso, la regla se simplifica: <span class="math display">\[P(A \cup C) = P(A) + P(C)\]</span> <span class="math display">\[P(A \cup C) = 0.25 + 0.30 = 0.55\]</span></p>
+<section id="simulación-ley-de-los-grandes-números" class="slide level2">
+<h2>Simulación: Ley de los Grandes Números</h2>
+<p>¿Qué pasa si lanzamos los dados en la vida real? Al principio el promedio oscila, pero con el tiempo se estabiliza en la Esperanza Teórica (7).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="ejercicio-rápido-para-la-clase" class="slide level2">
-<h2>Ejercicio Rápido para la Clase</h2>
-<p>Utilizando la tabla inicial, calcular:</p>
+<section id="esperanza-matemática-valor-esperado" class="slide level2">
+<h2>Esperanza Matemática (Valor Esperado)</h2>
+<p>Más allá de la probabilidad de cada evento, queremos un solo número que resuma el “centro” de la distribución.</p>
+<p><strong>Esperanza Matemática</strong> (<span class="math inline">\(E[X]\)</span> o <span class="math inline">\(\mu\)</span>): es el promedio ponderado de todos los valores posibles.</p>
+<p><span class="math display">\[ E[X] = \sum_{x} x \cdot P(X=x) \]</span></p>
 <blockquote>
-<p>¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de <strong>Estudios Internacionales</strong> o sea de sexo <strong>Masculino</strong>?</p>
+<p>No es necesariamente un valor que la variable pueda tomar (ej. 3.5 en un dado), sino el promedio a largo plazo.</p>
 </blockquote>
-<p>Pasos:</p>
-<p>1. <span class="math inline">\(P(\text{EEI})\)</span></p>
-<p>2. <span class="math inline">\(P(\text{M})\)</span></p>
-<p>3. <span class="math inline">\(P(\text{EEI} \cap \text{M})\)</span></p>
+</section>
+<section id="interpretación-física-el-centro-de-gravedad" class="slide level2">
+<h2>Interpretación Física: El Centro de Gravedad</h2>
+<p>Imagina que el gráfico de barras es una tabla física y las probabilidades son pesos. La Esperanza es exactamente el punto donde podrías poner el dedo para que la tabla se mantenga en equilibrio.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="la-ley-de-los-grandes-números" class="slide level2">
+<h2>La Ley de los Grandes Números</h2>
+<p>¿Por qué nos importa un valor teórico? Porque garantiza que, si repetimos el experimento suficientes veces, el <strong>promedio observado</strong> (<span class="math inline">\(\bar{x}\)</span>) convergerá a la <strong>Esperanza teórica</strong> (<span class="math inline">\(\mu\)</span>).</p>
+<p><span class="math display">\[ \bar{X}_n \xrightarrow{n \to \infty} E[X] \]</span></p>
+<p>Es el puente que permite usar la estadística para predecir ganancias en casinos, seguros y negocios.</p>
+</section>
+<section id="simulación-convergencia-en-acción" class="slide level2">
+<h2>Simulación: Convergencia en Acción</h2>
+<p>Lanzamos un dado trucado (cargado al 6). Teóricamente, <span class="math inline">\(E[X] \approx 4.5\)</span> (mayor que el 3.5 normal). Veamos cómo el promedio acumulado se estabiliza.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="la-distribución-binomial" class="title-slide slide level1 center">
+<h1>La Distribución Binomial</h1>
+
+</section>
+<section id="cuándo-usar-la-binomial" class="slide level2">
+<h2>¿Cuándo usar la Binomial?</h2>
+<p>Es el modelo estándar para <strong>conteo de éxitos</strong>.</p>
+<p>Requisitos:</p>
+<ol type="1">
+<li>Repetimos un ensayo <span class="math inline">\(n\)</span> veces.</li>
+<li>Solo hay dos resultados (Éxito/Fracaso).</li>
+<li>La probabilidad de éxito <span class="math inline">\(p\)</span> es constante.</li>
+<li>Los ensayos son independientes.</li>
+</ol>
+</section>
+<section id="parámetros" class="slide level2">
+<h2>Parámetros</h2>
+<p>La forma de la distribución depende solo de dos números:</p>
+<ul>
+<li><span class="math inline">\(n\)</span>: Cuántas veces intentamos.</li>
+<li><span class="math inline">\(p\)</span>: Qué tan probable es ganar en cada intento.</li>
+</ul>
+<p><span class="math display">\[ X \sim Bin(n, p) \]</span></p>
+</section>
+<section id="visualizando-el-impacto-de-p" class="slide level2">
+<h2>Visualizando el impacto de <span class="math inline">\(p\)</span></h2>
+<p>Imaginemos lanzar 20 monedas (<span class="math inline">\(n=20\)</span>). ¿Cómo cambia la distribución si la moneda está trucada?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_12_files/figure-revealjs/unnamed-chunk-8-1.png" width="1152"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>La Distribución Normal</p>
+</section>
+<section id="de-lo-discreto-a-lo-continuo" class="slide level2">
+<h2>De lo Discreto a lo Continuo</h2>
+<p>Cuando medimos cosas (tiempo, peso, error), ya no hay “barras” separadas. Hay una curva suave.</p>
+<p>La probabilidad ya no es la altura de la barra, sino el <strong>Área bajo la Curva</strong>.</p>
+</section>
+<section id="la-distribución-normal-gaussiana" class="slide level2">
+<h2>La Distribución Normal (Gaussiana)</h2>
+<p>Es la curva más importante de la ciencia. Aparece en la naturaleza, en errores de medición y en promedios.</p>
+<p><span class="math display">\[ X \sim N(\mu, \sigma) \]</span></p>
+<p>Depende de: 1. <strong>Media (</strong><span class="math inline">\(\mu\)</span>): Dónde está el centro. 2. <strong>Desviación Estándar (</strong><span class="math inline">\(\sigma\)</span>): Qué tan ancha es.</p>
+</section>
+<section id="interpretación-gráfica" class="slide level2">
+<h2>Interpretación Gráfica</h2>
+<p>```{r} #| fig.align: center</p>
+<p>ggplot(data.frame(x = c(-4, 4)), aes(x = x)) + stat_function(fun = dnorm, size = 1.5, color=“#2980B9”) + geom_vline(xintercept = 0, linetype=“dashed”) + annotate</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo2.png" class="slide-logo"></p>
@@ -470,7 +694,7 @@ M.Sc. José Miguel Avendaño I.
 <p><a href="https://ucveconomia-estadistica1.netlify.app/">🔗 Estadística 1</a></p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -683,6 +907,44 @@ M.Sc. José Miguel Avendaño I.
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,7 +1,6 @@
 ---
 title: "Estadística I"
 subtitle: "Clase 10: Introducción a la Probabilidad"
-date: "2025/01/21"
 format: revealjs
 lang: es
 incremental: false
@@ -148,7 +147,7 @@ Cuando escribimos "o" en estadística, nos referimos a "y/o" a menos que explíc
 ¿Cuál es la probabilidad de que un estudiante seleccionado al azar piense que la marihuana debería legalizarse *o* que esté de acuerdo con las opiniones políticas de sus padres?
 
 |  |
-|------------------------------------------------------------------------|
+|----|
 | **\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_** Compartir la Política de los Padres |
 
 |              |            |             |         |

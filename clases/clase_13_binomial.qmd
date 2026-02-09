@@ -1,0 +1,259 @@
+---
+title: "Estadística I"
+subtitle: "Clase 13: Introducción a la Dist. Binomial"
+date: "2026/02/09"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## 1. Bernoulli
+
+Todo empieza con un experimento simple que solo tiene dos salidas:
+
+-   **Éxito (1):** Lo que nos interesa contar (Cara, Venta, Defecto).
+
+-   **Fracaso (0):** Lo contrario.
+
+A esto se le llama **Ensayo de Bernoulli**.
+
+Probabilidad de Éxito = $p$
+
+Probabilidad de Fracaso = $1 - p$ (a veces llamado $q$)
+
+------------------------------------------------------------------------
+
+## 2. Definición de la Binomial
+
+La Distribución Binomial nace cuando repetimos el ensayo de Bernoulli $n$ veces.
+
+> **Definición:** $X$ es el número total de éxitos en $n$ ensayos independientes.
+
+$$ X \sim Bin(n, p) $$
+
+Ejemplo: Lanzar 10 tiros libres ($n=10$) donde mi efectividad es del 70% ($p=0.7$).
+
+------------------------------------------------------------------------
+
+## 3. Los 4 Requisitos (BINS)
+
+Para usar este modelo, deben cumplirse estrictamente:
+
+1.  **B**inary: Resultados binarios (Éxito/Fracaso).
+2.  **I**ndependent: El resultado de un ensayo no afecta al siguiente.
+3.  **N**umber: El número de ensayos $n$ es fijo de antemano.
+4.  **S**ame probability: La probabilidad $p$ es constante en cada ensayo.
+
+## 4. La Fórmula
+
+$$ P(X=k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k} $$
+
+## 5.1 La Fórmula Desglosada
+
+$$P(X=k) = \underbrace{\binom{n}{k}}_{\text{Conteo}} \cdot \underbrace{p^k}_{\text{Éxitos}} \cdot \underbrace{(1-p)^{n-k}}_{\text{Fracasos}}$$
+
+Esta fórmula no es mágica, es la unión de tres partes lógicas:
+
+1.  **El Contador:** ¿De cuántas formas puede pasar?
+2.  **La Probabilidad de Ganar:** ¿Qué tan probable es tener $k$ éxitos?
+3.  **La Probabilidad de Perder:** ¿Qué tan probable es tener el resto de fracasos?
+
+## 5.2 El Lado Izquierdo: El Objetivo
+
+$$P(X=k)$$
+
+-   $P$: Probabilidad.
+-   $X$: La Variable Aleatoria (el "contador" de éxitos).
+-   $k$: El número específico de éxitos que nos interesa.
+
+> **Traducción:** "¿Cuál es la probabilidad de que el contador se detenga exactamente en el número $k$?"
+
+------------------------------------------------------------------------
+
+## 5.3 El Primer Término: El Coeficiente
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+-   **Función:** Cuenta las combinaciones.
+-   **Por qué está ahí:** Porque no nos importa el orden.
+    -   Ganar-Ganar-Perder
+    -   Ganar-Perder-Ganar
+    -   Perder-Ganar-Ganar
+-   Si queremos 2 éxitos en 3 intentos, hay **3 formas**. Este término nos da ese número (3).
+
+## 5.3.1 Aclaratoria: El "Filtro" de la Binomial {.small}
+
+Es común preguntar: *"¿Y dónde están los otros casos?"*
+
+La fórmula $P(X=k)$ es selectiva. Si buscamos **2 Éxitos** ($k=2$) en 3 intentos:
+
+|   Resultado   | ¿Cuántos Éxitos? | ¿Lo cuenta la fórmula? |
+|:-------------:|:----------------:|:----------------------:|
+|   G - G - G   |        3         |    ❌ No (sobra 1)     |
+| **G - G - P** |      **2**       |       ✅ **SÍ**        |
+| **G - P - G** |      **2**       |       ✅ **SÍ**        |
+| **P - G - G** |      **2**       |       ✅ **SÍ**        |
+|   G - P - P   |        1         |    ❌ No (falta 1)     |
+|   P - G - P   |        1         |    ❌ No (falta 1)     |
+|   P - P - G   |        1         |    ❌ No (falta 1)     |
+|   P - P - P   |        0         |    ❌ No (faltan 2)    |
+
+El término $\binom{3}{2}$ cuenta solo las filas con el ✅.
+
+## 5.4 El Segundo Término: Los Éxitos
+
+$$p^k$$
+
+-   $p$: Probabilidad de éxito en UN solo ensayo.
+-   $k$: Cuántos éxitos queremos.
+
+**Lógica:** Como los eventos son independientes, multiplicamos la probabilidad $p$ por sí misma $k$ veces. $$p \times p \times ... \times p$$
+
+------------------------------------------------------------------------
+
+## 5.5 El Tercer Término: Los Fracasos
+
+$$(1-p)^{n-k}$$
+
+-   $(1-p)$: Si la probabilidad de ganar es $p$, la de perder es el complemento.
+-   $n-k$: Si lanzamos $n$ veces y queremos $k$ éxitos, ¡obligatoriamente los otros $n-k$ lanzamientos deben ser fallos!
+
+> **Clave:** Sin esta parte, estaríamos ignorando lo que pasa en los otros intentos.
+
+------------------------------------------------------------------------
+
+## 5.6 Resumen Visual
+
+Para calcular la probabilidad de **2 Caras** en **3 Monedas** ($p=0.5$):
+
+1.  $\binom{3}{2} = 3$: Hay 3 caminos posibles.
+2.  $0.5^2 = 0.25$: Probabilidad de las 2 caras.
+3.  $(1-0.5)^{3-2} = 0.5$: Probabilidad del sello restante.
+
+$$Total = 3 \times 0.25 \times 0.5 = 0.375$$
+
+## 6. Calculando Probabilidades Exactas {.small}
+
+Ejemplo: Lanzamos 10 veces ($n=10$) con probabilidad de éxito del 30% ($p=0.3$).
+
+¿Probabilidad de obtener **exactamente 2 éxitos** ($k=2$)?
+
+Sustituyendo en la fórmula:
+
+$$ P(X=2) = \binom{10}{2} \cdot (0.3)^2 \cdot (1-0.3)^{10-2} $$
+
+$$ P(X=2) = 45 \cdot 0.09 \cdot (0.7)^8 $$
+
+$$ P(X=2) = 45 \cdot 0.09 \cdot 0.0576 \approx \mathbf{0.2334} $$
+
+**Resultado:** Hay un **23.34%** de probabilidad.
+
+## 6. Calculando Probabilidades Exactas (cont.)
+
+```{r}
+#| fig.align: center
+#| fig.height: 4.5
+
+library(tidyverse)
+df_b <- data.frame(x=0:10, y=dbinom(0:10, 10, 0.3))
+df_b$highlight <- ifelse(df_b$x == 2, "yes", "no")
+
+ggplot(df_b, aes(x=x, y=y, fill=highlight)) +
+  geom_col(show.legend=FALSE) +
+  scale_fill_manual(values=c("gray80", "#C0392B")) +
+  geom_text(aes(label=paste0(round(y*100, 1), "%")), vjust=-0.5, size=4) +
+  labs(title = "Distribución Binomial (n=10, p=0.3)",
+       subtitle = "La barra roja representa P(X=2) = 23.3%",
+       x = "Número de Éxitos", y = "Probabilidad") +
+  scale_x_continuous(breaks=0:10) +
+  theme_minimal(base_size = 18)
+```
+
+------------------------------------------------------------------------
+
+## 7. El Rol del Parámetro $p$ (Sesgo)
+
+El parámetro $p$ determina la simetría.
+
+-   Si $p < 0.5$: Sesgo a la derecha (éxitos raros).
+
+-   Si $p = 0.5$: Simétrica (como una moneda).
+
+-   Si $p > 0.5$: Sesgo a la izquierda (éxitos comunes).
+
+```{r}
+#| fig.align: center
+#| fig.height: 4
+
+par(mfrow=c(1,3))
+n_val <- 10
+barplot(dbinom(0:n_val, n_val, 0.2), names.arg=0:n_val, main="p = 0.2", col="#E74C3C", border=NA)
+barplot(dbinom(0:n_val, n_val, 0.5), names.arg=0:n_val, main="p = 0.5", col="#F1C40F", border=NA)
+barplot(dbinom(0:n_val, n_val, 0.8), names.arg=0:n_val, main="p = 0.8", col="#2ECC71", border=NA)
+```
+
+------------------------------------------------------------------------
+
+## 8. El Rol del Parámetro $n$ (Forma)
+
+Al aumentar $n$, la distribución se vuelve más "suave" y acampanada, incluso si $p$ no es 0.5.
+
+```{r}
+#| fig.align: center
+library(ggplot2)
+df_n <- rbind(
+  data.frame(x=0:5, y=dbinom(0:5, 5, 0.5), n="n=5"),
+  data.frame(x=0:30, y=dbinom(0:30, 30, 0.5), n="n=30"),
+  data.frame(x=0:100, y=dbinom(0:100, 100, 0.5), n="n=100")
+)
+
+ggplot(df_n, aes(x=x, y=y)) +
+  geom_col(fill="steelblue") +
+  facet_wrap(~n, scales="free") +
+  labs(title = "Efecto de aumentar el tamaño de muestra (n)", y="Probabilidad") +
+  theme_minimal()
+```
+
+------------------------------------------------------------------------
+
+## 9. Media y Varianza Binomial
+
+No necesitamos sumar todo para conocer el centro y la dispersión.
+
+-   **Media (Esperanza):** $\mu = n \cdot p$
+    -   *Si tiro 100 monedas, espero 50 caras.*
+-   **Varianza:** $\sigma^2 = n \cdot p \cdot (1-p)$
+-   **Desviación Estándar:** $\sigma = \sqrt{n \cdot p \cdot (1-p)}$
+
+------------------------------------------------------------------------
+
+## 10. Probabilidades Acumuladas
+
+¿Probabilidad de obtener **a lo sumo** 2 éxitos ($X \leq 2$)? Sumamos las barras de 0, 1 y 2.
+
+```{r}
+#| fig.align: center
+df_b$highlight_cum <- ifelse(df_b$x <= 2, "yes", "no")
+
+ggplot(df_b, aes(x=x, y=y, fill=highlight_cum)) +
+  geom_col(show.legend=FALSE) +
+  scale_fill_manual(values=c("grey", "purple")) +
+  labs(title = "P(X <= 2) = P(0) + P(1) + P(2)", x="Éxitos", y="Probabilidad") +
+  scale_x_continuous(breaks=0:10)
+```
+
+------------------------------------------------------------------------
+
+## 11. Aplicaciones Reales
+
+-   **Control de Calidad:** Número de piezas defectuosas en un lote.
+-   **Medicina:** Número de pacientes que responden a un tratamiento.
+-   **Marketing:** Número de clics en un anuncio (CTR).
+-   **Finanzas:** Número de días que una acción sube.

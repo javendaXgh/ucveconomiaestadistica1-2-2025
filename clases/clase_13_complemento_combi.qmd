@@ -1,0 +1,221 @@
+---
+title: "Estadística I"
+subtitle: "Clase 13: Complemento Combinatoria"
+date: "2026/02/09"
+format: revealjs
+lang: es
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## 1. La Fórmula Binomial
+
+$$ P(X=k) = \mathbf{\binom{n}{k}} \cdot p^k \cdot (1-p)^{n-k} $$
+
+Sabemos que $p^k$ es la probabilidad del éxito y $(1-p)$ la del fracaso.
+
+**¿qué hace el primer término entre paréntesis?**
+
+Se llama **Coeficiente Binomial** y es el contador de historias.
+
+------------------------------------------------------------------------
+
+## 2. El Problema de Contar
+
+Lanzar 3 monedas y buscas 2 caras.
+
+¿Cuántas formas hay de obtenerlas?
+
+1.  Cara - Cara - Sello
+2.  Cara - Sello - Cara
+3.  Sello - Cara - Cara
+
+Hay **3 caminos** distintos para llegar al mismo resultado (2 caras) y la combinatoria nos ayuda a contar estos caminos sin tener que escribirlos uno por uno.
+
+------------------------------------------------------------------------
+
+## 3. Concepto Clave: El Factorial ($n!$)
+
+Para contar se usa el "motor" de la multiplicación: el Factorial que es el producto de un número por todos sus antecesores hasta el 1.
+
+$$ 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 $$
+
+*Propiedad:* Nos dice de cuántas formas totales podemos ordenar $n$ objetos distintos.
+
+------------------------------------------------------------------------
+
+## 4. Visualizando el Crecimiento del Factorial
+
+```{r}
+#| fig.align: center
+
+library(tidyverse)
+df_fac <- data.frame(n = 1:7, factorial = factorial(1:7))
+
+ggplot(df_fac, aes(x=n, y=factorial)) +
+  geom_line(color="#E74C3C", size=1) +
+  geom_point(size=4) +
+  geom_text(aes(label=factorial), vjust=-0.5, size=5) +
+  labs(title = "Crecimiento del Factorial (n!)",
+       subtitle = "El número de combinaciones posibles se dispara rápidamente",
+       y = "Valor") +
+  theme_minimal(base_size = 18)
+```
+
+------------------------------------------------------------------------
+
+## 5. Orden vs. Grupo (Permutación vs. Combinación)
+
+Esta es la distinción más importante en estadística:
+
+-   **Permutación (El orden IMPORTA):**
+    -   La clave de tu email (1-2-3-4 no es lo mismo que 4-3-2-1).
+    -   Un podio de carrera (Oro, Plata, Bronce).
+
+## 5. Orden vs. Grupo (Permutación vs. Combinación). cont
+
+-   **Combinación (El orden NO importa):**
+    -   Una ensalada de frutas (Manzana y Pera es lo mismo que Pera y Manzana).
+    -   **La Binomial** (No nos importa *en qué orden* salieron las caras, solo *cuántas* salieron).
+
+------------------------------------------------------------------------
+
+## 6. La Fórmula de la Combinatoria
+
+Leemos $\binom{n}{k}$ como "n sobre k" o "combinaciones de n en k".
+
+$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
+
+**Intuición:**
+
+\* $n!$: Todas las formas de ordenar los elementos.
+
+\* División por $k!(n-k)!$: Eliminamos las repeticiones porque el orden no nos importa.
+
+------------------------------------------------------------------------
+
+## 7. Ejemplo Visual: 4 Letras (A, B, C, D)
+
+Queremos elegir 2 letras. ¿Cuántas parejas podemos formar?
+
+```{r}
+#| fig.align: center
+library(ggraph)
+library(igraph)
+
+# Creamos las combinaciones
+combs <- t(combn(LETTERS[1:4], 2))
+df_graph <- data.frame(from=rep("Origen", 6), 
+                       to=paste(combs[,1], combs[,2], sep="-"))
+
+# Grafo simple
+grafo <- graph_from_data_frame(df_graph)
+ggraph(grafo, layout = 'dendrogram', circular = FALSE) + 
+  geom_edge_diagonal() +
+  geom_node_point(color="steelblue", size=5) +
+  geom_node_text(aes(label=name), vjust=2.5, size=6) +
+  labs(title = "Combinaciones de 4 elementos tomados de 2 en 2",
+       subtitle = "Resultado: 6 parejas únicas") +
+  theme_void() +
+  coord_cartesian(clip = "off")
+```
+
+## 8. El Problema de la Doble Contabilidad {.small}
+
+Imagina que tienes 3 letras: **A, B, C**.
+
+Quieremos elegir 2.
+
+Si usamos el factorial o permutación ($3 \times 2 = 6$), estás contando:
+
+1.  **A - B**
+2.  **B - A**
+3.  A - C
+4.  C - A
+5.  B - C
+6.  C - B
+
+Pero para un grupo (combinación), **{A, B} es lo mismo que {B, A}**. ¡Estamos contando todo por duplicado!
+
+------------------------------------------------------------------------
+
+## 9. Visualizando la Redundancia
+
+La fórmula de Permutación ($\frac{n!}{(n-k)!}$) genera una lista "sucia" con duplicados. La división por $k!$ actúa como un **filtro** que limpia esas repeticiones.
+
+```{r}
+#| fig.align: center
+#| fig.height: 5
+
+library(tidyverse)
+
+# Datos: Permutaciones de 3 letras tomadas de 2 en 2
+datos <- data.frame(
+  Permutacion = c("AB", "BA", "AC", "CA", "BC", "CB"),
+  Grupo = c("{A,B}", "{A,B}", "{A,C}", "{A,C}", "{B,C}", "{B,C}"),
+  Tipo = c("Original", "Duplicado", "Original", "Duplicado", "Original", "Duplicado")
+)
+
+ggplot(datos, aes(x=Grupo, y=Permutacion, color=Tipo)) +
+  geom_text(aes(label=Permutacion), size=8, fontface="bold") +
+  scale_color_manual(values=c("red", "darkgreen")) +
+  labs(title = "Permutaciones vs Combinaciones",
+       subtitle = "La Permutación ve 6 casos. La Combinación ve solo 3 grupos únicos.",
+       x = "Grupo Real (Combinación)", y = "Lo que cuenta la Permutación") +
+  theme_minimal(base_size = 18)
+```
+
+------------------------------------------------------------------------
+
+## 10. La Matemática de la División
+
+$$ \binom{n}{k} = \frac{\text{Total de Ordenamientos}}{\text{Redundancia Interna}} = \frac{n!}{k!(n-k)!} $$
+
+-   $k!$: Es el número de formas en que puedo reordenar los $k$ elementos elegidos.
+
+-   Como el orden **NO** nos importa, todas esas $k!$ formas cuentan como **1 sola**.
+
+-   Por eso dividimos: para "colapsar" todas las versiones ordenadas en un solo grupo representativo.
+
+------------------------------------------------------------------------
+
+## 11. El Triángulo de Pascal
+
+Los coeficientes binomiales siguen un patrón geométrico perfecto. Cada número es la suma de los dos de arriba.
+
+Fila 4 (n=4): 1 - 4 - 6 - 4 - 1 Esto corresponde a $\binom{4}{0}, \binom{4}{1}, \binom{4}{2}, \binom{4}{3}, \binom{4}{4}$.
+
+## 11. El Triángulo de Pascal (cont.)
+
+![](images/clase13/Triángulo_de_Pascal.png){fig-align="center" width="600"}
+
+------------------------------------------------------------------------
+
+## 12. Simetría Combinatoria
+
+Elegir 2 ganadores de un grupo de 10 es lo mismo que elegir 8 perdedores.
+
+$$ \binom{10}{2} = \binom{10}{8} $$
+
+Matemáticamente son idénticos. En la Binomial, esto explica por qué la distribución es simétrica cuando $p=0.5$.
+
+```{r}
+#| echo: true
+choose(10, 2) == choose(10, 8)
+```
+
+------------------------------------------------------------------------
+
+## 13 ¿Por qué en la Binomial?
+
+Volviendo a la fórmula: $$ P(X=k) = \mathbf{\binom{n}{k}} \cdot p^k \cdot (1-p)^{n-k} $$
+
+1.  Calculamos la probabilidad de **UN** camino específico ($p^k...$).
+2.  Multiplicamos por **CUÁNTOS** caminos existen ($\binom{n}{k}$).
+
+Sin la combinatoria, estaríamos subestimando la probabilidad.

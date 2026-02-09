@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="M.Sc. José Miguel Avendaño I.">
-  <meta name="dcterms.date" content="2026-01-26">
+  <meta name="dcterms.date" content="2026-02-09">
   <title>UCV Economía Estadística I – Estadística I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -334,7 +334,7 @@
     }
   </style>
 <meta property="og:title" content="Estadística I – UCV Economía Estadística I">
-<meta property="og:description" content="Practica: Intro a la Probabilidad">
+<meta property="og:description" content="Clase 13: Introducción a la Dist. Binomial">
 <meta property="og:site_name" content="UCV Economía Estadística I">
 </head>
 <body class="quarto-light">
@@ -343,7 +343,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Estadística I</h1>
-  <p class="subtitle">Practica: Intro a la Probabilidad</p>
+  <p class="subtitle">Clase 13: Introducción a la Dist. Binomial</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -356,113 +356,251 @@ M.Sc. José Miguel Avendaño I.
     </div>
 </div>
 
-  <p class="date">2026-01-26</p>
+  <p class="date">2026-02-09</p>
 </section>
-<section id="el-escenario-estudiantes-de-faces" class="slide level2">
-<h2>El Escenario: Estudiantes de FACES</h2>
-<p>Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.</p>
-<p><strong>Datos de la muestra (N = 100):</strong></p>
+<section id="bernoulli" class="slide level2">
+<h2>1. Bernoulli</h2>
+<p>Todo empieza con un experimento simple que solo tiene dos salidas:</p>
+<ul>
+<li><p><strong>Éxito (1):</strong> Lo que nos interesa contar (Cara, Venta, Defecto).</p></li>
+<li><p><strong>Fracaso (0):</strong> Lo contrario.</p></li>
+</ul>
+<p>A esto se le llama <strong>Ensayo de Bernoulli</strong>.</p>
+<p>Probabilidad de Éxito = <span class="math inline">\(p\)</span></p>
+<p>Probabilidad de Fracaso = <span class="math inline">\(1 - p\)</span> (a veces llamado <span class="math inline">\(q\)</span>)</p>
+</section>
+<section id="definición-de-la-binomial" class="slide level2">
+<h2>2. Definición de la Binomial</h2>
+<p>La Distribución Binomial nace cuando repetimos el ensayo de Bernoulli <span class="math inline">\(n\)</span> veces.</p>
+<blockquote>
+<p><strong>Definición:</strong> <span class="math inline">\(X\)</span> es el número total de éxitos en <span class="math inline">\(n\)</span> ensayos independientes.</p>
+</blockquote>
+<p><span class="math display">\[ X \sim Bin(n, p) \]</span></p>
+<p>Ejemplo: Lanzar 10 tiros libres (<span class="math inline">\(n=10\)</span>) donde mi efectividad es del 70% (<span class="math inline">\(p=0.7\)</span>).</p>
+</section>
+<section id="los-4-requisitos-bins" class="slide level2">
+<h2>3. Los 4 Requisitos (BINS)</h2>
+<p>Para usar este modelo, deben cumplirse estrictamente:</p>
+<ol type="1">
+<li><strong>B</strong>inary: Resultados binarios (Éxito/Fracaso).</li>
+<li><strong>I</strong>ndependent: El resultado de un ensayo no afecta al siguiente.</li>
+<li><strong>N</strong>umber: El número de ensayos <span class="math inline">\(n\)</span> es fijo de antemano.</li>
+<li><strong>S</strong>ame probability: La probabilidad <span class="math inline">\(p\)</span> es constante en cada ensayo.</li>
+</ol>
+</section>
+<section id="la-fórmula" class="slide level2">
+<h2>4. La Fórmula</h2>
+<p><span class="math display">\[ P(X=k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k} \]</span></p>
+</section>
+<section id="la-fórmula-desglosada" class="slide level2">
+<h2>5.1 La Fórmula Desglosada</h2>
+<p><span class="math display">\[P(X=k) = \underbrace{\binom{n}{k}}_{\text{Conteo}} \cdot \underbrace{p^k}_{\text{Éxitos}} \cdot \underbrace{(1-p)^{n-k}}_{\text{Fracasos}}\]</span></p>
+<p>Esta fórmula no es mágica, es la unión de tres partes lógicas:</p>
+<ol type="1">
+<li><strong>El Contador:</strong> ¿De cuántas formas puede pasar?</li>
+<li><strong>La Probabilidad de Ganar:</strong> ¿Qué tan probable es tener <span class="math inline">\(k\)</span> éxitos?</li>
+<li><strong>La Probabilidad de Perder:</strong> ¿Qué tan probable es tener el resto de fracasos?</li>
+</ol>
+</section>
+<section id="el-lado-izquierdo-el-objetivo" class="slide level2">
+<h2>5.2 El Lado Izquierdo: El Objetivo</h2>
+<p><span class="math display">\[P(X=k)\]</span></p>
+<ul>
+<li><span class="math inline">\(P\)</span>: Probabilidad.</li>
+<li><span class="math inline">\(X\)</span>: La Variable Aleatoria (el “contador” de éxitos).</li>
+<li><span class="math inline">\(k\)</span>: El número específico de éxitos que nos interesa.</li>
+</ul>
+<blockquote>
+<p><strong>Traducción:</strong> “¿Cuál es la probabilidad de que el contador se detenga exactamente en el número <span class="math inline">\(k\)</span>?”</p>
+</blockquote>
+</section>
+<section id="el-primer-término-el-coeficiente" class="slide level2">
+<h2>5.3 El Primer Término: El Coeficiente</h2>
+<p><span class="math display">\[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]</span></p>
+<ul>
+<li><strong>Función:</strong> Cuenta las combinaciones.</li>
+<li><strong>Por qué está ahí:</strong> Porque no nos importa el orden.
+<ul>
+<li>Ganar-Ganar-Perder</li>
+<li>Ganar-Perder-Ganar</li>
+<li>Perder-Ganar-Ganar</li>
+</ul></li>
+<li>Si queremos 2 éxitos en 3 intentos, hay <strong>3 formas</strong>. Este término nos da ese número (3).</li>
+</ul>
+</section>
+<section id="aclaratoria-el-filtro-de-la-binomial" class="slide level2 small">
+<h2>5.3.1 Aclaratoria: El “Filtro” de la Binomial</h2>
+<p>Es común preguntar: <em>“¿Y dónde están los otros casos?”</em></p>
+<p>La fórmula <span class="math inline">\(P(X=k)\)</span> es selectiva. Si buscamos <strong>2 Éxitos</strong> (<span class="math inline">\(k=2\)</span>) en 3 intentos:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Escuela</th>
-<th>Masculino (M)</th>
-<th>Femenino (F)</th>
-<th>Total</th>
+<th style="text-align: center;">Resultado</th>
+<th style="text-align: center;">¿Cuántos Éxitos?</th>
+<th style="text-align: center;">¿Lo cuenta la fórmula?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Economía</td>
-<td>15</td>
-<td>10</td>
-<td><strong>25</strong></td>
+<td style="text-align: center;">G - G - G</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">❌ No (sobra 1)</td>
 </tr>
 <tr class="even">
-<td>Sociología</td>
-<td>10</td>
-<td>20</td>
-<td><strong>30</strong></td>
+<td style="text-align: center;"><strong>G - G - P</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">✅ <strong>SÍ</strong></td>
 </tr>
 <tr class="odd">
-<td>Estudios Int.</td>
-<td>20</td>
-<td>25</td>
-<td><strong>45</strong></td>
+<td style="text-align: center;"><strong>G - P - G</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">✅ <strong>SÍ</strong></td>
 </tr>
 <tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>45</strong></td>
-<td><strong>55</strong></td>
-<td><strong>100</strong></td>
+<td style="text-align: center;"><strong>P - G - G</strong></td>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">✅ <strong>SÍ</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">G - P - P</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">❌ No (falta 1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P - G - P</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">❌ No (falta 1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">P - P - G</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">❌ No (falta 1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P - P - P</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">❌ No (faltan 2)</td>
 </tr>
 </tbody>
 </table>
+<p>El término <span class="math inline">\(\binom{3}{2}\)</span> cuenta solo las filas con el ✅.</p>
 </section>
-<section id="definición-de-eventos" class="slide level2">
-<h2>Definición de Eventos</h2>
-<p>Supongamos que queremos calcular la probabilidad de que un estudiante sea de <strong>Economía (A)</strong> O sea <strong>Mujer (B)</strong>.</p>
+<section id="el-segundo-término-los-éxitos" class="slide level2">
+<h2>5.4 El Segundo Término: Los Éxitos</h2>
+<p><span class="math display">\[p^k\]</span></p>
 <ul>
-<li><strong>Evento A:</strong> El estudiante es de Economía. <span class="math inline">\(P(A) = \frac{25}{100} = 0.25\)</span></li>
-<li><strong>Evento B:</strong> El estudiante es de sexo Femenino. <span class="math inline">\(P(B) = \frac{55}{100} = 0.55\)</span></li>
+<li><span class="math inline">\(p\)</span>: Probabilidad de éxito en UN solo ensayo.</li>
+<li><span class="math inline">\(k\)</span>: Cuántos éxitos queremos.</li>
 </ul>
-<p>¿Podemos simplemente sumar <span class="math inline">\(0.25 + 0.55\)</span>?</p>
+<p><strong>Lógica:</strong> Como los eventos son independientes, multiplicamos la probabilidad <span class="math inline">\(p\)</span> por sí misma <span class="math inline">\(k\)</span> veces. <span class="math display">\[p \times p \times ... \times p\]</span></p>
 </section>
-<section id="el-problema-del-doble-conteo" class="slide level2">
-<h2>El Problema del “Doble Conteo”</h2>
-<p>Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando <strong>dos veces</strong> a las mujeres que estudian economía.</p>
-<p>La intersección (<span class="math inline">\(A \cap B\)</span>) representa a las 10 estudiantes que son <strong>mujeres de Economía</strong>.</p>
-<p><span class="math display">\[P(A \cap B) = \frac{10}{100} = 0.10\]</span></p>
-</section>
-<section id="la-regla-general-de-la-adición" class="slide level2">
-<h2>La Regla General de la Adición</h2>
-<p>Para evitar el doble conteo, la fórmula es:</p>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
-<p>Donde:</p>
-<p>* <span class="math inline">\(P(A \cup B)\)</span>: Probabilidad de A o B (unión).</p>
-<p>* <span class="math inline">\(P(A \cap B)\)</span>: Probabilidad de A y B (intersección).</p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<p><strong><em>COMPLETAR</em></strong></p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <em>completar</em></li>
-<li><strong>Probabilidad de Femenino:</strong> <em>completar</em></li>
-<li><strong>Restamos la intersección:</strong> <em>completar</em></li>
-</ol>
-<p><strong><em>COMPLETAR</em></strong></p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula-1" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <span class="math inline">\(P(A) = 0.25\)</span></li>
-<li><strong>Probabilidad de Femenino:</strong> <span class="math inline">\(P(B) = 0.55\)</span></li>
-<li><strong>Restamos la intersección:</strong> <span class="math inline">\(P(A \cap B) = 0.10\)</span></li>
-</ol>
-<p><span class="math display">\[P(A \cup B) = 0.25 + 0.55 - 0.10\]</span> <span class="math display">\[P(A \cup B) = 0.70\]</span></p>
-<p><strong>Resultado:</strong> Existe un <strong>70%</strong> de probabilidad de que el estudiante sea de Economía o mujer.</p>
-</section>
-<section id="y-si-los-eventos-fueran-mutuamente-excluyentes" class="slide level2">
-<h2>¿Y si los eventos fueran mutuamente excluyentes?</h2>
-<p>Si preguntamos por la probabilidad de ser de <strong>Economía (A)</strong> O de <strong>Sociología (C)</strong>:</p>
+<section id="el-tercer-término-los-fracasos" class="slide level2">
+<h2>5.5 El Tercer Término: Los Fracasos</h2>
+<p><span class="math display">\[(1-p)^{n-k}\]</span></p>
 <ul>
-<li>Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.</li>
-<li><span class="math inline">\(P(A \cap C) = 0\)</span></li>
+<li><span class="math inline">\((1-p)\)</span>: Si la probabilidad de ganar es <span class="math inline">\(p\)</span>, la de perder es el complemento.</li>
+<li><span class="math inline">\(n-k\)</span>: Si lanzamos <span class="math inline">\(n\)</span> veces y queremos <span class="math inline">\(k\)</span> éxitos, ¡obligatoriamente los otros <span class="math inline">\(n-k\)</span> lanzamientos deben ser fallos!</li>
 </ul>
-<p>En este caso, la regla se simplifica: <span class="math display">\[P(A \cup C) = P(A) + P(C)\]</span> <span class="math display">\[P(A \cup C) = 0.25 + 0.30 = 0.55\]</span></p>
-</section>
-<section id="ejercicio-rápido-para-la-clase" class="slide level2">
-<h2>Ejercicio Rápido para la Clase</h2>
-<p>Utilizando la tabla inicial, calcular:</p>
 <blockquote>
-<p>¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de <strong>Estudios Internacionales</strong> o sea de sexo <strong>Masculino</strong>?</p>
+<p><strong>Clave:</strong> Sin esta parte, estaríamos ignorando lo que pasa en los otros intentos.</p>
 </blockquote>
-<p>Pasos:</p>
-<p>1. <span class="math inline">\(P(\text{EEI})\)</span></p>
-<p>2. <span class="math inline">\(P(\text{M})\)</span></p>
-<p>3. <span class="math inline">\(P(\text{EEI} \cap \text{M})\)</span></p>
+</section>
+<section id="resumen-visual" class="slide level2">
+<h2>5.6 Resumen Visual</h2>
+<p>Para calcular la probabilidad de <strong>2 Caras</strong> en <strong>3 Monedas</strong> (<span class="math inline">\(p=0.5\)</span>):</p>
+<ol type="1">
+<li><span class="math inline">\(\binom{3}{2} = 3\)</span>: Hay 3 caminos posibles.</li>
+<li><span class="math inline">\(0.5^2 = 0.25\)</span>: Probabilidad de las 2 caras.</li>
+<li><span class="math inline">\((1-0.5)^{3-2} = 0.5\)</span>: Probabilidad del sello restante.</li>
+</ol>
+<p><span class="math display">\[Total = 3 \times 0.25 \times 0.5 = 0.375\]</span></p>
+</section>
+<section id="calculando-probabilidades-exactas" class="slide level2 small">
+<h2>6. Calculando Probabilidades Exactas</h2>
+<p>Ejemplo: Lanzamos 10 veces (<span class="math inline">\(n=10\)</span>) con probabilidad de éxito del 30% (<span class="math inline">\(p=0.3\)</span>).</p>
+<p>¿Probabilidad de obtener <strong>exactamente 2 éxitos</strong> (<span class="math inline">\(k=2\)</span>)?</p>
+<p>Sustituyendo en la fórmula:</p>
+<p><span class="math display">\[ P(X=2) = \binom{10}{2} \cdot (0.3)^2 \cdot (1-0.3)^{10-2} \]</span></p>
+<p><span class="math display">\[ P(X=2) = 45 \cdot 0.09 \cdot (0.7)^8 \]</span></p>
+<p><span class="math display">\[ P(X=2) = 45 \cdot 0.09 \cdot 0.0576 \approx \mathbf{0.2334} \]</span></p>
+<p><strong>Resultado:</strong> Hay un <strong>23.34%</strong> de probabilidad.</p>
+</section>
+<section id="calculando-probabilidades-exactas-cont." class="slide level2">
+<h2>6. Calculando Probabilidades Exactas (cont.)</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_binomial_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="el-rol-del-parámetro-p-sesgo" class="slide level2">
+<h2>7. El Rol del Parámetro <span class="math inline">\(p\)</span> (Sesgo)</h2>
+<p>El parámetro <span class="math inline">\(p\)</span> determina la simetría.</p>
+<ul>
+<li><p>Si <span class="math inline">\(p &lt; 0.5\)</span>: Sesgo a la derecha (éxitos raros).</p></li>
+<li><p>Si <span class="math inline">\(p = 0.5\)</span>: Simétrica (como una moneda).</p></li>
+<li><p>Si <span class="math inline">\(p &gt; 0.5\)</span>: Sesgo a la izquierda (éxitos comunes).</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_binomial_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="el-rol-del-parámetro-n-forma" class="slide level2">
+<h2>8. El Rol del Parámetro <span class="math inline">\(n\)</span> (Forma)</h2>
+<p>Al aumentar <span class="math inline">\(n\)</span>, la distribución se vuelve más “suave” y acampanada, incluso si <span class="math inline">\(p\)</span> no es 0.5.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_binomial_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="media-y-varianza-binomial" class="slide level2">
+<h2>9. Media y Varianza Binomial</h2>
+<p>No necesitamos sumar todo para conocer el centro y la dispersión.</p>
+<ul>
+<li><strong>Media (Esperanza):</strong> <span class="math inline">\(\mu = n \cdot p\)</span>
+<ul>
+<li><em>Si tiro 100 monedas, espero 50 caras.</em></li>
+</ul></li>
+<li><strong>Varianza:</strong> <span class="math inline">\(\sigma^2 = n \cdot p \cdot (1-p)\)</span></li>
+<li><strong>Desviación Estándar:</strong> <span class="math inline">\(\sigma = \sqrt{n \cdot p \cdot (1-p)}\)</span></li>
+</ul>
+</section>
+<section id="probabilidades-acumuladas" class="slide level2">
+<h2>10. Probabilidades Acumuladas</h2>
+<p>¿Probabilidad de obtener <strong>a lo sumo</strong> 2 éxitos (<span class="math inline">\(X \leq 2\)</span>)? Sumamos las barras de 0, 1 y 2.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_binomial_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="aplicaciones-reales" class="slide level2">
+<h2>11. Aplicaciones Reales</h2>
+<ul>
+<li><strong>Control de Calidad:</strong> Número de piezas defectuosas en un lote.</li>
+<li><strong>Medicina:</strong> Número de pacientes que responden a un tratamiento.</li>
+<li><strong>Marketing:</strong> Número de clics en un anuncio (CTR).</li>
+<li><strong>Finanzas:</strong> Número de días que una acción sube.</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo2.png" class="slide-logo"></p>
@@ -683,6 +821,44 @@ M.Sc. José Miguel Avendaño I.
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

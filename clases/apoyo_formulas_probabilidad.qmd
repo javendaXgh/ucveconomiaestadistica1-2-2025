@@ -1,0 +1,38 @@
+---
+title: "Hoja de Referencia: Fórmulas de Probabilidad"
+format: revealjs
+editor: visual
+---
+
+## Fórmulas de Apoyo {.xsmall}
+
+::::: columns
+::: {.column width="50%"}
+### 1. Reglas Básicas
+
+-   **Rango de Probabilidad** $$0 \leq P(A) \leq 1$$
+
+**Regla del Complemento** $$P(A^c) = 1 - P(A)$$ $$P(A) + P(A^c) = 1$$
+
+**Lógica de "Al Menos Uno"** $$P(\text{al menos } 1) = 1 - P(\text{ninguno})$$
+:::
+
+::: {.column width="50%"}
+### 2. Unión e Intersección
+
+**Regla General de la Adición ("o")** $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$ *(Si son disjuntos,* $P(A \cap B) = 0$)
+
+**Independencia ("y")** Si $A$ y $B$ son independientes: $$P(A \cap B) = P(A) \times P(B)$$
+
+**Probabilidad Condicional** $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+:::
+:::::
+
+::: callout-tip
+## Recordatorio de Notación
+
+-   $\cup$ : Unión (ocurre A **o** B, o ambos).
+-   $\cap$ : Intersección (ocurre A **y** B simultáneamente).
+-   $A^c$ : Complemento (NO ocurre A).
+-   Disjuntos: No pueden ocurrir al mismo tiempo.
+:::

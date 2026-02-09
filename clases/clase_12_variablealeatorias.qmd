@@ -1,0 +1,335 @@
+---
+title: "Estadística I"
+subtitle: "Clase 12: Variables Aleatorias y Distribuciones"
+date: "2026/01/21"
+format: revealjs
+lang: es
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## Introducción
+
+<br>
+
+Entender cómo pasamos de la incertidumbre de un evento (lanzar una moneda) a una función matemática que podemos analizar (La Variable Aleatoria).
+
+<br>
+
+```{r}
+#| label: setup
+library(tidyverse)
+library(patchwork)
+library(knitr)
+
+# Tema global para gráficos grandes y claros en proyección
+theme_set(theme_minimal() + 
+            theme(text = element_text(size = 20),
+                  plot.title = element_text(face = "bold", size = 24),
+                  axis.title = element_text(size = 18)))
+```
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## El Problema de la Probabilidad Clásica
+
+Hasta ahora, hemos trabajado con **Espacios Muestrales (**$\Omega$) que describen cualidades:
+
+-   Lanzar una moneda: $\{Cara, Sello\}$
+-   Estado de un producto: $\{Defectuoso, Bueno\}$
+-   Encuesta de satisfacción: $\{Bajo, Medio, Alto\}$
+
+**El problema:** Es difícil hacer álgebra o cálculo con palabras como "Cara" o "Defectuoso".
+
+------------------------------------------------------------------------
+
+## La Solución: Variable Aleatoria
+
+Necesitamos traducir los resultados cualitativos a **números**.
+
+> Una **Variable Aleatoria (X)** es una función que asigna un valor numérico a cada resultado posible de un experimento aleatorio.
+
+$$ X: \Omega \rightarrow \mathbb{R} $$
+
+------------------------------------------------------------------------
+
+## Visualizando el Concepto
+
+Imagina lanzar **3 monedas**. El espacio muestral es complejo: $\{(C,C,C), (C,S,C), ...\}$
+
+Si definimos $X$ = **Número de Caras**, simplificamos todo:
+
+-   $(S,S,S) \rightarrow \mathbf{0}$
+-   $(C,S,S) \rightarrow \mathbf{1}$
+-   $(C,C,S) \rightarrow \mathbf{2}$
+-   $(C,C,C) \rightarrow \mathbf{3}$
+
+Ahora trabajamos con números: $0, 1, 2, 3$.
+
+------------------------------------------------------------------------
+
+## Tipos de Variables Aleatorias
+
+Es fundamental distinguir entre dos mundos:
+
+::::: columns
+::: {.column width="50%"}
+### 1. Discretas
+
+-   "Saltos" entre valores.
+-   Generalmente provienen de **contar**.
+-   Ej: Goles en un partido, número de hijos, caras en una moneda.
+:::
+
+::: {.column width="50%"}
+### 2. Continuas
+
+-   Cualquier valor en un intervalo.
+-   Generalmente provienen de **medir**.
+-   Ej: Tiempo, distancia, temperatura, peso.
+:::
+:::::
+
+------------------------------------------------------------------------
+
+# Distribuciones Discretas
+
+------------------------------------------------------------------------
+
+## Función de Probabilidad
+
+En variables discretas, asignamos una probabilidad a cada valor exacto. Esto se llama **Función de Masa de Probabilidad**.
+
+$$ P(X = x) $$
+
+La suma de todas las barras debe ser siempre 1 (100%).
+
+------------------------------------------------------------------------
+
+## Profundizando: Función de Masa de Probabilidad (PMF)
+
+Para variables **discretas**, la función de probabilidad $f(x)$ actúa como una balanza:
+
+Asigna un "peso" (probabilidad) a cada punto específico.
+
+$$ f(x) = P(X = x) $$
+
+------------------------------------------------------------------------
+
+## Propiedades Fundamentales:
+
+1.  **Positividad:** $f(x) \geq 0$ (No existen probabilidades negativas).
+
+2.  **Certeza Total:** $\sum f(x) = 1$ (La suma de todos los pesos es el 100%).
+
+------------------------------------------------------------------------
+
+## La Mecánica de la Suma de 2 Dados
+
+-   **Resultados posibles** de sumar Dado 1 + Dado 2.
+-   Frecuencia de 2 y 12 Vs. la del 7
+
+```{r}
+#| echo: false
+# Generamos la matriz de sumas
+dado <- 1:6
+matriz_suma <- outer(dado, dado, "+")
+rownames(matriz_suma) <- paste("D1=", 1:6)
+colnames(matriz_suma) <- paste("D2=", 1:6)
+
+# Mostramos la tabla formateada
+kable(matriz_suma, caption = "Matriz de Posibles Resultados (Suma)", align = "c")
+```
+
+------------------------------------------------------------------------
+
+## Interpretación Gráfica: Gráfico de Bastones
+
+Si lanzamos dos dados y sumamos ¿cuál es el resultado más probable?
+
+```{r}
+#| fig.align: center
+library(tidyverse)
+
+dado <- 1:6
+espacio <- expand.grid(d1 = dado, d2 = dado)
+espacio$Suma <- espacio$d1 + espacio$d2
+
+probs <- espacio %>% count(Suma) %>% mutate(p = n/sum(n))
+
+ggplot(probs, aes(x = Suma, y = p)) +
+  geom_segment(aes(x=Suma, xend=Suma, y=0, yend=p), color="gray50", size=1) +
+  geom_point(color="#2C3E50", size=5) +
+  geom_text(aes(label = round(p, 2)), vjust = -1.5, size = 4) +
+  labs(title = "Función de Masa de Probabilidad (PMF)",
+       subtitle = "La probabilidad se concentra solo en los enteros (2, 3... 12)",
+       x = "Valor de X", y = "P(X=x)") +
+  ylim(0, 0.2) +
+  theme_minimal(base_size = 20)
+```
+
+------------------------------------------------------------------------
+
+## Interpretación Gráfica 2: Suma de dos dados
+
+```{r}
+#| fig.align: center
+dado <- 1:6
+espacio <- expand.grid(d1 = dado, d2 = dado)
+espacio$Suma <- espacio$d1 + espacio$d2
+
+probs <- espacio %>% count(Suma) %>% mutate(p = n/sum(n))
+
+ggplot(probs, aes(x = factor(Suma), y = p)) +
+  geom_col(fill = "#2C3E50", width = 0.7) +
+  geom_text(aes(label = round(p, 2)), vjust = -0.5, size = 5) +
+  labs(title = "Distribución de la Suma de 2 Dados",
+       subtitle = "7 es el valor más probable",
+       x = "Suma obtenida (X)", y = "Probabilidad") +
+  ylim(0, 0.2)
+```
+
+------------------------------------------------------------------------
+
+## Función de Distribución Acumulada (CDF)
+
+*"¿Cuál es la probabilidad de sacar **4 o menos**?"*
+
+**Función Acumulada** $F(x)$:
+
+$$ F(x) = P(X \leq x) = \sum_{k \leq x} f(k) $$
+
+Es la suma de las probabilidades "hacia atrás".
+
+------------------------------------------------------------------------
+
+## Visualizando la Acumulada: La Escalera
+
+La CDF de una variable discreta siempre tiene forma de **escalera**. Sube en cada valor posible y se mantiene constante entre valores.
+
+```{r}
+#| fig.align: center
+
+probs <- probs %>% mutate(acumulada = cumsum(p))
+
+ggplot(probs, aes(x = Suma, y = acumulada)) +
+  geom_step(direction = "hv", size = 1.5, color = "#E67E22") +
+  geom_point(size = 3, color = "#E67E22") +
+  geom_hline(yintercept = 1, linetype="dashed", color="gray") +
+  labs(title = "Función de Distribución Acumulada (CDF)",
+       subtitle = "Muestra la probabilidad de obtener un valor 'menor o igual a X'",
+       x = "Valor de X", y = "Probabilidad Acumulada F(x)") +
+  scale_y_continuous(breaks = seq(0, 1, 0.2)) +
+  theme_minimal(base_size = 20)
+```
+
+------------------------------------------------------------------------
+
+## Esperanza Matemática (Media)
+
+Es el "centro de gravedad" de la distribución. Es el valor promedio que obtendríamos si repitiéramos el experimento infinitas veces.
+
+$$ E[X] = \mu $$
+
+En el gráfico anterior, el "punto de equilibrio" visual está claramente en el **7**.
+
+------------------------------------------------------------------------
+
+## Simulación: Ley de los Grandes Números
+
+¿Qué pasa si lanzamos los dados en la vida real? Al principio el promedio oscila, pero con el tiempo se estabiliza en la Esperanza Teórica (7).
+
+```{r}
+#| fig.align: center
+set.seed(42)
+n_sim <- 500
+lanzamientos <- rowSums(replicate(2, sample(1:6, n_sim, replace=T)))
+promedios <- cumsum(lanzamientos) / 1:n_sim
+
+ggplot(data.frame(n=1:n_sim, media=promedios), aes(x=n, y=media)) +
+  geom_line(color = "#E74C3C", size = 1) +
+  geom_hline(yintercept = 7, linetype = "dashed", size = 1) +
+  labs(title = "Convergencia del Promedio Acumulado",
+       subtitle = "La línea punteada es la Esperanza Teórica (7)",
+       x = "Número de lanzamientos", y = "Promedio Observado")
+```
+
+## Esperanza Matemática (Valor Esperado)
+
+Más allá de la probabilidad de cada evento, queremos un solo número que resuma el "centro" de la distribución.
+
+**Esperanza Matemática** ($E[X]$ o $\mu$): es el promedio ponderado de todos los valores posibles.
+
+$$ E[X] = \sum_{x} x \cdot P(X=x) $$
+
+> No es necesariamente un valor que la variable pueda tomar (ej. 3.5 en un dado), sino el promedio a largo plazo.
+
+## Interpretación Física: El Centro de Gravedad
+
+Imagina que el gráfico de barras es una tabla física y las probabilidades son pesos. La Esperanza es exactamente el punto donde podrías poner el dedo para que la tabla se mantenga en equilibrio.
+
+```{r}
+#| fig.align: center
+#| fig.height: 5
+
+df_esperanza <- data.frame(
+  x = c(1, 2, 3, 10),
+  prob = c(0.1, 0.1, 0.1, 0.7)
+)
+
+mu <- sum(df_esperanza$x * df_esperanza$prob) # 0.1+0.2+0.3+7 = 7.6
+
+ggplot(df_esperanza, aes(x=x, y=prob)) +
+  geom_col(fill = "#8E44AD", width = 0.4) +
+  # El punto de equilibrio (fulcrum)
+  geom_point(aes(x=mu, y=-0.02), shape=24, size=8, fill="#F39C12", color="black") +
+  geom_text(aes(x=mu, y=-0.06, label=paste("E[X] =", mu)), color="#F39C12", size=6, fontface="bold") +
+  geom_hline(yintercept = 0, color="black") +
+  labs(title = "La Esperanza como Centro de Masa",
+       subtitle = "Aunque los valores 1, 2 y 3 existen, el peso del 10 'jala' el promedio a la derecha",
+       x = "Valor de X", y = "Peso (Probabilidad)") +
+  theme_minimal(base_size = 20) +
+  coord_cartesian(ylim = c(-0.1, 0.8))
+```
+
+## La Ley de los Grandes Números
+
+¿Por qué nos importa un valor teórico? Porque garantiza que, si repetimos el experimento suficientes veces, el **promedio observado** ($\bar{x}$) convergerá a la **Esperanza teórica** ($\mu$).
+
+$$ \bar{X}_n \xrightarrow{n \to \infty} E[X] $$
+
+Es el puente que permite usar la estadística para predecir ganancias en casinos, seguros y negocios.
+
+------------------------------------------------------------------------
+
+## Simulación: Convergencia
+
+Lanzamos un dado trucado (cargado al 6). Teóricamente, $E[X] \approx 4.5$ (mayor que el 3.5 normal). Veamos cómo el promedio acumulado se estabiliza.
+
+```{r}
+#| fig.align: center
+
+set.seed(123)
+n <- 1000
+# Dado trucado: prob del 6 es 0.5, el resto 0.1
+probs_trucado <- c(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)
+media_teorica <- sum((1:6) * probs_trucado)
+
+lanzamientos <- sample(1:6, n, replace=TRUE, prob=probs_trucado)
+prom_acum <- cumsum(lanzamientos) / (1:n)
+
+ggplot(data.frame(n=1:n, media=prom_acum), aes(x=n, y=media)) +
+  geom_line(color = "#27AE60", size = 1) +
+  geom_hline(yintercept = media_teorica, linetype="dashed", color="red", size = 1.2) +
+  annotate("text", x=800, y=media_teorica+0.2, label="Esperanza Teórica", color="red", size=5) +
+  labs(title = "Ley de los Grandes Números (Dado Trucado)",
+       x = "Número de Lanzamientos", y = "Promedio Observado") +
+  theme_minimal(base_size = 18)
+```

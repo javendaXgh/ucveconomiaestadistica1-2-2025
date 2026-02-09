@@ -101,4 +101,10 @@ Utilizando la tabla inicial, calcular:
 
 > ¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de **Estudios Internacionales** o sea de sexo **Masculino**?
 
-Recordar identificar: 1. $P(\text{EEI})$ 2. $P(\text{M})$ 3. $P(\text{EEI} \cap \text{M})$
+Pasos:
+
+1\. $P(\text{EEI})$
+
+2\. $P(\text{M})$
+
+3\. $P(\text{EEI} \cap \text{M})$

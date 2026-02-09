@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="M.Sc. José Miguel Avendaño I.">
-  <meta name="dcterms.date" content="2026-01-26">
+  <meta name="dcterms.date" content="2026-02-09">
   <title>UCV Economía Estadística I – Estadística I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,6 +31,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
@@ -334,7 +399,7 @@
     }
   </style>
 <meta property="og:title" content="Estadística I – UCV Economía Estadística I">
-<meta property="og:description" content="Practica: Intro a la Probabilidad">
+<meta property="og:description" content="Clase 13: Complemento Combinatoria">
 <meta property="og:site_name" content="UCV Economía Estadística I">
 </head>
 <body class="quarto-light">
@@ -343,7 +408,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Estadística I</h1>
-  <p class="subtitle">Practica: Intro a la Probabilidad</p>
+  <p class="subtitle">Clase 13: Complemento Combinatoria</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -356,113 +421,156 @@ M.Sc. José Miguel Avendaño I.
     </div>
 </div>
 
-  <p class="date">2026-01-26</p>
+  <p class="date">2026-02-09</p>
 </section>
-<section id="el-escenario-estudiantes-de-faces" class="slide level2">
-<h2>El Escenario: Estudiantes de FACES</h2>
-<p>Imaginemos que seleccionamos un estudiante al azar en el pasillo. Queremos calcular la probabilidad de que pertenezca a una escuela específica o sea de un sexo determinado.</p>
-<p><strong>Datos de la muestra (N = 100):</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Escuela</th>
-<th>Masculino (M)</th>
-<th>Femenino (F)</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Economía</td>
-<td>15</td>
-<td>10</td>
-<td><strong>25</strong></td>
-</tr>
-<tr class="even">
-<td>Sociología</td>
-<td>10</td>
-<td>20</td>
-<td><strong>30</strong></td>
-</tr>
-<tr class="odd">
-<td>Estudios Int.</td>
-<td>20</td>
-<td>25</td>
-<td><strong>45</strong></td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>45</strong></td>
-<td><strong>55</strong></td>
-<td><strong>100</strong></td>
-</tr>
-</tbody>
-</table>
+<section id="la-fórmula-binomial" class="slide level2">
+<h2>1. La Fórmula Binomial</h2>
+<p><span class="math display">\[ P(X=k) = \mathbf{\binom{n}{k}} \cdot p^k \cdot (1-p)^{n-k} \]</span></p>
+<p>Sabemos que <span class="math inline">\(p^k\)</span> es la probabilidad del éxito y <span class="math inline">\((1-p)\)</span> la del fracaso.</p>
+<p><strong>¿qué hace el primer término entre paréntesis?</strong></p>
+<p>Se llama <strong>Coeficiente Binomial</strong> y es el contador de historias.</p>
 </section>
-<section id="definición-de-eventos" class="slide level2">
-<h2>Definición de Eventos</h2>
-<p>Supongamos que queremos calcular la probabilidad de que un estudiante sea de <strong>Economía (A)</strong> O sea <strong>Mujer (B)</strong>.</p>
-<ul>
-<li><strong>Evento A:</strong> El estudiante es de Economía. <span class="math inline">\(P(A) = \frac{25}{100} = 0.25\)</span></li>
-<li><strong>Evento B:</strong> El estudiante es de sexo Femenino. <span class="math inline">\(P(B) = \frac{55}{100} = 0.55\)</span></li>
-</ul>
-<p>¿Podemos simplemente sumar <span class="math inline">\(0.25 + 0.55\)</span>?</p>
-</section>
-<section id="el-problema-del-doble-conteo" class="slide level2">
-<h2>El Problema del “Doble Conteo”</h2>
-<p>Si sumamos todos los de Economía (25) y todas las mujeres (55), estamos contando <strong>dos veces</strong> a las mujeres que estudian economía.</p>
-<p>La intersección (<span class="math inline">\(A \cap B\)</span>) representa a las 10 estudiantes que son <strong>mujeres de Economía</strong>.</p>
-<p><span class="math display">\[P(A \cap B) = \frac{10}{100} = 0.10\]</span></p>
-</section>
-<section id="la-regla-general-de-la-adición" class="slide level2">
-<h2>La Regla General de la Adición</h2>
-<p>Para evitar el doble conteo, la fórmula es:</p>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
-<p>Donde:</p>
-<p>* <span class="math inline">\(P(A \cup B)\)</span>: Probabilidad de A o B (unión).</p>
-<p>* <span class="math inline">\(P(A \cap B)\)</span>: Probabilidad de A y B (intersección).</p>
-</section>
-<section id="paso-a-paso-aplicando-la-fórmula" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<p><strong><em>COMPLETAR</em></strong></p>
+<section id="el-problema-de-contar" class="slide level2">
+<h2>2. El Problema de Contar</h2>
+<p>Lanzar 3 monedas y buscas 2 caras.</p>
+<p>¿Cuántas formas hay de obtenerlas?</p>
 <ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <em>completar</em></li>
-<li><strong>Probabilidad de Femenino:</strong> <em>completar</em></li>
-<li><strong>Restamos la intersección:</strong> <em>completar</em></li>
+<li>Cara - Cara - Sello</li>
+<li>Cara - Sello - Cara</li>
+<li>Sello - Cara - Cara</li>
 </ol>
-<p><strong><em>COMPLETAR</em></strong></p>
+<p>Hay <strong>3 caminos</strong> distintos para llegar al mismo resultado (2 caras) y la combinatoria nos ayuda a contar estos caminos sin tener que escribirlos uno por uno.</p>
 </section>
-<section id="paso-a-paso-aplicando-la-fórmula-1" class="slide level2">
-<h2>Paso a Paso: Aplicando la Fórmula</h2>
-<p>Sustituimos nuestros valores de FACES:</p>
-<ol type="1">
-<li><strong>Probabilidad de Economía:</strong> <span class="math inline">\(P(A) = 0.25\)</span></li>
-<li><strong>Probabilidad de Femenino:</strong> <span class="math inline">\(P(B) = 0.55\)</span></li>
-<li><strong>Restamos la intersección:</strong> <span class="math inline">\(P(A \cap B) = 0.10\)</span></li>
-</ol>
-<p><span class="math display">\[P(A \cup B) = 0.25 + 0.55 - 0.10\]</span> <span class="math display">\[P(A \cup B) = 0.70\]</span></p>
-<p><strong>Resultado:</strong> Existe un <strong>70%</strong> de probabilidad de que el estudiante sea de Economía o mujer.</p>
+<section id="concepto-clave-el-factorial-n" class="slide level2">
+<h2>3. Concepto Clave: El Factorial (<span class="math inline">\(n!\)</span>)</h2>
+<p>Para contar se usa el “motor” de la multiplicación: el Factorial que es el producto de un número por todos sus antecesores hasta el 1.</p>
+<p><span class="math display">\[ 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 \]</span></p>
+<p><em>Propiedad:</em> Nos dice de cuántas formas totales podemos ordenar <span class="math inline">\(n\)</span> objetos distintos.</p>
 </section>
-<section id="y-si-los-eventos-fueran-mutuamente-excluyentes" class="slide level2">
-<h2>¿Y si los eventos fueran mutuamente excluyentes?</h2>
-<p>Si preguntamos por la probabilidad de ser de <strong>Economía (A)</strong> O de <strong>Sociología (C)</strong>:</p>
+<section id="visualizando-el-crecimiento-del-factorial" class="slide level2">
+<h2>4. Visualizando el Crecimiento del Factorial</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_complemento_combi_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="orden-vs.-grupo-permutación-vs.-combinación" class="slide level2">
+<h2>5. Orden vs.&nbsp;Grupo (Permutación vs.&nbsp;Combinación)</h2>
+<p>Esta es la distinción más importante en estadística:</p>
 <ul>
-<li>Un estudiante no puede estar inscrito en dos escuelas simultáneamente en este ejemplo.</li>
-<li><span class="math inline">\(P(A \cap C) = 0\)</span></li>
+<li><strong>Permutación (El orden IMPORTA):</strong>
+<ul>
+<li>La clave de tu email (1-2-3-4 no es lo mismo que 4-3-2-1).</li>
+<li>Un podio de carrera (Oro, Plata, Bronce).</li>
+</ul></li>
 </ul>
-<p>En este caso, la regla se simplifica: <span class="math display">\[P(A \cup C) = P(A) + P(C)\]</span> <span class="math display">\[P(A \cup C) = 0.25 + 0.30 = 0.55\]</span></p>
 </section>
-<section id="ejercicio-rápido-para-la-clase" class="slide level2">
-<h2>Ejercicio Rápido para la Clase</h2>
-<p>Utilizando la tabla inicial, calcular:</p>
-<blockquote>
-<p>¿Cuál es la probabilidad de que un estudiante seleccionado al azar sea de <strong>Estudios Internacionales</strong> o sea de sexo <strong>Masculino</strong>?</p>
-</blockquote>
-<p>Pasos:</p>
-<p>1. <span class="math inline">\(P(\text{EEI})\)</span></p>
-<p>2. <span class="math inline">\(P(\text{M})\)</span></p>
-<p>3. <span class="math inline">\(P(\text{EEI} \cap \text{M})\)</span></p>
+<section id="orden-vs.-grupo-permutación-vs.-combinación.-cont" class="slide level2">
+<h2>5. Orden vs.&nbsp;Grupo (Permutación vs.&nbsp;Combinación). cont</h2>
+<ul>
+<li><strong>Combinación (El orden NO importa):</strong>
+<ul>
+<li>Una ensalada de frutas (Manzana y Pera es lo mismo que Pera y Manzana).</li>
+<li><strong>La Binomial</strong> (No nos importa <em>en qué orden</em> salieron las caras, solo <em>cuántas</em> salieron).</li>
+</ul></li>
+</ul>
+</section>
+<section id="la-fórmula-de-la-combinatoria" class="slide level2">
+<h2>6. La Fórmula de la Combinatoria</h2>
+<p>Leemos <span class="math inline">\(\binom{n}{k}\)</span> como “n sobre k” o “combinaciones de n en k”.</p>
+<p><span class="math display">\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]</span></p>
+<p><strong>Intuición:</strong></p>
+<p>* <span class="math inline">\(n!\)</span>: Todas las formas de ordenar los elementos.</p>
+<p>* División por <span class="math inline">\(k!(n-k)!\)</span>: Eliminamos las repeticiones porque el orden no nos importa.</p>
+</section>
+<section id="ejemplo-visual-4-letras-a-b-c-d" class="slide level2">
+<h2>7. Ejemplo Visual: 4 Letras (A, B, C, D)</h2>
+<p>Queremos elegir 2 letras. ¿Cuántas parejas podemos formar?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_complemento_combi_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="el-problema-de-la-doble-contabilidad" class="slide level2 small">
+<h2>8. El Problema de la Doble Contabilidad</h2>
+<p>Imagina que tienes 3 letras: <strong>A, B, C</strong>.</p>
+<p>Quieremos elegir 2.</p>
+<p>Si usamos el factorial o permutación (<span class="math inline">\(3 \times 2 = 6\)</span>), estás contando:</p>
+<ol type="1">
+<li><strong>A - B</strong></li>
+<li><strong>B - A</strong></li>
+<li>A - C</li>
+<li>C - A</li>
+<li>B - C</li>
+<li>C - B</li>
+</ol>
+<p>Pero para un grupo (combinación), <strong>{A, B} es lo mismo que {B, A}</strong>. ¡Estamos contando todo por duplicado!</p>
+</section>
+<section id="visualizando-la-redundancia" class="slide level2">
+<h2>9. Visualizando la Redundancia</h2>
+<p>La fórmula de Permutación (<span class="math inline">\(\frac{n!}{(n-k)!}\)</span>) genera una lista “sucia” con duplicados. La división por <span class="math inline">\(k!\)</span> actúa como un <strong>filtro</strong> que limpia esas repeticiones.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_13_complemento_combi_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="la-matemática-de-la-división" class="slide level2">
+<h2>10. La Matemática de la División</h2>
+<p><span class="math display">\[ \binom{n}{k} = \frac{\text{Total de Ordenamientos}}{\text{Redundancia Interna}} = \frac{n!}{k!(n-k)!} \]</span></p>
+<ul>
+<li><p><span class="math inline">\(k!\)</span>: Es el número de formas en que puedo reordenar los <span class="math inline">\(k\)</span> elementos elegidos.</p></li>
+<li><p>Como el orden <strong>NO</strong> nos importa, todas esas <span class="math inline">\(k!\)</span> formas cuentan como <strong>1 sola</strong>.</p></li>
+<li><p>Por eso dividimos: para “colapsar” todas las versiones ordenadas en un solo grupo representativo.</p></li>
+</ul>
+</section>
+<section id="el-triángulo-de-pascal" class="slide level2">
+<h2>11. El Triángulo de Pascal</h2>
+<p>Los coeficientes binomiales siguen un patrón geométrico perfecto. Cada número es la suma de los dos de arriba.</p>
+<p>Fila 4 (n=4): 1 - 4 - 6 - 4 - 1 Esto corresponde a <span class="math inline">\(\binom{4}{0}, \binom{4}{1}, \binom{4}{2}, \binom{4}{3}, \binom{4}{4}\)</span>.</p>
+</section>
+<section id="el-triángulo-de-pascal-cont." class="slide level2">
+<h2>11. El Triángulo de Pascal (cont.)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clase13/Triángulo_de_Pascal.png" class="quarto-figure quarto-figure-center" width="600"></p>
+</figure>
+</div>
+</section>
+<section id="simetría-combinatoria" class="slide level2">
+<h2>12. Simetría Combinatoria</h2>
+<p>Elegir 2 ganadores de un grupo de 10 es lo mismo que elegir 8 perdedores.</p>
+<p><span class="math display">\[ \binom{10}{2} = \binom{10}{8} \]</span></p>
+<p>Matemáticamente son idénticos. En la Binomial, esto explica por qué la distribución es simétrica cuando <span class="math inline">\(p=0.5\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">choose</span>(<span class="dv">10</span>, <span class="dv">2</span>) <span class="sc">==</span> <span class="fu">choose</span>(<span class="dv">10</span>, <span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="por-qué-en-la-binomial" class="slide level2">
+<h2>13 ¿Por qué en la Binomial?</h2>
+<p>Volviendo a la fórmula: <span class="math display">\[ P(X=k) = \mathbf{\binom{n}{k}} \cdot p^k \cdot (1-p)^{n-k} \]</span></p>
+<ol type="1">
+<li>Calculamos la probabilidad de <strong>UN</strong> camino específico (<span class="math inline">\(p^k...\)</span>).</li>
+<li>Multiplicamos por <strong>CUÁNTOS</strong> caminos existen (<span class="math inline">\(\binom{n}{k}\)</span>).</li>
+</ol>
+<p>Sin la combinatoria, estaríamos subestimando la probabilidad.</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo2.png" class="slide-logo"></p>
@@ -683,6 +791,44 @@ M.Sc. José Miguel Avendaño I.
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
