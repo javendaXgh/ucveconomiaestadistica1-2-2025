@@ -2,7 +2,7 @@
 title: "Estadística I"
 subtitle: "Respuestas: Intro a la Probabilidad"
 date: "2026/01/26"
-format: revealjs
+format: html
 lang: es
 author: M.Sc. José Miguel Avendaño I.
 incremental: false

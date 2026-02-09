@@ -59,7 +59,15 @@ c)  Sí, porque la probabilidad de 6 rojos seguidos es imposible.
 
 d)  Depende de si es un proceso Bayesiano.
 
-**4. Ley de los Grandes Números (LLN)** La LLN establece que a medida que aumenta el número de observaciones ($n$), la proporción observada $\hat{p}_n$: a) Se aleja de la probabilidad real $p$. b) Converge a la probabilidad real $p$. c) Oscila violentamente sin patrón. d) Se mantiene constante en 0.5.
+**4. Ley de los Grandes Números (LLN)** La LLN establece que a medida que aumenta el número de observaciones ($n$), la proporción observada $\hat{p}_n$:
+
+a\) Se aleja de la probabilidad real $p$.
+
+b\) Converge a la probabilidad real $p$.
+
+c\) Oscila violentamente sin patrón.
+
+d\) Se mantiene constante en 0.5.
 
 **5. Eventos Disjuntos** Seleccione el par de eventos que son **disjuntos (mutuamente excluyentes)**:
 
