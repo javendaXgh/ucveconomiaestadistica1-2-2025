@@ -1,0 +1,496 @@
+---
+title: "Estadística I"
+subtitle: "Clase 14: Distribución Normal"
+date: "2026/02/09"
+format: revealjs
+lang: es
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+```{r}
+library(tidyverse)
+```
+
+------------------------------------------------------------------------
+
+## Del Histograma a la Densidad
+
+Al aumentar la muestra ($n \to \infty$) y reducir el ancho de las barras, el histograma se convierte en una curva suave: la **Función de Densidad**.
+
+```{r}
+#| echo: false
+#| fig.height: 4
+set.seed(123)
+data_hist <- data.frame(x = rnorm(1000))
+
+ggplot(data_hist, aes(x = x)) +
+  geom_histogram(aes(y = ..density..), bins = 30, fill = "#3498DB", color = "white", alpha = 0.6) +
+  geom_density(color = "#2C3E50", size = 1.5) +
+  labs(title = "Convergencia: Barras a Curva", y = "Densidad")
+```
+
+## ¿Dónde aparece la Normal?
+
+La distribución normal (Campana de Gauss) es el modelo más importante porque muchos fenómenos naturales convergen a ella (Teorema del Límite Central).
+
+-   **Biometría:** Estatura, peso, presión arterial.
+-   **Errores:** Lecturas de instrumentos de laboratorio.
+-   **Psicometría:** Coeficiente intelectual (CI), exámenes estandarizados.
+-   **Finanzas:** Retornos de activos a corto plazo.
+-   **Industria:** Variabilidad en manufactura.
+
+## El salto a lo Continuo
+
+La Binomial son barras (saltos). La Normal es una línea (flujo). Es el modelo más importante porque muchos fenómenos naturales convergen a ella.
+
+$$ f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 } $$
+
+------------------------------------------------------------------------
+
+## Tablero de Galton
+
+<video width="800" height="500" controls>
+
+<source src="images/clase_14/galton_1.mp4" type="video/mp4">
+
+</video>
+
+Video de @firlefranz82 disponible en https://www.youtube.com/shorts/TZs2PhHauEc
+
+## Tablero de Galton Simplificado
+
+<video width="800" height="500" controls>
+
+<source src="images/clase_14/galton_2.mp4" type="video/mp4">
+
+</video>
+
+Video de @edmar123451 disponible en https://www.youtube.com/shorts/qPnhHqqfSFs
+
+## Tablero de Galtón Simulado
+
+[app Tablero Galton](https://javenda.shinyapps.io/galton/)
+
+## Anatomía de la Campana
+
+1.  **Simétrica:** El lado izquierdo es espejo del derecho.
+2.  **Unimodal:** Tiene un solo pico (la moda, media y mediana son iguales).
+3.  **Asintótica:** Nunca toca el eje X (teóricamente va de $-\infty$ a $+\infty$).
+
+------------------------------------------------------------------------
+
+## La Matemática: $\pi$ y $e$
+
+La ecuación de la densidad depende de dos constantes famosas:
+
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }$$
+
+1.  **Euler (**$e$): Causa la caída exponencial (las colas bajan a cero).
+2.  **Pi (**$\pi$): Es el factor de normalización. Asegura que el **área total bajo la curva sea exactamente 1**.
+
+## El Parámetro $\mu$ (Ubicación)
+
+La media ($\mu$) nos dice **dónde** está centrada la campana. Cambiar $\mu$ desplaza la curva sin cambiar su forma.
+
+```{r}
+#| fig.align: center
+ggplot(data.frame(x=c(-5, 15)), aes(x=x)) +
+  stat_function(fun=dnorm, args=list(mean=0), aes(color="Media = 0"), size=1.2) +
+  stat_function(fun=dnorm, args=list(mean=5), aes(color="Media = 5"), size=1.2) +
+  stat_function(fun=dnorm, args=list(mean=10), aes(color="Media = 10"), size=1.2) +
+  labs(title = "Desplazamiento horizontal según la Media") +
+  theme(legend.position="bottom")
+```
+
+------------------------------------------------------------------------
+
+## El Parámetro $\sigma$ (Forma)
+
+La desviación estándar ($\sigma$) nos dice **qué tan ancha** es.
+
+-   $\sigma$ pequeña: Alta y delgada (precisión).
+
+-   $\sigma$ grande: Baja y gorda (incertidumbre).
+
+```{r}
+#| fig.align: center
+ggplot(data.frame(x=c(-5, 5)), aes(x=x)) +
+  stat_function(fun=dnorm, args=list(sd=0.5), aes(color="SD = 0.5"), size=1.2) +
+  stat_function(fun=dnorm, args=list(sd=1), aes(color="SD = 1.0"), size=1.2) +
+  stat_function(fun=dnorm, args=list(sd=2), aes(color="SD = 2.0"), size=1.2) +
+  labs(title = "Aplastamiento según la Desviación Estándar") +
+  theme(legend.position="bottom")
+```
+
+## Revisando la Normal
+
+[app Distribución Normal](https://javenda.shinyapps.io/normal/)
+
+## Probabilidad = Área
+
+En continuas, $P(X=x) = 0$.
+
+Siempre calculamos intervalos: $P(a < X < b)$.
+
+Esto equivale a calcular la superficie bajo la curva entre dos puntos.
+
+------------------------------------------------------------------------
+
+## La Regla Empírica (68-95-99.7)
+
+Una regla de oro para estimaciones rápidas:
+
+-   **68%** de los datos están a $\pm 1\sigma$.
+-   **95%** de los datos están a $\pm 2\sigma$.
+-   **99.7%** de los datos están a $\pm 3\sigma$.
+
+## Visualizando la Regla Empírica
+
+```{r}
+#| fig.align: center
+#| echo: false
+
+x <- seq(-4, 4, length=1000)
+y <- dnorm(x)
+df <- data.frame(x, y)
+
+ggplot(df, aes(x, y)) +
+  geom_line() +
+  geom_area(data=subset(df, x >= -1 & x <= 1), fill="#2ECC71", alpha=0.5) +
+  geom_area(data=subset(df, x >= -2 & x <= -1), fill="#F1C40F", alpha=0.5) +
+  geom_area(data=subset(df, x >= 1 & x <= 2), fill="#F1C40F", alpha=0.5) +
+  annotate("text", x=0, y=0.2, label="68%") +
+  annotate("text", x=1.5, y=0.05, label="13.5%") +
+  annotate("text", x=-1.5, y=0.05, label="13.5%") +
+  labs(title = "Distribución de Probabilidad Normal Estándar", 
+       x = "Desviaciones Estándar (Z)")
+```
+
+## La Normal Estándar ($Z$)
+
+Cualquier Normal $N(\mu, \sigma)$ se puede transformar a la estándar $N(0, 1)$ usando la fórmula Z:
+
+$$ Z = \frac{x - \mu}{\sigma} $$
+
+**Interpretación:** Z es el número de desviaciones estándar que un dato se aleja de su media.
+
+-   $Z=2$: El dato es muy alto (top 2.5%).
+-   $Z=0$: El dato es exactamente el promedio.
+
+## Viendo la Estandarización
+
+[App Z](https://javenda.shinyapps.io/estandar/)
+
+## Cálculo de Colas (R vs Tablas)
+
+Antes se usaban tablas de papel.
+
+Hoy usamos R (`pnorm`).
+
+El comando `pnorm(z)` siempre nos da el área a la **izquierda** (cola inferior).
+
+Si queremos la cola derecha (mayor que), hacemos $1 - pnorm(z)$.
+
+------------------------------------------------------------------------
+
+## Cálculo de Colas (R)
+
+Usamos `pnorm(q, mean, sd)`.
+
+-   **Cola Izquierda:** `pnorm(x)` (Por defecto).
+-   **Cola Derecha:** `1 - pnorm(x)` o `lower.tail = FALSE`.
+
+## Ej. 1 {.small}
+
+**Enunciado:**cuando la estatura promedio es 170cm, y la SD 10cm. ¿Cuál es la probabilidad de medir más de 185cm?
+
+1.  Calcular Z: $(185 - 170) / 10 = 1.5$.
+2.  Buscar área a la derecha de 1.5.
+
+```{r}
+#| fig.align: center
+ggplot(data.frame(x=c(140, 200)), aes(x=x)) +
+  stat_function(fun=dnorm, args=list(mean=170, sd=10)) +
+  stat_function(fun=dnorm, args=list(mean=170, sd=10), xlim=c(185, 200), geom="area", fill="red") +
+  geom_vline(xintercept=185, linetype="dashed") +
+  labs(title = "Área de la cola derecha (X > 185)", x="Estatura", y="Densidad")
+```
+
+## Ej. 2: Riesgo Legal (Cola Inferior) {.scrollable}
+
+**Enunciado:** Una normativa legal exige que las botellas de detergente contengan al menos 490ml. La máquina llenadora está calibrada en $\mu=500$ ml con una desviación $\sigma=5$ ml. ¿Qué porcentaje de la producción viola la ley y pone a la empresa en riesgo de multa?
+
+```{r}
+#| echo: false
+#| fig.height: 3.5
+mu <- 500; sigma <- 5; x <- 490
+prob <- pnorm(x, mean = mu, sd = sigma)
+
+# Gráfico
+ggplot(data.frame(x = c(480, 520)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma),
+                xlim = c(480, 490), geom = "area", fill = "red", alpha = 0.5) +
+  geom_vline(xintercept = 490, linetype="dashed") +
+  annotate("text", x=495, y=0.04, label=paste("Riesgo:", round(prob*100, 2), "%")) +
+  labs(title = "Área de Riesgo Legal (X < 490)", y = "Densidad", x = "Volumen (ml)")
+```
+
+------------------------------------------------------------------------
+
+## Ej. 3: Garantía de Producto (Cola Superior) {.scrollable}
+
+**Enunciado:** Un fabricante de bombillas LED afirma que sus luces duran en promedio $\mu=40$ mil horas ($\sigma=2$ mil). Si queremos ofrecer una garantía "Premium" solo para aquellas bombillas que superen las **43 mil horas** (duración excepcional), ¿a qué porcentaje del inventario aplicaría esta etiqueta?
+
+```{r}
+#| echo: false
+#| fig.height: 3.5
+mu <- 40; sigma <- 2; x <- 43
+p <- pnorm(x, mu, sigma, lower.tail = FALSE)
+
+# Gráfico
+ggplot(data.frame(x = c(34, 46)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma),
+                xlim = c(43, 46), geom = "area", fill = "blue", alpha = 0.5) +
+  geom_vline(xintercept = 43, linetype="dashed") +
+  annotate("text", x=38, y=0.1, label=paste("Etiqueta Premium:\n", round(p*100, 2), "%")) +
+  labs(title = "Probabilidad de Duración Excepcional (X > 43)", x="Duración (miles de horas)")
+```
+
+------------------------------------------------------------------------
+
+## Ej. 4: Análisis de Desempeño (Intervalo) {.scrollable}
+
+**Enunciado:** En un examen de certificación nacional, los puntajes siguen una normal $N(75, 10)$. La universidad considera un desempeño "Estándar" a los puntajes ubicados entre **60 y 80** puntos. ¿Qué proporción de los estudiantes cae en esta categoría intermedia?
+
+```{r}
+#| echo: false
+#| fig.height: 3.5
+mu <- 75; sigma <- 10
+p_inter <- pnorm(80, mu, sigma) - pnorm(60, mu, sigma)
+
+# Gráfico
+ggplot(data.frame(x = c(45, 105)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma)) +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma),
+                xlim = c(60, 80), geom = "area", fill = "purple", alpha = 0.5) +
+  annotate("text", x=75, y=0.015, label=paste(round(p_inter*100, 1), "%"), color="white", fontface="bold") +
+  labs(title = "Población con Desempeño Estándar (60 < X < 80)", x="Puntaje")
+```
+
+------------------------------------------------------------------------
+
+## Ej. 5: Criterio de Admisión (Percentil) {.scrollable}
+
+**Enunciado:** Una sociedad de alto coeficiente intelectual solo acepta miembros que estén en el **Top 5%** de la población. Si el CI poblacional se distribuye $N(100, 15)$, ¿cuál es el puntaje mínimo de corte (cutoff) que debe sacar una persona para ser admitida?
+
+```{r}
+#| echo: false
+#| fig.height: 3.5
+# Top 5% superior = Percentil 95
+  nota <- qnorm(0.95, mean = 100, sd = 15)
+
+# Gráfico
+ggplot(data.frame(x = c(55, 145)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = 100, sd = 15)) +
+  geom_vline(xintercept = nota, color="red", size=1) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean = 100, sd = 15), 
+            xlim = c(nota, 145), fill = "red", alpha = 0.3) +
+  annotate("text", x=nota+10, y=0.01, label="Top 5%\n(Admitidos)", color="red", size=3) +
+  labs(title = paste("Puntaje de Corte:", round(nota, 1)), x="Coeficiente Intelectual (CI)")
+```
+
+------------------------------------------------------------------------
+
+## Ej. 6: Comparación de Métricas (Z-Score) {.scrollable}
+
+**Enunciado:** ¿Cómo comparamos peras con manzanas?
+
+\* **Juan** corre un maratón en 200 min (Media histórica=240, SD=20).
+
+\* **María** saca 85 en un examen difícil (Media=70, SD=5). ¿Quién tuvo un desempeño más destacado respecto a su propio grupo?
+
+```{r}
+#| echo: false
+#| fig.height: 3.5
+# Z-Scores:
+# Juan (Menor tiempo es mejor, ojo con el signo si fuera ranking, pero en Z puro): (200-240)/20 = -2
+# Maria: (85-70)/5 = 3
+z_juan <- -2
+z_maria <- 3
+
+ggplot(data.frame(x = c(-4, 4)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 1)) +
+  geom_segment(aes(x=z_juan, xend=z_juan, y=0, yend=dnorm(z_juan)), color="blue", size=1.2) +
+  geom_segment(aes(x=z_maria, xend=z_maria, y=0, yend=dnorm(z_maria)), color="red", size=1.2) +
+  annotate("text", x=z_juan, y=dnorm(z_juan)+0.05, label=paste("Juan\nZ =", z_juan), color="blue") +
+  annotate("text", x=z_maria, y=dnorm(z_maria)+0.05, label=paste("María\nZ =", z_maria), color="red") +
+  labs(title = "Comparación en la Escala Estándar (Z)", subtitle = "María está a 3 sigmas (excepcional). Juan está a -2 sigmas (muy rápido).")
+```
+
+## Supuestos para Aplicar la Normal {.small}
+
+No todo es una campana. Para usar el modelo $Z$ confiablemente, debemos validar:
+
+1.  **Independencia:** Los datos no deben influenciarse entre sí (ej. el peso de una persona no afecta al de la siguiente).
+2.  **Unimodalidad:** Los datos deben agruparse alrededor de un solo pico. (Si hay dos picos, ¡podrían ser dos poblaciones mezcladas!).
+3.  **Simetría:** La dispersión a la izquierda y derecha de la media debe ser similar.
+4.  **Tamaño de Muestra (**$n > 30$): Si los datos originales NO son normales, necesitamos muestras grandes para invocar el Teorema del Límite Central.
+
+## Precauciones y Trampas
+
+::: {.callout-caution icon="false"}
+## ¿Cuándo Aplicar?
+
+Aplicar la Normal donde no corresponde lleva a errores graves:
+
+-   **Colas Grasas (Fat Tails):** En finanzas o desastres naturales, los eventos extremos son más comunes de lo que predice la Normal. El modelo subestima el riesgo de "Cisnes Negros".
+-   **Asimetría (Skewness):** Ingresos, precios de casas o tiempos de espera suelen tener colas largas a la derecha. Usar la normal aquí subestima la media real.
+-   **Outliers:** La media y la desviación estándar son muy sensibles a valores extremos. Un solo dato erróneo puede inflar $\sigma$ y aplanar la curva artificialmente.
+:::
+
+## Visualizando el Error de Modelo
+
+Si asumimos Normalidad en datos asimétricos (ej. Salarios), el modelo (rojo) no encaja con la realidad (azul), calculando mal las probabilidades.
+
+```{r}
+#| echo: false
+#| fig.height: 4.5
+set.seed(123)
+# Generamos datos asimétricos (Log-Normal)
+datos_reales <- rlnorm(1000, meanlog = 0, sdlog = 0.6)
+media_real <- mean(datos_reales)
+sd_real <- sd(datos_reales)
+
+ggplot(data.frame(x = datos_reales), aes(x = x)) +
+  # La realidad (Histograma + Densidad)
+  geom_histogram(aes(y = ..density..), bins = 40, fill = "steelblue", alpha = 0.4) +
+  geom_density(aes(color = "Realidad (Asimétrica)"), size = 1.2) +
+  
+  # El modelo Normal forzado (usando media y SD de los datos)
+  stat_function(fun = dnorm, args = list(mean = media_real, sd = sd_real), 
+                aes(color = "Modelo Normal (Incorrecto)"), size = 1.2, linetype = "dashed") +
+  
+  scale_color_manual(values = c("Realidad (Asimétrica)" = "steelblue", "Modelo Normal (Incorrecto)" = "red")) +
+  xlim(0, 5) +
+  labs(title = "Peligro: Ajustar una Normal a datos sesgados",
+       subtitle = "El modelo normal subestima el pico y calcula mal las colas",
+       y = "Densidad", x = "Variable", color = "Leyenda") +
+  theme(legend.position = "bottom")
+```
+
+## El Desafío Matemático
+
+¿Por qué necesitamos tablas o computadoras? ¿No podemos simplemente calcular el área a mano usando una fórmula?
+
+**La respuesta es NO.**
+
+Para hallar el área bajo la curva normal, deberíamos resolver la siguiente integral definida:
+
+$$ P(a < X < b) = \int_{a}^{b} \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2} dx $$
+
+------------------------------------------------------------------------
+
+## La "Integral Imposible" {.small}
+
+El problema es que esta función **no tiene una primitiva elemental**.
+
+-   No existe una fórmula simple $F(x)$ que al derivarla nos de la función normal.
+-   No podemos usar las reglas básicas de integración (como $\int x^n dx$).
+-   **Solución Antigua:** Matemáticos pasaron años calculando aproximaciones numéricas (Series de Taylor) y las imprimieron en las **Tablas Z** que usaban tus abuelos.
+-   **Solución Moderna:** R usa algoritmos de integración numérica instantánea (`pnorm`).
+
+## Gráfico Área Sombreada
+
+```{r}
+#| echo: false
+#| fig.height: 3
+ggplot(data.frame(x = c(-4, 4)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 1)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean = 0, sd = 1), 
+            xlim = c(-4, 1.5), fill = "gray", alpha = 0.5) +
+  annotate("text", x = 0, y = 0.15, label = "?", size = 15, color = "white") +
+  annotate("text", x = 2, y = 0.3, label = "Sin fórmula\n cerrada", color = "red") +
+  labs(title = "El área sombreada no se puede calcular con lápiz y papel", 
+       subtitle = "Requiere métodos numéricos avanzados")
+```
+
+## Discreto ($\Sigma$) vs Continuo ($\int$)
+
+La gran diferencia conceptual:
+
+1.  **Discreto (Dados/Binomial):** La probabilidad es la **suma de las alturas** de las barras. Es aritmética simple (contar bloques). $$ P(X \le k) = P(0) + P(1) + ... + P(k) $$
+
+2.  **Continuo (Normal):** No hay barras. La probabilidad es una **superficie lisa**. Debemos "sumar infinitos rectángulos infinitamente delgados" (Integrar).
+
+## Discreto ($\Sigma$) vs Continuo ($\int$) Gráficos
+
+```{r}
+#| echo: false
+#| fig.height: 5
+library(patchwork) # Para unir gráficos
+
+# 1. Gráfico Discreto (Binomial)
+df_binom <- data.frame(x = 0:10, prob = dbinom(0:10, size=10, prob=0.5))
+p1 <- ggplot(df_binom, aes(x=x, y=prob)) +
+  geom_col(fill="lightgray", color="black", width=0.6) +
+  geom_col(data=subset(df_binom, x <= 4), aes(x=x, y=prob), fill="#F39C12", color="black", width=0.6) +
+  annotate("text", x=2, y=0.25, label="Suma de Bloques\n(Aritmética)", color="#F39C12", fontface="bold") +
+  labs(title = "Mundo Discreto (Binomial / Dados)", subtitle = "P(X <= 4) = Suma de las barras naranjas", x="Éxitos", y="Probabilidad")
+
+# 2. Gráfico Continuo (Normal)
+p2 <- ggplot(data.frame(x = c(0, 10)), aes(x)) +
+  stat_function(fun = dnorm, args = list(mean = 5, sd = 1.58), color="black") +
+  stat_function(fun = dnorm, args = list(mean = 5, sd = 1.58), 
+                xlim = c(0, 4), geom = "area", fill = "#3498DB", alpha = 0.8) +
+  annotate("text", x=2, y=0.25, label="Área bajo la Curva\n(Cálculo Integral)", color="#3498DB", fontface="bold") +
+  labs(title = "Mundo Continuo (Normal)", subtitle = "P(X <= 4) = Integral de la función", x="Variable Continua", y="Densidad")
+
+# Unir verticalmente
+p1 / p2
+```
+
+------------------------------------------------------------------------
+
+## La Función de Densidad (PDF) {.small}
+
+Para variables continuas, no podemos asignar probabilidad a puntos exactos (son infinitos). Usamos una curva matemática suave $f(x)$ para describir la distribución.
+
+**Propiedades Clave:**
+
+1.  **La altura no es probabilidad:** El valor $f(x)$ en el eje Y se llama "densidad".
+2.  **Probabilidad = Área:** La probabilidad solo se puede calcular en intervalos. Es la superficie bajo la curva entre dos puntos $a$ y $b$.
+3.  **Área Total = 1:** La suma de toda la superficie bajo la curva desde $-\infty$ hasta $+\infty$ es siempre exactamente 1 (el 100% del espacio muestral).
+
+## Gráfico PDF
+
+```{r}
+
+#| echo: false
+#| fig.height: 4
+# Usamos una normal estándar como ejemplo genérico, pero ocultamos los números para que sea conceptual
+ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
+  # La curva completa
+  stat_function(fun = dnorm, size = 1.5, color = "#2C3E50") +
+  # El área sombreada entre a y b
+  stat_function(fun = dnorm, xlim = c(-1, 1.5), geom = "area", fill = "#3498DB", alpha = 0.7) +
+  # Líneas verticales para a y b
+  geom_vline(xintercept = -1, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 1.5, linetype = "dashed", color = "gray") +
+  # Etiquetas conceptuales
+  annotate("text", x = 0.25, y = 0.15, label = "Área = P(a < X < b)", color = "white", fontface = "bold", size = 5) +
+  # Personalización de ejes para que sea genérico
+  scale_x_continuous(breaks = c(-1, 1.5), labels = c("a", "b")) +
+  scale_y_continuous(breaks = NULL) + # Ocultamos números del eje Y
+  labs(title = "Concepto Genérico de Densidad f(x)",
+       subtitle = "En continuo, P(X=a) es siempre 0. Siempre medimos intervalos.",
+       y = "Densidad f(x)", x = "Variable Continua X") +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
