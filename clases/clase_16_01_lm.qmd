@@ -2,7 +2,7 @@
 title: "Estadística I"
 subtitle: "Clase 15: Regresión Lineal Simple"
 format: revealjs
-date: "2025/06/05"
+date: "2026/03/25"
 lang: es
 incremental: true
 auto-stretch: false
@@ -179,7 +179,7 @@ Ahora, calculamos los términos necesarios para $\beta_1$:
 <br>
 
 | $x_i$ | $y_i$ | $x_i - \bar{x}$ | $y_i - \bar{y}$ | $(x_i - \bar{x})(y_i - \bar{y})$ | $(x_i - \bar{x})^2$ |
-|:--:|:--:|:--:|:--:|:--:|:--:|
+|:------:|:------:|:------:|:------:|:------:|:------:|
 | 1 | 2 | -1 | -1.67 | 1.67 | 1 |
 | 2 | 4 | 0 | 0.33 | 0 | 0 |
 | 3 | 5 | 1 | 1.33 | 1.33 | 1 |

@@ -1,8 +1,8 @@
 ---
 title: "Estadística I"
-subtitle: "clase 15: coeficiente de correlación de Pearson"
+subtitle: "clase 15 complemento: coeficiente de correlación de Pearson"
 format: revealjs
-date: "2026/02/09"
+date: "2026/02/25"
 lang: es
 incremental: true
 auto-stretch: false

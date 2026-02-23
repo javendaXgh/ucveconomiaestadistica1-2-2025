@@ -2,7 +2,7 @@
 title: "Estadística I"
 subtitle: "Clase 15: Correlación Variables"
 format: revealjs
-date: "2026/02/22"
+date: "2026/02/23"
 lang: es
 incremental: true
 auto-stretch: false
