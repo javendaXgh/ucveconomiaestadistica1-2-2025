@@ -4797,8 +4797,8 @@
     "objectID": "clases/clase_17_mmc.html#el-método-de-los-mínimos-cuadrados-mmc",
     "href": "clases/clase_17_mmc.html#el-método-de-los-mínimos-cuadrados-mmc",
     "title": "Estadística I",
-    "section": "",
-    "text": "Problema: Cuando tenemos un conjunto de puntos de datos \\((X_i, Y_i)\\) en un gráfico de dispersión, y creemos que existe una relación lineal entre ellos, queremos encontrar la “mejor” línea recta que represente esa relación.\nEl Reto: Hay infinitas líneas posibles que podemos dibujar a través de una nube de puntos. ¿Cuál es la “mejor”?\nLa Solución de MCO: El Método de los Mínimos Cuadrados (MCO) proporciona un criterio objetivo para elegir esa línea. La “mejor” línea es aquella que minimiza la suma de los cuadrados de las distancias verticales entre cada punto observado y la línea predicha."
+    "section": "El Método de los Mínimos Cuadrados (MMC)",
+    "text": "El Método de los Mínimos Cuadrados (MMC)\n\nProblema: Cuando tenemos un conjunto de puntos de datos \\((X_i, Y_i)\\) en un gráfico de dispersión, y creemos que existe una relación lineal entre ellos, queremos encontrar la “mejor” línea recta que represente esa relación.\nEl Reto: Hay infinitas líneas posibles que podemos dibujar a través de una nube de puntos. ¿Cuál es la “mejor”?\nLa Solución de MCO: El Método de los Mínimos Cuadrados (MCO) proporciona un criterio objetivo para elegir esa línea. La “mejor” línea es aquella que minimiza la suma de los cuadrados de las distancias verticales entre cada punto observado y la línea predicha."
   },
   {
     "objectID": "clases/clase_17_mmc.html#errores-o-residuales",
@@ -4833,7 +4833,7 @@
     "href": "clases/clase_17_mmc.html#ventajas-del-método-de-mínimos-cuadrados",
     "title": "Estadística I",
     "section": "Ventajas del Método de Mínimos Cuadrados",
-    "text": "Ventajas del Método de Mínimos Cuadrados\n\nSimplicidad y Eficiencia: Es relativamente sencillo de entender y calcular, especialmente con herramientas computacionales.\nEstimadores BLUE (Si se cumplen los supuestos): Bajo ciertos supuestos (que se estudiarán en cursos más avanzados), los estimadores obtenidos por MCO son los Mejores Estimadores Lineales Insesgados (Best Linear Unbiased Estimators - BLUE). Esto significa que son los estimadores más precisos dentro de la clase de estimadores lineales e insesgados.\nBase para Modelos Más Complejos: Es la base para comprender y aplicar modelos de regresión más complejos, como la regresión lineal múltiple y otros modelos econométricos."
+    "text": "Ventajas del Método de Mínimos Cuadrados\n\nSimplicidad y Eficiencia: Es relativamente sencillo de entender y calcular, especialmente con herramientas computacionales.\nEstimadores BLUE (Si se cumplen los supuestos): Bajo ciertos supuestos (que se estudiarán en cursos más avanzados), los estimadores obtenidos por MCO son los Mejores Estimadores Lineales Insesgados (Best Linear Unbiased Estimators - BLUE). Esto significa que son los estimadores más precisos dentro de la clase de estimadores lineales e insesgados.\nBase para Modelos Más Complejos: Es la base para comprender y aplicar modelos de regresión más complejos, como la regresión lineal múltiple y otros modelos econométricos.\n\n\n\n\n\n🔗 Estadística 1"
   },
   {
     "objectID": "clases/clase_15_01correlaciones.html",
