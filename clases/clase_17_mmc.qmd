@@ -1,0 +1,78 @@
+---
+title: "Estadística I"
+subtitle: "Clase 15: Método de Mínimos Cuadrados"
+format: revealjs
+date: "2025/06/05"
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## El Método de los Mínimos Cuadrados (MMC)
+
+-   **Problema:** Cuando tenemos un conjunto de puntos de datos $(X_i, Y_i)$ en un gráfico de dispersión, y creemos que existe una relación lineal entre ellos, queremos encontrar la "mejor" línea recta que represente esa relación.
+-   **El Reto:** Hay infinitas líneas posibles que podemos dibujar a través de una nube de puntos. ¿Cuál es la "mejor"?
+-   **La Solución de MCO:** El Método de los Mínimos Cuadrados (MCO) proporciona un criterio objetivo para elegir esa línea. La "mejor" línea es aquella que minimiza la suma de los cuadrados de las distancias verticales entre cada punto observado y la línea predicha.
+
+------------------------------------------------------------------------
+
+## "Errores" o "Residuales"
+
+-   **Predicción vs. Realidad:** Para cada punto de dato $(X_i, Y_i)$, nuestra línea de regresión nos dará un valor predicho $\hat{Y}_i$.
+
+-   **El Error (**$e_i$): La diferencia entre el valor real observado ($Y_i$) y el valor predicho ($\hat{Y}_i$) se llama **error** o **residual**.
+
+    $$e_i = Y_i - \hat{Y}_i$$
+
+-   **Visualización:** ver aplicación pestaña residuos
+
+------------------------------------------------------------------------
+
+## "Cuadrados" {.small}
+
+-   **Problema de la Suma Simple:** Si se sumam los errores ($e_i$), los errores positivos y negativos se cancelarían, dando una suma cercana a cero incluso si la línea no ajusta bien los datos y no sirve para encontrar la "mejor" línea.
+
+-   **La Solución del Cuadrado:** Para evitar la cancelación y darle el mismo peso a los errores positivos y negativos, y además penalizar más los errores grandes, se eleva cada error al cuadrado antes de sumarlos.
+
+-   **Función Objetivo:** El objetivo del MCO es encontrar la línea (es decir, los coeficientes $\hat{\beta}_0$ y $\hat{\beta}_1$) que haga mínima la **Suma de Cuadrados de los Errores (SCE)** o **Suma de Cuadrados Residuales (SCR)**:
+
+    $$\text{Minimizar } \sum_{i=1}^{n} e_i^2 = \text{Minimizar } \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2$$
+
+    Sustituyendo $\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i$:
+
+    $$\text{Minimizar } \sum_{i=1}^{n} (Y_i - (\hat{\beta}_0 + \hat{\beta}_1 X_i))^2$$
+
+------------------------------------------------------------------------
+
+## Cómo se Encuentran los Coeficientes (Concepto Matemático) {.small}
+
+-   **Cálculo Diferencial:** Para encontrar los valores de $\hat{\beta}_0$ y $\hat{\beta}_1$ que minimizan la SCE, se utiliza cálculo diferencial.
+
+-   **Derivadas Parciales:** Se toman las derivadas parciales de la función SCE con respecto a $\hat{\beta}_0$ y $\hat{\beta}_1$, y se igualan a cero. Esto nos da un sistema de dos ecuaciones con dos incógnitas, conocidas como las **Ecuaciones Normales**.
+
+-   **Sistema de Ecuaciones Normales:**
+
+    $$\sum Y_i = n \hat{\beta}_0 + \hat{\beta}_1 \sum X_i$$ $$\sum X_i Y_i = \hat{\beta}_0 \sum X_i + \hat{\beta}_1 \sum X_i^2$$
+
+-   **Resolución:** Al resolver este sistema de ecuaciones, obtenemos las fórmulas para $\hat{\beta}_0$ y $\hat{\beta}_1$ que vimos anteriormente en la lámina de "Fórmulas para el Cálculo de los Coeficientes".
+
+------------------------------------------------------------------------
+
+## La Intuición Detrás del MCO {.small}
+
+-   **Punto Medio:** La línea de regresión MCO siempre pasará por el punto de las medias ($\bar{X}$, $\bar{Y}$). Esto tiene sentido, ya que si los errores se cancelan, la línea debe "pivotar" alrededor del centro de los datos.
+-   **Balance de Errores:** El MCO logra un balance donde los errores positivos y negativos se distribuyen de tal manera que la suma de sus cuadrados es la más pequeña posible. Esto no significa que los errores individuales sean cero, sino que el "error total" del modelo es el mínimo posible bajo el supuesto de una relación lineal.
+-   **Sensibilidad a Outliers:** Al elevar los errores al cuadrado, el método de MCO es sensible a los "outliers" o valores atípicos, ya que un error grande se vuelve mucho más grande cuando se eleva al cuadrado, influyendo considerablemente en la posición de la línea.
+
+------------------------------------------------------------------------
+
+## Ventajas del Método de Mínimos Cuadrados
+
+-   **Simplicidad y Eficiencia:** Es relativamente sencillo de entender y calcular, especialmente con herramientas computacionales.
+-   **Estimadores BLUE (Si se cumplen los supuestos):** Bajo ciertos supuestos (que se estudiarán en cursos más avanzados), los estimadores obtenidos por MCO son los Mejores Estimadores Lineales Insesgados (Best Linear Unbiased Estimators - BLUE). Esto significa que son los estimadores más precisos dentro de la clase de estimadores lineales e insesgados.
+-   **Base para Modelos Más Complejos:** Es la base para comprender y aplicar modelos de regresión más complejos, como la regresión lineal múltiple y otros modelos econométricos.

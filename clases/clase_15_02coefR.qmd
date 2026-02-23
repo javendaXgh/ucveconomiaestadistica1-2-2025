@@ -1,0 +1,175 @@
+---
+title: "Estadística I"
+subtitle: "clase 15: coeficiente de correlación de Pearson"
+format: revealjs
+date: "2026/02/09"
+lang: es
+incremental: true
+auto-stretch: false
+fig-align: center
+execute:
+  echo: false
+  eval: true
+  fig-align: center
+---
+
+## Coeficiente de Correlación de Pearson
+
+-   El **coeficiente de correlación de Pearson** ($r$) es una medida estadística que cuantifica la **fuerza** y la **dirección** de la relación lineal entre dos variables cuantitativas.
+-   Es una herramienta fundamental en estadística para entender cómo se mueven dos variables de un mismo cojunto de datos en distintas observaciones.
+-   El valor de $r$ siempre se encuentra entre -1 y +1.
+
+------------------------------------------------------------------------
+
+## Interpretación del Coeficiente $r$
+
+-   $r > 0$: Indica una correlación **positiva**. A medida que una variable aumenta, la otra tiende a aumentar.
+-   $r < 0$: Indica una correlación **negativa**. A medida que una variable aumenta, la otra tiende a disminuir.
+-   $r \approx 0$: Indica una correlación **débil** o nula entre las variables.
+-   La magnitud de $r$ indica la fuerza de la relación lineal:
+    -   Cercano a $\pm 1$: Correlación lineal fuerte.
+    -   Cercano a 0: Correlación lineal débil.
+
+------------------------------------------------------------------------
+
+## La Fórmula del Coeficiente de Correlación de Pearson {.small}
+
+El coeficiente de correlación de Pearson se calcula mediante la siguiente fórmula:
+
+$$r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}}$$
+
+Donde:
+
+\- $n$ es el número de pares de datos.
+
+\- $x_i$ y $y_i$ son los valores individuales de las dos variables.
+
+\- $\bar{x}$ es la media de los valores de $x$.
+
+\- $\bar{y}$ es la media de los valores de $y$.
+
+------------------------------------------------------------------------
+
+## Ejemplo de Cálculo
+
+Consideremos el siguiente conjunto de datos sobre horas de estudio ($X$) y calificaciones obtenidas ($Y$):
+
+| Estudiante | Horas de Estudio ($X$) | Calificación ($Y$) |
+|:----------:|:----------------------:|:------------------:|
+|     1      |           2            |         5          |
+|     2      |           3            |         7          |
+|     3      |           4            |         8          |
+
+## Gráfico de Dispersión
+
+```{r}
+#| echo: false
+#| warning: false
+
+x <- c(2,3,4)
+y <- c(5,7,8)
+plot(x,y,col='blue', 
+     pch=8,
+     cex=4,
+     main='Horas de Estudio Vs. Calificación',
+     xlab= 'horas',
+     ylab='calificación')
+
+```
+
+## Ejemplo de Cálculo-cont.
+
+Vamos a calcular el coeficiente de correlación $r$.
+
+Primero, calculamos las medias:
+
+<br>
+
+$$\bar{x} = \frac{2+3+4}{3} = 3$$
+
+<br>
+
+$$\bar{y} = \frac{5+7+8}{3} \approx 6.67$$
+
+Luego, calculamos los términos necesarios para la fórmula:
+
+## Ejemplo de Cálculo-cont. {style=".small"}
+
+| $x_i$ | $y_i$ | $x_i - \bar{x}$ | $y_i - \bar{y}$ | $(x_i - \bar{x})(y_i - \bar{y})$ | $(x_i - \bar{x})^2$ | $(y_i - \bar{y})^2$ |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| 2 | 5 | -1 | -1.67 | 1.67 | 1 | 2.79 |
+| 3 | 7 | 0 | 0.33 | 0 | 0 | 0.11 |
+| 4 | 8 | 1 | 1.33 | 1.33 | 1 | 1.77 |
+|  |  |  |  | $\sum = 3.00$ | $\sum = 2$ | $\sum = 4.67$ |
+
+------------------------------------------------------------------------
+
+## Resultado del Ejemplo
+
+Sustituyendo los valores en la fórmula:
+
+$$r = \frac{3.00}{\sqrt{2} \sqrt{4.67}} = \frac{3.00}{\sqrt{9.34}} \approx \frac{3.00}{3.06} \approx 0.98$$
+
+-   El valor de $r \approx 0.98$ indica una **correlación lineal positiva muy fuerte** entre las horas de estudio y las calificaciones obtenidas en este pequeño conjunto de datos. Esto sugiere que a mayor número de horas de estudio, tiende a haber una mayor calificación.
+
+# Descomposición del Coeficiente de Correlación de Pearson (r)
+
+## El Numerador - La Covarianza (Sin normalizar) {.small}
+
+La parte superior de la fracción es el núcleo de la relación: $$\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})$$
+
+-   Mide cómo varían las dos variables conjuntamente.
+-   **Lógica de los signos:**
+    -   Si cuando $x$ sube, $y$ también sube, ambos paréntesis serán positivos (o ambos negativos), dando un resultado **positivo**.
+    -   Si varían en direcciones opuestas, el producto será **negativo**.
+
+## Las Desviaciones Individuales $(x_i - \bar{x})$ y $(y_i - \bar{y})$ {.small}
+
+Antes de sumar, la fórmula observa la distancia de cada dato respecto a su propia media.
+
+-   $\bar{x}$: Es el promedio de la variable $X$.
+-   $\bar{y}$: Es el promedio de la variable $Y$.
+-   **Propósito:** Al restar la media, estamos "centrando" los datos. No nos importa el valor absoluto del dato, sino qué tan lejos está del centro de su propio grupo.
+
+## El Denominador - La Normalización {.small}
+
+La parte inferior de la fórmula actúa como un "estandarizador": $$\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2 \cdot \sum_{i=1}^{n} (y_i - \bar{y})^2}$$
+
+-   El numerador depende de las unidades de medida (metros, kilos, etc.). El denominador utiliza las desviaciones cuadráticas para eliminar esas unidades.
+-   **Resultado:** Gracias a esto, el coeficiente $r$ es "adimensional" y siempre se mantiene en el rango de -1 a 1, permitiendo comparar peras con manzanas.
+
+## La Variabilidad Total (Suma de Cuadrados)
+
+Observemos los componentes dentro de la raíz:
+
+1\. $\sum (x_i - \bar{x})^2$: Es la suma de los cuadrados de las desviaciones de $X$. Indica cuánta dispersión total hay en la primera variable.
+
+2\. $\sum (y_i - \bar{y})^2$: Lo mismo para la variable $Y$.
+
+Al multiplicar ambas y obtener la raíz cuadrada, estamos calculando una especie de "variabilidad combinada máxima posible" que sirve de techo para el numerador.
+
+## Todas las Partes {.small}
+
+En términos conceptuales, la fórmula se puede entender así:
+
+$$r = \frac{\text{Variación Conjunta Real (Covarianza)}}{\text{Variación Total Posible (Dispersión de X e Y)}}$$
+
+-   Si la **variación conjunta** es igual a la **dispersión total**, el resultado es 1.
+-   Si no hay ninguna relación en el movimiento de las variables, el numerador se vuelve 0, y por tanto, $r = 0$.
+
+## Sensibilidad a Valores Atípicos (Outliers) {.small}
+
+El coeficiente de Pearson es extremadamente sensible a valores extremos.
+
+-   **El problema de los cuadrados:** Como la fórmula eleva las diferencias al cuadrado $(x_i - \bar{x})^2$, un solo dato muy alejado del promedio tiene un peso desproporcionado en el resultado final.
+-   **Efecto:** Un solo punto "atípico" puede inflar una correlación inexistente o destruir una correlación fuerte, dando una imagen falsa de la realidad de los datos.
+
+## Limitación - Solo Relaciones Lineales {.small}
+
+Pearson "asume" que la relación entre variables es una línea recta.
+
+-   **Relaciones Curvilíneas:** Si tus datos forman una "U" o una curva perfecta, Pearson podría marcar un $r = 0$, sugiriendo que no hay relación cuando en realidad hay una relación estructural muy fuerte (pero no lineal).
+
+    ::: callout-important
+    Siempre es vital visualizar los datos en un diagrama de dispersión antes de confiar ciegamente en el valor de $r$.
+    :::

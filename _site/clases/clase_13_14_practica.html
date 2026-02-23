@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="M.Sc. José Miguel Avendaño I.">
+  <meta name="dcterms.date" content="2026-02-23">
+  <title>UCV Economía Estadística I – Estadística I</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Estadística I – UCV Economía Estadística I">
+<meta property="og:description" content="Guía de Ejercicios: La Distribución Binomial (Clase 13) y la Distribución Normal (Clase1 14)">
+<meta property="og:site_name" content="UCV Economía Estadística I">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Estadística I</h1>
+  <p class="subtitle">Guía de Ejercicios: La Distribución Binomial (Clase 13) y la Distribución Normal (Clase1 14)</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+M.Sc. José Miguel Avendaño I. 
+</div>
+        <p class="quarto-title-affiliation">
+            Universidad Central de Venezuela- Escuela de Economía. 2025-1
+          </p>
+    </div>
+</div>
+
+  <p class="date">2026-02-23</p>
+</section>
+<section id="dist.-binomial" class="slide level2">
+<h2>Dist. Binomial</h2>
+<p>La distribución binomial es un modelo de probabilidad discreta que describe el número de éxitos en una secuencia de <span class="math inline">\(n\)</span> ensayos independientes de Bernoulli, con una probabilidad fija <span class="math inline">\(p\)</span> de ocurrencia del éxito entre los ensayos.</p>
+</section>
+<section id="cálculos-manuales-sin-r" class="slide level2 small">
+<h2>Cálculos Manuales (Sin R)</h2>
+<p>El objetivo de esta sección es comprender la estructura de la función de probabilidad de la distribución binomial:</p>
+<p><span class="math display">\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\]</span></p>
+<p>Donde:</p>
+<p>- <span class="math inline">\(n\)</span> es el número de ensayos.</p>
+<p>- <span class="math inline">\(k\)</span> es el número de éxitos deseados.</p>
+<p>- <span class="math inline">\(p\)</span> es la probabilidad de éxito en un ensayo dado.</p>
+<p>- <span class="math inline">\(\binom{n}{k} = \frac{n!}{k!(n-k)!}\)</span> es el coeficiente binomial.</p>
+</section>
+<section id="ejercicio-1-probabilidad-exacta-riesgo-crediticio" class="slide level2">
+<h2>Ejercicio 1: Probabilidad Exacta (Riesgo Crediticio)</h2>
+<p>Un analista de crédito en un banco determina que la probabilidad de que un cliente de cierto segmento incurra en impago (default) en su primer año es del <span class="math inline">\(10\%\)</span> (<span class="math inline">\(p = 0.10\)</span>). Si se selecciona una muestra aleatoria de <span class="math inline">\(4\)</span> clientes de este segmento: <strong>¿Cuál es la probabilidad de que exactamente 1 cliente incurra en impago?</strong></p>
+</section>
+<section id="solución-manual-ejercicio-1" class="slide level2">
+<h2><strong>Solución Manual</strong> Ejercicio 1<strong>:</strong></h2>
+<p>- <span class="math inline">\(n = 4\)</span></p>
+<p>- <span class="math inline">\(k = 1\)</span></p>
+<p>- <span class="math inline">\(p = 0.10\)</span></p>
+<p><span class="math display">\[P(X = 1) = \binom{4}{1} (0.10)^1 (0.90)^3 = 4 \times 0.10 \times 0.729 = 0.2916\]</span> La probabilidad es del <span class="math inline">\(29.16\%\)</span>.</p>
+</section>
+<section id="ejercicio-2-probabilidad-acumulada-lanzamiento-de-un-producto" class="slide level2 small">
+<h2>Ejercicio 2: Probabilidad Acumulada (Lanzamiento de un Producto)</h2>
+<p>Una pequeña empresa de software sabe por experiencia que el <span class="math inline">\(20\%\)</span> de los usuarios que descargan la versión de prueba de su programa terminan comprando la licencia (<span class="math inline">\(p = 0.20\)</span>). Si hoy <span class="math inline">\(5\)</span> usuarios descargaron la prueba: <strong>¿Cuál es la probabilidad de que máximo 2 usuarios compren la licencia?</strong></p>
+</section>
+<section id="solución-manual-ejercicio-2" class="slide level2">
+<h2><strong>Solución Manual</strong> Ejercicio 2<strong>:</strong></h2>
+<p>Para hallar <span class="math inline">\(P(X \le 2)\)</span>, debemos calcular y sumar las probabilidades individuales de <span class="math inline">\(X = 0\)</span>, <span class="math inline">\(X = 1\)</span> y <span class="math inline">\(X = 2\)</span>.</p>
+<ul>
+<li><span class="math inline">\(P(X = 0) = \binom{5}{0} (0.20)^0 (0.80)^5 = 1 \times 1 \times 0.32768 = 0.32768\)</span></li>
+<li><span class="math inline">\(P(X = 1) = \binom{5}{1} (0.20)^1 (0.80)^4 = 5 \times 0.20 \times 0.4096 = 0.4096\)</span></li>
+<li><span class="math inline">\(P(X = 2) = \binom{5}{2} (0.20)^2 (0.80)^3 = 10 \times 0.04 \times 0.512 = 0.2048\)</span></li>
+</ul>
+<p><span class="math display">\[P(X \le 2) = 0.32768 + 0.4096 + 0.2048 = 0.94208\]</span></p>
+<aside class="notes">
+<p><em>Nota cómo el cálculo manual se vuelve tedioso rápidamente. ¿Qué pasaría si tuviéramos 100 usuarios y quisiéramos saber la probabilidad de que máximo 40 compren la licencia? ¡Tendríamos que calcular y sumar 41 fórmulas distintas! Aquí es donde R se vuelve una herramienta indispensable.</em></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cálculos-con-r" class="slide level2">
+<h2>Cálculos con R</h2>
+<p>En R, contamos con cuatro funciones principales para trabajar con cualquier distribución. Para la binomial, estas son:</p>
+<p>- <code>dbinom()</code>: Densidad o probabilidad exacta <span class="math inline">\(P(X = k)\)</span>.</p>
+<p>- <code>pbinom()</code>: Probabilidad acumulada <span class="math inline">\(P(X \le k)\)</span>.</p>
+<p>- <code>qbinom()</code>: Cuantiles (el valor de <span class="math inline">\(k\)</span> dada una probabilidad).</p>
+<p>- <code>rbinom()</code>: Generación de números aleatorios (simulación).</p>
+</section>
+<section id="ejercicio-3-probabilidad-exacta-con-dbinom-auditoría-de-facturas" class="slide level2 small">
+<h2>Ejercicio 3: Probabilidad Exacta con <code>dbinom</code> (Auditoría de Facturas)</h2>
+<p>Una empresa de contabilidad sabe que el <span class="math inline">\(5\%\)</span> de las facturas que procesa tienen algún error menor. En una auditoría de rutina, se revisan <span class="math inline">\(50\)</span> facturas. <strong>¿Cuál es la probabilidad de que se encuentren exactamente 4 facturas con errores?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb1-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb1-3"><a></a>k <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="fu">dbinom</span>(<span class="at">x =</span> k, <span class="at">size =</span> n, <span class="at">prob =</span> p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1359752</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">50</span>, <span class="at">prob =</span> <span class="fl">0.05</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1359752</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-4-probabilidad-acumulada-con-pbinom-control-de-calidad" class="slide level2 small">
+<h2>Ejercicio 4: Probabilidad Acumulada con <code>pbinom</code> (Control de Calidad)</h2>
+<p>Una fábrica produce microchips, y la tasa histórica de defectos es del <span class="math inline">\(2\%\)</span>. Un lote se aprueba si en una muestra de <span class="math inline">\(100\)</span> chips hay 3 o menos defectuos. <strong>¿Cuál es la probabilidad de aprobar un lote?</strong> <span class="math inline">\(P(X \le 3)\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb5-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.02</span></span>
+<span id="cb5-3"><a></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a><span class="fu">pbinom</span>(<span class="at">q =</span> k, <span class="at">size =</span> n, <span class="at">prob =</span> p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8589616</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-5-probabilidad-de-la-cola-superior-ventas-de-seguros" class="slide level2 xsmall">
+<h2>Ejercicio 5: Probabilidad de la Cola Superior (Ventas de Seguros)</h2>
+<p>Un agente de seguros tiene una tasa de éxito del <span class="math inline">\(15\%\)</span> al contactar prospectos en frío. Si en una semana contacta a <span class="math inline">\(80\)</span> personas: <strong>¿Cuál es la probabilidad de que logre vender más de 15 pólizas?</strong> <span class="math inline">\(P(X &gt; 15)\)</span></p>
+<p><em>Nota: <code>pbinom</code> calcula</em> <span class="math inline">\(P(X \le k)\)</span>. Para <span class="math inline">\(P(X &gt; k)\)</span>, calculamos <span class="math inline">\(1 - P(X \le 15)\)</span> o usamos el argumento <code>lower.tail = FALSE</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">80</span></span>
+<span id="cb7-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.15</span></span>
+<span id="cb7-3"><a></a>k <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb7-4"><a></a></span>
+<span id="cb7-5"><a></a><span class="co"># Método 1</span></span>
+<span id="cb7-6"><a></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pbinom</span>(<span class="at">q =</span> k, <span class="at">size =</span> n, <span class="at">prob =</span> p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1375337</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Método 2 (Recomendado)</span></span>
+<span id="cb9-2"><a></a><span class="fu">pbinom</span>(<span class="at">q =</span> k, <span class="at">size =</span> n, <span class="at">prob =</span> p, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1375337</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-6-probabilidad-en-un-rango-análisis-de-encuestas" class="slide level2">
+<h2>Ejercicio 6: Probabilidad en un Rango (Análisis de Encuestas)</h2>
+<p>En una encuesta nacional de consumo, se sabe que el <span class="math inline">\(40\%\)</span> de la población prefiere la marca “A”. Si tomamos una muestra de <span class="math inline">\(200\)</span> individuos: <strong>¿Cuál es la probabilidad de que entre 70 y 90 personas (ambos inclusive) prefieran la marca “A”?</strong> <span class="math inline">\(P(70 \le X \le 90)\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb11-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.40</span></span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a><span class="co"># Calculamos P(X &lt;= 90) y le restamos P(X &lt;= 69) para incluir el 70.</span></span>
+<span id="cb11-5"><a></a><span class="fu">pbinom</span>(<span class="dv">90</span>, n, p) <span class="sc">-</span> <span class="fu">pbinom</span>(<span class="dv">69</span>, n, p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8706073</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-7-uso-de-cuantiles-con-qbinom-planificación-de-inventario" class="slide level2 small">
+<h2>Ejercicio 7: Uso de Cuantiles con <code>qbinom</code> (Planificación de Inventario)</h2>
+<p>Una tienda de retail vende laptops durante promociones. La probabilidad de que un visitante compre una laptop es del <span class="math inline">\(8\%\)</span>. Si se esperan <span class="math inline">\(500\)</span> visitantes en un día, el gerente quiere asegurar suficiente inventario. <strong>¿Cuántas laptops debe tener en stock para satisfacer la demanda con una certeza del</strong> <span class="math inline">\(95\%\)</span>?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb13-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.08</span></span>
+<span id="cb13-3"><a></a>certeza <span class="ot">&lt;-</span> <span class="fl">0.95</span></span>
+<span id="cb13-4"><a></a></span>
+<span id="cb13-5"><a></a>stock_necesario <span class="ot">&lt;-</span> <span class="fu">qbinom</span>(<span class="at">p =</span> certeza, <span class="at">size =</span> n, <span class="at">prob =</span> p)</span>
+<span id="cb13-6"><a></a>stock_necesario</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-8-simulación-con-rbinom-proyección-de-crecimiento" class="slide level2 small">
+<h2>Ejercicio 8: Simulación con <code>rbinom</code> (Proyección de Crecimiento)</h2>
+<p>Supongamos que una startup presenta su proyecto a varios fondos de inversión. La probabilidad de que un fondo decida invertir es del <span class="math inline">\(12\%\)</span>. La startup presenta a <span class="math inline">\(20\)</span> fondos cada mes. <strong>Simula el número de inversiones conseguidas por mes durante un periodo de 2 años (24 meses).</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>meses <span class="ot">&lt;-</span> <span class="dv">24</span></span>
+<span id="cb15-2"><a></a>n_fondos <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb15-3"><a></a>p_exito <span class="ot">&lt;-</span> <span class="fl">0.12</span></span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>) <span class="co"># Para reproducibilidad</span></span>
+<span id="cb15-6"><a></a>simulacion_inversiones <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="at">n =</span> meses, <span class="at">size =</span> n_fondos, <span class="at">prob =</span> p_exito)</span>
+<span id="cb15-7"><a></a>simulacion_inversiones</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 4 2 4 5 0 2 4 2 2 5 2 3 3 1 4 1 0 2 5 4 3 3 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># Media empírica de nuestra simulación</span></span>
+<span id="cb17-2"><a></a><span class="fu">mean</span>(simulacion_inversiones)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.875</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-9-visualización-de-la-función-de-masa-de-probabilidad-pmf" class="slide level2 small">
+<h2>Ejercicio 9: Visualización de la Función de Masa de Probabilidad (PMF)</h2>
+<p>Visualizar la distribución nos ayuda a entender dónde se concentra la probabilidad. <strong>Genera un gráfico de barras de la distribución binomial para el escenario de la startup (n = 20, p = 0.12).</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb19-2"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.12</span></span>
+<span id="cb19-3"><a></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>n</span>
+<span id="cb19-4"><a></a>probabilidades <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(x, <span class="at">size =</span> n, <span class="at">prob =</span> p)</span>
+<span id="cb19-5"><a></a></span>
+<span id="cb19-6"><a></a>df_binomial <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Exitos =</span> x, <span class="at">Probabilidad =</span> probabilidades)</span>
+<span id="cb19-7"><a></a>df_binomial</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Exitos Probabilidad
+1       0 7.756279e-02
+2       1 2.115349e-01
+3       2 2.740338e-01
+4       3 2.242095e-01
+5       4 1.299396e-01
+6       5 5.670092e-02
+7       6 1.932986e-02
+8       7 5.271779e-03
+9       8 1.168178e-03
+10      9 2.123961e-04
+11     10 3.185941e-05
+12     11 3.949514e-06
+13     12 4.039275e-07
+14     13 3.389602e-08
+15     14 2.311092e-09
+16     15 1.260596e-10
+17     16 5.371857e-12
+18     17 1.723590e-13
+19     18 3.917251e-15
+20     19 5.622848e-17
+21     20 3.833760e-19</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-9-cont." class="slide level2">
+<h2>Ejercicio 9: cont.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Filtramos solo hasta 10 éxitos para ver mejor el gráfico,</span></span>
+<span id="cb21-2"><a></a><span class="co"># ya que la probabilidad de 11+ es casi nula.</span></span>
+<span id="cb21-3"><a></a>grafico_binomial <span class="ot">&lt;-</span> df_binomial <span class="sc">%&gt;%</span></span>
+<span id="cb21-4"><a></a>  <span class="fu">filter</span>(Exitos <span class="sc">&lt;=</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(Exitos), <span class="at">y =</span> Probabilidad)) <span class="sc">+</span></span>
+<span id="cb21-6"><a></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb21-7"><a></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(Probabilidad, <span class="dv">3</span>)), <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
+<span id="cb21-8"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución Binomial: Inversiones Conseguidas"</span>,</span>
+<span id="cb21-9"><a></a>       <span class="at">subtitle =</span> <span class="st">"n = 20 ensayos, p = 0.12"</span>,</span>
+<span id="cb21-10"><a></a>       <span class="at">x =</span> <span class="st">"Número de Inversiones (Éxitos)"</span>,</span>
+<span id="cb21-11"><a></a>       <span class="at">y =</span> <span class="st">"Probabilidad"</span>) <span class="sc">+</span></span>
+<span id="cb21-12"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejercicio-9-gráfico" class="slide level2">
+<h2>Ejercicio 9 Gráfico</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>grafico_binomial</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_13_14_practica_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ejercicio-10-valor-esperado-y-varianza-teórica-vs.-empírica" class="slide level2">
+<h2>Ejercicio 10: Valor Esperado y Varianza Teórica vs.&nbsp;Empírica</h2>
+<p>Para una distribución binomial, sabemos que: - Esperanza matemática: <span class="math inline">\(E(X) = n \cdot p\)</span> - Varianza: <span class="math inline">\(V(X) = n \cdot p \cdot (1-p)\)</span></p>
+<p><strong>Compara estos valores teóricos con los resultados de una simulación a gran escala (10,000 observaciones) para un portafolio de</strong> <span class="math inline">\(150\)</span> acciones donde la probabilidad de que una acción supere el rendimiento del mercado es del <span class="math inline">\(45\%\)</span>.</p>
+</section>
+<section id="ejercicio-10--cont." class="slide level2">
+<h2>Ejercicio 10- cont.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>n_acciones <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb23-2"><a></a>p_superar <span class="ot">&lt;-</span> <span class="fl">0.45</span></span>
+<span id="cb23-3"><a></a>n_simulaciones <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb23-4"><a></a></span>
+<span id="cb23-5"><a></a><span class="co"># Cálculos Teóricos</span></span>
+<span id="cb23-6"><a></a>esperanza_teorica <span class="ot">&lt;-</span> n_acciones <span class="sc">*</span> p_superar</span>
+<span id="cb23-7"><a></a>varianza_teorica <span class="ot">&lt;-</span> n_acciones <span class="sc">*</span> p_superar <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_superar)</span>
+<span id="cb23-8"><a></a></span>
+<span id="cb23-9"><a></a><span class="co"># Simulación Empírica</span></span>
+<span id="cb23-10"><a></a><span class="fu">set.seed</span>(<span class="dv">456</span>)</span>
+<span id="cb23-11"><a></a>sim_gran_escala <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(n_simulaciones, <span class="at">size =</span> n_acciones, <span class="at">prob =</span> p_superar)</span>
+<span id="cb23-12"><a></a></span>
+<span id="cb23-13"><a></a>media_empirica <span class="ot">&lt;-</span> <span class="fu">mean</span>(sim_gran_escala)</span>
+<span id="cb23-14"><a></a>varianza_empirica <span class="ot">&lt;-</span> <span class="fu">var</span>(sim_gran_escala)</span>
+<span id="cb23-15"><a></a></span>
+<span id="cb23-16"><a></a><span class="co"># Resultados</span></span>
+<span id="cb23-17"><a></a><span class="fu">cat</span>(<span class="st">"Esperanza Teórica: "</span>, esperanza_teorica, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Esperanza Teórica:  67.5 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">cat</span>(<span class="st">"Media Empírica: "</span>, media_empirica, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Media Empírica:  67.5883 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">cat</span>(<span class="st">"Varianza Teórica: "</span>, varianza_teorica, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Varianza Teórica:  37.125 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">cat</span>(<span class="st">"Varianza Empírica: "</span>, varianza_empirica, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Varianza Empírica:  37.79898 </code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-10-cont." class="slide level2">
+<h2>Ejercicio 10 cont.</h2>
+<p>La Ley de los Grandes Números asegura que las simulaciones en R converjan de manera muy precisa a los parámetros poblacionales teóricos, lo cual es fundamental para el modelaje de riesgos económicos.</p>
+</section>
+<section id="dist.-normal" class="slide level2">
+<h2>Dist. Normal</h2>
+<p>La distribución normal es el modelo continuo más importante en estadística. Una variable aleatoria <span class="math inline">\(X\)</span> sigue una distribución normal si su función de densidad de probabilidad forma una curva simétrica en forma de campana, completamente determinada por dos parámetros: su media (<span class="math inline">\(\mu\)</span>) y su desviación estándar (<span class="math inline">\(\sigma\)</span>). Lo denotamos como <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>.</p>
+<p>En R, utilizamos el sufijo <code>norm</code> acompañado de las letras <code>d</code>, <code>p</code>, <code>q</code> y <code>r</code> para realizar cálculos de densidad, probabilidad acumulada, cuantiles y simulaciones aleatorias, respectivamente.</p>
+</section>
+<section class="slide level2">
+
+<h3 class="small" id="ejercicio-11-probabilidad-de-un-valor-inferior-con-pnorm-gasto-del-consumidor">Ejercicio 11: Probabilidad de un valor inferior con <code>pnorm</code> (Gasto del Consumidor)</h3>
+<p>Un estudio de mercado indica que el gasto mensual en entretenimiento de los hogares en cierta ciudad se distribuye normalmente con una media de $150 mensuales y una desviación estándar de $30. <strong>¿Cuál es la probabilidad de que un hogar seleccionado al azar gaste menos de $100 al mes en entretenimiento?</strong> <span class="math inline">\(P(X &lt; 100)\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>mu <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb31-2"><a></a>sigma <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb31-3"><a></a>x <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb31-4"><a></a></span>
+<span id="cb31-5"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> x, <span class="at">mean =</span> mu, <span class="at">sd =</span> sigma)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04779035</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-11-interpretación" class="slide level2">
+<h2>Ejercicio 11: <em>Interpretación:</em></h2>
+<p><em>Hay aproximadamente un 4.78% de probabilidad de que un hogar gaste menos de $100 en entretenimiento.</em></p>
+</section>
+<section id="ejercicio-12-probabilidad-en-un-intervalo-salarios-en-la-industria" class="slide level2">
+<h2>Ejercicio 12: Probabilidad en un intervalo (Salarios en la Industria)</h2>
+<p>El salario mensual de los analistas financieros junior en un país sigue una distribución normal con una media de $1200 y una desviación estándar de $150. <strong>¿Cuál es la probabilidad de que un analista gane entre $1000 y $1400 mensuales?</strong> <span class="math inline">\(P(1000 &lt; X &lt; 1400)\)</span></p>
+</section>
+<section id="ejercicio-12-códigos" class="slide level2">
+<h2>Ejercicio 12: Códigos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>mu_salario <span class="ot">&lt;-</span> <span class="dv">1200</span></span>
+<span id="cb33-2"><a></a>sigma_salario <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb33-3"><a></a>limite_inf <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb33-4"><a></a>limite_sup <span class="ot">&lt;-</span> <span class="dv">1400</span></span>
+<span id="cb33-5"><a></a></span>
+<span id="cb33-6"><a></a><span class="co"># Calculamos P(X &lt; 1400) y le restamos P(X &lt; 1000)</span></span>
+<span id="cb33-7"><a></a>prob_intervalo <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(limite_sup, mu_salario, sigma_salario) <span class="sc">-</span> </span>
+<span id="cb33-8"><a></a>                  <span class="fu">pnorm</span>(limite_inf, mu_salario, sigma_salario)</span>
+<span id="cb33-9"><a></a>prob_intervalo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8175776</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-12-interpretación" class="slide level2">
+<h2>Ejercicio 12 Interpretación<em>:</em></h2>
+<p><em>Aproximadamente el 81.76% de los analistas financieros junior tienen un salario dentro de este rango.</em></p>
+</section>
+<section id="ejercicio-13-encontrando-percentiles-con-qnorm-garantía-de-tiempos-de-entrega" class="slide level2">
+<h2>Ejercicio 13: Encontrando percentiles con <code>qnorm</code> (Garantía de Tiempos de Entrega)</h2>
+<p>Una empresa de logística promete entregas rápidas. Sabe que el tiempo de entrega de sus paquetes se distribuye normalmente con una media de 45 minutos y una desviación estándar de 8 minutos. La gerencia quiere establecer un tiempo máximo garantizado para su campaña publicitaria de modo que cumplan con el 95% de las entregas. <strong>¿Cuál debe ser ese tiempo garantizado?</strong> (Buscamos el percentil 95).</p>
+</section>
+<section id="ejercicio-13-códigos" class="slide level2">
+<h2>Ejercicio 13 códigos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>mu_tiempo <span class="ot">&lt;-</span> <span class="dv">45</span></span>
+<span id="cb35-2"><a></a>sigma_tiempo <span class="ot">&lt;-</span> <span class="dv">8</span></span>
+<span id="cb35-3"><a></a>prob_objetivo <span class="ot">&lt;-</span> <span class="fl">0.95</span></span>
+<span id="cb35-4"><a></a></span>
+<span id="cb35-5"><a></a>tiempo_garantizado <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="at">p =</span> prob_objetivo, <span class="at">mean =</span> mu_tiempo, <span class="at">sd =</span> sigma_tiempo)</span>
+<span id="cb35-6"><a></a>tiempo_garantizado</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 58.15883</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-13-interpretación" class="slide level2">
+<h2>Ejercicio 13 Interpretación:</h2>
+<p><em>Para cumplir con el 95% de los clientes, la empresa debería garantizar la entrega en 58.16 minutos (podría redondearse a 60 minutos por razones de marketing).</em></p>
+</section>
+<section id="ejercicio-14-simulación-de-escenarios-con-rnorm-rendimiento-de-acciones" class="slide level2">
+<h2>Ejercicio 14: Simulación de escenarios con <code>rnorm</code> (Rendimiento de Acciones)</h2>
+<p>Supongamos que el rendimiento diario de una acción en la bolsa de valores sigue una distribución normal con un rendimiento medio del 0.05% (0.0005) y una volatilidad (desviación estándar) del 2% (0.02). <strong>Simula los rendimientos diarios de esta acción para los próximos 100 días de cotización e identifica cuántos días tuvieron un rendimiento negativo.</strong></p>
+</section>
+<section id="ejercicio-14-códigos" class="slide level2">
+<h2>Ejercicio 14 Códigos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>mu_rend <span class="ot">&lt;-</span> <span class="fl">0.0005</span></span>
+<span id="cb37-2"><a></a>sigma_rend <span class="ot">&lt;-</span> <span class="fl">0.02</span></span>
+<span id="cb37-3"><a></a>dias <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb37-4"><a></a></span>
+<span id="cb37-5"><a></a><span class="fu">set.seed</span>(<span class="dv">789</span>) <span class="co"># Para que todos los estudiantes obtengan el mismo resultado</span></span>
+<span id="cb37-6"><a></a>simulacion_rendimientos <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> dias, <span class="at">mean =</span> mu_rend, <span class="at">sd =</span> sigma_rend)</span>
+<span id="cb37-7"><a></a></span>
+<span id="cb37-8"><a></a><span class="co"># Contar cuántos días el rendimiento fue menor a 0</span></span>
+<span id="cb37-9"><a></a>dias_negativos <span class="ot">&lt;-</span> <span class="fu">sum</span>(simulacion_rendimientos <span class="sc">&lt;</span> <span class="dv">0</span>)</span>
+<span id="cb37-10"><a></a></span>
+<span id="cb37-11"><a></a><span class="fu">paste</span>(<span class="st">"De los 100 días simulados,"</span>, dias_negativos, <span class="st">"tuvieron rendimientos negativos.</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "De los 100 días simulados, 53 tuvieron rendimientos negativos.\n"</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-15-visualización-de-la-curva-normal-con-dnorm-y-ggplot2" class="slide level2">
+<h2>Ejercicio 15: Visualización de la Curva Normal con <code>dnorm</code> y <code>ggplot2</code></h2>
+<p>Para entender mejor la distribución del Ejercicio 2 (Salarios), vamos a graficar la curva de densidad normal correspondiente y sombrear el área que representa a los analistas que ganan menos de $1000.</p>
+</section>
+<section id="ejercicio-15-códigos" class="slide level2">
+<h2>Ejercicio 15 Códigos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="co"># Creamos un rango de valores para el eje X (Salarios)</span></span>
+<span id="cb39-2"><a></a><span class="co"># Usualmente graficamos +/- 4 desviaciones estándar desde la media</span></span>
+<span id="cb39-3"><a></a>x_salarios <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1200</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span><span class="dv">150</span>, <span class="dv">1200</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span><span class="dv">150</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb39-4"><a></a></span>
+<span id="cb39-5"><a></a><span class="co"># Calculamos la densidad (eje Y) para cada salario</span></span>
+<span id="cb39-6"><a></a>y_densidad <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x_salarios, <span class="at">mean =</span> <span class="dv">1200</span>, <span class="at">sd =</span> <span class="dv">150</span>)</span>
+<span id="cb39-7"><a></a></span>
+<span id="cb39-8"><a></a><span class="co"># Creamos un dataframe para ggplot</span></span>
+<span id="cb39-9"><a></a>df_salarios <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Salario =</span> x_salarios, <span class="at">Densidad =</span> y_densidad)</span>
+<span id="cb39-10"><a></a></span>
+<span id="cb39-11"><a></a>df_salarios</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       Salario     Densidad
+1     600.0000 8.922015e-07
+2     601.2012 9.212136e-07
+3     602.4024 9.511082e-07
+4     603.6036 9.819099e-07
+5     604.8048 1.013644e-06
+6     606.0060 1.046337e-06
+7     607.2072 1.080015e-06
+8     608.4084 1.114705e-06
+9     609.6096 1.150436e-06
+10    610.8108 1.187236e-06
+11    612.0120 1.225135e-06
+12    613.2132 1.264162e-06
+13    614.4144 1.304349e-06
+14    615.6156 1.345727e-06
+15    616.8168 1.388329e-06
+16    618.0180 1.432187e-06
+17    619.2192 1.477337e-06
+18    620.4204 1.523811e-06
+19    621.6216 1.571648e-06
+20    622.8228 1.620882e-06
+21    624.0240 1.671551e-06
+22    625.2252 1.723693e-06
+23    626.4264 1.777348e-06
+24    627.6276 1.832556e-06
+25    628.8288 1.889357e-06
+26    630.0300 1.947794e-06
+27    631.2312 2.007910e-06
+28    632.4324 2.069748e-06
+29    633.6336 2.133354e-06
+30    634.8348 2.198774e-06
+31    636.0360 2.266054e-06
+32    637.2372 2.335243e-06
+33    638.4384 2.406391e-06
+34    639.6396 2.479547e-06
+35    640.8408 2.554764e-06
+36    642.0420 2.632093e-06
+37    643.2432 2.711589e-06
+38    644.4444 2.793307e-06
+39    645.6456 2.877303e-06
+40    646.8468 2.963635e-06
+41    648.0480 3.052361e-06
+42    649.2492 3.143542e-06
+43    650.4505 3.237240e-06
+44    651.6517 3.333516e-06
+45    652.8529 3.432435e-06
+46    654.0541 3.534064e-06
+47    655.2553 3.638468e-06
+48    656.4565 3.745715e-06
+49    657.6577 3.855877e-06
+50    658.8589 3.969025e-06
+51    660.0601 4.085230e-06
+52    661.2613 4.204568e-06
+53    662.4625 4.327115e-06
+54    663.6637 4.452948e-06
+55    664.8649 4.582146e-06
+56    666.0661 4.714791e-06
+57    667.2673 4.850964e-06
+58    668.4685 4.990751e-06
+59    669.6697 5.134236e-06
+60    670.8709 5.281507e-06
+61    672.0721 5.432655e-06
+62    673.2733 5.587769e-06
+63    674.4745 5.746945e-06
+64    675.6757 5.910275e-06
+65    676.8769 6.077857e-06
+66    678.0781 6.249791e-06
+67    679.2793 6.426176e-06
+68    680.4805 6.607115e-06
+69    681.6817 6.792714e-06
+70    682.8829 6.983078e-06
+71    684.0841 7.178317e-06
+72    685.2853 7.378541e-06
+73    686.4865 7.583863e-06
+74    687.6877 7.794400e-06
+75    688.8889 8.010267e-06
+76    690.0901 8.231585e-06
+77    691.2913 8.458475e-06
+78    692.4925 8.691062e-06
+79    693.6937 8.929472e-06
+80    694.8949 9.173833e-06
+81    696.0961 9.424278e-06
+82    697.2973 9.680938e-06
+83    698.4985 9.943950e-06
+84    699.6997 1.021345e-05
+85    700.9009 1.048959e-05
+86    702.1021 1.077250e-05
+87    703.3033 1.106233e-05
+88    704.5045 1.135923e-05
+89    705.7057 1.166335e-05
+90    706.9069 1.197484e-05
+91    708.1081 1.229387e-05
+92    709.3093 1.262058e-05
+93    710.5105 1.295515e-05
+94    711.7117 1.329773e-05
+95    712.9129 1.364850e-05
+96    714.1141 1.400762e-05
+97    715.3153 1.437527e-05
+98    716.5165 1.475162e-05
+99    717.7177 1.513685e-05
+100   718.9189 1.553115e-05
+101   720.1201 1.593470e-05
+102   721.3213 1.634768e-05
+103   722.5225 1.677029e-05
+104   723.7237 1.720273e-05
+105   724.9249 1.764518e-05
+106   726.1261 1.809786e-05
+107   727.3273 1.856095e-05
+108   728.5285 1.903468e-05
+109   729.7297 1.951924e-05
+110   730.9309 2.001485e-05
+111   732.1321 2.052174e-05
+112   733.3333 2.104011e-05
+113   734.5345 2.157019e-05
+114   735.7357 2.211221e-05
+115   736.9369 2.266639e-05
+116   738.1381 2.323298e-05
+117   739.3393 2.381220e-05
+118   740.5405 2.440429e-05
+119   741.7417 2.500951e-05
+120   742.9429 2.562809e-05
+121   744.1441 2.626028e-05
+122   745.3453 2.690635e-05
+123   746.5465 2.756654e-05
+124   747.7477 2.824112e-05
+125   748.9489 2.893035e-05
+126   750.1502 2.963450e-05
+127   751.3514 3.035384e-05
+128   752.5526 3.108866e-05
+129   753.7538 3.183921e-05
+130   754.9550 3.260580e-05
+131   756.1562 3.338871e-05
+132   757.3574 3.418821e-05
+133   758.5586 3.500462e-05
+134   759.7598 3.583823e-05
+135   760.9610 3.668933e-05
+136   762.1622 3.755824e-05
+137   763.3634 3.844527e-05
+138   764.5646 3.935071e-05
+139   765.7658 4.027490e-05
+140   766.9670 4.121815e-05
+141   768.1682 4.218079e-05
+142   769.3694 4.316314e-05
+143   770.5706 4.416554e-05
+144   771.7718 4.518832e-05
+145   772.9730 4.623182e-05
+146   774.1742 4.729638e-05
+147   775.3754 4.838235e-05
+148   776.5766 4.949009e-05
+149   777.7778 5.061994e-05
+150   778.9790 5.177226e-05
+151   780.1802 5.294742e-05
+152   781.3814 5.414578e-05
+153   782.5826 5.536772e-05
+154   783.7838 5.661360e-05
+155   784.9850 5.788380e-05
+156   786.1862 5.917871e-05
+157   787.3874 6.049870e-05
+158   788.5886 6.184417e-05
+159   789.7898 6.321551e-05
+160   790.9910 6.461312e-05
+161   792.1922 6.603738e-05
+162   793.3934 6.748872e-05
+163   794.5946 6.896753e-05
+164   795.7958 7.047422e-05
+165   796.9970 7.200921e-05
+166   798.1982 7.357292e-05
+167   799.3994 7.516576e-05
+168   800.6006 7.678816e-05
+169   801.8018 7.844055e-05
+170   803.0030 8.012336e-05
+171   804.2042 8.183703e-05
+172   805.4054 8.358198e-05
+173   806.6066 8.535867e-05
+174   807.8078 8.716753e-05
+175   809.0090 8.900902e-05
+176   810.2102 9.088358e-05
+177   811.4114 9.279167e-05
+178   812.6126 9.473375e-05
+179   813.8138 9.671027e-05
+180   815.0150 9.872170e-05
+181   816.2162 1.007685e-04
+182   817.4174 1.028511e-04
+183   818.6186 1.049701e-04
+184   819.8198 1.071258e-04
+185   821.0210 1.093188e-04
+186   822.2222 1.115496e-04
+187   823.4234 1.138185e-04
+188   824.6246 1.161262e-04
+189   825.8258 1.184730e-04
+190   827.0270 1.208596e-04
+191   828.2282 1.232863e-04
+192   829.4294 1.257536e-04
+193   830.6306 1.282621e-04
+194   831.8318 1.308123e-04
+195   833.0330 1.334046e-04
+196   834.2342 1.360396e-04
+197   835.4354 1.387177e-04
+198   836.6366 1.414394e-04
+199   837.8378 1.442053e-04
+200   839.0390 1.470159e-04
+201   840.2402 1.498717e-04
+202   841.4414 1.527731e-04
+203   842.6426 1.557207e-04
+204   843.8438 1.587150e-04
+205   845.0450 1.617565e-04
+206   846.2462 1.648457e-04
+207   847.4474 1.679831e-04
+208   848.6486 1.711693e-04
+209   849.8498 1.744047e-04
+210   851.0511 1.776899e-04
+211   852.2523 1.810253e-04
+212   853.4535 1.844115e-04
+213   854.6547 1.878491e-04
+214   855.8559 1.913384e-04
+215   857.0571 1.948800e-04
+216   858.2583 1.984745e-04
+217   859.4595 2.021223e-04
+218   860.6607 2.058240e-04
+219   861.8619 2.095800e-04
+220   863.0631 2.133909e-04
+221   864.2643 2.172571e-04
+222   865.4655 2.211792e-04
+223   866.6667 2.251577e-04
+224   867.8679 2.291930e-04
+225   869.0691 2.332857e-04
+226   870.2703 2.374362e-04
+227   871.4715 2.416451e-04
+228   872.6727 2.459128e-04
+229   873.8739 2.502399e-04
+230   875.0751 2.546268e-04
+231   876.2763 2.590739e-04
+232   877.4775 2.635818e-04
+233   878.6787 2.681510e-04
+234   879.8799 2.727819e-04
+235   881.0811 2.774749e-04
+236   882.2823 2.822306e-04
+237   883.4835 2.870494e-04
+238   884.6847 2.919318e-04
+239   885.8859 2.968781e-04
+240   887.0871 3.018889e-04
+241   888.2883 3.069646e-04
+242   889.4895 3.121056e-04
+243   890.6907 3.173124e-04
+244   891.8919 3.225853e-04
+245   893.0931 3.279249e-04
+246   894.2943 3.333314e-04
+247   895.4955 3.388054e-04
+248   896.6967 3.443471e-04
+249   897.8979 3.499571e-04
+250   899.0991 3.556356e-04
+251   900.3003 3.613831e-04
+252   901.5015 3.672000e-04
+253   902.7027 3.730866e-04
+254   903.9039 3.790432e-04
+255   905.1051 3.850702e-04
+256   906.3063 3.911680e-04
+257   907.5075 3.973368e-04
+258   908.7087 4.035771e-04
+259   909.9099 4.098890e-04
+260   911.1111 4.162730e-04
+261   912.3123 4.227294e-04
+262   913.5135 4.292583e-04
+263   914.7147 4.358601e-04
+264   915.9159 4.425351e-04
+265   917.1171 4.492834e-04
+266   918.3183 4.561055e-04
+267   919.5195 4.630014e-04
+268   920.7207 4.699714e-04
+269   921.9219 4.770158e-04
+270   923.1231 4.841348e-04
+271   924.3243 4.913284e-04
+272   925.5255 4.985970e-04
+273   926.7267 5.059406e-04
+274   927.9279 5.133595e-04
+275   929.1291 5.208538e-04
+276   930.3303 5.284236e-04
+277   931.5315 5.360691e-04
+278   932.7327 5.437902e-04
+279   933.9339 5.515872e-04
+280   935.1351 5.594602e-04
+281   936.3363 5.674091e-04
+282   937.5375 5.754341e-04
+283   938.7387 5.835351e-04
+284   939.9399 5.917122e-04
+285   941.1411 5.999655e-04
+286   942.3423 6.082948e-04
+287   943.5435 6.167002e-04
+288   944.7447 6.251817e-04
+289   945.9459 6.337392e-04
+290   947.1471 6.423727e-04
+291   948.3483 6.510820e-04
+292   949.5495 6.598670e-04
+293   950.7508 6.687277e-04
+294   951.9520 6.776640e-04
+295   953.1532 6.866756e-04
+296   954.3544 6.957624e-04
+297   955.5556 7.049243e-04
+298   956.7568 7.141610e-04
+299   957.9580 7.234723e-04
+300   959.1592 7.328581e-04
+301   960.3604 7.423180e-04
+302   961.5616 7.518518e-04
+303   962.7628 7.614592e-04
+304   963.9640 7.711399e-04
+305   965.1652 7.808936e-04
+306   966.3664 7.907200e-04
+307   967.5676 8.006187e-04
+308   968.7688 8.105893e-04
+309   969.9700 8.206315e-04
+310   971.1712 8.307448e-04
+311   972.3724 8.409288e-04
+312   973.5736 8.511831e-04
+313   974.7748 8.615071e-04
+314   975.9760 8.719005e-04
+315   977.1772 8.823627e-04
+316   978.3784 8.928931e-04
+317   979.5796 9.034913e-04
+318   980.7808 9.141566e-04
+319   981.9820 9.248886e-04
+320   983.1832 9.356865e-04
+321   984.3844 9.465498e-04
+322   985.5856 9.574778e-04
+323   986.7868 9.684698e-04
+324   987.9880 9.795252e-04
+325   989.1892 9.906433e-04
+326   990.3904 1.001823e-03
+327   991.5916 1.013065e-03
+328   992.7928 1.024366e-03
+329   993.9940 1.035728e-03
+330   995.1952 1.047148e-03
+331   996.3964 1.058626e-03
+332   997.5976 1.070162e-03
+333   998.7988 1.081753e-03
+334  1000.0000 1.093400e-03
+335  1001.2012 1.105102e-03
+336  1002.4024 1.116858e-03
+337  1003.6036 1.128666e-03
+338  1004.8048 1.140525e-03
+339  1006.0060 1.152436e-03
+340  1007.2072 1.164396e-03
+341  1008.4084 1.176405e-03
+342  1009.6096 1.188461e-03
+343  1010.8108 1.200564e-03
+344  1012.0120 1.212713e-03
+345  1013.2132 1.224905e-03
+346  1014.4144 1.237141e-03
+347  1015.6156 1.249420e-03
+348  1016.8168 1.261739e-03
+349  1018.0180 1.274098e-03
+350  1019.2192 1.286495e-03
+351  1020.4204 1.298930e-03
+352  1021.6216 1.311401e-03
+353  1022.8228 1.323907e-03
+354  1024.0240 1.336446e-03
+355  1025.2252 1.349017e-03
+356  1026.4264 1.361620e-03
+357  1027.6276 1.374252e-03
+358  1028.8288 1.386912e-03
+359  1030.0300 1.399599e-03
+360  1031.2312 1.412312e-03
+361  1032.4324 1.425049e-03
+362  1033.6336 1.437808e-03
+363  1034.8348 1.450589e-03
+364  1036.0360 1.463389e-03
+365  1037.2372 1.476208e-03
+366  1038.4384 1.489043e-03
+367  1039.6396 1.501894e-03
+368  1040.8408 1.514759e-03
+369  1042.0420 1.527635e-03
+370  1043.2432 1.540523e-03
+371  1044.4444 1.553419e-03
+372  1045.6456 1.566323e-03
+373  1046.8468 1.579233e-03
+374  1048.0480 1.592148e-03
+375  1049.2492 1.605064e-03
+376  1050.4505 1.617982e-03
+377  1051.6517 1.630900e-03
+378  1052.8529 1.643815e-03
+379  1054.0541 1.656726e-03
+380  1055.2553 1.669631e-03
+381  1056.4565 1.682529e-03
+382  1057.6577 1.695418e-03
+383  1058.8589 1.708296e-03
+384  1060.0601 1.721162e-03
+385  1061.2613 1.734013e-03
+386  1062.4625 1.746848e-03
+387  1063.6637 1.759666e-03
+388  1064.8649 1.772463e-03
+389  1066.0661 1.785240e-03
+390  1067.2673 1.797993e-03
+391  1068.4685 1.810721e-03
+392  1069.6697 1.823422e-03
+393  1070.8709 1.836094e-03
+394  1072.0721 1.848737e-03
+395  1073.2733 1.861346e-03
+396  1074.4745 1.873922e-03
+397  1075.6757 1.886461e-03
+398  1076.8769 1.898963e-03
+399  1078.0781 1.911425e-03
+400  1079.2793 1.923846e-03
+401  1080.4805 1.936222e-03
+402  1081.6817 1.948554e-03
+403  1082.8829 1.960838e-03
+404  1084.0841 1.973074e-03
+405  1085.2853 1.985258e-03
+406  1086.4865 1.997389e-03
+407  1087.6877 2.009466e-03
+408  1088.8889 2.021486e-03
+409  1090.0901 2.033448e-03
+410  1091.2913 2.045349e-03
+411  1092.4925 2.057188e-03
+412  1093.6937 2.068963e-03
+413  1094.8949 2.080672e-03
+414  1096.0961 2.092312e-03
+415  1097.2973 2.103883e-03
+416  1098.4985 2.115383e-03
+417  1099.6997 2.126809e-03
+418  1100.9009 2.138159e-03
+419  1102.1021 2.149432e-03
+420  1103.3033 2.160626e-03
+421  1104.5045 2.171739e-03
+422  1105.7057 2.182769e-03
+423  1106.9069 2.193715e-03
+424  1108.1081 2.204574e-03
+425  1109.3093 2.215345e-03
+426  1110.5105 2.226025e-03
+427  1111.7117 2.236614e-03
+428  1112.9129 2.247109e-03
+429  1114.1141 2.257509e-03
+430  1115.3153 2.267811e-03
+431  1116.5165 2.278014e-03
+432  1117.7177 2.288116e-03
+433  1118.9189 2.298115e-03
+434  1120.1201 2.308011e-03
+435  1121.3213 2.317800e-03
+436  1122.5225 2.327482e-03
+437  1123.7237 2.337054e-03
+438  1124.9249 2.346515e-03
+439  1126.1261 2.355863e-03
+440  1127.3273 2.365097e-03
+441  1128.5285 2.374214e-03
+442  1129.7297 2.383214e-03
+443  1130.9309 2.392095e-03
+444  1132.1321 2.400855e-03
+445  1133.3333 2.409492e-03
+446  1134.5345 2.418006e-03
+447  1135.7357 2.426393e-03
+448  1136.9369 2.434654e-03
+449  1138.1381 2.442787e-03
+450  1139.3393 2.450789e-03
+451  1140.5405 2.458660e-03
+452  1141.7417 2.466398e-03
+453  1142.9429 2.474001e-03
+454  1144.1441 2.481469e-03
+455  1145.3453 2.488800e-03
+456  1146.5465 2.495993e-03
+457  1147.7477 2.503045e-03
+458  1148.9489 2.509957e-03
+459  1150.1502 2.516727e-03
+460  1151.3514 2.523352e-03
+461  1152.5526 2.529833e-03
+462  1153.7538 2.536168e-03
+463  1154.9550 2.542356e-03
+464  1156.1562 2.548396e-03
+465  1157.3574 2.554286e-03
+466  1158.5586 2.560025e-03
+467  1159.7598 2.565613e-03
+468  1160.9610 2.571048e-03
+469  1162.1622 2.576330e-03
+470  1163.3634 2.581457e-03
+471  1164.5646 2.586428e-03
+472  1165.7658 2.591242e-03
+473  1166.9670 2.595899e-03
+474  1168.1682 2.600398e-03
+475  1169.3694 2.604737e-03
+476  1170.5706 2.608916e-03
+477  1171.7718 2.612935e-03
+478  1172.9730 2.616792e-03
+479  1174.1742 2.620486e-03
+480  1175.3754 2.624017e-03
+481  1176.5766 2.627385e-03
+482  1177.7778 2.630588e-03
+483  1178.9790 2.633627e-03
+484  1180.1802 2.636499e-03
+485  1181.3814 2.639206e-03
+486  1182.5826 2.641746e-03
+487  1183.7838 2.644119e-03
+488  1184.9850 2.646324e-03
+489  1186.1862 2.648361e-03
+490  1187.3874 2.650230e-03
+491  1188.5886 2.651930e-03
+492  1189.7898 2.653461e-03
+493  1190.9910 2.654823e-03
+494  1192.1922 2.656015e-03
+495  1193.3934 2.657037e-03
+496  1194.5946 2.657889e-03
+497  1195.7958 2.658571e-03
+498  1196.9970 2.659082e-03
+499  1198.1982 2.659423e-03
+500  1199.3994 2.659594e-03
+501  1200.6006 2.659594e-03
+502  1201.8018 2.659423e-03
+503  1203.0030 2.659082e-03
+504  1204.2042 2.658571e-03
+505  1205.4054 2.657889e-03
+506  1206.6066 2.657037e-03
+507  1207.8078 2.656015e-03
+508  1209.0090 2.654823e-03
+509  1210.2102 2.653461e-03
+510  1211.4114 2.651930e-03
+511  1212.6126 2.650230e-03
+512  1213.8138 2.648361e-03
+513  1215.0150 2.646324e-03
+514  1216.2162 2.644119e-03
+515  1217.4174 2.641746e-03
+516  1218.6186 2.639206e-03
+517  1219.8198 2.636499e-03
+518  1221.0210 2.633627e-03
+519  1222.2222 2.630588e-03
+520  1223.4234 2.627385e-03
+521  1224.6246 2.624017e-03
+522  1225.8258 2.620486e-03
+523  1227.0270 2.616792e-03
+524  1228.2282 2.612935e-03
+525  1229.4294 2.608916e-03
+526  1230.6306 2.604737e-03
+527  1231.8318 2.600398e-03
+528  1233.0330 2.595899e-03
+529  1234.2342 2.591242e-03
+530  1235.4354 2.586428e-03
+531  1236.6366 2.581457e-03
+532  1237.8378 2.576330e-03
+533  1239.0390 2.571048e-03
+534  1240.2402 2.565613e-03
+535  1241.4414 2.560025e-03
+536  1242.6426 2.554286e-03
+537  1243.8438 2.548396e-03
+538  1245.0450 2.542356e-03
+539  1246.2462 2.536168e-03
+540  1247.4474 2.529833e-03
+541  1248.6486 2.523352e-03
+542  1249.8498 2.516727e-03
+543  1251.0511 2.509957e-03
+544  1252.2523 2.503045e-03
+545  1253.4535 2.495993e-03
+546  1254.6547 2.488800e-03
+547  1255.8559 2.481469e-03
+548  1257.0571 2.474001e-03
+549  1258.2583 2.466398e-03
+550  1259.4595 2.458660e-03
+551  1260.6607 2.450789e-03
+552  1261.8619 2.442787e-03
+553  1263.0631 2.434654e-03
+554  1264.2643 2.426393e-03
+555  1265.4655 2.418006e-03
+556  1266.6667 2.409492e-03
+557  1267.8679 2.400855e-03
+558  1269.0691 2.392095e-03
+559  1270.2703 2.383214e-03
+560  1271.4715 2.374214e-03
+561  1272.6727 2.365097e-03
+562  1273.8739 2.355863e-03
+563  1275.0751 2.346515e-03
+564  1276.2763 2.337054e-03
+565  1277.4775 2.327482e-03
+566  1278.6787 2.317800e-03
+567  1279.8799 2.308011e-03
+568  1281.0811 2.298115e-03
+569  1282.2823 2.288116e-03
+570  1283.4835 2.278014e-03
+571  1284.6847 2.267811e-03
+572  1285.8859 2.257509e-03
+573  1287.0871 2.247109e-03
+574  1288.2883 2.236614e-03
+575  1289.4895 2.226025e-03
+576  1290.6907 2.215345e-03
+577  1291.8919 2.204574e-03
+578  1293.0931 2.193715e-03
+579  1294.2943 2.182769e-03
+580  1295.4955 2.171739e-03
+581  1296.6967 2.160626e-03
+582  1297.8979 2.149432e-03
+583  1299.0991 2.138159e-03
+584  1300.3003 2.126809e-03
+585  1301.5015 2.115383e-03
+586  1302.7027 2.103883e-03
+587  1303.9039 2.092312e-03
+588  1305.1051 2.080672e-03
+589  1306.3063 2.068963e-03
+590  1307.5075 2.057188e-03
+591  1308.7087 2.045349e-03
+592  1309.9099 2.033448e-03
+593  1311.1111 2.021486e-03
+594  1312.3123 2.009466e-03
+595  1313.5135 1.997389e-03
+596  1314.7147 1.985258e-03
+597  1315.9159 1.973074e-03
+598  1317.1171 1.960838e-03
+599  1318.3183 1.948554e-03
+600  1319.5195 1.936222e-03
+601  1320.7207 1.923846e-03
+602  1321.9219 1.911425e-03
+603  1323.1231 1.898963e-03
+604  1324.3243 1.886461e-03
+605  1325.5255 1.873922e-03
+606  1326.7267 1.861346e-03
+607  1327.9279 1.848737e-03
+608  1329.1291 1.836094e-03
+609  1330.3303 1.823422e-03
+610  1331.5315 1.810721e-03
+611  1332.7327 1.797993e-03
+612  1333.9339 1.785240e-03
+613  1335.1351 1.772463e-03
+614  1336.3363 1.759666e-03
+615  1337.5375 1.746848e-03
+616  1338.7387 1.734013e-03
+617  1339.9399 1.721162e-03
+618  1341.1411 1.708296e-03
+619  1342.3423 1.695418e-03
+620  1343.5435 1.682529e-03
+621  1344.7447 1.669631e-03
+622  1345.9459 1.656726e-03
+623  1347.1471 1.643815e-03
+624  1348.3483 1.630900e-03
+625  1349.5495 1.617982e-03
+626  1350.7508 1.605064e-03
+627  1351.9520 1.592148e-03
+628  1353.1532 1.579233e-03
+629  1354.3544 1.566323e-03
+630  1355.5556 1.553419e-03
+631  1356.7568 1.540523e-03
+632  1357.9580 1.527635e-03
+633  1359.1592 1.514759e-03
+634  1360.3604 1.501894e-03
+635  1361.5616 1.489043e-03
+636  1362.7628 1.476208e-03
+637  1363.9640 1.463389e-03
+638  1365.1652 1.450589e-03
+639  1366.3664 1.437808e-03
+640  1367.5676 1.425049e-03
+641  1368.7688 1.412312e-03
+642  1369.9700 1.399599e-03
+643  1371.1712 1.386912e-03
+644  1372.3724 1.374252e-03
+645  1373.5736 1.361620e-03
+646  1374.7748 1.349017e-03
+647  1375.9760 1.336446e-03
+648  1377.1772 1.323907e-03
+649  1378.3784 1.311401e-03
+650  1379.5796 1.298930e-03
+651  1380.7808 1.286495e-03
+652  1381.9820 1.274098e-03
+653  1383.1832 1.261739e-03
+654  1384.3844 1.249420e-03
+655  1385.5856 1.237141e-03
+656  1386.7868 1.224905e-03
+657  1387.9880 1.212713e-03
+658  1389.1892 1.200564e-03
+659  1390.3904 1.188461e-03
+660  1391.5916 1.176405e-03
+661  1392.7928 1.164396e-03
+662  1393.9940 1.152436e-03
+663  1395.1952 1.140525e-03
+664  1396.3964 1.128666e-03
+665  1397.5976 1.116858e-03
+666  1398.7988 1.105102e-03
+667  1400.0000 1.093400e-03
+668  1401.2012 1.081753e-03
+669  1402.4024 1.070162e-03
+670  1403.6036 1.058626e-03
+671  1404.8048 1.047148e-03
+672  1406.0060 1.035728e-03
+673  1407.2072 1.024366e-03
+674  1408.4084 1.013065e-03
+675  1409.6096 1.001823e-03
+676  1410.8108 9.906433e-04
+677  1412.0120 9.795252e-04
+678  1413.2132 9.684698e-04
+679  1414.4144 9.574778e-04
+680  1415.6156 9.465498e-04
+681  1416.8168 9.356865e-04
+682  1418.0180 9.248886e-04
+683  1419.2192 9.141566e-04
+684  1420.4204 9.034913e-04
+685  1421.6216 8.928931e-04
+686  1422.8228 8.823627e-04
+687  1424.0240 8.719005e-04
+688  1425.2252 8.615071e-04
+689  1426.4264 8.511831e-04
+690  1427.6276 8.409288e-04
+691  1428.8288 8.307448e-04
+692  1430.0300 8.206315e-04
+693  1431.2312 8.105893e-04
+694  1432.4324 8.006187e-04
+695  1433.6336 7.907200e-04
+696  1434.8348 7.808936e-04
+697  1436.0360 7.711399e-04
+698  1437.2372 7.614592e-04
+699  1438.4384 7.518518e-04
+700  1439.6396 7.423180e-04
+701  1440.8408 7.328581e-04
+702  1442.0420 7.234723e-04
+703  1443.2432 7.141610e-04
+704  1444.4444 7.049243e-04
+705  1445.6456 6.957624e-04
+706  1446.8468 6.866756e-04
+707  1448.0480 6.776640e-04
+708  1449.2492 6.687277e-04
+709  1450.4505 6.598670e-04
+710  1451.6517 6.510820e-04
+711  1452.8529 6.423727e-04
+712  1454.0541 6.337392e-04
+713  1455.2553 6.251817e-04
+714  1456.4565 6.167002e-04
+715  1457.6577 6.082948e-04
+716  1458.8589 5.999655e-04
+717  1460.0601 5.917122e-04
+718  1461.2613 5.835351e-04
+719  1462.4625 5.754341e-04
+720  1463.6637 5.674091e-04
+721  1464.8649 5.594602e-04
+722  1466.0661 5.515872e-04
+723  1467.2673 5.437902e-04
+724  1468.4685 5.360691e-04
+725  1469.6697 5.284236e-04
+726  1470.8709 5.208538e-04
+727  1472.0721 5.133595e-04
+728  1473.2733 5.059406e-04
+729  1474.4745 4.985970e-04
+730  1475.6757 4.913284e-04
+731  1476.8769 4.841348e-04
+732  1478.0781 4.770158e-04
+733  1479.2793 4.699714e-04
+734  1480.4805 4.630014e-04
+735  1481.6817 4.561055e-04
+736  1482.8829 4.492834e-04
+737  1484.0841 4.425351e-04
+738  1485.2853 4.358601e-04
+739  1486.4865 4.292583e-04
+740  1487.6877 4.227294e-04
+741  1488.8889 4.162730e-04
+742  1490.0901 4.098890e-04
+743  1491.2913 4.035771e-04
+744  1492.4925 3.973368e-04
+745  1493.6937 3.911680e-04
+746  1494.8949 3.850702e-04
+747  1496.0961 3.790432e-04
+748  1497.2973 3.730866e-04
+749  1498.4985 3.672000e-04
+750  1499.6997 3.613831e-04
+751  1500.9009 3.556356e-04
+752  1502.1021 3.499571e-04
+753  1503.3033 3.443471e-04
+754  1504.5045 3.388054e-04
+755  1505.7057 3.333314e-04
+756  1506.9069 3.279249e-04
+757  1508.1081 3.225853e-04
+758  1509.3093 3.173124e-04
+759  1510.5105 3.121056e-04
+760  1511.7117 3.069646e-04
+761  1512.9129 3.018889e-04
+762  1514.1141 2.968781e-04
+763  1515.3153 2.919318e-04
+764  1516.5165 2.870494e-04
+765  1517.7177 2.822306e-04
+766  1518.9189 2.774749e-04
+767  1520.1201 2.727819e-04
+768  1521.3213 2.681510e-04
+769  1522.5225 2.635818e-04
+770  1523.7237 2.590739e-04
+771  1524.9249 2.546268e-04
+772  1526.1261 2.502399e-04
+773  1527.3273 2.459128e-04
+774  1528.5285 2.416451e-04
+775  1529.7297 2.374362e-04
+776  1530.9309 2.332857e-04
+777  1532.1321 2.291930e-04
+778  1533.3333 2.251577e-04
+779  1534.5345 2.211792e-04
+780  1535.7357 2.172571e-04
+781  1536.9369 2.133909e-04
+782  1538.1381 2.095800e-04
+783  1539.3393 2.058240e-04
+784  1540.5405 2.021223e-04
+785  1541.7417 1.984745e-04
+786  1542.9429 1.948800e-04
+787  1544.1441 1.913384e-04
+788  1545.3453 1.878491e-04
+789  1546.5465 1.844115e-04
+790  1547.7477 1.810253e-04
+791  1548.9489 1.776899e-04
+792  1550.1502 1.744047e-04
+793  1551.3514 1.711693e-04
+794  1552.5526 1.679831e-04
+795  1553.7538 1.648457e-04
+796  1554.9550 1.617565e-04
+797  1556.1562 1.587150e-04
+798  1557.3574 1.557207e-04
+799  1558.5586 1.527731e-04
+800  1559.7598 1.498717e-04
+801  1560.9610 1.470159e-04
+802  1562.1622 1.442053e-04
+803  1563.3634 1.414394e-04
+804  1564.5646 1.387177e-04
+805  1565.7658 1.360396e-04
+806  1566.9670 1.334046e-04
+807  1568.1682 1.308123e-04
+808  1569.3694 1.282621e-04
+809  1570.5706 1.257536e-04
+810  1571.7718 1.232863e-04
+811  1572.9730 1.208596e-04
+812  1574.1742 1.184730e-04
+813  1575.3754 1.161262e-04
+814  1576.5766 1.138185e-04
+815  1577.7778 1.115496e-04
+816  1578.9790 1.093188e-04
+817  1580.1802 1.071258e-04
+818  1581.3814 1.049701e-04
+819  1582.5826 1.028511e-04
+820  1583.7838 1.007685e-04
+821  1584.9850 9.872170e-05
+822  1586.1862 9.671027e-05
+823  1587.3874 9.473375e-05
+824  1588.5886 9.279167e-05
+825  1589.7898 9.088358e-05
+826  1590.9910 8.900902e-05
+827  1592.1922 8.716753e-05
+828  1593.3934 8.535867e-05
+829  1594.5946 8.358198e-05
+830  1595.7958 8.183703e-05
+831  1596.9970 8.012336e-05
+832  1598.1982 7.844055e-05
+833  1599.3994 7.678816e-05
+834  1600.6006 7.516576e-05
+835  1601.8018 7.357292e-05
+836  1603.0030 7.200921e-05
+837  1604.2042 7.047422e-05
+838  1605.4054 6.896753e-05
+839  1606.6066 6.748872e-05
+840  1607.8078 6.603738e-05
+841  1609.0090 6.461312e-05
+842  1610.2102 6.321551e-05
+843  1611.4114 6.184417e-05
+844  1612.6126 6.049870e-05
+845  1613.8138 5.917871e-05
+846  1615.0150 5.788380e-05
+847  1616.2162 5.661360e-05
+848  1617.4174 5.536772e-05
+849  1618.6186 5.414578e-05
+850  1619.8198 5.294742e-05
+851  1621.0210 5.177226e-05
+852  1622.2222 5.061994e-05
+853  1623.4234 4.949009e-05
+854  1624.6246 4.838235e-05
+855  1625.8258 4.729638e-05
+856  1627.0270 4.623182e-05
+857  1628.2282 4.518832e-05
+858  1629.4294 4.416554e-05
+859  1630.6306 4.316314e-05
+860  1631.8318 4.218079e-05
+861  1633.0330 4.121815e-05
+862  1634.2342 4.027490e-05
+863  1635.4354 3.935071e-05
+864  1636.6366 3.844527e-05
+865  1637.8378 3.755824e-05
+866  1639.0390 3.668933e-05
+867  1640.2402 3.583823e-05
+868  1641.4414 3.500462e-05
+869  1642.6426 3.418821e-05
+870  1643.8438 3.338871e-05
+871  1645.0450 3.260580e-05
+872  1646.2462 3.183921e-05
+873  1647.4474 3.108866e-05
+874  1648.6486 3.035384e-05
+875  1649.8498 2.963450e-05
+876  1651.0511 2.893035e-05
+877  1652.2523 2.824112e-05
+878  1653.4535 2.756654e-05
+879  1654.6547 2.690635e-05
+880  1655.8559 2.626028e-05
+881  1657.0571 2.562809e-05
+882  1658.2583 2.500951e-05
+883  1659.4595 2.440429e-05
+884  1660.6607 2.381220e-05
+885  1661.8619 2.323298e-05
+886  1663.0631 2.266639e-05
+887  1664.2643 2.211221e-05
+888  1665.4655 2.157019e-05
+889  1666.6667 2.104011e-05
+890  1667.8679 2.052174e-05
+891  1669.0691 2.001485e-05
+892  1670.2703 1.951924e-05
+893  1671.4715 1.903468e-05
+894  1672.6727 1.856095e-05
+895  1673.8739 1.809786e-05
+896  1675.0751 1.764518e-05
+897  1676.2763 1.720273e-05
+898  1677.4775 1.677029e-05
+899  1678.6787 1.634768e-05
+900  1679.8799 1.593470e-05
+901  1681.0811 1.553115e-05
+902  1682.2823 1.513685e-05
+903  1683.4835 1.475162e-05
+904  1684.6847 1.437527e-05
+905  1685.8859 1.400762e-05
+906  1687.0871 1.364850e-05
+907  1688.2883 1.329773e-05
+908  1689.4895 1.295515e-05
+909  1690.6907 1.262058e-05
+910  1691.8919 1.229387e-05
+911  1693.0931 1.197484e-05
+912  1694.2943 1.166335e-05
+913  1695.4955 1.135923e-05
+914  1696.6967 1.106233e-05
+915  1697.8979 1.077250e-05
+916  1699.0991 1.048959e-05
+917  1700.3003 1.021345e-05
+918  1701.5015 9.943950e-06
+919  1702.7027 9.680938e-06
+920  1703.9039 9.424278e-06
+921  1705.1051 9.173833e-06
+922  1706.3063 8.929472e-06
+923  1707.5075 8.691062e-06
+924  1708.7087 8.458475e-06
+925  1709.9099 8.231585e-06
+926  1711.1111 8.010267e-06
+927  1712.3123 7.794400e-06
+928  1713.5135 7.583863e-06
+929  1714.7147 7.378541e-06
+930  1715.9159 7.178317e-06
+931  1717.1171 6.983078e-06
+932  1718.3183 6.792714e-06
+933  1719.5195 6.607115e-06
+934  1720.7207 6.426176e-06
+935  1721.9219 6.249791e-06
+936  1723.1231 6.077857e-06
+937  1724.3243 5.910275e-06
+938  1725.5255 5.746945e-06
+939  1726.7267 5.587769e-06
+940  1727.9279 5.432655e-06
+941  1729.1291 5.281507e-06
+942  1730.3303 5.134236e-06
+943  1731.5315 4.990751e-06
+944  1732.7327 4.850964e-06
+945  1733.9339 4.714791e-06
+946  1735.1351 4.582146e-06
+947  1736.3363 4.452948e-06
+948  1737.5375 4.327115e-06
+949  1738.7387 4.204568e-06
+950  1739.9399 4.085230e-06
+951  1741.1411 3.969025e-06
+952  1742.3423 3.855877e-06
+953  1743.5435 3.745715e-06
+954  1744.7447 3.638468e-06
+955  1745.9459 3.534064e-06
+956  1747.1471 3.432435e-06
+957  1748.3483 3.333516e-06
+958  1749.5495 3.237240e-06
+959  1750.7508 3.143542e-06
+960  1751.9520 3.052361e-06
+961  1753.1532 2.963635e-06
+962  1754.3544 2.877303e-06
+963  1755.5556 2.793307e-06
+964  1756.7568 2.711589e-06
+965  1757.9580 2.632093e-06
+966  1759.1592 2.554764e-06
+967  1760.3604 2.479547e-06
+968  1761.5616 2.406391e-06
+969  1762.7628 2.335243e-06
+970  1763.9640 2.266054e-06
+971  1765.1652 2.198774e-06
+972  1766.3664 2.133354e-06
+973  1767.5676 2.069748e-06
+974  1768.7688 2.007910e-06
+975  1769.9700 1.947794e-06
+976  1771.1712 1.889357e-06
+977  1772.3724 1.832556e-06
+978  1773.5736 1.777348e-06
+979  1774.7748 1.723693e-06
+980  1775.9760 1.671551e-06
+981  1777.1772 1.620882e-06
+982  1778.3784 1.571648e-06
+983  1779.5796 1.523811e-06
+984  1780.7808 1.477337e-06
+985  1781.9820 1.432187e-06
+986  1783.1832 1.388329e-06
+987  1784.3844 1.345727e-06
+988  1785.5856 1.304349e-06
+989  1786.7868 1.264162e-06
+990  1787.9880 1.225135e-06
+991  1789.1892 1.187236e-06
+992  1790.3904 1.150436e-06
+993  1791.5916 1.114705e-06
+994  1792.7928 1.080015e-06
+995  1793.9940 1.046337e-06
+996  1795.1952 1.013644e-06
+997  1796.3964 9.819099e-07
+998  1797.5976 9.511082e-07
+999  1798.7988 9.212136e-07
+1000 1800.0000 8.922015e-07</code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-15-códigos-gráficos" class="slide level2 small">
+<h2>Ejercicio 15 Códigos Gráficos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="co"># Gráfico</span></span>
+<span id="cb41-2"><a></a>grafico_normal <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df_salarios, <span class="fu">aes</span>(<span class="at">x =</span> Salario, <span class="at">y =</span> Densidad)) <span class="sc">+</span></span>
+<span id="cb41-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb41-4"><a></a>  <span class="co"># Sombreado para X &lt; 1000</span></span>
+<span id="cb41-5"><a></a>  <span class="fu">geom_area</span>(<span class="at">data =</span> <span class="fu">filter</span>(df_salarios, Salario <span class="sc">&lt;</span> <span class="dv">1000</span>), </span>
+<span id="cb41-6"><a></a>            <span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1200</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb41-8"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución Normal de Salarios"</span>,</span>
+<span id="cb41-9"><a></a>       <span class="at">subtitle =</span> <span class="st">"Media = $1200, Desviación Estándar = $150"</span>,</span>
+<span id="cb41-10"><a></a>       <span class="at">x =</span> <span class="st">"Salario Mensual ($)"</span>,</span>
+<span id="cb41-11"><a></a>       <span class="at">y =</span> <span class="st">"Densidad de Probabilidad"</span>) <span class="sc">+</span></span>
+<span id="cb41-12"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejercicio-15-gráfico" class="slide level2">
+<h2>Ejercicio 15 Gráfico</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>grafico_normal</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_13_14_practica_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="quarto-auto-generated-content">
+<p><img src="images/logo2.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://ucveconomia-estadistica1.netlify.app/">🔗 Estadística 1</a></p>
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/ucveconomia-estadistica1-2-2025\.netlify\.app\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

@@ -1,0 +1,400 @@
+---
+title: "Estadística I"
+subtitle: "Guía de Ejercicios: La Distribución Binomial (Clase 13) y la Distribución Normal (Clase1 14)"
+date: "2026/02/23"
+format: revealjs
+lang: es
+author: M.Sc. José Miguel Avendaño I.
+incremental: false
+auto-stretch: false
+fig-align: center
+execute:
+  echo: true
+  eval: true
+  code-fold: true
+  code-summary: "mostrár código"
+  fig-align: center
+---
+
+## Dist. Binomial
+
+La distribución binomial es un modelo de probabilidad discreta que describe el número de éxitos en una secuencia de $n$ ensayos independientes de Bernoulli, con una probabilidad fija $p$ de ocurrencia del éxito entre los ensayos.
+
+------------------------------------------------------------------------
+
+## Cálculos Manuales (Sin R) {.small}
+
+El objetivo de esta sección es comprender la estructura de la función de probabilidad de la distribución binomial:
+
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$$
+
+Donde:
+
+\- $n$ es el número de ensayos.
+
+\- $k$ es el número de éxitos deseados.
+
+\- $p$ es la probabilidad de éxito en un ensayo dado.
+
+\- $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ es el coeficiente binomial.
+
+## Ejercicio 1: Probabilidad Exacta (Riesgo Crediticio)
+
+Un analista de crédito en un banco determina que la probabilidad de que un cliente de cierto segmento incurra en impago (default) en su primer año es del $10\%$ ($p = 0.10$). Si se selecciona una muestra aleatoria de $4$ clientes de este segmento: **¿Cuál es la probabilidad de que exactamente 1 cliente incurra en impago?**
+
+## **Solución Manual** Ejercicio 1**:**
+
+\- $n = 4$
+
+\- $k = 1$
+
+\- $p = 0.10$
+
+$$P(X = 1) = \binom{4}{1} (0.10)^1 (0.90)^3 = 4 \times 0.10 \times 0.729 = 0.2916$$ La probabilidad es del $29.16\%$.
+
+## Ejercicio 2: Probabilidad Acumulada (Lanzamiento de un Producto) {.small}
+
+Una pequeña empresa de software sabe por experiencia que el $20\%$ de los usuarios que descargan la versión de prueba de su programa terminan comprando la licencia ($p = 0.20$). Si hoy $5$ usuarios descargaron la prueba: **¿Cuál es la probabilidad de que máximo 2 usuarios compren la licencia?**
+
+## **Solución Manual** Ejercicio 2**:**
+
+Para hallar $P(X \le 2)$, debemos calcular y sumar las probabilidades individuales de $X = 0$, $X = 1$ y $X = 2$.
+
+-   $P(X = 0) = \binom{5}{0} (0.20)^0 (0.80)^5 = 1 \times 1 \times 0.32768 = 0.32768$
+-   $P(X = 1) = \binom{5}{1} (0.20)^1 (0.80)^4 = 5 \times 0.20 \times 0.4096 = 0.4096$
+-   $P(X = 2) = \binom{5}{2} (0.20)^2 (0.80)^3 = 10 \times 0.04 \times 0.512 = 0.2048$
+
+$$P(X \le 2) = 0.32768 + 0.4096 + 0.2048 = 0.94208$$
+
+::: notes
+*Nota cómo el cálculo manual se vuelve tedioso rápidamente. ¿Qué pasaría si tuviéramos 100 usuarios y quisiéramos saber la probabilidad de que máximo 40 compren la licencia? ¡Tendríamos que calcular y sumar 41 fórmulas distintas! Aquí es donde R se vuelve una herramienta indispensable.*
+:::
+
+------------------------------------------------------------------------
+
+## Cálculos con R
+
+En R, contamos con cuatro funciones principales para trabajar con cualquier distribución. Para la binomial, estas son:
+
+\- `dbinom()`: Densidad o probabilidad exacta $P(X = k)$.
+
+\- `pbinom()`: Probabilidad acumulada $P(X \le k)$.
+
+\- `qbinom()`: Cuantiles (el valor de $k$ dada una probabilidad).
+
+\- `rbinom()`: Generación de números aleatorios (simulación).
+
+```{r setup, message=FALSE, warning=FALSE,echo=FALSE}
+# Cargamos los paquetes que usaremos para visualización y manipulación
+library(ggplot2)
+library(dplyr)
+```
+
+## Ejercicio 3: Probabilidad Exacta con `dbinom` (Auditoría de Facturas) {.small}
+
+Una empresa de contabilidad sabe que el $5\%$ de las facturas que procesa tienen algún error menor. En una auditoría de rutina, se revisan $50$ facturas. **¿Cuál es la probabilidad de que se encuentren exactamente 4 facturas con errores?**
+
+```{r}
+#| echo: true
+n <- 50
+p <- 0.05
+k <- 4
+
+dbinom(x = k, size = n, prob = p)
+dbinom(x = 4, size = 50, prob = 0.05)
+```
+
+## Ejercicio 4: Probabilidad Acumulada con `pbinom` (Control de Calidad) {.small}
+
+Una fábrica produce microchips, y la tasa histórica de defectos es del $2\%$. Un lote se aprueba si en una muestra de $100$ chips hay 3 o menos defectuos. **¿Cuál es la probabilidad de aprobar un lote?** $P(X \le 3)$
+
+```{r}
+#| echo: true
+n <- 100
+p <- 0.02
+k <- 3
+
+pbinom(q = k, size = n, prob = p)
+
+```
+
+## Ejercicio 5: Probabilidad de la Cola Superior (Ventas de Seguros) {.xsmall}
+
+Un agente de seguros tiene una tasa de éxito del $15\%$ al contactar prospectos en frío. Si en una semana contacta a $80$ personas: **¿Cuál es la probabilidad de que logre vender más de 15 pólizas?** $P(X > 15)$
+
+*Nota: `pbinom` calcula* $P(X \le k)$. Para $P(X > k)$, calculamos $1 - P(X \le 15)$ o usamos el argumento `lower.tail = FALSE`.
+
+```{r}
+#| echo: true
+n <- 80
+p <- 0.15
+k <- 15
+
+# Método 1
+1 - pbinom(q = k, size = n, prob = p)
+
+# Método 2 (Recomendado)
+pbinom(q = k, size = n, prob = p, lower.tail = FALSE)
+```
+
+## Ejercicio 6: Probabilidad en un Rango (Análisis de Encuestas)
+
+En una encuesta nacional de consumo, se sabe que el $40\%$ de la población prefiere la marca "A". Si tomamos una muestra de $200$ individuos: **¿Cuál es la probabilidad de que entre 70 y 90 personas (ambos inclusive) prefieran la marca "A"?** $P(70 \le X \le 90)$
+
+```{r}
+#| echo: true
+n <- 200
+p <- 0.40
+
+# Calculamos P(X <= 90) y le restamos P(X <= 69) para incluir el 70.
+pbinom(90, n, p) - pbinom(69, n, p)
+
+```
+
+## Ejercicio 7: Uso de Cuantiles con `qbinom` (Planificación de Inventario) {.small}
+
+Una tienda de retail vende laptops durante promociones. La probabilidad de que un visitante compre una laptop es del $8\%$. Si se esperan $500$ visitantes en un día, el gerente quiere asegurar suficiente inventario. **¿Cuántas laptops debe tener en stock para satisfacer la demanda con una certeza del** $95\%$?
+
+```{r}
+#| echo: true
+n <- 500
+p <- 0.08
+certeza <- 0.95
+
+stock_necesario <- qbinom(p = certeza, size = n, prob = p)
+stock_necesario
+```
+
+## Ejercicio 8: Simulación con `rbinom` (Proyección de Crecimiento) {.small}
+
+Supongamos que una startup presenta su proyecto a varios fondos de inversión. La probabilidad de que un fondo decida invertir es del $12\%$. La startup presenta a $20$ fondos cada mes. **Simula el número de inversiones conseguidas por mes durante un periodo de 2 años (24 meses).**
+
+```{r}
+#| echo: true
+meses <- 24
+n_fondos <- 20
+p_exito <- 0.12
+
+set.seed(123) # Para reproducibilidad
+simulacion_inversiones <- rbinom(n = meses, size = n_fondos, prob = p_exito)
+simulacion_inversiones
+
+# Media empírica de nuestra simulación
+mean(simulacion_inversiones)
+```
+
+## Ejercicio 9: Visualización de la Función de Masa de Probabilidad (PMF) {.small}
+
+Visualizar la distribución nos ayuda a entender dónde se concentra la probabilidad. **Genera un gráfico de barras de la distribución binomial para el escenario de la startup (n = 20, p = 0.12).**
+
+```{r}
+#| echo: true
+n <- 20
+p <- 0.12
+x <- 0:n
+probabilidades <- dbinom(x, size = n, prob = p)
+
+df_binomial <- data.frame(Exitos = x, Probabilidad = probabilidades)
+df_binomial
+
+```
+
+## Ejercicio 9: cont.
+
+```{r}
+#| echo: true
+
+
+# Filtramos solo hasta 10 éxitos para ver mejor el gráfico,
+# ya que la probabilidad de 11+ es casi nula.
+grafico_binomial <- df_binomial %>%
+  filter(Exitos <= 10) %>%
+  ggplot(aes(x = factor(Exitos), y = Probabilidad)) +
+  geom_col(fill = "steelblue", color = "black", alpha = 0.8) +
+  geom_text(aes(label = round(Probabilidad, 3)), vjust = -0.5, size = 3.5) +
+  labs(title = "Distribución Binomial: Inversiones Conseguidas",
+       subtitle = "n = 20 ensayos, p = 0.12",
+       x = "Número de Inversiones (Éxitos)",
+       y = "Probabilidad") +
+  theme_minimal()
+```
+
+## Ejercicio 9 Gráfico
+
+```{r}
+#| echo: true
+grafico_binomial
+```
+
+## Ejercicio 10: Valor Esperado y Varianza Teórica vs. Empírica
+
+Para una distribución binomial, sabemos que: - Esperanza matemática: $E(X) = n \cdot p$ - Varianza: $V(X) = n \cdot p \cdot (1-p)$
+
+**Compara estos valores teóricos con los resultados de una simulación a gran escala (10,000 observaciones) para un portafolio de** $150$ acciones donde la probabilidad de que una acción supere el rendimiento del mercado es del $45\%$.
+
+## Ejercicio 10- cont.
+
+```{r}
+#| echo: true
+n_acciones <- 150
+p_superar <- 0.45
+n_simulaciones <- 10000
+
+# Cálculos Teóricos
+esperanza_teorica <- n_acciones * p_superar
+varianza_teorica <- n_acciones * p_superar * (1 - p_superar)
+
+# Simulación Empírica
+set.seed(456)
+sim_gran_escala <- rbinom(n_simulaciones, size = n_acciones, prob = p_superar)
+
+media_empirica <- mean(sim_gran_escala)
+varianza_empirica <- var(sim_gran_escala)
+
+# Resultados
+cat("Esperanza Teórica: ", esperanza_teorica, "\n")
+cat("Media Empírica: ", media_empirica, "\n\n")
+cat("Varianza Teórica: ", varianza_teorica, "\n")
+cat("Varianza Empírica: ", varianza_empirica, "\n")
+```
+
+## Ejercicio 10 cont.
+
+La Ley de los Grandes Números asegura que las simulaciones en R converjan de manera muy precisa a los parámetros poblacionales teóricos, lo cual es fundamental para el modelaje de riesgos económicos.
+
+## Dist. Normal
+
+La distribución normal es el modelo continuo más importante en estadística. Una variable aleatoria $X$ sigue una distribución normal si su función de densidad de probabilidad forma una curva simétrica en forma de campana, completamente determinada por dos parámetros: su media ($\mu$) y su desviación estándar ($\sigma$). Lo denotamos como $X \sim N(\mu, \sigma^2)$.
+
+En R, utilizamos el sufijo `norm` acompañado de las letras `d`, `p`, `q` y `r` para realizar cálculos de densidad, probabilidad acumulada, cuantiles y simulaciones aleatorias, respectivamente.
+
+------------------------------------------------------------------------
+
+### Ejercicio 11: Probabilidad de un valor inferior con `pnorm` (Gasto del Consumidor) {.small}
+
+Un estudio de mercado indica que el gasto mensual en entretenimiento de los hogares en cierta ciudad se distribuye normalmente con una media de \$150 mensuales y una desviación estándar de \$30. **¿Cuál es la probabilidad de que un hogar seleccionado al azar gaste menos de \$100 al mes en entretenimiento?** $P(X < 100)$
+
+```{r}
+mu <- 150
+sigma <- 30
+x <- 100
+
+pnorm(q = x, mean = mu, sd = sigma)
+```
+
+## Ejercicio 11: *Interpretación:*
+
+*Hay aproximadamente un 4.78% de probabilidad de que un hogar gaste menos de \$100 en entretenimiento.*
+
+------------------------------------------------------------------------
+
+## Ejercicio 12: Probabilidad en un intervalo (Salarios en la Industria)
+
+El salario mensual de los analistas financieros junior en un país sigue una distribución normal con una media de \$1200 y una desviación estándar de \$150. **¿Cuál es la probabilidad de que un analista gane entre \$1000 y \$1400 mensuales?** $P(1000 < X < 1400)$
+
+## Ejercicio 12: Códigos
+
+```{r}
+mu_salario <- 1200
+sigma_salario <- 150
+limite_inf <- 1000
+limite_sup <- 1400
+
+# Calculamos P(X < 1400) y le restamos P(X < 1000)
+prob_intervalo <- pnorm(limite_sup, mu_salario, sigma_salario) - 
+                  pnorm(limite_inf, mu_salario, sigma_salario)
+prob_intervalo
+```
+
+## Ejercicio 12 Interpretación*:* 
+
+*Aproximadamente el 81.76% de los analistas financieros junior tienen un salario dentro de este rango.*
+
+------------------------------------------------------------------------
+
+## Ejercicio 13: Encontrando percentiles con `qnorm` (Garantía de Tiempos de Entrega)
+
+Una empresa de logística promete entregas rápidas. Sabe que el tiempo de entrega de sus paquetes se distribuye normalmente con una media de 45 minutos y una desviación estándar de 8 minutos. La gerencia quiere establecer un tiempo máximo garantizado para su campaña publicitaria de modo que cumplan con el 95% de las entregas. **¿Cuál debe ser ese tiempo garantizado?** (Buscamos el percentil 95).
+
+## Ejercicio 13 códigos
+
+```{r}
+mu_tiempo <- 45
+sigma_tiempo <- 8
+prob_objetivo <- 0.95
+
+tiempo_garantizado <- qnorm(p = prob_objetivo, mean = mu_tiempo, sd = sigma_tiempo)
+tiempo_garantizado
+```
+
+## Ejercicio 13 Interpretación: 
+
+*Para cumplir con el 95% de los clientes, la empresa debería garantizar la entrega en 58.16 minutos (podría redondearse a 60 minutos por razones de marketing).*
+
+------------------------------------------------------------------------
+
+## Ejercicio 14: Simulación de escenarios con `rnorm` (Rendimiento de Acciones)
+
+Supongamos que el rendimiento diario de una acción en la bolsa de valores sigue una distribución normal con un rendimiento medio del 0.05% (0.0005) y una volatilidad (desviación estándar) del 2% (0.02). **Simula los rendimientos diarios de esta acción para los próximos 100 días de cotización e identifica cuántos días tuvieron un rendimiento negativo.**
+
+## Ejercicio 14 Códigos
+
+```{r}
+mu_rend <- 0.0005
+sigma_rend <- 0.02
+dias <- 100
+
+set.seed(789) # Para que todos los estudiantes obtengan el mismo resultado
+simulacion_rendimientos <- rnorm(n = dias, mean = mu_rend, sd = sigma_rend)
+
+# Contar cuántos días el rendimiento fue menor a 0
+dias_negativos <- sum(simulacion_rendimientos < 0)
+
+paste("De los 100 días simulados,", dias_negativos, "tuvieron rendimientos negativos.\n")
+```
+
+------------------------------------------------------------------------
+
+## Ejercicio 15: Visualización de la Curva Normal con `dnorm` y `ggplot2`
+
+Para entender mejor la distribución del Ejercicio 2 (Salarios), vamos a graficar la curva de densidad normal correspondiente y sombrear el área que representa a los analistas que ganan menos de \$1000.
+
+## Ejercicio 15 Códigos
+
+```{r}
+# Creamos un rango de valores para el eje X (Salarios)
+# Usualmente graficamos +/- 4 desviaciones estándar desde la media
+x_salarios <- seq(1200 - 4*150, 1200 + 4*150, length.out = 1000)
+
+# Calculamos la densidad (eje Y) para cada salario
+y_densidad <- dnorm(x_salarios, mean = 1200, sd = 150)
+
+# Creamos un dataframe para ggplot
+df_salarios <- data.frame(Salario = x_salarios, Densidad = y_densidad)
+
+df_salarios
+
+```
+
+## Ejercicio 15 Códigos Gráficos {.small}
+
+```{r}
+# Gráfico
+grafico_normal <- ggplot(df_salarios, aes(x = Salario, y = Densidad)) +
+  geom_line(color = "darkblue", size = 1) +
+  # Sombreado para X < 1000
+  geom_area(data = filter(df_salarios, Salario < 1000), 
+            fill = "red", alpha = 0.5) +
+  geom_vline(xintercept = 1200, linetype = "dashed", color = "black") +
+  labs(title = "Distribución Normal de Salarios",
+       subtitle = "Media = $1200, Desviación Estándar = $150",
+       x = "Salario Mensual ($)",
+       y = "Densidad de Probabilidad") +
+  theme_minimal()
+```
+
+## Ejercicio 15 Gráfico
+
+```{r}
+grafico_normal
+```
