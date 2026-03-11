@@ -57,6 +57,8 @@ website:
             text: Recursos Disponibles
           - href: participantes.qmd
             text: Alumnos Curso
+          - href: calificaciones.qmd
+            text: Calificaciones
       - section: Tareas
         contents:
           - href: asignacionI.qmd

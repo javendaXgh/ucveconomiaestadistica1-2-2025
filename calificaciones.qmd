@@ -1,0 +1,22 @@
+---
+title: "Calificaciones"
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+library(readxl)
+library(tidyverse)
+library(gt)
+library(gtExtras )
+
+read_xlsx('_admin_materiales/notas.xlsx')%>%
+  gt()%>%
+  fmt_missing(
+    columns = everything(), # Aplica el cambio a todas las columnas
+    missing_text = "-"      # Define el guion como texto de reemplazo
+  )%>%
+  gt_theme_pff()
+```
