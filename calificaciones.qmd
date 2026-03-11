@@ -13,6 +13,7 @@ library(gt)
 library(gtExtras )
 
 read_xlsx('_admin_materiales/notas.xlsx')%>%
+  mutate(Acum=round(Acum,2))%>%
   gt()%>%
   fmt_missing(
     columns = everything(), # Aplica el cambio a todas las columnas

@@ -4272,8 +4272,8 @@
     "objectID": "clases/clase_13_14_practica.html#dist.-binomial",
     "href": "clases/clase_13_14_practica.html#dist.-binomial",
     "title": "Estadística I",
-    "section": "Dist. Binomial",
-    "text": "Dist. Binomial\nLa distribución binomial es un modelo de probabilidad discreta que describe el número de éxitos en una secuencia de \\(n\\) ensayos independientes de Bernoulli, con una probabilidad fija \\(p\\) de ocurrencia del éxito entre los ensayos."
+    "section": "",
+    "text": "La distribución binomial es un modelo de probabilidad discreta que describe el número de éxitos en una secuencia de \\(n\\) ensayos independientes de Bernoulli, con una probabilidad fija \\(p\\) de ocurrencia del éxito entre los ensayos."
   },
   {
     "objectID": "clases/clase_13_14_practica.html#cálculos-manuales-sin-r",
@@ -4301,7 +4301,7 @@
     "href": "clases/clase_13_14_practica.html#dist.-normal",
     "title": "Estadística I",
     "section": "Dist. Normal",
-    "text": "Dist. Normal\nLa distribución normal es el modelo continuo más importante en estadística. Una variable aleatoria \\(X\\) sigue una distribución normal si su función de densidad de probabilidad forma una curva simétrica en forma de campana, completamente determinada por dos parámetros: su media (\\(\\mu\\)) y su desviación estándar (\\(\\sigma\\)). Lo denotamos como \\(X \\sim N(\\mu, \\sigma^2)\\).\nEn R, utilizamos el sufijo norm acompañado de las letras d, p, q y r para realizar cálculos de densidad, probabilidad acumulada, cuantiles y simulaciones aleatorias, respectivamente."
+    "text": "Dist. Normal\nLa distribución normal es el modelo continuo más importante en estadística. Una variable aleatoria \\(X\\) sigue una distribución normal si su función de densidad de probabilidad forma una curva simétrica en forma de campana, completamente determinada por dos parámetros: su media (\\(\\mu\\)) y su desviación estándar (\\(\\sigma\\)). Lo denotamos como \\(X \\sim N(\\mu, \\sigma^2)\\).\nEn R, utilizamos el sufijo norm acompañado de las letras d, p, q y r para realizar cálculos de densidad, probabilidad acumulada, cuantiles y simulaciones aleatorias, respectivamente.\n\n\nEjercicio 11: Probabilidad de un valor inferior con pnorm (Gasto del Consumidor)\nUn estudio de mercado indica que el gasto mensual en entretenimiento de los hogares en cierta ciudad se distribuye normalmente con una media de $150 mensuales y una desviación estándar de $30. ¿Cuál es la probabilidad de que un hogar seleccionado al azar gaste menos de $100 al mes en entretenimiento? \\(P(X &lt; 100)\\)\n\nmu &lt;- 150\nsigma &lt;- 30\nx &lt;- 100\n\npnorm(q = x, mean = mu, sd = sigma)\n\n[1] 0.04779035"
   },
   {
     "objectID": "clases/clase_13_14_practica.html#ejercicio-12-probabilidad-en-un-intervalo-salarios-en-la-industria",
@@ -4406,7 +4406,7 @@
     "href": "clases/clase_13_14_practica.html#ejercicio-15-gráfico",
     "title": "Estadística I",
     "section": "Ejercicio 15 Gráfico",
-    "text": "Ejercicio 15 Gráfico\n\ngrafico_normal\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Ejercicio 15 Gráfico\n\ngrafico_normal"
   },
   {
     "objectID": "clases/clase_15_01correlaciones.html#repaso",
@@ -4538,8 +4538,8 @@
     "objectID": "clases/clase_15_02coefR.html#coeficiente-de-correlación-de-pearson",
     "href": "clases/clase_15_02coefR.html#coeficiente-de-correlación-de-pearson",
     "title": "Estadística I",
-    "section": "Coeficiente de Correlación de Pearson",
-    "text": "Coeficiente de Correlación de Pearson\n\nEl coeficiente de correlación de Pearson (\\(r\\)) es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables cuantitativas.\nEs una herramienta fundamental en estadística para entender cómo se mueven dos variables de un mismo cojunto de datos en distintas observaciones.\nEl valor de \\(r\\) siempre se encuentra entre -1 y +1."
+    "section": "",
+    "text": "El coeficiente de correlación de Pearson (\\(r\\)) es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables cuantitativas.\nEs una herramienta fundamental en estadística para entender cómo se mueven dos variables de un mismo cojunto de datos en distintas observaciones.\nEl valor de \\(r\\) siempre se encuentra entre -1 y +1."
   },
   {
     "objectID": "clases/clase_15_02coefR.html#interpretación-del-coeficiente-r",
@@ -4637,7 +4637,7 @@
     "href": "clases/clase_15_02coefR.html#limitación---solo-relaciones-lineales",
     "title": "Estadística I",
     "section": "Limitación - Solo Relaciones Lineales",
-    "text": "Limitación - Solo Relaciones Lineales\nPearson “asume” que la relación entre variables es una línea recta.\n\nRelaciones Curvilíneas: Si tus datos forman una “U” o una curva perfecta, Pearson podría marcar un \\(r = 0\\), sugiriendo que no hay relación cuando en realidad hay una relación estructural muy fuerte (pero no lineal).\n\n\n\n\n\n\nImportante\n\n\nSiempre es vital visualizar los datos en un diagrama de dispersión antes de confiar ciegamente en el valor de \\(r\\).\n\n\n\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Limitación - Solo Relaciones Lineales\nPearson “asume” que la relación entre variables es una línea recta.\n\nRelaciones Curvilíneas: Si tus datos forman una “U” o una curva perfecta, Pearson podría marcar un \\(r = 0\\), sugiriendo que no hay relación cuando en realidad hay una relación estructural muy fuerte (pero no lineal).\n\n\n\n\n\n\nImportante\n\n\n\nSiempre es vital visualizar los datos en un diagrama de dispersión antes de confiar ciegamente en el valor de \\(r\\)."
   },
   {
     "objectID": "clases/clase_15_02coefR.html#el-numerador---la-covarianza-sin-normalizar",
@@ -4664,8 +4664,8 @@
     "objectID": "clases/clase_16_01_lm.html#introducción-a-la-regresión-lineal-simple",
     "href": "clases/clase_16_01_lm.html#introducción-a-la-regresión-lineal-simple",
     "title": "Estadística I",
-    "section": "Introducción a la Regresión Lineal Simple",
-    "text": "Introducción a la Regresión Lineal Simple\n\nLa regresión lineal simple busca modelar la relación lineal entre una variable dependiente (\\(Y\\)) y una variable independiente (\\(X\\)).\nEl objetivo es encontrar la “mejor” línea recta que describa cómo cambia \\(Y\\) en función de \\(X\\), equivalente a predecir el valor de la variable dependiente basándose en el valor de la variable independiente.\n\nEsta línea se representa con la ecuación: \\[\\hat{y} = \\beta_0 + \\beta_1 x\\]"
+    "section": "",
+    "text": "La regresión lineal simple busca modelar la relación lineal entre una variable dependiente (\\(Y\\)) y una variable independiente (\\(X\\)).\nEl objetivo es encontrar la “mejor” línea recta que describa cómo cambia \\(Y\\) en función de \\(X\\), equivalente a predecir el valor de la variable dependiente basándose en el valor de la variable independiente.\n\nEsta línea se representa con la ecuación: \\[\\hat{y} = \\beta_0 + \\beta_1 x\\]"
   },
   {
     "objectID": "clases/clase_16_01_lm.html#compuesta-por",
@@ -4784,7 +4784,7 @@
     "href": "clases/clase_16_01_lm.html#usos-de-la-rl",
     "title": "Estadística I",
     "section": "Usos de la RL",
-    "text": "Usos de la RL\n\nEvaluar relaciones entre dos variables\nPredecir\n\n\n\n\n\n🔗 Estadística 1"
+    "text": "Usos de la RL\n\nEvaluar relaciones entre dos variables\nPredecir"
   },
   {
     "objectID": "clases/clase_17_mmc.html",
@@ -4848,5 +4848,23 @@
     "title": "Estadística I",
     "section": "",
     "text": "La distribución binomial es un modelo de probabilidad discreta que describe el número de éxitos en una secuencia de \\(n\\) ensayos independientes de Bernoulli, con una probabilidad fija \\(p\\) de ocurrencia del éxito entre los ensayos."
+  },
+  {
+    "objectID": "calificaciones.html",
+    "href": "calificaciones.html",
+    "title": "Calificaciones",
+    "section": "",
+    "text": "id\nalumno\nci\nQ_1\nQ_2\nQ_3\nP_1\nP_2\nP_3\ntrabajo\nasist & inter\nAcum\nreparación\nObserv\n\n\n\n\n1\nAaron Romero\n28312670\n20\n15\n14\n18\n20\n5\n0\n2.0\n13.05\n-\n-\n\n\n2\nAbraham Carmona\n29992575\n19\n20\n20\n9\n20\n19\n20\n2.0\n17.55\n-\n-\n\n\n3\nAbraham Elbitar\n29864837\n11\n15\n-\n12\n14\n2\n13\n2.0\n10.85\n-\n-\n\n\n4\nAdrian Acevedo\n31984508\n11\n20\n18\n13\n14\n9\n16\n1.0\n13.05\n-\n-\n\n\n5\nAngela salcedo\n31508240\n16\n-\n5\n8\n15\n16\n15\n1.5\n12.60\n-\n-\n\n\n6\nAshley Reyes\n28326912\n19\n18\n20\n14\n16\n15\n12\n1.5\n15.15\n-\n-\n\n\n7\nCarlos Diz\n29625588\n10\n14\n8\n10\n14\n7\n17\n1.5\n11.85\n-\n-\n\n\n8\nChantal Carrillo\n30437350\n10\n11\n10\n13\n9\n6\n13\n1.5\n10.60\n-\n-\n\n\n9\nDaniel Maldonado\n29664107\n9\n5\n11\n12\n14\n3\n17\n1.5\n11.10\n-\n-\n\n\n10\nDilam Depablos\n31761713\n7\n16\n10\n11\n9\n5\n13\n1.5\n10.10\n-\n-\n\n\n11\nEysler Jiménez\n25210266\n14\n13\n5\n8\n8\n1\n19\n2.0\n9.85\n-\n-\n\n\n12\nFranyerber Alcalá\n29731662\n15\n19\n-\n11\n16\n14\n12\n1.5\n13.20\n-\n-\n\n\n13\nGerardo Escalante\n31193520\n9\n7\n-\n12\n16\n3\n14\n0.0\n9.10\n-\n-\n\n\n33\nJosé Ruiz\n30152542\n1\n-\n-\n-\n-\n-\n-\n0.0\n0.05\n-\nPI\n\n\n14\nJuan Piñero\n30678650\n3\n5\n-\n-\n3\n-\n-\n0.0\n1.00\n-\nPI\n\n\n15\nLeysamar Rivas\n30950950\n14\n11\n1\n8\n8\n2\n20\n1.8\n9.70\n-\n-\n\n\n16\nMaría Fernanda Cuervo\n27988880\n-\n-\n-\n6\n-\n-\n15\n0.0\n3.45\n-\nPI\n\n\n18\nMaría Urribarri\n32346774\n10\n12\n7\n5\n7\n8\n20\n1.1\n9.55\n-\n-\n\n\n16\nMariargelia Bolivar\n28014942\n1\n20\n19\n6\n17\n1\n10\n1.2\n9.50\n-\n-\n\n\n19\nMiguel Riera\n31418043\n12\n10\n7\n11\n8\n4\n13\n1.5\n9.50\n-\n-\n\n\n20\nMiller De Freitas\n32281822\n15\n15\n19\n6\n18\n7\n14\n1.5\n12.25\n-\n-\n\n\n21\nNathalia Diaz\n31945857\n12\n20\n19\n15\n6\n15\n12\n1.0\n12.55\n-\n-\n\n\n22\nPaola Lapenna\n31777525\n20\n18\n15\n17\n18\n10\n14\n2.0\n15.75\n-\n-\n\n\n23\nRachel Mahfoud\n31170925\n9\n19\n3\n10\n13\n4\n15\n2.0\n11.20\n-\n-\n\n\n24\nRicardo Obregón\n28302190\n5\n15\n-\n10\n8\n14\n0\n1.0\n8.40\n18\n-\n\n\n25\nRubén Torres\n28311075\n2\n-\n-\n16\n-\n-\n-\n0.0\n3.30\n-\nPI\n\n\n26\nSamuel Isaaccura\n31867328\n10\n8\n19\n7\n16\n10\n10\n2.0\n11.95\n-\n-\n\n\n27\nSara Henríquez\n29596779\n9\n16\n12\n8\n14\n4\n13\n1.5\n10.50\n-\n-\n\n\n28\nSofia Goitte\n32417008\n3\n10\n17\n13\n14\n8\n13\n1.5\n11.95\n-\n-\n\n\n29\nSusana González\n30346674\n13\n-\n1\n8\n4\n-\n15\n0.5\n5.85\n-\n-\n\n\n30\nValeria García\n30751510\n14\n20\n-\n8\n17\n11\n12\n1.0\n11.70\n-\n-\n\n\n31\nVictor Cortez\n31249794\n12\n16\n9\n14\n20\n14\n16\n0.0\n13.85\n-\n-\n\n\n32\nWinder Pico\n29584271\n4\n-\n-\n3\n-\n-\n-\n0.0\n0.80\n-\n-",
+    "crumbs": [
+      "Sobre el Curso",
+      "Calificaciones"
+    ]
+  },
+  {
+    "objectID": "clases/clase_15_02coefR.html",
+    "href": "clases/clase_15_02coefR.html",
+    "title": "Estadística I",
+    "section": "",
+    "text": "El coeficiente de correlación de Pearson (\\(r\\)) es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables cuantitativas.\nEs una herramienta fundamental en estadística para entender cómo se mueven dos variables de un mismo cojunto de datos en distintas observaciones.\nEl valor de \\(r\\) siempre se encuentra entre -1 y +1."
   }
 ]
